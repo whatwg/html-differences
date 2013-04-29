@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>HTML5 differences from HTML4</title>
+    <title class=not-whatwg>HTML5 differences from HTML4</title>
+    <title class=not-w3c>HTML differences from HTML4</title>
     <style type="text/css">
       .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
       p.note::before { content:"Note: " }
@@ -12,7 +13,8 @@
       pre code { color:inherit }
       pre strong { color:inherit; background:#ffa }
     </style>
-    <link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-[STATUS]">
+    <link class=not-whatwg rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-[STATUS]">
+    <link class=not-w3c rel="stylesheet" href="http://www.whatwg.org/style/specification">
   </head>
   <body>
     <!--
@@ -24,17 +26,22 @@
 
     -->
     <div class="head">
-      <!--logo-->
+      <div class=not-whatwg><!--logo--></div>
+      <p class=not-w3c><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
+ 
       <hgroup>
-								<h1 id="html5-diff">HTML5 differences from HTML4</h1>
+								<h1 id="html5-diff" class=not-whatwg>HTML5 differences from HTML4</h1>
+								<h1 class=not-w3c>HTML differences from HTML4</h1>
 		
-								<h2 class="no-num no-toc" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
+								<h2 class="no-num no-toc not-whatwg" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
+								<h2 class="no-num no-toc not-w3c">Living Document &mdash; Last Updated [DATE: 1 August 1986]</h2>
       </hgroup>
 
       <dl>
         <dt>This Version:</dt>
-        <dd class=not-draft><a href="[VERSION]">[VERSION]</a></dd>
-        <dd class=not-tr><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a>
+        <dd class="not-draft not-whatwg"><a href="[VERSION]">[VERSION]</a></dd>
+        <dd class="not-tr not-whatwg"><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a>
+        <dd class="not-w3c"><a href="http://html-differences.spec.whatwg.org/">http://html-differences.spec.whatwg.org/</a>
 
         <dt class=not-draft>Latest Version:</dt>
         <dd class=not-draft><a href="[LATEST]">[LATEST]</a></dd>
@@ -42,20 +49,23 @@
         <dt class=not-draft>Latest Editor's Draft:</dt>
         <dd class=not-draft><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a></dd>
 
-        <dt>Previous Versions:</dt>
-        <dd><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110113/">http://www.w3.org/TR/2011/WD-html5-diff-20110113/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20101019/">http://www.w3.org/TR/2010/WD-html5-diff-20101019/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100624/">http://www.w3.org/TR/2010/WD-html5-diff-20100624/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100304/">http://www.w3.org/TR/2010/WD-html5-diff-20100304/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090825/">http://www.w3.org/TR/2009/WD-html5-diff-20090825/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090423/">http://www.w3.org/TR/2009/WD-html5-diff-20090423/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090212/">http://www.w3.org/TR/2009/WD-html5-diff-20090212/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080610/">http://www.w3.org/TR/2008/WD-html5-diff-20080610/</a></dd>
-        <dd><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080122/">http://www.w3.org/TR/2008/WD-html5-diff-20080122/</a></dd>
+        <dt>Version History:
+        <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
+
+        <dt class=not-whatwg>Previous Versions:</dt>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110113/">http://www.w3.org/TR/2011/WD-html5-diff-20110113/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20101019/">http://www.w3.org/TR/2010/WD-html5-diff-20101019/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100624/">http://www.w3.org/TR/2010/WD-html5-diff-20100624/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100304/">http://www.w3.org/TR/2010/WD-html5-diff-20100304/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090825/">http://www.w3.org/TR/2009/WD-html5-diff-20090825/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090423/">http://www.w3.org/TR/2009/WD-html5-diff-20090423/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090212/">http://www.w3.org/TR/2009/WD-html5-diff-20090212/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080610/">http://www.w3.org/TR/2008/WD-html5-diff-20080610/</a></dd>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080122/">http://www.w3.org/TR/2008/WD-html5-diff-20080122/</a></dd>
 
         <dt>Editor:</dt>
         <dd>Simon Pieters
@@ -66,7 +76,17 @@
         &lt;<a href="mailto:annevk@annevk.nl">annevk@annevk.nl</a>></dd>
       </dl>
 
-      <!--copyright-->
+      <div class="not-whatwg"><!--copyright--></div>
+      
+      <p class="copyright not-w3c"><a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/80x15.png" alt="CC0"></a>
+      To the extent possible under law, the editors have waived all copyright and
+      related or neighboring rights to this work. In addition, as of
+      [DATE: 01 Jan 1901], the editors have made this specification available
+      under the
+      <a rel="license"
+      href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0">Open Web Foundation Agreement Version 1.0</a>,
+      which is available at
+      http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
     </div>
 
     <hr>
@@ -83,7 +103,7 @@
     check the specifications themselves. <span data-anolis-ref>HTML5</span>
     <span data-anolis-ref>HTML</span></p>
 
-
+    <div class="not-whatwg">
     <h2 class="no-num no-toc" id="sotd">Status of this Document</h2>
 
     <p><i>This section describes the status of this document at the time of its
@@ -123,7 +143,7 @@
     Claim(s)</a> must disclose the information in accordance with
     <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
     6 of the W3C Patent Policy</a>.</p>
-
+    </div>
 
     <h2 class="no-num no-toc" id="toc">Table of Contents</h2>
 

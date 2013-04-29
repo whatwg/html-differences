@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en-US"><head>
-    <title class="not-whatwg">HTML5 differences from HTML4</title>
+    <title class="not-w3c">HTML differences from HTML4</title>
     <style type="text/css">
       .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
       p.note::before { content:"Note: " }
@@ -10,8 +10,8 @@
       pre code { color:inherit }
       pre strong { color:inherit; background:#ffa }
     </style>
-    <link class="not-whatwg" href="http://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
-    </head>
+    <link class="not-w3c" href="http://www.whatwg.org/style/specification" rel="stylesheet">
+  </head>
   <body>
     <!--
 
@@ -22,35 +22,20 @@
 
     -->
     <div class="head">
-      <div class="not-whatwg">
-<!--begin-logo-->
-<p><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a></p>
-<!--end-logo--></div>
+      <p class="not-w3c"><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
+ 
       <hgroup>
-								<h1 class="not-whatwg" id="html5-diff">HTML5 differences from HTML4</h1>
-								<h2 class="no-num no-toc not-whatwg" id="w3c-doctype">Editor's Draft 29 April 2013</h2>
-								</hgroup>
+								<h1 class="not-w3c">HTML differences from HTML4</h1>
+		
+								<h2 class="no-num no-toc not-w3c">Living Document — Last Updated 29 April 2013</h2>
+      </hgroup>
 
       <dl>
         <dt>This Version:</dt>
-        <dd class="not-tr not-whatwg"><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a>
+        <dd class="not-w3c"><a href="http://html-differences.spec.whatwg.org/">http://html-differences.spec.whatwg.org/</a>
+
         <dt>Version History:
         <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
-
-        <dt class="not-whatwg">Previous Versions:</dt>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110113/">http://www.w3.org/TR/2011/WD-html5-diff-20110113/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2010/WD-html5-diff-20101019/">http://www.w3.org/TR/2010/WD-html5-diff-20101019/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100624/">http://www.w3.org/TR/2010/WD-html5-diff-20100624/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100304/">http://www.w3.org/TR/2010/WD-html5-diff-20100304/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090825/">http://www.w3.org/TR/2009/WD-html5-diff-20090825/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090423/">http://www.w3.org/TR/2009/WD-html5-diff-20090423/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090212/">http://www.w3.org/TR/2009/WD-html5-diff-20090212/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080610/">http://www.w3.org/TR/2008/WD-html5-diff-20080610/</a></dd>
-        <dd class="not-whatwg"><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080122/">http://www.w3.org/TR/2008/WD-html5-diff-20080122/</a></dd>
 
         <dt>Editor:</dt>
         <dd>Simon Pieters
@@ -61,12 +46,15 @@
         &lt;<a href="mailto:annevk@annevk.nl">annevk@annevk.nl</a>&gt;</dd>
       </dl>
 
-      <div class="not-whatwg">
-<!--begin-copyright-->
-<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2013 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
-<!--end-copyright--></div>
-      
-      </div>
+      <p class="copyright not-w3c"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/80x15.png"></a>
+      To the extent possible under law, the editors have waived all copyright and
+      related or neighboring rights to this work. In addition, as of
+      29 April 2013, the editors have made this specification available
+      under the
+      <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
+      which is available at
+      http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
+    </div>
 
     <hr>
 
@@ -81,48 +69,6 @@
     the specifications are still actively in development. When in doubt, always
     check the specifications themselves. <a href="#refsHTML5">[HTML5]</a>
     <a href="#refsHTML">[HTML]</a></p>
-
-    <div class="not-whatwg">
-    <h2 class="no-num no-toc" id="sotd">Status of this Document</h2>
-
-    <p><i>This section describes the status of this document at the time of its
-    publication. Other documents may supersede this document. A list of current
-    W3C publications and the latest revision of this technical report can be
-    found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
-    at http://www.w3.org/TR/.</i></p>
-
-    <p>This is the 29 April 2013 Editor's Draft produced by the
-    <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
-    <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
-    Working Group intends to publish this document as a
-    <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
-    Group Note</a> to accompany the
-    <a href="http://www.w3.org/TR/html5/">HTML5 specification</a>.
-    The appropriate forum for comments is
-    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">W3C
-    Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
-    a mailing list with a
-    <a href="http://lists.w3.org/Archives/Public/public-html-comments/" title="Archive for HTML comments mailing-list">public
-    archive</a>, is no longer used for tracking comments.)</p>
-
-    <p>Publication as a Working Draft does not imply endorsement by the
-    W3C Membership. This is a draft document and may be updated, replaced or
-    obsoleted by other documents at any time. It is inappropriate to cite
-    this document as other than work in progress.</p>
-
-    <p>This document was produced by a group operating under the
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February
-    2004 W3C Patent Policy</a>. W3C maintains a
-    <a href="http://www.w3.org/2004/01/pp-impl/40318/status" rel="disclosure">public
-    list of any patent disclosures</a> made in connection with the deliverables
-    of the group; that page also includes instructions for disclosing a patent.
-    An individual who has actual knowledge of a patent which the individual
-    believes contains
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
-    Claim(s)</a> must disclose the information in accordance with
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
-    6 of the W3C Patent Policy</a>.</p>
-    </div>
 
     <h2 class="no-num no-toc" id="toc">Table of Contents</h2>
 

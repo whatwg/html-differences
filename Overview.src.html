@@ -1,0 +1,3358 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>HTML5 differences from HTML4</title>
+    <style type="text/css">
+      .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
+      p.note::before { content:"Note: " }
+      dfn { font-style:normal; font-weight:bold }
+      code { color:orangered; font-size:14px }
+      h3 code { font-size:17px }
+      code :link, code :visited { color:inherit }
+      pre code { color:inherit }
+      pre strong { color:inherit; background:#ffa }
+    </style>
+    <link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-[STATUS]">
+  </head>
+  <body>
+    <!--
+
+     Editor's checklist for stuff to fix for publication:
+
+       * Previous Versions links
+       * Changelog headings
+
+    -->
+    <div class="head">
+      <!--logo-->
+      <hgroup>
+								<h1 id="html5-diff">HTML5 differences from HTML4</h1>
+		
+								<h2 class="no-num no-toc" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
+      </hgroup>
+
+      <dl>
+        <dt>This Version:</dt>
+        <dd class=not-draft><a href="[VERSION]">[VERSION]</a></dd>
+        <dd class=not-tr><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a>
+
+        <dt class=not-draft>Latest Version:</dt>
+        <dd class=not-draft><a href="[LATEST]">[LATEST]</a></dd>
+
+        <dt class=not-draft>Latest Editor's Draft:</dt>
+        <dd class=not-draft><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a></dd>
+
+        <dt>Previous Versions:</dt>
+        <dd><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110113/">http://www.w3.org/TR/2011/WD-html5-diff-20110113/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20101019/">http://www.w3.org/TR/2010/WD-html5-diff-20101019/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100624/">http://www.w3.org/TR/2010/WD-html5-diff-20100624/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100304/">http://www.w3.org/TR/2010/WD-html5-diff-20100304/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090825/">http://www.w3.org/TR/2009/WD-html5-diff-20090825/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090423/">http://www.w3.org/TR/2009/WD-html5-diff-20090423/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090212/">http://www.w3.org/TR/2009/WD-html5-diff-20090212/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080610/">http://www.w3.org/TR/2008/WD-html5-diff-20080610/</a></dd>
+        <dd><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080122/">http://www.w3.org/TR/2008/WD-html5-diff-20080122/</a></dd>
+
+        <dt>Editor:</dt>
+        <dd>Simon Pieters
+        (<a href="http://www.opera.com/">Opera Software ASA</a>)
+        &lt;<a href="mailto:simonp@opera.com">simonp@opera.com</a>></dd>
+        <dt>Previous Editor:</dt>
+        <dd><a href="http://annevankesteren.nl/">Anne van Kesteren</a>
+        &lt;<a href="mailto:annevk@annevk.nl">annevk@annevk.nl</a>></dd>
+      </dl>
+
+      <!--copyright-->
+    </div>
+
+    <hr>
+
+
+    <h2 class="no-num no-toc" id="abstract">Abstract</h2>
+
+    <p>HTML is the core language of the World Wide Web. The W3C publishes HTML5,
+    which is the fifth major revision of HTML. The WHATWG publishes HTML, which
+    is a rough superset of HTML5. "HTML5 differences from HTML4" describes the
+    differences of these documents from HTML4, and calls out cases where HTML is
+    different from HTML5. This document may not provide accurate information as
+    the specifications are still actively in development. When in doubt, always
+    check the specifications themselves. <span data-anolis-ref>HTML5</span>
+    <span data-anolis-ref>HTML</span></p>
+
+
+    <h2 class="no-num no-toc" id="sotd">Status of this Document</h2>
+
+    <p><i>This section describes the status of this document at the time of its
+    publication. Other documents may supersede this document. A list of current
+    W3C publications and the latest revision of this technical report can be
+    found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
+    at http://www.w3.org/TR/.</i></p>
+
+    <p>This is the [DATE: 1 August 1986] [LONGSTATUS] produced by the
+    <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
+    <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
+    Working Group intends to publish this document as a
+    <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
+    Group Note</a> to accompany the
+    <a href="http://www.w3.org/TR/html5/">HTML5 specification</a>.
+    The appropriate forum for comments is
+    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">W3C
+    Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
+    a mailing list with a
+    <a href="http://lists.w3.org/Archives/Public/public-html-comments/" title="Archive for HTML comments mailing-list">public
+    archive</a>, is no longer used for tracking comments.)</p>
+
+    <p>Publication as a Working Draft does not imply endorsement by the
+    W3C Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite
+    this document as other than work in progress.</p>
+
+    <p>This document was produced by a group operating under the
+    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February
+    2004 W3C Patent Policy</a>. W3C maintains a
+    <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/40318/status">public
+    list of any patent disclosures</a> made in connection with the deliverables
+    of the group; that page also includes instructions for disclosing a patent.
+    An individual who has actual knowledge of a patent which the individual
+    believes contains
+    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
+    Claim(s)</a> must disclose the information in accordance with
+    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
+    6 of the W3C Patent Policy</a>.</p>
+
+
+    <h2 class="no-num no-toc" id="toc">Table of Contents</h2>
+
+    <!--toc-->
+
+
+    <h2 id="introduction">Introduction</h2>
+
+    <p>HTML has been in continuous evolution since it was introduced to the
+    Internet in the early 1990s. Some features were introduced in
+    specifications; others were introduced in software releases. In some
+    respects, implementations and author practices have converged with each
+    other and with specifications and standards, but in other ways, they
+    have diverged.</p>
+
+    <p>HTML4 became a W3C Recommendation in 1997. While it continues
+    to serve as a rough guide to many of the core features of HTML, it does
+    not provide enough information to build implementations that
+    interoperate with each other and, more importantly, with a critical mass
+    of deployed content. The same goes for XHTML1, which defines an
+    XML serialization for HTML4, and DOM Level 2 HTML, which defines
+    JavaScript APIs for both HTML and XHTML. HTML5 will replace these
+    documents. <span data-anolis-ref>DOM2HTML</span>
+    <span data-anolis-ref>HTML4</span>
+    <span data-anolis-ref>XHTML1</span>
+
+    <p>The HTML5 draft reflects an effort, started in 2004, to study
+    contemporary HTML implementations and deployed content. The draft:</p>
+
+    <ol>
+      <li>Defines a single language called HTML which can be written
+      in HTML syntax and in XML syntax.</li>
+      <li>Defines detailed processing models to foster interoperable
+      implementations.</li>
+      <li>Improves markup for documents.</li>
+      <li>Introduces markup and APIs for emerging idioms, such as Web
+      applications.</li>
+    </ol>
+
+
+    <h3 id="open-issues">Open Issues</h3>
+
+    <p><strong>HTML5 is still a draft.</strong> The contents of
+    HTML5, as well as the contents of this document which depend on
+    HTML5, are still being discussed on the HTML Working Group
+    and WHATWG mailing lists. The open issues are linked from the HTML5
+    draft.</p>
+
+
+    <h3 id="backwards-compatible">Backwards Compatible</h3>
+
+    <p>HTML5 is defined in a way that it is backwards compatible with
+    the way user agents handle deployed content. To keep the authoring
+    language relatively simple for authors, several elements and attributes
+    are not included, as outlined in the other sections of this document,
+    such as presentational elements that are better dealt with using
+    CSS.</p>
+
+    <p>User agents, however, will always have to support these older
+    elements and attributes and this is why the HTML5 specification clearly
+    separates requirements for authors and user agents. For instance, this
+    means that authors cannot use the <code data-anolis-spec=html>isindex</code> or the
+    <code data-anolis-spec=html>plaintext</code> element, but user agents are required to support
+    them in a way that is compatible with how these elements need to behave
+    for compatibility with deployed content.</p>
+
+    <p>Since HTML5 has separate conformance requirements for authors
+    and user agents there is no longer a need for marking features
+    "deprecated".</p>
+
+
+    <h3 id="development-model">Development Model</h3>
+
+    <p>The HTML5 specification will not be considered finished before
+    there are at least two complete implementations of the specification. A
+    test suite will be used to measure completeness of the implementations.
+    This approach differs from previous versions of HTML, where the final
+    specification would typically be approved by a committee before being
+    actually implemented. The goal of this change is to ensure that the
+    specification is implementable, and usable by authors once it is
+    finished.</p>
+
+
+
+    <h2 id="syntax">Syntax</h2>
+
+    <p>HTML5 defines an HTML syntax that is
+    compatible with HTML4 and XHTML1 documents published on the
+    Web, but is not compatible with the more esoteric SGML features of
+    HTML4, such as
+    <a href="http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.6">processing instructions</a>
+    and
+    <a href="http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.7">shorthand markup</a>
+    as these are not supported by most user agents. Documents using the HTML
+    syntax are served with the <code>text/html</code> media
+    type.</p>
+
+    <p>HTML5 also defines detailed parsing rules (including "error
+    handling") for this syntax which are largely compatible with HTML4-era
+    implementations. User agents must use these rules for resources that
+    have the <code>text/html</code> media type. Here is an example document
+    that conforms to the HTML syntax:</p>
+
+    <pre><code>&lt;!doctype html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>Example document&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;p>Example paragraph&lt;/p>
+  &lt;/body>
+&lt;/html></code></pre>
+
+    <p>The other syntax that can be used for HTML5 is XML. This syntax
+    is compatible with XHTML1 documents and implementations. Documents
+    using this syntax need to be served with an XML media type and elements
+    need to be put in the <code>http://www.w3.org/1999/xhtml</code>
+    namespace following the rules set forth by the XML specifications.
+    <span data-anolis-ref>XML</span>
+
+    <p>Below is an example document that conforms to the XML syntax of
+    HTML5. Note that XML documents must be served with an XML media type
+    such as <code>application/xhtml+xml</code> or
+    <code>application/xml</code>.</p>
+
+    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;html xmlns="http://www.w3.org/1999/xhtml">
+  &lt;head>
+    &lt;title>Example document&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;p>Example paragraph&lt;/p>
+  &lt;/body>
+&lt;/html></code></pre>
+
+    <h3 id="character-encoding">Character Encoding</h3>
+
+    <p>For the HTML syntax, authors are required to declare the
+    character encoding. There are three ways to do that:</p>
+
+    <ul>
+      <li>At the transport level. By using the HTTP <code>Content-Type</code>
+      header for instance.</li>
+
+      <li>Using a Unicode Byte Order Mark (BOM) character at the start of
+      the file. This character provides a signature for the encoding
+      used.</li>
+
+      <li>Using a <code data-anolis-spec=html>meta</code> element with a <code data-anolis-spec=html title=attr-meta-charset>charset</code>
+      attribute that specifies the encoding within the first 1024 bytes of
+      the document. For instance, <code>&lt;meta charset="UTF-8"></code>
+      could be used to specify the UTF-8 encoding. This replaces the need
+      for
+      <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></code>
+      although that syntax is still allowed.</li>
+    </ul>
+
+    <p>For the XML syntax, authors have to use the rules as set forth in the
+    XML specifications to set the character encoding.</p>
+
+    <h3 id="doctype">The Doctype</h3>
+
+    <p>The HTML syntax of HTML5 requires a doctype to be specified to ensure
+    that the browser renders the page in standards mode. The doctype has no
+    other purpose. <span data-anolis-ref>DOCTYPE</span>
+
+    <p>The doctype declaration for the HTML syntax is <code>&lt;!DOCTYPE html></code> and is
+    case-insensitive. Doctypes from earlier versions of
+    HTML were longer because the HTML language was SGML-based and therefore
+    required a reference to a DTD. With HTML5 this is no longer the case and
+    the doctype is only needed to enable standards mode for documents
+    written using the HTML syntax. Browsers already do this for
+    <code>&lt;!DOCTYPE html></code>.</p>
+    
+    <p>To support legacy markup generators that cannot generate the preferred
+    short doctype, the doctype <code>&lt;!DOCTYPE html SYSTEM
+    "about:legacy-compat"></code> is allowed in the HTML syntax.
+    
+    <p>The strict doctypes for HTML 4.0, HTML 4.01, XHTML 1.0 as well as XHTML
+    1.1 are also allowed (but are discouraged) in the HTML syntax.
+    
+    <p>In the XML syntax, any doctype declaration may be used, or it may be
+    omitted altogether. Documents with an XML media type are always handled in
+    standards mode.
+
+
+    <h3 id="mathml-svg">MathML and SVG</h3>
+
+    <p>The HTML syntax of HTML5 allows for MathML and SVG elements to
+    be used inside a document. An <code>math</code> or <code>svg</code> start
+    tag causes the HTML parser to switch to a special insertion mode which puts
+    elements and attributes in the appropriate namespaces, does case fixups for
+    elements and attributes that have mixed case, and supports the empty-element
+    syntax as in XML. The syntax is still case-insensitive and attributes allow
+    the same syntax as for HTML elements. Namespace declarations may be omitted.
+    CDATA sections are supported in this insertion mode.
+    
+    <p>Some MathML and SVG elements cause the parser to switch back to "HTML
+    mode", e.g. <code>mtext</code> and <code>foreignObject</code>, so you can
+    use HTML elements or a new <code>math</code> or <code>svg</code> element.
+    
+    <p>For instance, a very simple document using some of the
+    minimal syntax features could look like:</p>
+
+    <pre><code>&lt;!doctype html>
+&lt;title>SVG in text/html&lt;/title>
+&lt;p>
+ A green circle:
+ <strong>&lt;svg> &lt;circle r="50" cx="50" cy="50" fill="green"/> &lt;/svg></strong>
+&lt;/p></code></pre>
+
+    <h3 id="syntax-misc">Miscellaneous</h3>
+
+    <p>There are a few other changes in the HTML syntax worthy of mentioning:</p>
+
+    <ul>
+     <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character
+     references now expand to U+27E8 and U+27E9 instead of U+2329 and U+232A,
+     respectively.
+     
+     <li><p>Many new named character references have been added, including all from
+     MathML.
+     
+     <li><p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
+     trailing slash.
+     
+     <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in some more
+     cases compared to HTML4.
+     
+     <li><p>Attributes have to be separated by at least one whitespace character.
+     
+     <li><p>Attributes with an empty value may be written as just the attribute
+     name omitting the equals sign and the value, even if it's not a boolean
+     attribute. (HTML4 actually allowed using only the attribute
+     <em>value</em> and omitting the attribute name, for enumerated attributes,
+     but this was not supported in browsers.)
+     
+     <li><p>Attributes omitting quotes for the value are allowed to use a larger
+     set of characters compared to HTML4.
+     
+     <li><p>The <code>optgroup</code> end tag is now optional.
+     
+     <li><p>The <code>colgroup</code> start tag is now optional and is inferred by
+     the HTML parser.
+    </ul>
+
+
+    <h2 id="language">Language</h2>
+
+    <p>This section is split up in several subsections to more clearly
+    illustrate the various differences there are between HTML4 and
+    HTML5.</p>
+
+
+    <h3 id="new-elements">New Elements</h3>
+
+    <p>The following elements have been introduced for better structure:</p>
+
+  <ul>
+      <li><p><code data-anolis-spec=html>section</code>
+      represents a generic document or application section. It can be
+      <span data-anolis-spec=html title="Headings and sections">used together</span>
+      with the <code data-anolis-spec=html>h1</code>, <code data-anolis-spec=html>h2</code>, <code data-anolis-spec=html>h3</code>,
+      <code data-anolis-spec=html>h4</code>, <code data-anolis-spec=html>h5</code>, and <code data-anolis-spec=html>h6</code> elements to
+      indicate the document structure.</p></li>
+
+      <li><p><code data-anolis-spec=html>article</code>
+      represents an independent piece of content of a document, such as a
+      blog entry or newspaper article.</p></li>
+
+      <li><p><code data-anolis-spec=html>aside</code>
+      represents a piece of content that is only slightly related to the
+      rest of the page.</p></li>
+
+      <li><p><code data-anolis-spec=html>hgroup</code>
+      represents the header of a section.</p></li>
+
+      <li><p><code data-anolis-spec=html>header</code>
+      represents a group of introductory or navigational aids.</p></li>
+
+      <li><p><code data-anolis-spec=html>footer</code>
+      represents a footer for a section and can contain information about
+      the author, copyright information, etc.</p></li>
+
+      <li><p><code data-anolis-spec=html>nav</code>
+      represents a section of the document intended for navigation.</p></li>
+
+      <li>
+        <p><code data-anolis-spec=html>figure</code>
+        represents a piece of self-contained flow content, typically
+        referenced as a single unit from the main flow of the document.</p>
+
+        <pre><code>&lt;figure>
+ &lt;video src="example.webm" controls>&lt;/video>
+ &lt;figcaption>Example&lt;/figcaption>
+&lt;/figure></code></pre>
+
+        <p><code data-anolis-spec=html>figcaption</code> can be used as caption (it is optional).</p>
+      </li>
+    </ul>
+
+    <p>Then there are several other new elements:</p>
+
+    <ul>
+      <li><p><code data-anolis-spec=html>video</code> and
+      <code data-anolis-spec=html>audio</code> for multimedia content. Both
+      provide an API so application authors can script their own user
+      interface, but there is also a way to trigger a user interface
+      provided by the user agent. <code data-anolis-spec=html>source</code>
+      elements are used together with these elements if there are multiple
+      streams available of different types.
+
+      <li><p><code data-anolis-spec=html>track</code> provides text tracks
+      for the <code data-anolis-spec=html>video</code> element.
+
+      <li><p><code data-anolis-spec=html>embed</code> is used for plugin
+      content.
+
+      <li><p><code data-anolis-spec=html>mark</code> represents a run of
+      text in one document marked or highlighted for reference purposes, due
+      to its relevance in another context.
+
+      <li><p><code data-anolis-spec=html>progress</code> represents a
+      completion of a task, such as downloading or when performing a series
+      of expensive operations.
+
+      <li><p><code data-anolis-spec=html>meter</code> represents a
+      measurement, such as disk usage.
+
+      <li><p><code data-anolis-spec=html>time</code> represents a date
+      and/or time.
+
+      <li><p>WHATWG HTML has <code data-anolis-spec=html>data</code> which
+      allows content to be annotated with a machine-readable value.
+      
+      <li><p>WHATWG HTML has <code data-anolis-spec=html>dialog</code> for showing a dialog.
+
+      <li><p><code data-anolis-spec=html>ruby</code>,
+      <code data-anolis-spec=html>rt</code>, and
+      <code data-anolis-spec=html>rp</code> allow for marking up ruby
+      annotations.
+
+      <li><p><code data-anolis-spec=html>bdi</code> represents a span of
+      text that is to be isolated from its surroundings for the purposes of
+      bidirectional text formatting.
+
+      <li><p><code data-anolis-spec=html>wbr</code> represents a line break
+      opportunity.
+
+      <li><p><code data-anolis-spec=html>canvas</code> is used for rendering
+      dynamic bitmap graphics on the fly, such as graphs or games.
+
+      <li><p><code data-anolis-spec=html>command</code>
+      represents a command the user can invoke.</p></li>
+
+      <li><p><code data-anolis-spec=html>details</code>
+      represents additional information or controls which the user can
+      obtain on demand. The
+      <code data-anolis-spec=html>summary</code>
+      element provides its summary, legend, or caption.</p></li>
+
+      <li>
+        <p><code data-anolis-spec=html>datalist</code>
+        together with the a new <code data-anolis-spec=html title=attr-input-list>list</code> attribute for
+        <code data-anolis-spec=html>input</code> can be used to make comboboxes:</p>
+
+        <pre><code>&lt;input <strong>list="browsers"</strong>>
+&lt;datalist <strong>id="browsers"</strong>>
+ &lt;option value="Safari">
+ &lt;option value="Internet Explorer">
+ &lt;option value="Opera">
+ &lt;option value="Firefox">
+&lt;/datalist></code></pre>
+      </li>
+
+      <li><p><code data-anolis-spec=html>keygen</code>
+      represents control for key pair generation.</p></li>
+
+      <li><p><code data-anolis-spec=html>output</code>
+      represents some type of output, such as from a calculation done
+      through scripting.</p></li>
+    </ul>
+
+    <p>The <code data-anolis-spec=html>input</code> element's <code data-anolis-spec=html title=attr-input-type>type</code> attribute now has the
+    following new values:</p>
+
+    <ul>
+      <li><code data-anolis-spec=html title=attr-input-type-tel>tel</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-search>search</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-url>url</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-email>email</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-datetime>datetime</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-date>date</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-month>month</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-week>week</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-time>time</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-datetime-local>datetime-local</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-number>number</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-range>range</code>
+
+      <li><code data-anolis-spec=html title=attr-input-type-color>color</code>
+    </ul>
+
+    <p>The idea of these new types is that the user agent can provide the user
+    interface, such as a calendar date picker or integration with the user's
+    address book, and submit a defined format to the server. It gives the user a
+    better experience as his input is checked before sending it to the server
+    meaning there is less time to wait for feedback.</p>
+
+
+    <h3 id="new-attributes">New Attributes</h3>
+
+    <p>Several attributes have been introduced to various elements
+    that were already part of HTML4:</p>
+
+    <ul>
+      <li><p>The <code data-anolis-spec=html>a</code> and <code data-anolis-spec=html>area</code> elements now have a
+      <code data-anolis-spec=html title=attr-hyperlink-media>media</code> attribute for consistency with the <code data-anolis-spec=html>link</code>
+      element. WHATWG HTML also has the <code data-anolis-spec=html title=attr-hyperlink-download>download</code> and <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attributes.
+
+      <li><p>The <code data-anolis-spec=html>area</code> element, for consistency with the
+      <code data-anolis-spec=html>a</code> and <code data-anolis-spec=html>link</code> elements, now also has the
+      <code data-anolis-spec=html title=attr-hyperlink-hreflang>hreflang</code>, <code data-anolis-spec=html title=attr-hyperlink-type>type</code> and <code data-anolis-spec=html title=attr-hyperlink-rel>rel</code> attributes.
+
+      <li><p>The <code data-anolis-spec=html>base</code> element can now have a <code data-anolis-spec=html title=attr-base-target>target</code>
+      attribute as well, mainly for consistency with the
+      <code data-anolis-spec=html>a</code> element. (This is already widely supported.)
+
+      <li><p>The <code data-anolis-spec=html>meta</code> element has a <code data-anolis-spec=html title=attr-meta-charset>charset</code>
+      attribute now as this was already widely supported and provides a nice
+      way to specify the
+      <a href="#character-encoding">character encoding</a> for the document.
+
+      <li><p>A new <code data-anolis-spec=html title=attr-fe-autofocus>autofocus</code> attribute can be specified on the
+      <code data-anolis-spec=html>input</code> (except when the <code data-anolis-spec=html title=attr-input-type>type</code> attribute is
+      <code data-anolis-spec=html title=attr-input-type-hidden>hidden</code>), <code data-anolis-spec=html>select</code>, <code data-anolis-spec=html>textarea</code> and
+      <code data-anolis-spec=html>button</code> elements. It provides a declarative way to focus a
+      form control during page load. Using this feature should enhance the
+      user experience compared to focusing the element with script as the user can turn it off if the user does not like
+      it, for instance.
+
+      <li>
+       <p>A new <code data-anolis-spec=html title=attr-input-placeholder>placeholder</code> attribute can be specified on
+      the <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> elements. It
+      represents a hint intended to aid the user with data entry.</p>
+       <pre><code>&lt;input type=email <strong>placeholder="a@b.com"</strong>></code></pre>
+      </li>
+
+      <li>
+       <p>The new <code data-anolis-spec=html title=attr-fae-form>form</code> attribute for <code data-anolis-spec=html>input</code>,
+       <code data-anolis-spec=html>output</code>, <code data-anolis-spec=html>select</code>, <code data-anolis-spec=html>textarea</code>,
+       <code data-anolis-spec=html>button</code>, <code data-anolis-spec=html>label</code>, <code data-anolis-spec=html>object</code> and <code data-anolis-spec=html>fieldset</code> elements allows for
+       controls to be associated with a form. These elements can now be
+       placed anywhere on a page, not just as descendants of the
+       <code data-anolis-spec=html>form</code> element, and still be associated with a <code data-anolis-spec=html>form</code>.</p>
+
+       <pre>&lt;table>
+ &lt;tr>
+  &lt;th>Key
+  &lt;th>Value
+  &lt;th>Action
+ &lt;tr>
+  &lt;td>&lt;form <strong>id=1</strong>>&lt;input name=1-key>&lt;/form>
+  &lt;td>&lt;input <strong>form=1</strong> name=1-value>
+  &lt;td>&lt;button <strong>form=1</strong> name=1-action value=save>&#x2713;&lt;/button>
+      &lt;button <strong>form=1</strong> name=1-action value=delete>&#x2717;&lt;/button>
+ ...
+&lt;/table></pre>
+      </li>
+
+      <li><p>The new <code data-anolis-spec=html title=attr-input-required>required</code> attribute applies to
+      <code data-anolis-spec=html>input</code> (except when the <code data-anolis-spec=html title=attr-input-type>type</code> attribute is
+      <code data-anolis-spec=html title=attr-input-type-hidden>hidden</code>, <code data-anolis-spec=html title=attr-input-type-image>image</code> or some button type such as
+      <code data-anolis-spec=html title=attr-input-type-submit>submit</code>), <code data-anolis-spec=html>select</code> and <code data-anolis-spec=html>textarea</code>. It indicates that the user
+      has to fill in a value in order to submit the form. For <code data-anolis-spec=html>select</code>, the first <code data-anolis-spec=html>option</code> element has to be a placeholder with an empty value.
+
+      <pre><code>&lt;label>Color: &lt;select name=color <strong>required</strong>>
+ &lt;option <strong>value=""</strong>>Choose one
+ &lt;option>Red
+ &lt;option>Green
+ &lt;option>Blue
+&lt;/select>&lt;/label></code></pre>
+
+      <li><p>The <code data-anolis-spec=html>fieldset</code> element now allows the
+      <code data-anolis-spec=html title=attr-fieldset-disabled>disabled</code> attribute which disables all descendant controls (excluding those that are descendants of the <code data-anolis-spec=html>legend</code> element)
+      when specified, and the <code data-anolis-spec=html title=attr-fe-name>name</code> attribute which can be used for script access.
+
+      <li><p>The <code data-anolis-spec=html>input</code> element has several new attributes to
+      specify constraints: <code data-anolis-spec=html title=attr-fe-autocomplete>autocomplete</code>, <code data-anolis-spec=html title=attr-input-min>min</code>,
+      <code data-anolis-spec=html title=attr-input-max>max</code>, <code data-anolis-spec=html title=attr-input-multiple>multiple</code>, <code data-anolis-spec=html title=attr-input-pattern>pattern</code> and
+      <code data-anolis-spec=html title=attr-input-step>step</code>. As mentioned before it also has a new
+      <code data-anolis-spec=html title=attr-input-list>list</code> attribute which can be used together with the
+      <code data-anolis-spec=html>datalist</code> element. It also now has the <code data-anolis-spec=html title=attr-dim-width>width</code> and <code data-anolis-spec=html title=attr-dim-height>height</code> attributes to specify the dimensions of the image when using <code>type=image</code>.
+
+      <li><p>The <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> elements have
+      a new attribute named <code data-anolis-spec=html title=attr-fe-dirname>dirname</code> that causes the
+      directionality of the control as set by the user to be submitted as
+      well.
+
+      <li><p>The <code data-anolis-spec=html>textarea</code> element also has two new attributes,
+      <code data-anolis-spec=html title=attr-textarea-maxlength>maxlength</code> and <code data-anolis-spec=html title=attr-textarea-wrap>wrap</code> which control max input
+      length and submitted line wrapping behavior, respectively.
+
+      <li><p>The <code data-anolis-spec=html>form</code> element has a <code data-anolis-spec=html title=attr-fs-novalidate>novalidate</code>
+      attribute that can be used to disable form validation submission (i.e.
+      the form can always be submitted).
+
+      <li><p>The <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>button</code> elements have
+      <code data-anolis-spec=html title=attr-fs-formaction>formaction</code>, <code data-anolis-spec=html title=attr-fs-formenctype>formenctype</code>,
+      <code data-anolis-spec=html title=attr-fs-formmethod>formmethod</code>, <code  data-anolis-spec=html title=attr-fs-formnovalidate>formnovalidate</code>, and
+      <code data-anolis-spec=html title=attr-fs-formtarget>formtarget</code> as new attributes. If present, they override
+      the <code data-anolis-spec=html title=attr-fs-action>action</code>, <code data-anolis-spec=html title=attr-fs-enctype>enctype</code>, <code data-anolis-spec=html title=attr-fs-method>method</code>,
+      <code data-anolis-spec=html title=attr-fs-novalidate>novalidate</code>, and <code data-anolis-spec=html title=attr-fs-target>target</code> attributes on the
+      <code data-anolis-spec=html>form</code> element.</p>
+      
+      <li><p>In WHATWG HTML, the <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> have an <code data-anolis-spec=html title="attr-fe-inputmode">inputmode</code> attribute.
+
+      <li><p>The <code data-anolis-spec=html>menu</code> element has two new attributes:
+      <code data-anolis-spec=html title=attr-menu-type>type</code> and <code data-anolis-spec=html title=attr-menu-label>label</code>. They
+      allow the element to transform into a menu as found in typical user
+      interfaces as well as providing for context menus in conjunction with the
+      global <code data-anolis-spec=html title=attr-contextmenu>contextmenu</code> attribute.
+
+      <li><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
+      attribute which can be used to enable scoped style sheets. Style rules
+      within such a <code data-anolis-spec=html>style</code> element only apply to the local tree.
+
+      <li><p>The <code data-anolis-spec=html>script</code> element has a new attribute called
+      <code data-anolis-spec=html title=attr-script-async>async</code> that influences script loading and execution.
+
+      <li><p>The <code data-anolis-spec=html>html</code> element has a new attribute called
+      <code data-anolis-spec=html title=attr-html-manifest>manifest</code> that points to an application cache manifest
+      used in conjunction with the API for offline Web applications.
+
+      <li><p>The <code data-anolis-spec=html>link</code> element has a new attribute called
+      <code data-anolis-spec=html title=attr-link-sizes>sizes</code>. It can be used in conjunction with the
+      <code data-anolis-spec=html title=rel-icon>icon</code> relationship (set through the <code data-anolis-spec=html title=attr-link-rel>rel</code>
+      attribute; can be used for e.g. favicons) to indicate the size of the
+      referenced icon. Thus allowing for icons of distinct dimensions.
+
+      <li><p>The <code data-anolis-spec=html>ol</code> element has a new attribute called
+      <code data-anolis-spec=html title=attr-ol-reversed>reversed</code>. When present, it indicates that the list order
+      is descending.
+
+      <li><p>The <code data-anolis-spec=html>iframe</code> element has three new attributes called
+      <code data-anolis-spec=html title=attr-iframe-sandbox>sandbox</code>, <code data-anolis-spec=html title=attr-iframe-seamless>seamless</code>, and <code data-anolis-spec=html title=attr-iframe-srcdoc>srcdoc</code>
+      which allow for sandboxing content, e.g. blog comments.</p></li>
+
+      <li><p>The <code data-anolis-spec=html>object</code> element has a new attribute called <code data-anolis-spec=html title=attr-object-typemustmatch>typemustmatch</code> which allows safer embedding of external resources.
+
+      <li><p>The <code data-anolis-spec=html>img</code> element has a new attribute called <code data-anolis-spec=html title=attr-img-crossorigin>crossorigin</code> to use CORS in the fetch and if it is successful, allows the image data to be read with the <code data-anolis-spec=html>canvas</code> API. In WHATWG HTML, there is also a new attribute called <code data-anolis-spec=html title=attr-img-srcset>srcset</code> to support multiple images for different resolutions and different images for different viewport sizes.
+    </ul>
+
+    <p>Several attributes from HTML4 now apply to all elements. These
+    are called global attributes: <code data-anolis-spec=html title=attr-accesskey>accesskey</code>, <code data-anolis-spec=html title=attr-class>class</code>, <code data-anolis-spec=html title=attr-dir>dir</code>,
+    <code data-anolis-spec=html title=attr-id>id</code>, <code data-anolis-spec=html title=attr-dir>lang</code>, <code data-anolis-spec=html title=attr-style>style</code>,
+    <code data-anolis-spec=html title=attr-tabindex>tabindex</code> and <code data-anolis-spec=html title=attr-title>title</code>. Additionally, XHTML 1.0
+    only allowed <code>xml:space</code> on some elements, which is now allowed
+    on all elements in XHTML documents.</p>
+
+    <p>There are also several new global attributes:</p>
+
+    <ul>
+      <li><p>The <code data-anolis-spec=html
+      title=attr-contenteditable>contenteditable</code> attribute indicates that
+      the element is an editable area. The user can change the contents of the
+      element and manipulate the markup.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-contextmenu>contextmenu</code> attribute can be used to point
+      to a context menu provided by the author.
+
+      <li><p>The <code data-anolis-spec=html
+      title="attr-data-*">data-<var>*</var></code> collection of author-defined
+      attributes. Authors can define any attribute they want as long as they
+      prefix it with <code>data-</code> to avoid clashes with future versions of
+      HTML. These are intended to be used to store custom data to be consumed by
+      the Web page or application itself. They are <em>not</em> intended for
+      data to be consumed by other parties (e.g. user agents). 
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-draggable>draggable</code> and <code data-anolis-spec=html
+      title=attr-dropzone>dropzone</code> attributes can be used together with
+      the new drag &amp; drop API.
+
+      <li><p>The <code data-anolis-spec=html title=attr-hidden>hidden</code>
+      attribute indicates that an element is not yet, or is no longer, relevant.
+      
+      <li><p>WHATWG HTML has the <code data-anolis-spec=html title=attr-inert>inert</code> attribute, intended to make <code data-anolis-spec=html>dialog</code> elements modal.
+
+      <li><p>The <code data-anolis-spec=html title=wai-aria>role</code> and
+      <code data-anolis-spec=html title=wai-aria>aria-<var>*</var></code>
+      collection attributes which can be used to instruct assistive
+      technology.</li>
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-spellcheck>spellcheck</code> attribute allows for hinting
+      whether content can be checked for spelling or not.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-translate>translate</code> attribute gives a hint to
+      translators whether the content should be translated.
+
+    </ul>
+
+    <p>HTML5 also makes all event handler attributes from HTML4, which take the
+    form <code>on<var>event</var></code>, global attributes and adds
+    several new event handler attributes for new events it defines. For
+    instance, the <code data-anolis-spec=html title=handler-onplay>onplay</code>
+    event handler attribute for the <code data-anolis-spec=html
+    title=event-media-play>play</code> event which is used by the API for the
+    media elements (<code data-anolis-spec=html>video</code> and <code
+    data-anolis-spec=html>audio</code>).</p>
+
+
+    <h3 id="changed-elements">Changed Elements</h3>
+
+    <p>These elements have slightly modified meanings in HTML5 to
+    better reflect how they are used on the Web or to make them more
+    useful:</p>
+
+    <ul>
+      <!--
+      <li><p>The <code data-anolis-spec=html>a</code> element without an
+      <code data-anolis-spec=html title=attr-hyperlink-href>href</code>
+      attribute now represents a placeholder for where a link otherwise
+      might have been placed.</p></li>
+
+      html4:
+      Each  A element defines an anchor
+
+      1. The  A element's content defines the position of the anchor.
+      2. The  name attribute names the anchor so that it may be the destination
+      of zero or more links (see also anchors with  id).
+      3. The  href attribute makes this anchor the source anchor of exactly one
+      link.
+
+      Authors may also create an A element that specifies no anchors, i.e., that
+      doesn't specify href, name, or id. Values for these attributes may be set
+      at a later time through scripts.
+
+      html5:
+      If the a element has an href attribute, then it represents a hyperlink (a
+      hypertext anchor).
+
+      If the a element has no href attribute, then the element represents a
+      placeholder for where a link might otherwise have been placed, if it had
+      been relevant.
+
+      Both basically say that <a> without href is a "placeholder", so this isn't
+      really a change.
+      -->
+
+      <!--
+      <li><p>The <code data-anolis-spec=html>abbr</code> element now represents
+      an abbreviation <em>or</em> an acronym.
+
+      html4:
+      Indicates an abbreviated form (e.g., WWW, HTTP, URI, Mass., etc.).
+
+      html5:
+      The abbr element represents an abbreviation or acronym, optionally with
+      its expansion.
+
+      Not a major change (technically acronym is a form of abbreviation anyway),
+      and this document says to use abbr instead of acronym already.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>address</code> element is now
+      scoped by the nearest ancestor <code data-anolis-spec=html>article</code>
+      or <code data-anolis-spec=html>body</code> element.</p></li>
+
+      <!--
+      AREA
+      html4 doesn't really have a definition of area, but html5 does, but that's
+      hardly worth calling out here.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>b</code> element now represents a
+      span of text to which attention is being drawn for utilitarian purposes
+      without conveying any extra importance and with no implication of an
+      alternate voice or mood, such as key words in a document abstract, product
+      names in a review, actionable words in interactive text-driven software,
+      or an article lede.</p></li>
+
+      <!--
+      BASE
+      html4:
+      The BASE element allows authors to specify a document's base URI
+      explicitly.
+
+      html5:
+      The base element allows authors to specify the document base URL for the
+      purposes of resolving relative URLs, and the name of the default browsing
+      context for the purposes of following hyperlinks. The element does not
+      represent any content beyond this information.
+      -->
+
+      <!--
+      BDO
+      html4:
+      The BDO element allows authors to turn off the bidirectional algorithm for
+      selected fragments of text.
+
+      html5:
+      The bdo element represents explicit text directionality formatting control
+      for its children. It allows authors to override the Unicode bidirectional
+      algorithm by explicitly specifying a direction override.
+      -->
+
+      <!--
+      <li><p>The <code data-anolis-spec=html>blockquote</code> element now
+      represents a section that is quoted <em>from another source</em> (and that
+      is not necessarily "long").
+
+      html4:
+      These two elements designate quoted text.  BLOCKQUOTE is for long
+      quotations (block-level content)
+
+      html5:
+      The blockquote element represents a section that is quoted from another
+      source.
+      -->
+
+      <!--
+      BODY
+      html4:
+      The body of a document contains the document's content.
+
+      html5:
+      The body element represents the main content of the document.
+      -->
+
+      <!--
+      BR
+      html4:
+      The  BR element forcibly breaks (ends) the current line of text.
+
+      html5:
+      The br element represents a line break.
+      -->
+
+      <!--
+      BUTTON
+      html4:
+      Buttons created with the BUTTON element function just like buttons created
+      with the INPUT element
+      html5:
+      The button element represents a button.
+      -->
+
+      <!--
+      CAPTION
+      html4:
+      When present, the CAPTION element's text should describe the nature of the
+      table.
+
+      html5:
+      The caption element represents the title of the table that is its parent,
+      if it has a parent and that is a table element.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>cite</code> element now solely
+      represents the title of a work (e.g. a book, a paper, an essay, a poem, a
+      score, a song, a script, a film, a TV show, a game, a sculpture, a
+      painting, a theatre production, a play, an opera, a musical, an
+      exhibition, a legal case report, etc). Specifically the example in HTML4
+      where it is used to mark up the name of a person is no longer considered
+      conforming.</p></li>
+
+      <!--
+      CODE
+      html4:
+      Designates a fragment of computer code.
+      html5:
+      The code element represents a fragment of computer code.
+      -->
+
+      <!--
+      COL
+      html4:
+      The  COL element allows authors to group together attribute specifications
+      for table columns.
+
+      html5:
+      If a col element has a parent and that is a colgroup element that itself
+      has a parent that is a table element, then the col element represents one
+      or more columns in the column group represented by that colgroup.
+      -->
+
+      <!--
+      COLGROUP
+      html4:
+      The  COLGROUP element creates an explicit column group.
+
+      html5:
+      The colgroup element represents a group of one or more columns in the
+      table that is its parent, if it has a parent and that is a table element.
+      -->
+
+      <!--
+      DD
+      covered by dl
+      -->
+
+      <!--
+      DEL
+      html4:
+      INS and DEL are used to markup sections of the document that have been
+      inserted or deleted with respect to a different version of a document
+
+      html5:
+      The del element represents a removal from the document.
+      -->
+
+      <!--
+      DFN
+      html4:
+      Indicates that this is the defining instance of the enclosed term.
+
+      html5:
+      The dfn element represents the defining instance of a term.
+      -->
+
+      <!--
+      DIV
+      html4:
+      The  DIV and SPAN elements, in conjunction with the id and  class
+      attributes, offer a generic mechanism for adding structure to documents.
+      These elements define content to be inline (SPAN) or block-level (DIV) but
+      impose no other presentational idioms on the content. Thus, authors may
+      use these elements in conjunction with style sheets, the lang attribute,
+      etc., to tailor HTML to their own needs and tastes.
+
+      html5:
+      The div element has no special meaning at all. It represents its children.
+      It can be used with the class, lang, and title attributes to mark up
+      semantics common to a group of consecutive elements.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>dl</code> element now represents an
+      association list of name-value groups, and is no longer said to be
+      appropriate for dialogue.</p></li>
+
+      <!--
+      DT
+      covered by dl
+      -->
+
+      <!--
+      EM
+      html4:
+      Indicates emphasis.
+
+      html5:
+      The em element represents stress emphasis of its contents.
+      -->
+
+      <!--
+      FIELDSET
+      html4:
+      The FIELDSET element allows authors to group thematically related controls
+      and labels.
+
+      html5:
+      The fieldset element represents a set of form controls optionally grouped
+      under a common name.
+      -->
+
+      <!--
+      FORM
+      html4:
+      The  FORM element acts as a container for  controls.
+
+      html5:
+      The form element represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing.
+      -->
+
+      <!--
+      <li><p>The <code data-anolis-spec=html>h1</code>-<code
+      data-anolis-spec=html>h6</code> elements in HTML4 are said to have
+      different importance. In HTML5, they are said to have different <span
+      data-anolis-spec=html>ranks</span>, which affect the outline algorithm,
+      but do not affect importance.
+
+      html4:
+      A heading element briefly describes the topic of the section it
+      introduces. Heading information may be used by user agents, for example,
+      to construct a table of contents for a document automatically.
+
+      There are six levels of headings in HTML with H1 as the most important and
+      H6 as the least. Visual browsers usually render more important headings in
+      larger fonts than less important ones.
+
+      html5:
+      These elements represent headings for their sections.
+
+      The semantics and meaning of these elements are defined in the section on
+      headings and sections.
+
+      These elements have a rank given by the number in their name. The h1
+      element is said to have the highest rank, the h6 element has the lowest
+      rank, and two elements with the same name have equal rank.
+
+      well, they intend the same semantics, basically.
+      -->
+
+      <!--
+      HEAD
+      html4:
+      The  HEAD element contains information about the current document, such as
+      its title, keywords that may be useful to search engines, and other data
+      that is not considered document content.
+
+      html5:
+      The head element represents a collection of metadata for the Document.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>hr</code> element now represents a
+      paragraph-level thematic break.
+
+      <!--
+      HTML
+      html4:
+      After document type declaration, the remainder of an HTML document is
+      contained by the HTML element.
+
+      html5:
+      The html element represents the root of an HTML document.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>i</code> element now represents a
+      span of text in an alternate voice or mood, or otherwise offset from the
+      normal prose in a manner indicating a different quality of text, such as a
+      taxonomic designation, a technical term, an idiomatic phrase from another
+      language, a thought, or a ship name in Western texts.</p></li>
+
+      <!--
+      IFRAME
+      html4:
+      The  IFRAME element allows authors to insert a frame within a block of
+      text. Inserting an inline frame within a section of text is much like
+      inserting an object via the OBJECT element: they both allow you to insert
+      an HTML document in the middle of another, they may both be aligned with
+      surrounding text, etc.
+
+      html5:
+      The iframe element represents a nested browsing context.
+      -->
+
+      <!--
+      IMG
+      html4:
+      The  IMG element embeds an image in the current document at the location
+      of the element's definition.
+
+      html5:
+      An img element represents an image.
+      -->
+
+      <!--
+      INPUT
+
+      type         html4         html5
+      text         Creates a single-line text input control.
+                                 Text with no line breaks; A text field. The
+                                 input element represents a one line plain text
+                                 edit control for the element's value.
+      password     Like "text", but the input text is rendered in such a way as
+                   to hide the characters
+                                 Text with no line breaks (sensitive
+                                 information); A text field that obscures data
+                                 entry. The input element represents a one line
+                                 plain text edit control for the element's
+                                 value. The user agent should obscure the value
+                                 so that people other than the user cannot see
+                                 it.
+      checkbox     Checkboxes are on/off switches that may be toggled by the
+                   user.
+                                 A set of zero or more values from a predefined
+                                 list; A checkbox. The input element represents
+                                 a two-state control that represents the
+                                 element's checkedness state.
+      radio        Radio buttons are like checkboxes except that when several
+                   share the same control name, they are mutually exclusive
+                                 An enumerated value; A radio button. The input
+                                 element represents a control that, when used in
+                                 conjunction with other input elements, forms a
+                                 radio button group in which only one control
+                                 can have its checkedness state set to true.
+      submit       When activated, a submit button submits a form. A form may
+                   contain more than one submit button.
+                                 An enumerated value, with the extra semantic
+                                 that it must be the last value selected and
+                                 initiates form submission; A button. The input
+                                 element represents a button that, when
+                                 activated, submits the form.
+      image        Creates a graphical submit button.
+                                 A coordinate, relative to a particular image's
+                                 size, with the extra semantic that it must be
+                                 the last value selected and initiates form
+                                 submission; Either a clickable image, or a
+                                 button. The input element represents either an
+                                 image from which a user can select a coordinate
+                                 and submit the form, or alternatively a button
+                                 from which the user can submit the form. The
+                                 element is a button, specifically a submit
+                                 button.
+      reset        When activated, a reset button resets all controls to their
+                   initial values.
+                                 n/a; A button. The input element represents a
+                                 button that, when activated, resets the form.
+      button       Push buttons have no default behavior.
+                                 n/a; A button. The input element represents a
+                                 button with no default behavior.
+      hidden       Authors may create controls that are not rendered but whose
+                   values are submitted with a form. Authors generally use this
+                   control type to store information between client/server
+                   exchanges that would otherwise be lost due to the stateless
+                   nature of HTTP (see [RFC2616]). The INPUT element is used to
+                   create a hidden control.
+                                 An arbitrary string; n/a. The input element
+                                 represents a value that is not intended to be
+                                 examined or manipulated by the user.
+      file         This control type allows the user to select files so that
+                   their contents may be submitted with a form. The INPUT
+                   element is used to create a file select control.
+                                 Zero or more files each with a MIME type and
+                                 optionally a file name; A label and a button.
+                                 The input element represents a list of selected
+                                 files, each file consisting of a file name, a
+                                 file type, and a file body (the contents of the
+                                 file).
+      -->
+
+      <!--
+      INS
+      see DEL above
+      -->
+
+      <!--
+      KBD
+      html4:
+      Indicates text to be entered by the user.
+
+      html5:
+      The kbd element represents user input (typically keyboard input, although
+      it may also be used to represent other input, such as voice commands).
+      -->
+
+      <li><p>For the <code data-anolis-spec=html>label</code> element the
+      browser should no longer move focus from the label to the control unless
+      such behavior is standard for the underlying platform user
+      interface.</p></li>
+
+      <!--
+      LEGEND
+      html4:
+      The  LEGEND element allows authors to assign a caption to a  FIELDSET.
+
+      html5:
+      The legend element represents a caption for the rest of the contents of
+      the legend element's parent fieldset element, if any.
+      -->
+
+      <!--
+      LI
+      html4:
+      Both types of lists are made up of sequences of list items defined by the
+      LI element
+
+      html5:
+      The li element represents a list item.
+      -->
+
+      <!--
+      LINK
+      html4:
+      This element defines a link.
+
+      html5:
+      The link element allows authors to link their document to other resources.
+      -->
+
+      <!--
+      MAP
+      html4:
+      The  MAP element specifies a client-side image map (or other navigation
+      mechanism)
+
+      html5:
+      The map element, in conjunction with any area element descendants, defines
+      an image map. The element represents its children.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>menu</code> element is redefined to
+      be useful for toolbars and context menus.</p></li>
+
+      <!--
+      META
+      html4:
+      The  META element can be used to identify properties of a document (e.g.,
+      author, expiration date, a list of key words, etc.) and assign values to
+      those properties.
+
+      html5:
+      The meta element represents various kinds of metadata that cannot be
+      expressed using the title, base, link, style, and script elements.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>noscript</code> element is no
+      longer said to be rendered when the user agent doesn't support a scripting
+      language invoked by a <code data-anolis-spec=html>script</code> element
+      earlier in the document.
+
+      <!--
+      OBJECT
+      html4:
+      The  OBJECT element allows authors to control whether data should be
+      rendered externally or by some program, specified by the author, that
+      renders the data within the user agent.
+
+      html5:
+      The object element can represent an external resource, which, depending on
+      the type of the resource, will either be treated as an image, as a nested
+      browsing context, or as an external resource to be processed by a plugin.
+      -->
+
+      <!--
+      OL
+      html4:
+      Ordered and unordered lists are rendered in an identical manner except
+      that visual user agents number ordered list items. User agents may present
+      those numbers in a variety of ways. Unordered list items are not numbered.
+
+      html5:
+      The ol element represents a list of items, where the items have been
+      intentionally ordered, such that changing the order would change the
+      meaning of the document.
+      -->
+
+      <!--
+      OPTGROUP
+      html4:
+      The OPTGROUP element allows authors to group choices logically.
+
+      html5:
+      The optgroup element represents a group of option elements with a common
+      label.
+      -->
+
+      <!--
+      OPTION
+      html4:
+      Each choice offered by the menu is represented by an OPTION element.
+
+      html5:
+      The option element represents an option in a select element ...
+      -->
+
+      <!--
+      P
+      html4:
+      The  P element represents a paragraph.
+
+      html5:
+      The p element represents a paragraph.
+      -->
+
+      <!--
+      PARAM
+      html4:
+      PARAM elements specify a set of values that may be required by an object
+      at run-time.
+
+      html5:
+      The param element defines parameters for plugins invoked by object
+      elements. It does not represent anything on its own.
+      -->
+
+      <!--
+      PRE
+      html4:
+      The  PRE element tells visual user agents that the enclosed text is
+      "preformatted".
+
+      html5:
+      The pre element represents a block of preformatted text, in which
+      structure is represented by typographic conventions rather than by
+      elements.
+      -->
+
+      <!--
+      Q
+      html4:
+      These two elements designate quoted text.  ... Q is intended for short
+      quotations (inline content) that don't require paragraph breaks.
+
+      html5:
+      The q element represents some phrasing content quoted from another source.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>s</code> element now represents
+      contents that are no longer accurate or no longer relevant.</p></li>
+
+      <!--
+      SAMP
+      html4:
+      Designates sample output from programs, scripts, etc.
+
+      html5:
+      The samp element represents (sample) output from a program or computing
+      system.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>script</code> element can now be
+      used for scripts or for custom data blocks.
+
+      <!--
+      SELECT
+      html4:
+      The  SELECT element creates a menu. Menus offer users options from which
+      to choose.
+
+      html5:
+      The select element represents a control for selecting amongst a set of
+      options.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>small</code> element now represents
+      side comments such as small print.</p></li>
+
+      <!--
+      SPAN
+      html4:
+      The  DIV and SPAN elements, in conjunction with the id and  class
+      attributes, offer a generic mechanism for adding structure to documents.
+      These elements define content to be inline (SPAN) or block-level (DIV) but
+      impose no other presentational idioms on the content. Thus, authors may
+      use these elements in conjunction with style sheets, the lang attribute,
+      etc., to tailor HTML to their own needs and tastes.
+
+      html5:
+      The span element doesn't mean anything on its own, but can be useful when
+      used together with the global attributes, e.g. class, lang, or dir. It
+      represents its children.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>strong</code> element now
+      represents importance rather than strong emphasis.</p></li>
+
+      <!--
+      STYLE
+      html4:
+      The  STYLE element allows authors to put style sheet rules in the head of
+      the document.
+
+      html5:
+      The style element allows authors to embed style information in their
+      documents. The style element is one of several inputs to the styling
+      processing model. The element does not represent content for the user.
+      -->
+
+      <!--
+      SUB and SUP
+      html4:
+      Many scripts (e.g., French) require superscripts or subscripts for proper
+      rendering. The  SUB and SUP elements should be used to markup text in
+      these cases.
+
+      html5:
+      The sup element represents a superscript and the sub element represents a
+      subscript.
+      -->
+
+      <!--
+      TABLE
+      html4:
+      The  TABLE element contains all other elements that specify caption, rows,
+      content, and formatting.
+
+      html5:
+      The table element represents data with more than one dimension, in the
+      form of a table.
+      -->
+
+      <!--
+      TBODY
+      html4:
+      The table body should contain rows of table data.
+
+      html5:
+      The tbody element represents a block of rows that consist of a body of
+      data for the parent table element, if the tbody element has a parent and
+      it is a table.
+      -->
+
+      <!--
+      TD
+      html4:
+      The  TD element defines a cell that contains data.
+
+      html5:
+      The td element represents a data cell in a table.
+      -->
+
+      <!--
+      TEXTAREA
+      html4:
+      The  TEXTAREA element creates a  multi-line text input control. User
+      agents should use the contents of this element as the initial value of
+      the control and should render this text initially.
+
+      html5:
+      The textarea element represents a multiline plain text edit control for
+      the element's raw value. The contents of the control represent the control's default value.
+      -->
+
+      <!--
+      TFOOT
+      html4:
+      The table head and table foot should contain information about the table's
+      columns.
+
+      html5:
+      The tfoot element represents the block of rows that consist of the column
+      summaries (footers) for the parent table element, if the tfoot element has
+      a parent and it is a table.
+      -->
+
+      <!--
+      TH
+      html4:
+      The  TH element defines a cell that contains header information.
+
+      html5:
+      The th element represents a header cell in a table.
+      -->
+
+      <!--
+      THEAD
+      html4:
+      The table head and table foot should contain information about the table's columns.
+
+      html5:
+      The thead element represents the block of rows that consist of the column
+      labels (headers) for the parent table element, if the thead element has a
+      parent and it is a table.
+      -->
+
+      <!--
+      TITLE
+      html4:
+      Authors should use the TITLE element to identify the contents of a
+      document. Since users often consult documents out of context, authors
+      should provide context-rich titles.
+
+      html5:
+      The title element represents the document's title or name. Authors should
+      use titles that identify their documents even when they are used out of
+      context, for example in a user's history or bookmarks, or in search
+      results.
+      -->
+
+      <!--
+      TR
+      html4:
+      The  TR elements acts as a container for a row of table cells.
+
+      html5:
+      The tr element represents a row of cells in a table.
+      -->
+
+      <li><p>The <code data-anolis-spec=html>u</code> element now represents a
+      span of text with an unarticulated, though explicitly rendered,
+      non-textual annotation, such as labeling the text as being a proper name
+      in Chinese text (a Chinese proper name mark), or labeling the text as
+      being misspelt.</p></li>
+
+      <!--
+      UL
+      html4:
+      Ordered and unordered lists are rendered in an identical manner except
+      that visual user agents number ordered list items. User agents may present
+      those numbers in a variety of ways. Unordered list items are not numbered.
+
+      html5:
+      The ul element represents a list of items, where the order of the items is
+      not important — that is, where changing the order would not materially
+      change the meaning of the document.
+      -->
+
+      <!--
+      VAR
+      html4:
+      Indicates an instance of a variable or program argument.
+
+      html5:
+      The var element represents a variable. This could be an actual variable in
+      a mathematical expression or programming context, an identifier
+      representing a constant, a function parameter, or just be a term used as a
+      placeholder in prose.
+      -->
+
+    </ul>
+
+
+    <h3 id="changed-attributes">Changed Attributes</h3>
+
+    <p>Several attributes have changed in various ways.</p>
+
+    <ul>
+      <li><p>The <code data-anolis-spec=html
+      title=attr-input-accept>accept</code> attribute on <code
+      data-anolis-spec=html>input</code> now allows the values
+      <code>audio/*</code>, <code>video/*</code> and <code>image/*</code>.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-accesskey>accesskey</code> global attribute now allows multiple
+      characters to be specified, which the user agent can choose from.
+
+      <li><p>The <code data-anolis-spec=html title=attr-fs-action>action</code>
+      attribute on <code data-anolis-spec=html>form</code> is no longer allowed
+      to have an empty URL.
+      
+      <li><p>In WHATWG HTML, the <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
+
+      <li><p>The <code>border</code> attribute on <code
+      data-anolis-spec=html>table</code> only allows the values "1" and the
+      empty string. In WHATWG HTML, the <code data-anolis-spec=html
+      title=attr-table-border>border</code> attribute is obsolete.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-tdth-colspan>colspan</code> attribute on <code
+      data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>
+      now has to be greater than zero.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-area-coords>coords</code> attribute on <code
+      data-anolis-spec=html>area</code> no longer allows a percentage value of
+      the radius when the element is in the circle state.
+
+      <li><p>The <code data-anolis-spec=html title=attr-object-data>data</code>
+      attribute on <code data-anolis-spec=html>object</code> is no longer said
+      to be relative to the <code>codebase</code> attribute.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-script-defer>defer</code> attribute on <code
+      data-anolis-spec=html>script</code> now explicitly makes the script
+      execute when the page has finished parsing.
+
+      <li><p>The <code data-anolis-spec=html title=attr-dir>dir</code> global
+      attribute now allows the value <code>auto</code>.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-fs-enctype>enctype</code> attribute on <code
+      data-anolis-spec=html>form</code> now supports the value
+      <code>text/plain</code>.
+
+      <li><p>The <code data-anolis-spec=html title=attr-dim-width>width</code>
+      and <code data-anolis-spec=html title=attr-dim-height>height</code>
+      attributes on <code data-anolis-spec=html>img</code>, <code
+      data-anolis-spec=html>iframe</code> and <code
+      data-anolis-spec=html>object</code> are no longer allowed to contain
+      percentages. They are also not allowed to be used to stretch the image to
+      a different aspect ratio than its intrinsic aspect ratio.</p>
+
+      <li><p>The <code data-anolis-spec=html title=attr-link-href>href</code>
+      attribute on <code data-anolis-spec=html>link</code> is no longer allowed
+      to have an empty URL.
+
+      <li><p>The <code data-anolis-spec=html title=attr-base-href>href</code>
+      attribute on <code data-anolis-spec=html>base</code> is now allowed to
+      contain a relative URL.
+      
+      <li><p>All attributes that take URLs, e.g. <code data-anolis-spec=html
+      title=attr-hyperlink-href>href</code> on the <code
+      data-anolis-spec=html>a</code> element, now support IRIs if the document's
+      encoding is UTF-8 or UTF-16.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-meta-http-equiv>http-equiv</code> attribute on <code
+      data-anolis-spec=html>meta</code> is no longer said to be used by HTTP
+      servers to create HTTP headers in the HTTP response. Instead, it is said
+      to be a pragma directive to be used by the user agent.
+
+      <li><p>The <code data-anolis-spec=html title=attr-id>id</code> global
+      attribute is now allowed to have any value, as long as it is unique, is
+      not the empty string, and does not contain space characters.
+
+      <li><p>The <code data-anolis-spec=html title=attr-lang>lang</code> global
+      attribute takes the empty string in addition to a valid language
+      identifier, just like <code>xml:lang</code> does in XML.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-hyperlink-media>media</code> attribute on <code
+      data-anolis-spec=html>link</code> now accepts a media query and defaults
+      to "all".
+
+      <li><p>The event handler attributes (e.g. <code data-anolis-spec=html
+      title=handler-onclick>onclick</code>) now always use JavaScript as the
+      scripting language.
+
+      <li><p>The <code data-anolis-spec=html title=attr-li-value>value</code>
+      attribute of the <code data-anolis-spec=html>li</code> element is no
+      longer deprecated as it is not presentational. The same goes for the <code
+      data-anolis-spec=html title=attr-ol-start>start</code> and <code
+      data-anolis-spec=html title=attr-ol-type>type</code> attributes of the
+      <code data-anolis-spec=html>ol</code> element.
+
+      <li><p>The <code data-anolis-spec=html title=attr-style>style</code>
+      global attribute now always uses CSS as the styling language.
+
+      <li><p>The <code data-anolis-spec=html title=attr-tabindex>tabindex</code>
+      global attribute now allows negative values which indicate that the
+      element can receive focus but cannot be tabbed to.
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-hyperlink-target>target</code> attribute of the <code
+      data-anolis-spec=html>a</code> and <code data-anolis-spec=html>area</code>
+      elements is no longer deprecated, as it is useful in Web applications,
+      e.g. in conjunction with <code data-anolis-spec=html>iframe</code>.
+
+      <li><p>The <code data-anolis-spec=html title=attr-script-type>type</code>
+      attribute on <code data-anolis-spec=html>script</code> and <code
+      data-anolis-spec=html>style</code> is no longer required if the scripting
+      language is JavaScript and the styling language is CSS, respectively.</p>
+
+      <li><p>The <code data-anolis-spec=html
+      title=attr-hyperlink-usemap>usemap</code> attribute on <code
+      data-anolis-spec=html>img</code> no longer takes a URL, but instead takes
+      a <span data-anolis-spec=html>valid hash-name reference</span> to a <code
+      data-anolis-spec=html>map</code> element.
+
+    </ul>
+
+    <p>The following attributes are allowed but authors are discouraged from
+    using them and instead strongly encouraged to use an alternative solution:</p>
+
+    <ul>
+     <li><p>The <code data-anolis-spec=html title=attr-img-border>border</code>
+     attribute on <code data-anolis-spec=html>img</code>. It is required to have
+     the value "<code>0</code>" when present. Authors can use CSS
+     instead.</p></li>
+
+     <li><p>The <code data-anolis-spec=html
+     title=attr-script-language>language</code> attribute on <code
+     data-anolis-spec=html>script</code>. It is required to have the value
+     "<code>JavaScript</code>" (case-insensitive) when present and cannot
+     conflict with the <code data-anolis-spec=html
+     title=attr-script-type>type</code> attribute. Authors can simply omit it as
+     it has no useful function.</p></li>
+
+     <li><p>The <code data-anolis-spec=html
+     title=attr-a-name>name</code> attribute on <code
+     data-anolis-spec=html>a</code>. Authors can use the <code
+     data-anolis-spec=html>id</code> attribute instead.</p></li>
+    </ul>
+
+
+    <h3 id="obsolete-elements">Obsolete Elements</h3>
+
+    <p>The elements in this section are not to be used by authors. User
+    agents will still have to support them and various sections in
+    HTML5 define how. E.g. the obsolete <code data-anolis-spec=html>isindex</code> element
+    is handled by the parser section.</p>
+
+    <p>The following elements are not in HTML5 because their effect is
+    purely presentational and their function is better handled by CSS:</p>
+
+    <ul>
+      <li><code data-anolis-spec=html>basefont</code>
+
+      <li><code data-anolis-spec=html>big</code>
+
+      <li><code data-anolis-spec=html>center</code>
+
+      <li><code data-anolis-spec=html>font</code>
+
+      <li><code data-anolis-spec=html>strike</code>
+
+      <li><code data-anolis-spec=html>tt</code>
+    </ul>
+
+    <p>The following elements are not in HTML5 because using them damages
+    usability and accessibility:</p>
+
+    <ul>
+      <li><code data-anolis-spec=html>frame</code>
+
+      <li><code data-anolis-spec=html>frameset</code>
+
+      <li><code data-anolis-spec=html>noframes</code>
+    </ul>
+
+    <p>The following elements are not included because they have not been
+    used often, created confusion, or their function can be handled by other
+    elements:</p>
+
+    <ul>
+      <li><code data-anolis-spec=html>acronym</code> is not included because it has created a lot
+      of confusion. Authors are to use <code data-anolis-spec=html>abbr</code> for
+      abbreviations.</li>
+
+      <li><code data-anolis-spec=html>applet</code> has been obsoleted in favor of
+      <code data-anolis-spec=html>object</code>.
+
+      <li><code data-anolis-spec=html>isindex</code> usage can be replaced by usage of form controls.
+
+      <li><code data-anolis-spec=html title=attr-dir>dir</code> has been obsoleted in favor of <code data-anolis-spec=html>ul</code>.
+    </ul>
+
+    <p>Finally the <code data-anolis-spec=html>noscript</code> element is only conforming in the
+    HTML syntax. It is not allowed in the XML syntax. This is because in order to not only hide visually but also prevent the content to run scripts, apply style sheets, have submittable form controls, load resources, and so forth, the HTML parser parses the content of the <code data-anolis-spec=html>noscript</code> element as plain text. The same is not possible with an XML parser.</p>
+
+
+    <h3 id="obsolete-attributes">Obsolete Attributes</h3>
+
+    <p>Some attributes from HTML4 are no longer allowed in HTML5. The
+    specification defines how user agents should process them in legacy
+    documents, but authors must not use them and they will not validate.</p>
+
+    <p>HTML5
+    <span data-anolis-spec=html title="non-conforming features">has advice</span>
+    on what you can use instead.</p>
+
+    <ul>
+      <li><code data-anolis-spec=html title=attr-a-rev>rev</code> and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
+      <code data-anolis-spec=html>link</code> and <code data-anolis-spec=html>a</code>.
+
+      <li><code data-anolis-spec=html title=attr-a-shape>shape</code> and <code data-anolis-spec=html title=attr-a-coords>coords</code> attributes on
+      <code data-anolis-spec=html>a</code>.
+
+      <li><code data-anolis-spec=html title=attr-iframe-longdesc>longdesc</code> attribute on <code data-anolis-spec=html>img</code> and
+      <code data-anolis-spec=html>iframe</code>.
+
+      <li><code data-anolis-spec=html title=attr-link-target>target</code> attribute on <code data-anolis-spec=html>link</code>.
+
+      <li><code data-anolis-spec=html title=attr-area-nohref>nohref</code> attribute on <code data-anolis-spec=html>area</code>.
+
+      <li><code data-anolis-spec=html title=attr-head-profile>profile</code> attribute on <code data-anolis-spec=html>head</code>.
+
+      <li><code data-anolis-spec=html title=attr-html-version>version</code> attribute on <code data-anolis-spec=html>html</code>.
+
+      <li><code data-anolis-spec=html title=attr-img-name>name</code> attribute on <code data-anolis-spec=html>img</code>
+      (use <code data-anolis-spec=html title=attr-id>id</code> instead).
+
+      <li><code data-anolis-spec=html title=attr-meta-scheme>scheme</code> attribute on <code data-anolis-spec=html>meta</code>.
+
+      <li><code data-anolis-spec=html title=attr-object-archive>archive</code>, <code data-anolis-spec=html title=attr-object-classid>classid</code>, <code data-anolis-spec=html title=attr-object-codebase>codebase</code>,
+      <code data-anolis-spec=html title=attr-object-codetype>codetype</code>, <code data-anolis-spec=html title=attr-object-declare>declare</code> and <code data-anolis-spec=html title=attr-object-standby>standby</code>
+      attributes on <code data-anolis-spec=html>object</code>.
+
+      <li><code data-anolis-spec=html title=attr-param-valuetype>valuetype</code> and <code data-anolis-spec=html title=attr-param-type>type</code> attributes on
+      <code data-anolis-spec=html>param</code>.
+
+      <li><code data-anolis-spec=html title=attr-tdth-axis>axis</code> and <code data-anolis-spec=html title=attr-tdth-abbr>abbr</code>
+      attributes on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
+
+      <li><code data-anolis-spec=html title=attr-td-scope>scope</code> attribute on <code data-anolis-spec=html>td</code>.
+
+      <li><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
+    </ul>
+
+    <p>In addition, HTML5 has none of the presentational attributes
+    that were in HTML4 as their functions are better handled by
+    CSS:</p>
+
+    <ul>
+      <li><code data-anolis-spec=html title=attr-caption-align>align</code> attribute on <code data-anolis-spec=html>caption</code>,
+      <code data-anolis-spec=html>iframe</code>, <code data-anolis-spec=html>img</code>, <code data-anolis-spec=html>input</code>,
+      <code data-anolis-spec=html>object</code>, <code data-anolis-spec=html>legend</code>, <code data-anolis-spec=html>table</code>,
+      <code data-anolis-spec=html>hr</code>, <code data-anolis-spec=html>div</code>, <code data-anolis-spec=html>h1</code>, <code data-anolis-spec=html>h2</code>,
+      <code data-anolis-spec=html>h3</code>, <code data-anolis-spec=html>h4</code>, <code data-anolis-spec=html>h5</code>, <code data-anolis-spec=html>h6</code>,
+      <code data-anolis-spec=html>p</code>, <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>,
+      <code data-anolis-spec=html>tbody</code>, <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>tfoot</code>,
+      <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code> and <code data-anolis-spec=html>tr</code>.
+
+      <li><code data-anolis-spec=html title=attr-body-alink>alink</code>, <code data-anolis-spec=html title=attr-body-link>link</code>, <code data-anolis-spec=html title=attr-body-text>text</code> and
+      <code data-anolis-spec=html title=attr-body-vlink>vlink</code> attributes on <code data-anolis-spec=html>body</code>.
+
+      <li><code data-anolis-spec=html title=attr-background>background</code> attribute on <code data-anolis-spec=html>body</code>.
+
+      <li><code data-anolis-spec=html title=attr-body-bgcolor>bgcolor</code> attribute on <code data-anolis-spec=html>table</code>, <code data-anolis-spec=html>tr</code>,
+      <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>th</code> and <code data-anolis-spec=html>body</code>.
+
+      <li><code data-anolis-spec=html title=attr-object-border>border</code> attribute on <code data-anolis-spec=html>object</code>.
+
+      <li><code data-anolis-spec=html title=attr-table-cellpadding>cellpadding</code> and <code data-anolis-spec=html title=attr-table-cellspacing>cellspacing</code> attributes on
+      <code data-anolis-spec=html>table</code>.
+
+      <li><code data-anolis-spec=html title=attr-col-char>char</code> and <code data-anolis-spec=html title=attr-col-charoff>charoff</code> attributes on
+      <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>, <code data-anolis-spec=html>tbody</code>,
+      <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code>
+      and <code data-anolis-spec=html>tr</code>.
+
+      <li><code data-anolis-spec=html title=attr-br-clear>clear</code> attribute on <code data-anolis-spec=html>br</code>.
+
+      <li><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>menu</code>,
+      <code data-anolis-spec=html>ol</code> and <code data-anolis-spec=html>ul</code>.
+
+      <li><code data-anolis-spec=html title=attr-table-frame>frame</code> attribute on <code data-anolis-spec=html>table</code>.
+
+      <li><code data-anolis-spec=html title=attr-iframe-frameborder>frameborder</code> attribute on <code data-anolis-spec=html title=attr-iframe-frameborder>iframe</code>.
+
+      <li><code data-anolis-spec=html title=attr-tdth-height>height</code> attribute on <code data-anolis-spec=html>td</code> and
+      <code data-anolis-spec=html>th</code>.
+
+      <li><code data-anolis-spec=html title=attr-img-hspace>hspace</code> and <code data-anolis-spec=html title=attr-img-vspace>vspace</code> attributes on
+      <code data-anolis-spec=html>img</code> and <code data-anolis-spec=html>object</code>.
+
+      <li><code data-anolis-spec=html title=attr-iframe-marginheight>marginheight</code> and <code data-anolis-spec=html title=attr-iframe-marginwidth>marginwidth</code> attributes on
+      <code data-anolis-spec=html>iframe</code>.
+
+      <li><code data-anolis-spec=html title=attr-hr-noshade>noshade</code> attribute on <code data-anolis-spec=html>hr</code>.
+
+      <li><code data-anolis-spec=html title=attr-tdth-nowrap>nowrap</code> attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
+
+      <li><code data-anolis-spec=html title=attr-table-rules>rules</code> attribute on <code data-anolis-spec=html>table</code>.
+
+      <li><code data-anolis-spec=html title=attr-iframe-scrolling>scrolling</code> attribute on <code data-anolis-spec=html>iframe</code>.
+
+      <li><code data-anolis-spec=html title=attr-hr-size>size</code> attribute on <code data-anolis-spec=html>hr</code>.
+
+      <li><code data-anolis-spec=html title=attr-li-type>type</code> attribute
+      on <code data-anolis-spec=html>li</code>,  and <code
+      data-anolis-spec=html>ul</code>.
+
+      <li><code data-anolis-spec=html title=attr-col-valign>valign</code> attribute on <code data-anolis-spec=html>col</code>,
+      <code data-anolis-spec=html>colgroup</code>, <code data-anolis-spec=html>tbody</code>, <code data-anolis-spec=html>td</code>,
+      <code data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code> and
+      <code data-anolis-spec=html>tr</code>.
+
+      <li><code data-anolis-spec=html title=attr-hr-width>width</code> attribute on <code data-anolis-spec=html>hr</code>, <code data-anolis-spec=html>table</code>,
+      <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>
+      and <code data-anolis-spec=html>pre</code>.
+    </ul>
+
+    <h2 id="content-model">Content Model</h2>
+
+    <p>Content model is what defines how elements may be nested &mdash; what is
+    allowed as children (or descendants) of a certain element.
+
+    <p>At a high level, HTML4 had two major categories of elements, "inline"
+    (e.g. <code data-anolis-spec=html>span</code>, <code
+    data-anolis-spec=html>img</code>, text), and "block-level" (e.g. <code
+    data-anolis-spec=html>div</code>, <code data-anolis-spec=html>hr</code>,
+    <code data-anolis-spec=html>table</code>). Some elements did not fit in
+    either category.
+
+    <p>Some elements allowed "inline" elements (e.g. <code
+    data-anolis-spec=html>p</code>), some allowed "block-level" elements (e.g.
+    <code data-anolis-spec=html>body</code>), some allowed both (e.g. <code
+    data-anolis-spec=html>div</code>), while other elements did not allow either
+    category but only allowed other specific elements (e.g. <code
+    data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>table</code>),
+    or did now allow any children at all (e.g. <code
+    data-anolis-spec=html>link</code>, <code data-anolis-spec=html>img</code>,
+    <code data-anolis-spec=html>hr</code>).
+
+    <p class=note>Notice the difference between an element itself being in a
+    certain category, and having a content model of a certain category. For
+    instance, the <code data-anolis-spec=html>p</code> element is itself a
+    "block-level" element, but has a content model of "inline".
+
+    <p>To make it more confusing, HTML4 had different content model rules in its
+    Strict, Transitional and Frameset flavors. For instance, in Strict, the
+    <code data-anolis-spec=html>body</code> element allowed only "block-level"
+    elements, but in Transitional, it allowed both "inline" and "block-level".
+
+    <p>To make things more confusing still, CSS uses the terms "block-level
+    element" and "inline-level element" for its visual formatting model, which
+    is related to CSS's 'display' property and has nothing to do with HTML's
+    content model rules.
+
+    <p>HTML5 does not use the terms "block-level" or "inline" as part of its
+    content model rules, to reduce confusion with CSS. However, it has more
+    <span data-anolis-spec=html title="content categories">categories</span>
+    than HTML4, and an element can be part of none of them, one of them, or
+    several of them.
+
+    <ul>
+      <li>Metadata content, e.g. <code data-anolis-spec=html>link</code>, <code
+      data-anolis-spec=html>script</code>.
+
+      <li>Flow content, e.g. <code data-anolis-spec=html>span</code>, <code
+      data-anolis-spec=html>div</code>, text. This is roughly like HTML4's
+      "block-level" and "inline" together.
+
+      <li>Sectioning content, e.g. <code data-anolis-spec=html>aside</code>,
+      <code data-anolis-spec=html>section</code>.
+
+      <li>Heading content, e.g. <code data-anolis-spec=html>h1</code>, <code
+      data-anolis-spec=html>hgroup</code>.
+
+      <li>Phrasing content, e.g. <code data-anolis-spec=html>span</code>, <code
+      data-anolis-spec=html>img</code>, text. This is roughly like HTML4's
+      "inline". Elements that are phrasing content are also flow content.
+
+      <li>Embedded content, e.g. <code data-anolis-spec=html>img</code>, <code
+      data-anolis-spec=html>iframe</code>, <code
+      data-anolis-spec=html>svg</code>.
+
+      <li>Interactive content, e.g. <code data-anolis-spec=html>a</code>, <code
+      data-anolis-spec=html>button</code>, <code
+      data-anolis-spec=html>label</code>. Interactive content is not allowed to
+      be nested.
+    </ul>
+
+    <p>As broad changes from HTML4, HTML5 no longer has any element that only
+    accepts what HTML4 called "block-level" elements; e.g. the <code
+    data-anolis-spec=html>body</code> element now allows flow content. This is
+    thus closer to HTML4 Transitional than HTML4 Strict.
+
+    <p>Further changes include:
+
+    <ul>
+
+      <li><p>The <code data-anolis-spec=html>address</code> element now allows
+      flow content, but with no heading content descendants, no sectioning
+      content descendants, and no <code data-anolis-spec=html>header</code>,
+      <code data-anolis-spec=html>footer</code>, or <code
+      data-anolis-spec=html>address</code> element descendants.
+
+      <li><p>HTML4 allowed <code data-anolis-spec=html>object</code> in <code
+      data-anolis-spec=html>head</code>. HTML5 does not.
+
+      <li><p>WHATWG HTML allows <code data-anolis-spec=html>link</code> and
+      <code data-anolis-spec=html>meta</code> as descendants of <code
+      data-anolis-spec=html>body</code> if they use microdata attributes.
+
+      <li><p>The <code data-anolis-spec=html>noscript</code> element was a
+      "block-level" element in HTML4, but is phrasing content in HTML5.
+
+      <li><p>The <code data-anolis-spec=html>table</code>, <code
+      data-anolis-spec=html>thead</code>, <code
+      data-anolis-spec=html>tbody</code>, <code
+      data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>tr</code>,
+      <code data-anolis-spec=html>ol</code>, <code
+      data-anolis-spec=html>ul</code> and <code data-anolis-spec=html>dl</code> elements are
+      allowed to be empty in HTML5.
+
+      <li><p>Table elements have to conform to the <span
+      data-anolis-spec=html>table model</span> (e.g. two cells are not allowed
+      to overlap).
+
+      <li><p>The <code data-anolis-spec=html>table</code> element now does not
+      allow <code data-anolis-spec=html>col</code> elements as direct children.
+      However, the HTML parser implies a <code
+      data-anolis-spec=html>colgroup</code> element, so this change should not
+      affect <code>text/html</code> content.
+
+      <li><p>The <code data-anolis-spec=html>table</code> element now allows the
+      <code data-anolis-spec=html>tfoot</code> element to be the last child.
+
+      <li><p>The <code data-anolis-spec=html>caption</code> element now allows
+      flow content, but with no descendant <code
+      data-anolis-spec=html>table</code> elements.
+
+      <li><p>The <code data-anolis-spec=html>th</code> element now allows flow
+      content, but with no <code data-anolis-spec=html>header</code>, <code
+      data-anolis-spec=html>footer</code>, sectioning content, or heading
+      content descendants.
+
+      <li><p>The <code data-anolis-spec=html>a</code> element now has a <span
+      data-anolis-spec=html>transparent</span> content model (except it does not
+      allow interactive content descendants), meaning that it has the same
+      content model as its parent. This means that the <code
+      data-anolis-spec=html>a</code> element can now contain e.g. <code
+      data-anolis-spec=html>div</code> elements, if its parent allows flow
+      content.
+
+      <li><p>The <code data-anolis-spec=html>ins</code> and <code
+      data-anolis-spec=html>del</code> elements also have a transparent content
+      model. HTML4 had similar rules in prose that could not be expressed in the
+      DTD.
+
+      <li><p>The <code data-anolis-spec=html>object</code> element also has a
+      transparent content model, after its <code
+      data-anolis-spec=html>param</code> children.
+
+      <li><p>The <code data-anolis-spec=html>map</code> element also has a
+      transparent content model. The <code data-anolis-spec=html>area</code>
+      element is considered phrasing content if there is a <code
+      data-anolis-spec=html>map</code> element ancestor, which means that they
+      do not need to be direct children of <code
+      data-anolis-spec=html>map</code>.
+
+      <li><p>The <code data-anolis-spec=html>fieldset</code> element no longer
+      requires a <code data-anolis-spec=html>legend</code> child.
+
+    </ul>
+
+
+    <h2 id="apis">APIs</h2>
+
+    <p>HTML5 has introduced many new APIs and have extended, changed or
+    obsoleted some existing APIs.
+
+
+    <h3 id="new-apis">New APIs</h3>
+
+    <p>HTML5 introduces a number of APIs that help in creating Web
+    applications. These can be used together with the new elements introduced
+    for applications:</p>
+
+    <ul>
+      <li><p>Media elements (<code data-anolis-spec=html>video</code> and <code
+      data-anolis-spec=html>audio</code>) have APIs for controlling playback,
+      syncronising multiple media elements, and timed text tracks (e.g.
+      subtitles).
+
+      <li><p>An API for form constraint validation (e.g. the <code
+      data-anolis-spec=html
+      title=dom-cva-setcustomvalidity>setCustomValidity()</code> method).
+
+      <li><p>An API for <span data-anolis-spec=html
+      title=concept-command>commands</span> that the user can invoke (used
+      together with the <code data-anolis-spec=html>command</code> element among
+      others).
+
+      <li><p>An API that enables offline Web applications, with an <span
+      data-anolis-spec=html>application cache</span>.</li>
+
+      <li><p>An API that allows a Web application to register itself for certain
+      protocols or media types, using <code data-anolis-spec=html
+      title=dom-navigator-registerProtocolHandler>registerProtocolHandler()</code>
+      and <code data-anolis-spec=html
+      title=dom-navigator-registerContentHandler>registerContentHandler()</code>
+      .</li>
+
+      <li><p>Editing API in combination with a new global <code
+      data-anolis-spec=html title=attr-contenteditable>contenteditable</code>
+      attribute.</li>
+
+      <li><p>Drag &amp; drop API in combination with a <code
+      data-anolis-spec=html title=attr-draggable>draggable</code>
+      attribute.</li>
+
+      <li><p>An API that exposes the components of the document's URL and allows
+      scripts to navigate, redirect and reload (the <code
+      data-anolis-spec=html>Location</code> interface).
+
+      <li><p>An API that exposes the session history and allows scripts to
+      update the document's URL without actually navigating, so that
+      applications don't need to abuse the fragment component for "Ajax-style"
+      navigation (the <code data-anolis-spec=html>History</code> interface).
+
+      <li><p>An API for base64 conversion (<code data-anolis-spec=html
+      title=dom-windowbase64-atob>atob()</code> and <code data-anolis-spec=html
+      title=dom-windowbase64-btoa>btoa()</code> methods).
+
+      <li><p>An API to schedule timer-based callbacks (<code
+      data-anolis-spec=html
+      title=dom-windowtimers-settimeout>setTimeout()</code> and <code
+      data-anolis-spec=html
+      title=dom-windowtimers-setinterval>setInterval()</code>).
+
+      <li><p>An API to prompt the user (<code data-anolis-spec=html
+      title=dom-alert>alert()</code>, <code data-anolis-spec=html
+      title=dom-confirm>confirm()</code>, <code data-anolis-spec=html
+      title=dom-prompt>prompt()</code>, <code data-anolis-spec=html
+      title=dom-showmodaldialog>showModalDialog()</code>).
+
+      <li><p>An API for printing the document (<code data-anolis-spec=html
+      title=dom-print>print()</code>).
+
+      <li><p>An API for handling search providers (<code data-anolis-spec=html
+      title=dom-external-addsearchprovider>AddSearchProvider()</code> and <code
+      data-anolis-spec=html
+      title=dom-external-issearchproviderinstalled>IsSearchProviderInstalled()</code>).
+      
+      <li><p>The <code data-anolis-spec=html>Window</code> object has been defined.
+    </ul>
+
+    <p>WHATWG HTML has further APIs that are not in HTML5 but are separate specifications at the W3C:
+
+    <ul>
+      <li><p>An API for microdata.
+
+      <li><p>An API for immediate-mode bitmap graphics (the <code
+      data-anolis-spec=html title=canvas-context-2d>2d</code> context for the
+      <code data-anolis-spec=html>canvas</code> element).
+
+      <li><p>An API for cross-document messaging and channel messaging (<code
+      data-anolis-spec=html title=dom-window-postMessage>postMessage()</code>
+      and <code data-anolis-spec=html>MessageChannel</code>).
+
+      <li><p>An API for runnings scripts in the background (<code
+      data-anolis-spec=html>Worker</code> and <code
+      data-anolis-spec=html>SharedWorker</code>).
+
+      <li><p>An API for client-side storage (<code data-anolis-spec=html
+      title=dom-localStorage>localStorage</code> and <code data-anolis-spec=html
+      title=dom-sessionStorage>sessionStorage</code>).
+
+      <li><p>An API for bidirectional client-server communication (<code
+      data-anolis-spec=html>WebSocket</code>).
+
+      <li><p>An API for server-to-client data push (<code data-anolis-spec=html>EventSource</code>).
+    </ul>
+
+
+    <h3 id="changed-apis">Changed APIs</h3>
+
+    <p>The following features from DOM Level 2 HTML are changed in various ways:
+
+    <ul>
+      <li><p><code data-anolis-spec=html
+      title=dom-document-title>document.title</code> now collapses whitespace on
+      getting.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-domain>document.domain</code> is made settable, which
+      can change the document's effective script origin.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-open>document.open()</code> now either clears the
+      document (if invoked with two or less arguments), or acts like <code
+      data-anolis-spec=html title=dom-open>window.open()</code> (if invoked with
+      three or four arguments). In the former case, throws an exception in XML.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-close>document.close()</code>, <code
+      data-anolis-spec=html title=dom-document-close>document.write()</code> and
+      <code data-anolis-spec=html
+      title=dom-document-close>document.writeln()</code> throw an exception in
+      XML. The latter two now support variadic arguments; they can add text to
+      the document's input stream while it is still being parsed, or can imply a
+      call to <code data-anolis-spec=html
+      title=dom-document-open>document.open()</code> or be ignored altogether in
+      some cases.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-getElementsByName>document.getElementsByName()</code>
+      now returns all HTML elements with a <code>name</code> attribute matching
+      the argument.
+
+      <li><p><code data-anolis-spec=html title=dom-form-elements>elements</code>
+      on <code data-anolis-spec=html>HTMLFormElement</code> now returns an
+      <code data-anolis-spec=html>HTMLFormControlsCollection</code> of <code
+      data-anolis-spec=html>button</code>, <code
+      data-anolis-spec=html>fieldset</code>, <code
+      data-anolis-spec=html>input</code>, <code
+      data-anolis-spec=html>keygen</code>, <code
+      data-anolis-spec=html>object</code>, <code
+      data-anolis-spec=html>output</code>, <code
+      data-anolis-spec=html>select</code> and <code
+      data-anolis-spec=html>textarea</code> elements. <code
+      data-anolis-spec=html title=dom-form-length>length</code> returns the
+      number of nodes in <code data-anolis-spec=html
+      title=dom-form-elements>elements</code>.
+
+      <li><p><code data-anolis-spec=html title=dom-select-add>add()</code> on
+      <code data-anolis-spec=html>HTMLSelectElement</code> now also accepts an
+      integer as its second argument.
+
+      <li><p><code data-anolis-spec=html title=dom-select-remove>remove()</code>
+      on <code data-anolis-spec=html>HTMLSelectElement</code> now removes the
+      first element in the collection if the argument is out of bounds.
+
+      <li><p><code data-anolis-spec=html>a</code> and <code
+      data-anolis-spec=html>area</code> elements now stringify to their <code
+      data-anolis-spec=html title=attr-hyperlink-href>href</code> attribute.
+
+      <li><p>The <code data-anolis-spec=html title=dom-click>click()</code>,
+      <code data-anolis-spec=html title=dom-focus>focus()</code> and <code
+      data-anolis-spec=html title=dom-blur>blur()</code> methods are now
+      available on all HTML elements.
+
+    </ul>
+
+    <h3 id="document-extensions">Extensions to
+    <code>Document</code></h3>
+
+    <p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
+    inherited from <code>Document</code> and provided HTML-specific members on
+    documents. HTML5 has moved these members to the <code
+    data-anolis-spec=html>Document</code> interface, and extended it in a number
+    of ways. Since all documents use the <code data-anolis-spec=html>Document</code> interface, the
+    HTML-specific members are now available on all documents, so they are usable
+    in e.g. SVG documents as well. It also has several new members:</p>
+
+    <ul>
+      <li><p><code data-anolis-spec=html
+      title=dom-document-location>location</code>, <code data-anolis-spec=html
+      title=dom-document-lastModified>lastModified</code> and <code
+      data-anolis-spec=html title=dom-document-readyState>readyState</code> to
+      help resource metadata management.
+
+      <li><p><code data-anolis-spec=html title=dom-document-dir>dir</code>,
+      <code data-anolis-spec=html title=dom-document-head>head</code>, <code
+      data-anolis-spec=html title=dom-document-embeds>embeds</code>, <code
+      data-anolis-spec=html title=dom-document-plugins>plugins</code>, <code
+      data-anolis-spec=html title=dom-document-scripts>scripts</code>, <code
+      data-anolis-spec=html title=dom-document-commands>commands</code>, and a
+      generic name getter, to access various parts of the DOM tree. WHATWG HTML
+      also has <code data-anolis-spec=html
+      title=dom-document-getItems>getItems()</code> for microdata and <code
+      data-anolis-spec=html
+      title=dom-document-cssElementMap>cssElementMap</code> to accompany the CSS
+      <code>element()</code> feature.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-activeElement>activeElement</code> and <code
+      data-anolis-spec=html title=dom-document-hasFocus>hasFocus</code> to
+      determine which element is currently focused and whether the <code
+      data-anolis-spec=html>Document</code> has focus respectively.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-document-designMode>designMode</code>, <code
+      data-anolis-spec=html title=dom-document-execCommand>execCommand()</code>,
+      <code data-anolis-spec=html
+      title=dom-document-queryCommandEnabled>queryCommandEnabled()</code>, <code
+      data-anolis-spec=html
+      title=dom-document-queryCommandIndeterm>queryCommandIndeterm()</code>,
+      <code data-anolis-spec=html
+      title=dom-document-queryCommandState>queryCommandState()</code>, <code
+      data-anolis-spec=html
+      title=dom-document-queryCommandSupported>queryCommandSupported()</code>, <code
+      data-anolis-spec=html
+      title=dom-document-queryCommandValue>queryCommandValue()</code> for the
+      editing API.
+
+      <li><p>All event handler IDL attributes. Also, <code data-anolis-spec=html
+      title=handler-onreadystatechange>onreadystatechange</code> is a
+      special event handler IDL attribute that is only available on
+      <code data-anolis-spec=html>Document</code>.
+    </ul>
+
+    <p>Existing scripts that modified the prototype of <code>HTMLDocument</code>
+    should continue to work because <code>window.HTMLDocument</code> now returns
+    the <code data-anolis-spec=html>Document</code> interface object.
+
+
+    <h3 id="htmlelement-extensions">Extensions to <code>HTMLElement</code></h3>
+
+    <p>The <code data-anolis-spec=html>HTMLElement</code> interface has also gained several extensions
+    in HTML5:</p>
+
+    <ul>
+      <li><p><code data-anolis-spec=html title=dom-translate>translate</code>,
+      <code data-anolis-spec=html title=dom-hidden>hidden</code>, <code
+      data-anolis-spec=html title=dom-tabIndex>tabIndex</code>, <code
+      data-anolis-spec=html title=dom-accessKey>accessKey</code>, <code
+      data-anolis-spec=html title=dom-draggable>draggable</code>, <code
+      data-anolis-spec=html title=dom-dropzone>dropzone</code>, <code
+      data-anolis-spec=html title=dom-contentEditable>contentEditable</code>,
+      <code data-anolis-spec=html title=dom-contextMenu>contextMenu</code>,
+      <code data-anolis-spec=html title=dom-spellcheck>spellcheck</code> and
+      <code data-anolis-spec=html title=dom-style>style</code> reflect content
+      attributes.
+
+      <li><p><code data-anolis-spec=html title=dom-classList>classList</code> is
+      a convenient accessor for <code data-anolis-spec=html
+      title=dom-className>className</code>. The object it returns, exposes
+      methods (<code>contains()</code>, <code>add()</code>,
+      <code>remove()</code>, and <code>toggle()</code>) for manipulating the
+      element's classes.
+
+      <li><p><code data-anolis-spec=html title=dom-dataset>dataset</code> is a
+      convenience feature for handling the <code data-anolis-spec=html
+      title="attr-data-*">data-*</code> attributes, which are exposed as
+      camel-cased properties. For instance, <code><var>elm</var>.dataset.fooBar
+      = 'test'</code> sets the <code>data-foo-bar</code> content attribute on
+      <code><var>elm</var></code>.
+
+      <li><p>WHATWG HTML has <code data-anolis-spec=html
+      title=dom-itemScope>itemScope</code>, <code data-anolis-spec=html
+      title=dom-itemType>itemType</code>, <code data-anolis-spec=html
+      title=dom-itemId>itemId</code>, <code data-anolis-spec=html
+      title=dom-itemRef>itemRef</code>, <code data-anolis-spec=html
+      title=dom-itemProp>itemProp</code>, <code data-anolis-spec=html
+      title=dom-properties>properties</code> and <code data-anolis-spec=html
+      title=dom-itemValue>itemValue</code> for microdata.
+
+      <li><p><code data-anolis-spec=html title=dom-click>click()</code>, <code
+      data-anolis-spec=html title=dom-focus>focus()</code> and <code
+      data-anolis-spec=html title=dom-blur>blur()</code> allows scripts to
+      simulate clicks and moving focus.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-accessKeyLabel>accessKeyLabel</code> gives the shortcut key that
+      the user agent has assigned for the element, which the author can
+      influence with the <code data-anolis-spec=html
+      title=attr-accesskey>accesskey</code> attribute.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-isContentEditable>isContentEditable</code> returns true if the
+      element is editable.
+
+      <li><p><code data-anolis-spec=html
+      title=dom-command-ro-commandType>commandType</code>, <code data-anolis-spec=html
+      title=dom-command-ro-commandLabel>commandLabel</code>, <code data-anolis-spec=html
+      title=dom-command-ro-commandIcon>commandIcon</code>, <code data-anolis-spec=html
+      title=dom-command-ro-commandHidden>commandHidden</code>, <code data-anolis-spec=html
+      title=dom-command-ro-commandDisabled>commandDisabled</code> and <code
+      data-anolis-spec=html title=dom-command-ro-commandChecked>commandChecked</code> is
+      part of the command API.
+
+      <li><p>All event handler IDL attributes.
+    </ul>
+
+
+    <h3 id="other-extensions">Extensions to Other Interfaces</h3>
+
+    <p>Some interfaces in DOM Level 2 HTML have been extended.</p>
+
+    <ul>
+      <li><p><code data-anolis-spec=html>HTMLOptionsCollection</code> now has a
+      legacy caller, setter creator, and the members <code data-anolis-spec=html
+      title=dom-HTMLOptionsCollection-add>add()</code>, <code
+      data-anolis-spec=html
+      title=dom-HTMLOptionsCollection-remove>remove()</code> and <code
+      data-anolis-spec=html
+      title=dom-HTMLOptionsCollection-selectedIndex>selectedIndex</code>
+
+      <li><p><code data-anolis-spec=html>HTMLLinkElement</code> and <code
+      data-anolis-spec=html>HTMLStyleElement</code> now implement the
+      <code>LinkStyle</code> interface from CSSOM. <span
+      data-anolis-ref>CSSOM</span>
+
+      <li><p><code data-anolis-spec=html>HTMLFormElement</code> now has a named
+      getter and an indexed getter.
+
+      <li><p><code data-anolis-spec=html>HTMLSelectElement</code> now has a
+      getter, <code data-anolis-spec=html title=dom-select-item>item()</code>
+      and <code data-anolis-spec=html
+      title=dom-select-namedItem>namedItem()</code> methods, a setter creator,
+      <code data-anolis-spec=html
+      title=dom-select-selectedOptions>selectedOptions</code> and <code
+      data-anolis-spec=html title=dom-lfe-labels>labels</code> IDL attributes,
+      and members for the form constrain validation API: <code
+      data-anolis-spec=html title=dom-cva-willvalidate>willValidate</code>,
+      <code data-anolis-spec=html title=dom-cva-validity>validity</code>, <code
+      data-anolis-spec=html
+      title=dom-cva-validationMessage>validationMessage</code>, <code
+      data-anolis-spec=html title=dom-form-checkvalidity>checkValidity()</code>
+      and <code data-anolis-spec=html
+      title=dom-cva-setCustomValidity>setCustomValidity()</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLOptionElement</code> now has a
+      constructor <code data-anolis-spec=html title=dom-option>Option</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLInputElement</code> now has the
+      members <code data-anolis-spec=html title=dom-input-files>files</code>,
+      <code data-anolis-spec=html title=dom-input-height>height</code>, <code
+      data-anolis-spec=html title=dom-input-indeterminate>indeterminate</code>,
+      <code data-anolis-spec=html title=dom-input-list>list</code>, <code
+      data-anolis-spec=html title=dom-input-valueAsDate>valueAsDate</code>,
+      <code data-anolis-spec=html
+      title=dom-input-valueAsNumber>valueAsNumber</code>, <code
+      data-anolis-spec=html title=dom-input-width>width</code>, <code
+      data-anolis-spec=html title=dom-input-stepUp>stepUp()</code>, <code
+      data-anolis-spec=html title=dom-input-stepDown>stepDown()</code>, the form
+      constraint validation API members, <code data-anolis-spec=html
+      title=dom-lfe-labels>labels</code>, members for the text field selection
+      API: <code data-anolis-spec=html
+      title="dom-textarea/input-selectionStart">selectionStart</code>, <code
+      data-anolis-spec=html
+      title="dom-textarea/input-selectionEnd">selectionEnd</code>, <code
+      data-anolis-spec=html
+      title="dom-textarea/input-selectionDirection">selectionDirection</code>,
+      <code data-anolis-spec=html
+      title="dom-textarea/input-setSelectionRange">setSelectionRange()</code>
+      and <code data-anolis-spec=html
+      title="dom-textarea/input-setRangeText">setRangeText()</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLTextAreaElement</code> now has the
+      members <code data-anolis-spec=html
+      title=dom-textarea-textLength>textLength</code>, the form constraint
+      validation API members, <code data-anolis-spec=html
+      title=dom-lfe-labels>labels</code> and the text field selection API
+      members.
+
+      <li><p><code data-anolis-spec=html>HTMLButtonElement</code> now has the
+      form constraint validation API members and <code data-anolis-spec=html
+      title=dom-lfe-labels>labels</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLLabelElement</code> now has the
+      member <code data-anolis-spec=html title=dom-label-control>control</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLFieldSetElement</code> now has the
+      members <code data-anolis-spec=html title=dom-fieldset-type>type</code>,
+      <code data-anolis-spec=html title=dom-fieldset-elements>elements</code>
+      and the form constraint validation API members.
+
+      <li><p><code data-anolis-spec=html>HTMLAnchorElement</code> now has the
+      members <code data-anolis-spec=html title=dom-a-relList>relList</code>,
+      <code data-anolis-spec=html title=dom-a-text>text</code>, the URL
+      decomposition IDL attributes: <code data-anolis-spec=html
+      title=dom-a-protocol>protocol</code>, <code data-anolis-spec=html
+      title=dom-a-host>host</code>, <code data-anolis-spec=html
+      title=dom-a-hostname>hostname</code>, <code data-anolis-spec=html
+      title=dom-a-port>port</code>, <code data-anolis-spec=html
+      title=dom-a-pathname>pathname</code>, <code data-anolis-spec=html
+      title=dom-a-search>search</code> and <code data-anolis-spec=html
+      title=dom-a-hash>hash</code>. <code
+      data-anolis-spec=html>HTMLLinkElement</code> and <code
+      data-anolis-spec=html>HTMLAreaElement</code> also have the <code
+      data-anolis-spec=html title=dom-link-relList>relList</code> IDL attribute.
+      <code data-anolis-spec=html>HTMLAreaElement</code> also has the URL
+      decomposition IDL attributes.
+
+      <li><p><code data-anolis-spec=html>HTMLImageElement</code> now has a
+      constructor <code data-anolis-spec=html title=dom-Image>Image</code>, the
+      members <code data-anolis-spec=html
+      title=dom-img-naturalWidth>naturalWidth</code>, <code
+      data-anolis-spec=html title=dom-img-naturalHeight>naturalHeight</code> and
+      <code data-anolis-spec=html title=dom-img-complete>complete</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLObjectElement</code> now has the
+      members <code data-anolis-spec=html
+      title=dom-object-contentWindow>contentWindow</code>, the form constraint
+      validation API members and a legacy caller.
+
+      <li><p><code data-anolis-spec=html>HTMLMapElement</code> now has the
+      member <code data-anolis-spec=html title=dom-map-images>images</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLTableElement</code> now has the
+      member <code data-anolis-spec=html
+      title=dom-table-createTBody>createTBody()</code>.
+
+      <li><p><code data-anolis-spec=html>HTMLIFrameElement</code> now has the
+      member <code data-anolis-spec=html
+      title=dom-iframe-contentWindow>contentWindow</code>.
+
+    </ul>
+
+    <p>In addition, most new content attributes also have corresponding IDL
+    attributes on the elements' interfaces, e.g. the <code data-anolis-spec=html
+    title=dom-link-sizes>sizes</code> IDL attribute on <code
+    data-anolis-spec=html>HTMLLinkElement</code> which reflects the <code
+    data-anolis-spec=html title=attr-link-sizes>sizes</code> content attribute.
+
+
+    <h3 id="obsolete-apis">Obsolete APIs</h3>
+
+    <p>Some APIs are now either removed altogether, or marked as obsolete.
+
+    <p>All IDL attributes that reflect a content attribute that is itself
+    obsolete, are now also obsolete. For instance, the <code
+    data-anolis-spec=html title=dom-body-bgColor>bgColor</code> IDL attribute on
+    <code data-anolis-spec=html>HTMLBodyElement</code> which reflects the
+    obsolete <code data-anolis-spec=html title=attr-body-bgcolor>bgcolor</code>
+    content attribute.
+
+    <p>The following interfaces are marked obsolete since the elements are
+    obsolete: <code data-anolis-spec=html>HTMLAppletElement</code>, <code
+    data-anolis-spec=html>HTMLFrameSetElement</code>, <code
+    data-anolis-spec=html>HTMLFrameElement</code>, <code
+    data-anolis-spec=html>HTMLBaseFontElement</code>, <code
+    data-anolis-spec=html>HTMLDirectoryElement</code> and <code
+    data-anolis-spec=html>HTMLFontElement</code>.
+
+    <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
+    the HTML parser expands an <code>isindex</code> tag into other elements.
+
+    <p>The following members of the <code>HTMLDocument</code> interface (which
+    have now moved to <code data-anolis-spec=html>Document</code>) are now
+    obsolete: <code data-anolis-spec=html
+    title=dom-document-anchors>anchors</code> and <code data-anolis-spec=html
+    title=dom-document-applets>applets</code>.
+
+
+    <h2 id="changelog">HTML5 Changelogs</h2>
+
+    <p>The changelogs in this section indicate what has been changed between
+    publications of the HTML5 drafts, as well as changes in WHATWG HTML that do
+    not affect HTML5. Rationale for changes can be found in the <a
+    href="http://lists.w3.org/Archives/Public/public-html/">public-html@w3.org</a> and <a
+    href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg@whatwg.
+    org</a> mailing list archives, and the <a
+    href="http://blog.whatwg.org/category/weekly-review">WHATWG Weekly</a>
+    series of blog posts. More fundamental rationale is being collected on the
+    WHATWG <a href="http://wiki.whatwg.org/wiki/Rationale">Rationale</a> wiki
+    page. Many editorial and minor technical changes are not included in these
+    changelogs. Implementors are strongly encouraged to follow the development
+    of the main specification on a frequent basis so they become aware of all
+    changes that affect them early on.</p>
+
+    <p>The changes in the changelogs are in rough chronological order.</p>
+    
+    <h3 id="changes-2012-03-29">Changes since 29 March 2012</h3><!-- rev 7028 - 7347 -->
+    
+    <ul>
+     <li>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
+     <li>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.
+     <li>The placeholder section for the <code>find()</code> API has been dropped.
+     <li>An encoding declaration is now required in the HTML syntax even if only ASCII characters are used.
+     <li>Some bug fixes in the Drag and Drop API.
+     <li>The <code>inBandMetadataTrackDispatchType</code> IDL attribute was added to <code>TextTrack</code>.
+     <li>The <code>TextTrackCue()</code> constructor now has fewer arguments.
+     <li>The <code>accept</code> attribute now supports file extensions as well as MIME types.
+     <li>The <code>initialTime</code> IDL attribute on media elements has been dropped.
+     <li>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
+    </ul>
+    
+    <p>Further changes to WHATWG HTML that do not affect HTML5:</p>
+
+    <ul>
+     <li>Several changes and bug fixes in the Text Track API.
+     <li><code>addElement()</code> was dropped from the Drag and Drop API.
+     <li>Media queries are now proxied for <code>iframe</code> elements with the <code>seamless</code> attribute.
+     <li>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now apply to <code>input</code> elements in the Hidden state.
+     <li>The <code>ssh</code>, <code>sip</code> and <code>magnet</code> schemes are now in the <code>registerProtocolHandler()</code> whitelist.
+     <li><code>table</code> elements now have 'box-sizing:border-box' by default.
+     <li>Bug fixes in the "potentially CORS-enabled fetch" algorithm.
+     <li>The document outline algorithm now ignores elements with the <code>hidden</code> attribute.
+     <li>Markup generators that are unable to provide required <code>alt</code> text can now use a specific attribute on <code>img</code> that makes validators ignore the missing <code>alt</code> error.
+     <li>Workers and shared workers now support <code>data:</code> URLs.
+     <li>The <code>inputmode</code> attribute has been added to <code>input</code> and <code>textarea</code>.
+     <li>The <code>autocomplete</code> attribute has been extended to support prefilling specific things.
+     <li>WebSocket supports sending <code>ArrayBufferView</code> as well as <code>ArrayBuffer</code>.
+     <li>The <code>border</code> attribute on <code>table</code> is non-conforming again.
+     <li>The canvas ImageData methods now assume 96dpi, and a set of "HD" methods have been introduced.
+     <li>The shared worker <code>connect</code> event now also exposes the source port in the <code>source</code> IDL attribute.
+     <li>Lone surrogates are converted to U+FFFD instead of throwing in WebSocket <code>send()</code>.
+     <li>The <code>setRangeText()</code> method has been added to <code>input</code> and <code>textarea</code>.
+     <li>The <code>srcset</code> attribute has been added to <code>img</code>.
+     <li>Application cache now has an <code>prefer-online</code> mode.
+     <li>Dialogs are now supported with the <code>dialog</code> element, the <code>inert</code> global attribute and the <code>dialog</code> method on <code>form</code>.
+     <li>The <code>resetTransform()</code> method, <code>currentTransform</code> IDL attribute, several IDL attributes for font metrics, <code>resetClip()</code> method, <code>imageSmoothingEnabled</code> IDL attribute, <code>addHitRegion()</code> method, <code>removeHitRegion()</code> method, support for dashed lines, have been added to the canvas 2d context.
+    </ul>
+
+    <h3 id="changes-2011-05-25">Changes from 25 May 2011 to 29 March 2012</h3> <!-- rev 6140 - 7027 -->
+
+    <ul>
+     <li>Support for mutation observers was added.
+     <li>The <code>TextTrackCue</code> members <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> and <code>direction</code> were renamed to <code>align</code>, <code>line</code>, <code>position</code> and <code>vertical</code>, respectively.
+     <li>The <code>command</code> element now has a <code>command</code> attribute.
+     <li>Drag and drop content is now suggested to be filtered by user agents to prevent XSS attacks.
+     <li>The <code>translate</code> global attribute was added.
+     <li>The <code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods are now allowed to do nothing during <code>pagehide</code>, <code>beforeunload</code> and <code>unload</code> events.
+     <li>The <code>script</code> element now supports <code>beforescriptexecute</code> and <code>afterscriptexecute</code> events.
+     <li><code>window.onerror</code> now supports a fourth argument for column position.
+     <li>The <code>window.opener</code> IDL attribute can now return null in some cases.
+     <li>The <code>clearTimeout()</code> and <code>clearInterval()</code> methods were made synonymous.
+     <li>The CSS <code>@global</code> at-rule was introduced, for use together with <code>style</code> elements with the <code>scoped</code> attribute.
+     <li>The <code>embed</code> and <code>object</code> elements now have a legacy caller.
+     <li>The handling of <code>window.onerror</code>'s return value was changed to match reality.
+     <li>The <code>setTimeout()</code> API is now allowed to be throttled in background tabs.
+     <li>The <code>:valid</code> and <code>:invalid</code> pseudo-classes now apply to <code>form</code> elements.
+     <li>The <code>toBlob()</code> method on <code>canvas</code> now honors the origin-clean flag.
+     <li>The <code>activeElement</code> IDL attribute now points to the relevant browsing context container (e.g. <code>iframe</code>) when a child document has focus.
+     <li>The <code>atob()</code> method now ignores whitespace.
+     <li>The <code>dropzone</code> attribute was changed to use "<code>string:</code>" and "<code>file:</code>" instead of "<code>s:</code>" and "<code>f:</code>".
+     <li>The HTML parser was fixed to correctly handle a case involving foreign lands and foster parenting.
+     <li>The date-and-time microsyntaxes now allows a single space instead of a "T".
+     <li>Application cache no longer checks the MIME type of the cache manifest.
+     <li>The <code>cueAsSource</code> IDL attribute on <code>TextTrackCue</code> got renamed to <code>text</code>.
+     <li>The <code>window.onerror</code> API is now invoked with dummy arguments for cross-origin scripts.
+     <li>The <code>textarea</code> element's <code>value</code> and <code>textLength</code> IDL attributes have their newlines normalized to LF.
+     <li>The <code>q</code> element now has language-specific quotes rendered by default.
+     <li>The <code>data</code> element was introduced.
+     <li>The <code>time</code> element was redesigned to make it match how people wanted to use it. Its <code>pubdate</code> attribute was dropped.
+     <li>The legacy caller on <code>form</code> was removed.
+     <li>The <code>location.resolveURL()</code> method was removed.
+     <li>The <code>track</code> element now sniffs instead of obeying the MIME type.
+     <li>The <code>load()</code> method on documents created by <code>createDocument()</code> is now defined on the <code>XMLDocument</code> interface.
+     <li>Members of <code>HTMLDocument</code> moved to <code>Document</code> and <code>window.HTMLDocument</code> now just returns <code>window.Document</code>.
+     <li>The <code>MutableTextTrack</code> and <code>TextTrack</code> interfaces were merged and <code>TextTrackCue</code> was made more mutable.
+     <li>The <code>selectedOption</code> IDL attribute on <code>input</code> was dropped.
+     <li>Attribute values in Selectors are now case sensitive for all attributes.
+     <li>The <code>readyState</code> IDL attribute moved from <code>TextTrack</code> to <code>HTMLTrackElement</code>.
+     <li>The <code>text/html-sandboxed</code> MIME type was dropped.
+     <li>Floating point numbers are now allowed to begin with a "<code>.</code>" character.
+     <li>Navigating to an audio or video resource is now supported.
+     <li>Table cells now allow flow content but does not allow <code>header</code>, <code>footer</code>, sectioning content or heading content descendants.
+     <li>Adding a track to a media element now fires an <code>addtrack</code> event on the relevant track list objects.
+     <li>Setting <code>currentTime</code> on media elements before the media has loaded now defers the seek instead of throwing.
+     <li>Plugins are no longer disabled in sandboxed <code>iframe</code>s if they honor the <code>sandbox</code> attribute.
+     <li>Some tweaks to history navigation and related events.
+     <li>Media elements and <code>MediaController</code>s now get paused when they end.
+     <li>Events now support constructors and some <code>init*Event()</code> methods were removed.
+     <li>Media elements now fire a <code>suspend</code> event when the resource is loaded.
+     <li>Form submission now normalizes newlines to CRLF.
+     <li>Some tweaks around bidi and the <code>br</code> element.
+     <li>Large parts of the Editing section moved to HTML Editing APIs.
+     <li><code>UndoManager</code> and related features moved to UndoManager and DOM Transaction.
+     <li><code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> and <code>unregisterContentHandler()</code> were added.
+     <li><code>registerContentHandler()</code> now has a blacklist of MIME types.
+     <li><code>registerProtocolHandler()</code> now has a whitelist of protocols, but also supports any protocol that starts with "<code>web+</code>".
+     <li>Fragment identifiers for <code>text/html</code> resources now don't need to point to an element with a matching ID.
+     <li><code>audio</code> elements are now allowed to have zero <code>source</code> children.
+     <li>There are now some restrictions on the use of bidi formatting characters.
+     <li>The <code>maxlength</code> and <code>size</code> attributes are allowed (but give warnings in validators) on <code>input</code> elements with <code>type=number</code>.
+     <li>The link relation "<code>shortcut icon</code>" is now allowed.
+     <li>Heading elements are now allowed to have the <code>heading</code> and <code>tab</code> roles.
+     <li>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
+     <li>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
+     <li>The <code>select</code> element and its <code>options</code> collection now have a setter.
+     <li><code>rel=help</code> on links now show a help cursor by default.
+     <li>Calls to <code>window.print()</code> before the document is loaded defers the print until it is loaded.
+     <li>Application cache gained an <code>abort()</code> method.
+     <li><code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, HTML-specific overrides to some DOM Core features (like <code>createElement()</code>), some definitions, the <code>id</code> IDL attribute and ID handling moved to DOM4.
+     <li>Fragment identifiers can now survive redirects.
+     <li>The <code>pushState()</code> and <code>replaceState()</code> methods now change the history entry to GET.
+     <li>The command API now has its properties prefixed so they are now <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> and <code>commandChecked</code>.
+     <li>The structured clone algorithm now supports sparse arrays.
+     <li><code>window.postMessage</code> now supports transferring some objects instead of cloning them, and supports transferring <code>ArrayBuffer</code>.
+     <li>Application cache was made stricter in its MIME type checking.
+     <li>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
+     <li><code>MediaController</code> gained an <code>onended</code> event listener.
+     <li>The HTML parser changed its handling of U+0000 characters in some places.
+     <li>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for authors to embed untrusted resources where they expect a certain content type.
+     <li>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
+     <li>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
+     <li>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so authors can safely use them for custom data blocks.
+     <li><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
+     <li><code>window.status</code> was specified to exist but do nothing.
+     <li>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
+     <li>Application cache now supports 'no-store' and HTTPS.
+     <li>The structured clone algorithm now supports getters.
+     <li>The <code>crossorigin</code> attribute has been added to <code>img</code>, <code>video</code> and <code>audio</code> to use CORS.
+     <li>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
+    </ul>
+
+    <p>Further changes to WHATWG HTML that do not affect HTML5:</p>
+
+    <ul>
+     <li>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
+     <li>The 2d context now supports <code>Path</code> objects. SVG path data can be added to a <code>Path</code>.
+     <li>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
+     <li>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
+     <li><code>PeerConnection</code> was moved to WebRTC.
+     <li>WebVTT was moved to its own specification.
+     <li>WebSockets no longer receive messages in the <code>CLOSING</code> state.
+     <li>The Atom conversion algorithm was dropped.
+     <li>The <code>itemtype</code> attribute now allows multiple types.
+     <li><code>CanvasPixelArray</code> was dropped in favor of <code>Uint8ClampedArray</code>.
+     <li>The microdata to RDF conversion algorithm was dropped.
+     <li>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
+     <li>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
+     <li>The "storage mutex" is made optional.
+     <li>Web Storage no longer supports structured data.
+     <li>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in HTML5.
+     <li>An experimental specification for the <code>window.find()</code> method was added.
+     <li>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
+     <li>Microdata now handles infinite loops.
+     <li>Web Worker <code>location</code> now stringifies.
+     <li>Script errors in a Web Worker can now be detected in a parent worker or the document with the <code>onerror</code> handler.
+     <li><code>EventSource</code> now supports CORS.
+     <li><code>EventSource</code> was made stricter in its MIME type checking.
+     <li>Web Workers gained the <code>atob()</code> and <code>btoa()</code> methods.
+     <li>Web Workers gained the <code>ononline</code> and <code>onoffline</code> event handlers.
+     <li>WebSockets API has the <code>error</code> event again.
+     <li>WebSockets API now exposes the selected extensions<!-- and allows compression (was dropped in a later rev)-->.
+     <li>Various tweaks to the UDP <code>PeerConnection</code> API.
+     <li>WebSocket close code and reason are now supported in the API.
+     <li>Binary data is now supported in WebSockets.
+     <li>Redirects in WebSockets are now blocked for security reasons.
+    </ul>
+
+    <h3 id="changes-2011-04-05">Changes from 5 April 2011 to 25 May 2011</h3> <!-- rev 5974 - 6139 -->
+
+    <ul>
+     <li>Support for the <code>javascript:</code> scheme in <code>img</code>, <code>object</code>, CSS, etc, has been dropped.
+     <li>The <code>toBlob()</code> method has been added to <code>canvas</code>.
+     <li>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
+     <li>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
+     <li>The <code>select</code> event has been specified.
+     <li>The <code>selectDirection</code> IDL attribute has been added to <code>input</code> and <code>textarea</code>.
+     <li>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now match <code>fieldset</code>, and the <code>:indeterminate</code> pseudo-class can now match <code>progress</code>.
+     <li>The <code>getKind()</code> method has been added to <code>TrackList</code>.
+     <li>The <code>MediaController</code> API and the <code>mediagroup</code> attribute have been added to synchronize playback of media elements.
+     <li>Some ARIA defaults have changed, and it is now invalid to specify ARIA attributes that match the defaults.
+     <li>The <code>getName()</code> method on <code>TrackList</code> was renamed to <code>getLabel()</code>.
+     <li>The <code>border</code> attribute on <code>table</code> is now conforming.
+     <li>The <code>u</code> element is now conforming.
+     <li>The <code>summary</code> attribute on <code>table</code> is now non-conforming.
+     <li>The <code>audio</code> attribute on <code>video</code> was changed to a boolean <code>muted</code> attribute.
+     <li>The <code>Content-Language</code> meta pragma is now non-conforming.
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2011-01-13">Changes from 13 January 2011 to 5 April 2011</h3> <!-- rev 5779 - 5974 -->
+
+    <ul>
+     <li>The <code>pushState</code> and <code>replaceState</code> features have
+     been changed based on implementation feedback in Firefox, and <code>history.state</code>
+     has been introduced.
+     <li>The <code>tracks</code> IDL attribute on media elements has been renamed
+     to <code>textTracks</code>.
+     <li>Event handler content attributes now support JavaScript strict mode.
+     <li>The <code>forminput</code> and <code>formchange</code> events, and
+     the <code>dispatchFormInput()</code> and <code>dispatchFormChange()</code>
+     methods have been dropped.
+     <li>The <code>rel</code> keywords <code>archives</code>, <code>up</code>,
+     <code>last</code>, <code>index</code>, <code>first</code> and related synonyms
+     have been dropped.
+     <li>Removing a media element from the DOM and inserting it again in the same
+     script now doesn't pause the media element.
+     <li>The <code>video</code> element's letterboxing rules are now specified in
+     terms of CSS 'object-fit'.
+     <li>Cross-origin fonts now don't leak information about the font when drawn
+     on a <code>canvas</code>.
+     <li>The character encoding declaration is now allowed to be within the first
+     1024 bytes instead of the first 512 bytes.
+     <li>The <code>onerror</code> event handler on <code>window</code> is now invoked
+     for compile-time script errors as well as runtime errors.
+     <li>Script-inserted <code>script</code> elements now have <code>async</code>
+     default to <code>true</code>, which can be set to <code>false</code> to make
+     the scripts execute in insertion order.
+     <li>The <code>atob()</code> and <code>btoa()</code> methods have been specified.
+     <li>The suggested file extension for application cache manifest files has been
+     changed from <code>.manifest</code> to <code>.appcache</code>.
+     <li>The <code>action</code> and <code>formaction</code> attributes are
+     no longer allowed to have the empty string as value.
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2010-10-19">Changes from 19 October 2010 to 13 January 2011</h3> <!-- rev 5643 - 5779 -->
+
+    <ul>
+     <li>Drag and drop model was refined.</li>
+     <li>A new global <code>dropzone</code> attribute was added.</li>
+     <li>A new <code>bdi</code> element was added to aid with user-generated
+     content that may have bidi implications.</li>
+     <li>The <code>dir</code> attribute gained a new "<code>auto</code>"
+     value.</li>
+     <li>A <code>dirname</code> attribute was added to <code>input</code>
+     elements. When specified the directionality as specified by the user
+     will be submitted to the server as well.</li>
+     <li>A new <code>track</code> element and associated TextTrack API were added for video text tracks.</li>
+     <li>The <code>type</code> attribute on the <code>ol</code> element is now allowed.
+    </ul>
+
+    <p>The <code>getSelection()</code> API moved to a separate
+    <a href="http://html5.org/specs/dom-range.html">DOM Range</a> draft.
+    Similarly <code>UndoManager</code> has been removed from the W3C copy of
+    HTML5 for now as it is not ready yet.</p>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2010-06-24">Changes from 24 June 2010 to 19 October 2010</h3> <!-- rev 5108 - 5642 -->
+
+    <ul>
+     <li>Numerous changes to the HTML parsing algorithm based on
+     implementation feedback.</li>
+     <li>The <code>hidden</code> attribute now works for table-related
+     elements.</li>
+     <li>The <code>canvas</code> <code>getContext()</code> method is now
+     defined to be able to handle multiple contexts better.</li>
+     <li>The media elements' <code>startTime</code> IDL attribute was
+     renamed to <code>initialTime</code> and <code>startOffsetTime</code>
+     was added.</li>
+     <li>The <code>prefetch</code> link relationship can now be used on
+     <code>a</code> elements.</li>
+     <li>The <code>datetime</code> attribute of <code>ins</code> and
+     <code>del</code> no longer requires a time to be specified.</li>
+     <li>Using PUT and DELETE as HTTP methods for the <code>form</code>
+     element is no longer supported.</li>
+     <li>The <code>s</code> element is no longer deprecated.</li>
+     <li>The <code>video</code> element has a new <code>audio</code>
+     attribute.</li>
+    </ul>
+
+    <p>Per usual, lots of other minor fixes have been made as well.</p>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2010-03-04">Changes from 4 March 2010 to 24 June 2010</h3> <!-- rev 4647 - 5107 -->
+
+    <ul>
+     <li>The <code>ping</code> attribute has been removed from the W3C
+     version of HTML5.</li>
+     <li>The <code>title</code> element is optional for
+     <code>iframe</code> <code>srcdoc</code> documents and other scenarios
+     where a title is already available. As is the case with email.</li>
+     <li><code>keywords</code> is now a standard metadata name for the
+     <code>meta</code> element.</li>
+     <li>The <code>allow-top-navigation</code> value has been added for the
+     <code>sandbox</code> attribute on the <code>iframe</code> element. It
+     allows the embedded content to navigate its parent when specified.</li>
+     <li>The <code>wbr</code> element has been added.</li>
+     <li>The <code>alternate</code> keyword for the <code>rel</code>
+     attribute of the <code>link</code> element can now be used to point to
+     feeds again, even if the feed is not an alternative for the
+     document.</li>
+     <li>The HTML to Atom mapping has been removed from the W3C version of
+     HTML5.</li>
+    </ul>
+
+    <p>In addition lots of minor changes, clarifications, and fixes have
+    been made to the document.</p>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2009-08-25">Changes from 25 August 2009 to 4 March 2010</h3> <!-- since rev 3673 -->
+
+    <ul>
+     <li>The <code>dialog</code> element has been removed. A section with
+     advice on how to mark up conversations has effectively replaced
+     it.</li>
+     <li><code>document.head</code> has been introduced to provide
+     convenient access to the <code>head</code> element from script.</li>
+     <li>The link type <code title="">feed</code> has been removed.
+     <code title="rel-alternate">alternate</code> with specific media types
+     is to be used instead.</li>
+     <li><code>createHTMLDocument()</code> has been introduced as API to
+     allow easy creation of HTML documents.</li>
+     <li>Both the <code>meter</code> and <code>progress</code> elements no
+     longer have "magic" processing of their contents because it could not
+     be made to work internationally.</li>
+     <li>The <code>meter</code> and <code>progress</code> elements, as well
+     as the <code>output</code> element, can now be labeled using the
+     <code>label</code> element.</li>
+     <li>A new media type, <code>text/html-sandboxed</code>, was introduced
+     to allow hosting of potentially hostile content without it causing
+     harm.</li>
+     <li>A <code>srcdoc</code> attribute for the <code>iframe</code> element
+     was introduced to allow embedding of potentially hostile content
+     inline. It is expected to be used together with the
+     <code>sandbox</code> and <code>seamless</code> attributes.</li>
+     <li>The <code>figure</code> element now uses a new element
+     <code>figcaption</code> rather than <code>legend</code> because people
+     want to use HTML5 long before it reaches W3C Recommendation.</li>
+     <li>The <code>details</code> element now uses a new element
+     <code>summary</code> for exactly the same reason.</li>
+     <li>The <code>autobuffer</code> attribute on media elements was renamed
+     to <code>preload</code>.</li>
+    </ul>
+
+    <p>A whole lot of other smaller issues have also been resolved. The
+    above list summarizes what is thought to be of primary interest to
+    authors.</p>
+
+    <p>In addition to all of the above, Microdata, the 2D context API for
+    <code>canvas</code>, and Web Messaging (<code>postMessage()</code> API)
+    have been split into their own drafts at the W3C (the WHATWG still
+    publishes a version of HTML5 that includes them):</p>
+
+    <ul>
+     <li><a href="http://dev.w3.org/html5/md/">HTML Microdata</a></li>
+     <li><a href="http://dev.w3.org/html5/2dcontext/">HTML Canvas 2D Context</a></li>
+     <li><a href="http://dev.w3.org/html5/postmsg/">HTML5 Web Messaging</a></li>
+    </ul>
+
+    <p>Specific microdata vocabularies are gone altogether in the W3C draft
+    of HTML5 and are not published as a separate draft. The WHATWG draft of
+    HTML5 still includes them.</p>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2009-04-23">Changes from 23 April 2009 to 25 August 2009</h3> <!-- since rev 2975 -->
+
+    <ul>
+     <li>When the <code>time</code> element is empty user agents have to
+     render the time in a locale-specific manner.</li>
+     <li>The <code>load</code> event is dispatched at <code>Window</code>,
+     but now has <code>Document</code> as its target.</li>
+     <li><code>pushState()</code> now affects the <code>Referer</code> (sic)
+     header.</li>
+     <li><code>onundo</code> and <code>onredo</code> are now on
+     <code>Window</code>.</li>
+     <li>Media elements now have a <code>startTime</code> member that
+     indicates where the current resource starts.</li>
+     <li><code>header</code> has been renamed to <code>hgroup</code> and a
+     new <code>header</code> element has been introduced.</li>
+     <li><code>createImageData()</code> now also takes
+     <code>ImageData</code> objects.</li>
+     <li><code>createPattern()</code> can now take a <code>video</code>
+     element as argument too.</li>
+     <li>The <code>footer</code> element is no longer allowed in
+     <code>header</code> and <code>header</code> is not allowed in
+     <code>address</code> or <code>footer</code>.</li>
+     <li>A new control has been introduced:
+     <code>&lt;input type="tel"></code></li>
+     <li>The Command API now works for all elements.</li>
+     <li><code>accesskey</code> is now properly defined.</li>
+     <li><code>section</code> and <code>article</code> now take a
+     <code>cite</code> attribute.</li>
+     <li>A new feature called Microdata has been introduced which allows
+     people to embed custom data structures in their HTML documents.</li>
+     <li>Using the Microdata model three predefined vocabularies have also
+     been included: vCard, vEvent, and a model for licensing.</li>
+     <li>Drag and drop has been updated to work with the Microdata
+     model.</li>
+     <li>The <a href="http://hsivonen.iki.fi/last-html-quirk/">last of the
+     parsing quirks</a> has been defined.</li> <!-- don't kill my easter egg -->
+     <li><code>textLength</code> has been added as member of the
+     <code>textarea</code> element.</li>
+     <li>The <code>rp</code> element now takes phrasing content rather than
+     a single character.</li>
+     <li><code>location.reload()</code> is now defined.</li>
+     <li>The <code>hashchange</code> event now fires asynchronously.</li>
+     <li>Rules for compatibility with XPath 1.0 and XSLT 1.0 have been
+     added.</li>
+     <li>The <code>spellcheck</code> IDL attribute now maps to a
+     <code>DOMString</code>.</li>
+     <li><code>hasFeature()</code> support has been reduced to a
+     minimum.</li>
+     <li>The <code>Audio()</code> constructor sets the
+     <code>autobuffer</code> attribute.</li>
+     <li>The <code>td</code> element is no longer allowed in
+     <code>thead</code>.</li>
+     <li>The <code>input</code> element and <code>DataTransfer</code> object
+     now have a <code>files</code> IDL attribute.</li>
+     <li>The <code>datagrid</code> and <code>bb</code> have been removed due
+     to their design not being agreed upon.</li>
+     <li>The cue range API has been removed from the media elements.</li>
+     <li>Support for WAI-ARIA has been integrated.</li>
+    </ul>
+
+    <p>On top of this list quite a few minor clarifications, typos,
+    issues specific to implementors, and other small problems have been
+    resolved.</p>
+
+    <p>In addition, the following parts of HTML5 have been taken out
+    and will likely be further developed at the IETF:</p>
+
+    <ul>
+     <li>Definition of URLs.</li>
+     <li>Definition of Content-Type sniffing.</li>
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2009-02-12">Changes from 12 February 2009 to 23 April 2009</h3>
+
+    <ul>
+     <li>A new global attribute called <code>spellcheck</code> has been
+     added.</li>
+     <li>Defined that JavaScript <code>this</code> in the global object
+     returns a <code>WindowProxy</code> object rather than the
+     <code>Window</code> object.</li>
+     <li>The <code>value</code> IDL attribute for <code>input</code>
+     elements in the File Upload state is now defined.</li>
+     <li>Definition of <code>designMode</code> was changed to be more in
+     line with legacy implementations.</li>
+     <li>The <code>drawImage()</code> method of the 2D drawing API can now
+     take a <code>video</code> element as well.</li>
+     <li>The way media elements load resources has been changed.</li>
+     <li><code>document.domain</code> is now IPv6-compatible.</li>
+     <li>The <code>video</code> element gained an <code>autobuffer</code>
+     boolean attribute that serves as a hint.</li>
+     <li>You are now allowed to specify the <code>meta</code> element with a
+     <code>charset</code> attribute in XML documents if the value of that
+     attribute matches the encoding of the document. (Note that it does not
+     specify the value, it is just a talisman.)</li>
+     <li>The <code>bufferingRate</code> and <code>bufferingThrottled</code>
+     members of media elements have been removed.</li>
+     <li>The media element resource selection algorithm is now
+     asynchronous.</li>
+     <li>The <code>postMessage()</code> API now takes an array of
+     <code>MessagePort</code> objects rather than just one.</li>
+     <li>The second argument of the <code>add()</code> method on the
+     <code>select</code> element and the <code>options</code> member of the
+     <code>select</code> element is now optional.</li>
+     <li>The <code>action</code>, <code>enctype</code>, <code>method</code>,
+     <code>novalidate</code>, and <code>target</code> attributes on
+     <code>input</code> and <code>button</code> elements have been
+     renamed to <code>formaction</code>, <code>formenctype</code>,
+     <code>formmethod</code>, <code>formnovalidate</code>, and
+     <code>formtarget</code>.</li>
+     <li>A "storage mutex" concept has been added to deal with separate
+     pages trying to change a storage object (<code>document.cookie</code>
+     and <code>localStorage</code>) at the same time. The
+     <code>Navigator</code> gained a <code>getStorageUpdates()</code> method
+     to allow it to be explicitly released.</li>
+     <li>A syntax for SVG similar to MathML is now defined so that SVG can
+     be included in <code>text/html</code> resources.</li>
+     <li>The <code>placeholder</code> attribute has been added to
+     the <code>textarea</code> element.</li>
+     <li>Added a <code>keygen</code> element for key pair generation.</li>
+     <li>The <code>datagrid</code> element was revised to make the API more
+     asynchronous and allow for unloaded parts of the grid.</li>
+    </ul>
+
+    <p>In addition, several parts of HTML5 have been taken out and
+    will be further developed by the Web Applications Working Group as
+    standalone specifications:</p>
+
+    <ul>
+     <li><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
+     <li><a href="http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol">WebSocket protocol</a></li>
+     <li><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
+     <li><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
+     <li><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2008-06-10">Changes from 10 June 2008 to 12 February 2009</h3>
+
+    <ul>
+     <li>The <code>data</code> member of <code>ImageData</code> objects has
+     been changed from an array to a <code>CanvasPixelArray</code>
+     object.</li>
+     <li>Shadows are now required from implementations of the
+     <code>canvas</code> element and its API.</li>
+     <li>Security model for <code>canvas</code> is clarified.</li>
+     <li>Various changes to the processing model of <code>canvas</code> have
+     been made in response to implementation and author feedback. E.g.
+     clarifying what happens when NaN and Infinity are passed and fixing the
+     definitions of <code>arc()</code> and <code>arcTo()</code>.</li>
+     <li><code>innerHTML</code> in XML was slightly changed to improve
+     round-tripping.</li>
+     <li>The <code>toDataURL()</code> method on the <code>canvas</code>
+     element now supports setting a quality level when the media type
+     argument is <code>image/jpeg</code>.</li>
+     <li>The <code>poster</code> attribute of the <code>video</code> element
+     now affects its intrinsic dimensions.</li>
+     <li>The behavior of the <code>type</code> attribute of the
+     <code>link</code> element has been clarified.</li>
+     <li>Sniffing is now allowed for <code>link</code> when the expected
+     type is an image.</li>
+     <li>A section on URLs is introduced dealing with how URL values are to
+     be interpreted and what exactly authors are required to do. Every
+     feature of the specification that uses URLs has been reworded to take
+     the new URL section into account.</li>
+     <li>It is now explicit that the <code>href</code> attribute of the
+     <code>base</code> element does not depend on
+     <code>xml:base</code>.</li>
+     <li>It is now defined what the behavior should be when the base URL
+     changes.</li>
+     <li>URL decomposition IDL attributes are now more aligned with Internet
+     Explorer.</li>
+     <li>The <code>xmlns</code> attribute with the value
+     <code>http://www.w3.org/1999/xhtml</code> is now allowed on all HTML
+     elements.</li>
+     <li><code>data-<var>*</var></code> attributes and custom attributes on
+     the <code>embed</code> element now have to match the XML
+     <code>Name</code> production and cannot contain a colon.</li>
+     <li>WebSocket API is introduced for bidirectional communication with a
+     server.</li>
+     <li>The default value of <code>volume</code> on media elements is now
+     1.0 rather than 0.5.</li>
+     <li><code>event-source</code> was renamed to <code>eventsource</code>
+     because no other HTML element uses a hyphen.</li>
+     <li>A message channel API has been introduced augmenting
+     <code>postMessage()</code>.</li>
+     <li>A new element named <code>bb</code> has been added. It represents a
+     user agent command that the user can invoke.</li>
+     <li>The <code>addCueRange()</code> method on media elements has been
+     modified to take an identifier which is exposed in the callbacks.</li>
+     <li>It is now defined how to mutate a DOM into an infoset.</li>
+     <li>The <code>parent</code> attribute of the <code>Window</code> object
+     is now defined.</li>
+     <li>The <code>embed</code> element is defined to do extension sniffing
+     for compatibility with servers that deliver Flash as
+     <code>text/plain</code>. (This is marked as an issue in the
+     specification to figure out if there is a better way to make this
+     work.)</li> <!-- and no, the answer is not to simply break stuff -->
+     <li>The <code>embed</code> can now be used without its <code>src</code>
+     attribute.</li>
+     <li><code>getElementsByClassName()</code> is defined to be ASCII
+     case-insensitive in quirks mode for consistency with CSS.</li>
+     <li>In HTML documents <code>localName</code> no longer returns the node
+     name in uppercase.</li>
+     <li><code>data-<var>*</var></code> attributes are defined to be always
+     lowercase.</li>
+     <li>The <code>opener</code> attribute of the <code>Window</code> object
+     is not to be present when the page was opened from a link with
+     <code>target="_blank"</code> and <code>rel="noreferrer"</code>.</li>
+     <li>The <code>top</code> attribute of the <code>Window</code> object is
+     now defined.</li>
+     <li>The <code>a</code> element now allows nested flow content, but not
+     nested interactive content.</li>
+     <li>It is now defined what the <code>header</code> element means to
+     document summaries and table of contents.</li>
+     <li>What it means to fetch a resource is now defined.</li>
+     <li>Patterns are now required for the <code>canvas</code> element.</li>
+     <li>The <code>autosubmit</code> attribute has been removed from the
+     <code>menu</code> element.</li>
+     <li>Support for <code>outerHTML</code> and
+     <code>insertAdjacentHTML()</code> has been added.</li>
+     <li><code>xml:lang</code> is now allowed in HTML when <code>lang</code>
+     is also specified and they have the same value. In XML
+     <code>lang</code> is allowed if <code>xml:lang</code> is also specified
+     and they have the same value.</li>
+     <li>The <code>frameElement</code> attribute of the <code>Window</code>
+     object is now defined.</li>
+     <li>An event loop and task queue is now defined detailing script
+     execution and events. All features have been updated to be defined in
+     terms of this mechanism.</li>
+     <li>If the <code>alt</code> attribute is omitted a <code>title</code>
+     attribute, an enclosing <code>figure</code> element with a
+     <code>legend</code> element descendant, or an
+     enclosing section with an associated heading must be present.</li>
+     <li>The <code>irrelevant</code> attribute has been renamed to
+     <code>hidden</code>.</li>
+     <li>The <code>definitionURL</code> attribute of MathML is now properly
+     supported. Previously it would have ended up being all lowercase during
+     parsing.</li>
+     <li>User agents must treat US-ASCII as Windows-1252 for compatibility
+     reasons.</li>
+     <li>An alternative syntax for the DOCTYPE is
+     allowed for compatibility with some XML tools.</li>
+     <li>Data templates have been removed (consisted of the
+     <code>datatemplate</code>, <code>rule</code> and <code>nest</code>
+     elements).</li>
+     <li>The media elements now support just a single <code>loop</code>
+     attribute.</li>
+     <li>The <code>load()</code> method on media elements has been
+     redefined as asynchronous. It also tries out files in turn now rather
+     than just looking at the <code>type</code> attribute of the
+     <code>source</code> element.</li>
+     <li>A new member called <code>canPlayType()</code> has been added to
+     the media elements.</li>
+     <li>The <code>totalBytes</code> and <code>bufferedBytes</code>
+     attributes have been removed from the media elements.</li>
+     <li>The <code>Location</code> object gained a
+     <code>resolveURL()</code> method.</li>
+     <li>The <code>q</code> element has changed again. Punctuation is to be
+     provided by the user agent again.</li>
+     <li>Various changes were made to the HTML parser algorithm to be more
+     in line with the behavior Web sites require.</li>
+     <li>The <code>unload</code> and <code>beforeunload</code> events are
+     now defined.</li>
+     <li>The IDL blocks in the specification have been revamped to be in
+     line with the upcoming Web IDL specification.</li>
+     <li>Table headers can now have headers. User agents are required to
+     support a <code>headers</code> attribute pointing to a <code>td</code>
+     or <code>th</code> element, but authors are required to only let them
+     point to <code>th</code> elements.</li>
+     <li>Interested parties can now register new <code>http-equiv</code>
+     values.</li>
+     <li>When the <code>meta</code> element has a <code>charset</code>
+     attribute it must occur within the first 512 bytes.</li>
+     <li>The <code>StorageEvent</code> object now has a
+     <code>storageArea</code> attribute.</li>
+     <li>It is now defined how HTML is to be used within the SVG
+     <code>foreignObject</code> element.</li>
+     <li>The notification API has been dropped.</li>
+     <li>How [[Get]] works for the <code>HTMLDocument</code> and
+     <code>Window</code> objects is now defined.</li>
+     <li>The <code>Window</code> object gained the
+     <code>locationbar</code>, <code>menubar</code>,
+     <code>personalbar</code>, <code>scrollbars</code>,
+     <code>statusbar</code> and <code>toolbar</code> attributes giving
+     information about the user interface.</li>
+     <li>The application cache section has been significantly revised and
+     updated.</li>
+     <li><code>document.domain</code> now relies on the Public Suffix List.
+     <span data-anolis-ref>PSL</span>
+     <li>A non-normative rendering section has been added that describes
+     user agent rendering rules for both obsolete and conforming
+     elements.</li>
+     <li>A normative section has been added that defines when certain
+     selectors as defined in the Selectors and the
+     CSS3 Basic User Interface Module match HTML elements.
+     <span data-anolis-ref>SELECTORS</span>
+     <span data-anolis-ref>CSSUI</span>
+    </ul>
+
+    <p>Web Forms 2.0, previously a standalone specification, has been fully
+    integrated into HTML5 since last publication. The following
+    changes were made to the forms chapter:</p>
+
+    <ul>
+     <li>Support for XML submission has been removed.</li>
+     <li>Support for form filling has been removed.</li>
+     <li>Support for filling of the <code>select</code> and
+     <code>datalist</code> elements through the <code>data</code> attribute
+     has been removed.</li>
+     <li>Support for associating a field with multiple forms has been
+     removed. A field can still be associated with a form it is not nested
+     in through the <code>form</code> attribute.</li>
+     <li>The <code>dispatchChangeInput()</code> and
+     <code>dispatchFormChange()</code> methods have been removed from the
+     <code>select</code>, <code>input</code>, <code>textarea</code>, and
+     <code>button</code> elements.</li>
+     <li>Repetition templates have been removed.</li>
+     <li>The <code>inputmode</code> attribute has been removed.</li>
+     <li>The <code>input</code> element in the File Upload state no longer
+     supports the <code>min</code> and <code>max</code> attributes.</li>
+     <li>The <code>allow</code> attribute on <code>input</code> elements in
+     the File Upload state is no longer authoritative.</li>
+     <li>The <code>pattern</code> and <code>accept</code> attributes for
+     <code>textarea</code> have been removed.</li>
+     <li>RFC 3106 is no longer explicitly supported.</li>
+     <li>The <code>submit()</code> method now just submits, it no longer
+     ensures the form controls are valid.</li>
+     <li>The <code>input</code> element in the Range state now defaults to
+     the middle, rather than the minimum value.</li>
+     <li>The <code>size</code> attribute on the <code>input</code> element
+     is now conforming (rather than deprecated).</li>
+     <li><code>object</code> elements now partake in form submission.</li>
+     <li>The <code>type</code> attribute of the <code>input</code> element
+     gained the values <code>color</code> and <code>search</code>.</li>
+     <li>The <code>input</code> element gained a <code>multiple</code>
+     attribute which allows for either multiple e-mails or multiple files to
+     be uploaded depending on the value of the <code>type</code>
+     attribute.</li>
+     <li>The <code>input</code>, <code>button</code> and <code>form</code>
+     elements now have a <code>novalidate</code> attribute to indicate that
+     the form fields should not be required to have valid values upon
+     submission.</li>
+     <li>When the <code>label</code> element contains an <code>input</code>
+     it may still have a <code>for</code> attribute as long as it points to
+     the <code>input</code> element it contains.</li>
+     <li>The <code>input</code> element now has an
+     <code>indeterminate</code> IDL attribute.</li>
+     <li>The <code>input</code> element gained a <code>placeholder</code>
+     attribute.</li>
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h3 id="changes-2008-01-22">Changes from 22 January 2008 to 10 June 2008</h3>
+
+    <ul>
+     <li>Implementation and authoring details around the <code>ping</code>
+     attribute have changed.
+     <li><code>&lt;meta http-equiv=content-type></code> is now a
+     conforming way to set the character encoding.</li>
+     <li>API for the <code>canvas</code> element has been cleaned up. Text
+     support has been added.
+     <li><code>globalStorage</code> is now restricted to the same-origin
+     policy and renamed to <code>localStorage</code>. Related event
+     dispatching has been clarified.
+     <li><code>postMessage()</code> API changed. Only the origin of the
+     message is exposed, no longer the URL. It also requires a second
+     argument that indicates the origin of the target document.
+     <li>Drag and drop API has got clarification. The
+     <code>dataTransfer</code> object now has a <code>types</code>
+     attribute indicating the type of data being transferred.
+     <li>The <code>m</code> element is now called <code>mark</code>.
+     <li>Server-sent events has changed and gotten clarification. It uses a
+     new format so that older implementations are not broken.
+     <li>The <code>figure</code> element no longer requires a caption.
+     <li>The <code>ol</code> element has a new <code>reversed</code>
+     attribute.
+     <li>Character encoding detection has changed in response to feedback.
+     <li>Various changes have been made to the HTML parser section in
+     response to implementation feedback.
+     <li>Various changes to the editing section have been made, including
+     adding <code>queryCommandEnabled()</code> and related methods.
+     <li>The <code>headers</code> attribute has been added for
+     <code>td</code> elements.
+     <li>The <code>table</code> element has a new <code>createTBody()</code>
+     method.
+     <li>MathML support has been added to the HTML parser section. (SVG
+     support is still awaiting input from the SVG WG.)
+     <li>Author-defined attributes have been added. Authors can add
+     attributes to elements in the form of
+     <code>data-<var>name</var></code> and can access these through the DOM
+     using <code>dataset[<var>name</var>]</code> on the element in question.
+     <li>The <code>q</code> element has changed to require punctuation
+     inside rather than having the browser render it.
+     <li>The <code>target</code> attribute can now have the value
+     <code>_blank</code>.
+     <li>The <code>showModalDialog</code> API has been added.
+     <li>The <code>document.domain</code> API has been defined.
+     <li>The <code>source</code> element now has a new
+     <code>pixelratio</code> attribute useful for videos that have some kind
+     encoding error.
+     <li><code>bufferedBytes</code>, <code>totalBytes</code> and
+     <code>bufferingThrottled</code> IDL attributes have been added to the
+     <code>video</code> element.
+     <li>Media <code>begin</code> event has been renamed to
+     <code>loadstart</code> for consistency with the Progress Events
+     specification.
+     <li><code>charset</code> attribute has been added to
+     <code>script</code>.
+     <li>The <code>iframe</code> element has gained the <code>sandbox</code>
+     and <code>seamless</code> attributes which provide sandboxing
+     functionality.
+     <li>The <code>ruby</code>, <code>rt</code> and <code>rp</code>
+     elements have been added to support ruby annotation.
+     <li>A <code>showNotification()</code> method has been added to show
+     notification messages to the user.
+     <li>Support for <code>beforeprint</code> and <code>afterprint</code>
+     events has been added.</li>
+    </ul>
+
+    <!-- XXX WHATWG HTML changes -->
+
+    <h2 class="no-num" id="acknowledgments">Acknowledgments</h2>
+
+    <p>The editors would like to thank
+
+    Ben Millard,
+    Bruce Lawson,
+    Cameron McCormack,
+    Charles McCathieNevile,
+    Dan Connolly,
+    David H&aring;s&auml;ther,
+    Dennis German,
+    Frank Ellermann,
+    Frank Palinkas,
+    Futomi Hatano<!-- 羽田野太巳 -->,
+    Gordon P. Hemsley,
+    Henri Sivonen,
+    James Graham,
+    Jens Meiert,
+    Jeremy Keith,
+    J&uuml;rgen Jeka,
+    Krijn Hoetmer,
+    Leif Halvard Silli,
+    Maciej Stachowiak,
+    Mallory van Achterberg<!--stommepoes-->,
+    Marcos Caceres,
+    Mark Pilgrim,
+    Martijn Wargers,
+    Martin Leese,
+    Martyn Haigh,
+    Masataka Yakura,
+    Michael Smith,
+    Mike Taylor<!--miketaylr-->,
+    <i>Ms2ger</i>,
+    Olivier Gendrin,
+    &Oslash;istein E. Andersen,
+    Philip J&auml;genstedt,
+    Philip Taylor,
+    Randy Peterman,
+    Toby Inkster, and
+    Yngve Spjeld Landro
+
+    for their contributions to this document as well as to all the people
+    who have contributed to HTML over the years for improving the Web!
+
+
+
+<h2 class=no-num>References</h2>
+<div id=anolis-references-normative></div>

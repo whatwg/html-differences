@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en-US"><head>
+    <meta charset="utf-8">
     <title class="not-w3c">HTML differences from HTML4</title>
-    <style type="text/css">
+    <style>
       .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
       p.note::before { content:"Note: " }
       dfn { font-style:normal; font-weight:bold }
@@ -23,10 +24,10 @@
     -->
     <div class="head">
       <p class="not-w3c"><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
- 
+
       <hgroup>
         <h1 class="not-w3c">HTML differences from HTML4</h1>
-  
+
         <h2 class="no-num no-toc not-w3c">Living Document — Last Updated 30 April 2013</h2>
       </hgroup>
 
@@ -302,14 +303,14 @@
     the doctype is only needed to enable standards mode for documents
     written using the HTML syntax. Browsers already do this for
     <code>&lt;!DOCTYPE html&gt;</code>.</p>
-    
+
     <p>To support legacy markup generators that cannot generate the preferred
     short doctype, the doctype <code>&lt;!DOCTYPE html SYSTEM
     "about:legacy-compat"&gt;</code> is allowed in the HTML syntax.
-    
+
     <p>The strict doctypes for HTML 4.0, HTML 4.01, XHTML 1.0 as well as XHTML
     1.1 are also allowed (but are discouraged) in the HTML syntax.
-    
+
     <p>In the XML syntax, any doctype declaration may be used, or it may be
     omitted altogether. Documents with an XML media type are always handled in
     standards mode.
@@ -325,11 +326,11 @@
     syntax as in XML. The syntax is still case-insensitive and attributes allow
     the same syntax as for HTML elements. Namespace declarations may be omitted.
     CDATA sections are supported in this insertion mode.
-    
+
     <p>Some MathML and SVG elements cause the parser to switch back to "HTML
     mode", e.g. <code>mtext</code> and <code>foreignObject</code>, so you can
     use HTML elements or a new <code>math</code> or <code>svg</code> element.
-    
+
     <p>For instance, a very simple document using some of the
     minimal syntax features could look like:</p>
 
@@ -348,29 +349,29 @@
      <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character
      references now expand to U+27E8 and U+27E9 instead of U+2329 and U+232A,
      respectively.
-     
+
      <li><p>Many new named character references have been added, including all from
      MathML.
-     
+
      <li><p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
      trailing slash.
-     
+
      <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in some more
      cases compared to HTML4.
-     
+
      <li><p>Attributes have to be separated by at least one whitespace character.
-     
+
      <li><p>Attributes with an empty value may be written as just the attribute
      name omitting the equals sign and the value, even if it's not a boolean
      attribute. (HTML4 actually allowed using only the attribute
      <em>value</em> and omitting the attribute name, for enumerated attributes,
      but this was not supported in browsers.)
-     
+
      <li><p>Attributes omitting quotes for the value are allowed to use a larger
      set of characters compared to HTML4.
-     
+
      <li><p>The <code>optgroup</code> end tag is now optional.
-     
+
      <li><p>The <code>colgroup</code> start tag is now optional and is inferred by
      the HTML parser.
     </ul>
@@ -463,7 +464,7 @@
 
       <li><p>WHATWG HTML has <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-data-element">data</a></code> which
       allows content to be annotated with a machine-readable value.
-      
+
       <li><p>WHATWG HTML has <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> for showing a dialog.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-ruby-element">ruby</a></code>,
@@ -654,7 +655,7 @@
       the <code class="external" title="attr-fs-action"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-action">action</a></code>, <code class="external" title="attr-fs-enctype"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-enctype">enctype</a></code>, <code class="external" title="attr-fs-method"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-method">method</a></code>,
       <code class="external" title="attr-fs-novalidate"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-novalidate">novalidate</a></code>, and <code class="external" title="attr-fs-target"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-target">target</a></code> attributes on the
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code> element.</p>
-      
+
       <li><p>In WHATWG HTML, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code> have an <code class="external" title="attr-fe-inputmode"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fe-inputmode">inputmode</a></code> attribute.
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element">menu</a></code> element has two new attributes:
@@ -715,14 +716,14 @@
       prefix it with <code>data-</code> to avoid clashes with future versions of
       HTML. These are intended to be used to store custom data to be consumed by
       the Web page or application itself. They are <em>not</em> intended for
-      data to be consumed by other parties (e.g. user agents). 
+      data to be consumed by other parties (e.g. user agents).
 
       <li><p>The <code class="external" title="attr-draggable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-draggable-attribute">draggable</a></code> and <code class="external" title="attr-dropzone"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">dropzone</a></code> attributes can be used together with
       the new drag &amp; drop API.
 
       <li><p>The <code class="external" title="attr-hidden"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#the-hidden-attribute">hidden</a></code>
       attribute indicates that an element is not yet, or is no longer, relevant.
-      
+
       <li><p>WHATWG HTML has the <code class="external" title="attr-inert"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#the-inert-attribute">inert</a></code> attribute, intended to make <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> elements modal.
 
       <li><p>The <code class="external" title="wai-aria"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">role</a></code> and
@@ -1519,7 +1520,7 @@
 
       html5:
       The ul element represents a list of items, where the order of the items is
-      not important â€” that is, where changing the order would not materially
+      not important — that is, where changing the order would not materially
       change the meaning of the document.
       -->
 
@@ -1552,7 +1553,7 @@
       <li><p>The <code class="external" title="attr-fs-action"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-action">action</a></code>
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code> is no longer allowed
       to have an empty URL.
-      
+
       <li><p>In WHATWG HTML, the <code class="external" title="attr-fs-method"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-method">method</a></code> attribute has a new keyword <code class="external" title="attr-fs-method-dialog-keyword"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-method-dialog-keyword">dialog</a></code>, intended to close a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> element.
 
       <li><p>The <code>border</code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code> only allows the values "1" and the
@@ -1590,7 +1591,7 @@
       <li><p>The <code class="external" title="attr-base-href"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-base-href">href</a></code>
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-base-element">base</a></code> is now allowed to
       contain a relative URL.
-      
+
       <li><p>All attributes that take URLs, e.g. <code class="external" title="attr-hyperlink-href"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#attr-hyperlink-href">href</a></code> on the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code> element, now support IRIs if the document's
       encoding is UTF-8 or UTF-16.
 
@@ -2008,7 +2009,7 @@
       <li><p>An API for printing the document (<code class="external" title="dom-print"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-print">print()</a></code>).
 
       <li><p>An API for handling search providers (<code class="external" title="dom-external-addsearchprovider"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-external-addsearchprovider">AddSearchProvider()</a></code> and <code class="external" title="dom-external-issearchproviderinstalled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-external-issearchproviderinstalled">IsSearchProviderInstalled()</a></code>).
-      
+
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#window">Window</a></code> object has been defined.
     </ul>
 
@@ -2282,11 +2283,11 @@
     changes that affect them early on.</p>
 
     <p>The changes in the changelogs are in rough chronological order.</p>
-    
+
     <h3 id="changes-2012-09-14"><span class="secno">6.1 </span>Changes from 14 September 2012 to 30 April 2013</h3><!-- rev 7347 - 7862 -->
 
     <p>The following changes were made to WHATWG HTML:
-    
+
     <ul>
      <li>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter.
      <li>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes.
@@ -2329,9 +2330,9 @@
      <li>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute.
      <li>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
     </ul>
-    
+
     <h3 id="changes-2012-03-29"><span class="secno">6.2 </span>Changes from 29 March 2012 to 14 September 2012</h3><!-- rev 7028 - 7347 -->
-    
+
     <ul>
      <li>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
      <li>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.
@@ -2344,7 +2345,7 @@
      <li>The <code>initialTime</code> IDL attribute on media elements has been dropped.
      <li>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
     </ul>
-    
+
     <p>Further changes to WHATWG HTML that do not affect HTML5:</p>
 
     <ul>
@@ -3132,7 +3133,7 @@
     Dennis German,
     Frank Ellermann,
     Frank Palinkas,
-    Futomi Hatano<!-- ç¾½ç”°é‡Žå¤ªå·³ -->,
+    Futomi Hatano<!-- 羽田野太巳 -->,
     Gordon P. Hemsley,
     Henri Sivonen,
     James Graham,

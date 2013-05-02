@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <meta charset=utf-8>
     <title>HTML differences from HTML4</title>
-    <style type="text/css">
+    <style>
       .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
       p.note::before { content:"Note: " }
       dfn { font-style:normal; font-weight:bold }
@@ -27,10 +28,9 @@
     <div class="head">
       <div class=not-whatwg><!--logo--></div>
       <p class=not-w3c><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
- 
+
       <hgroup>
         <h1>HTML differences from HTML4</h1>
-  
         <h2 class="no-num no-toc not-whatwg" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
         <h2 class="no-num no-toc not-w3c">Living Document &mdash; Last Updated [DATE: 1 August 1986]</h2>
       </hgroup>
@@ -85,7 +85,7 @@
       <script class=not-tr src=https://w3c-test.org/resources.whatwg.org/file-bug.js async></script>
 
       <div class="not-whatwg"><!--copyright--></div>
-      
+
       <p class="copyright not-w3c"><a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/80x15.png" alt="CC0"></a>
       To the extent possible under law, the editors have waived all copyright and
       related or neighboring rights to this work. In addition, as of
@@ -340,14 +340,14 @@
     the doctype is only needed to enable standards mode for documents
     written using the HTML syntax. Browsers already do this for
     <code>&lt;!DOCTYPE html></code>.</p>
-    
+
     <p>To support legacy markup generators that cannot generate the preferred
     short doctype, the doctype <code>&lt;!DOCTYPE html SYSTEM
     "about:legacy-compat"></code> is allowed in the HTML syntax.
-    
+
     <p>The strict doctypes for HTML 4.0, HTML 4.01, XHTML 1.0 as well as XHTML
     1.1 are also allowed (but are discouraged) in the HTML syntax.
-    
+
     <p>In the XML syntax, any doctype declaration may be used, or it may be
     omitted altogether. Documents with an XML media type are always handled in
     standards mode.
@@ -363,11 +363,11 @@
     syntax as in XML. The syntax is still case-insensitive and attributes allow
     the same syntax as for HTML elements. Namespace declarations may be omitted.
     CDATA sections are supported in this insertion mode.
-    
+
     <p>Some MathML and SVG elements cause the parser to switch back to "HTML
     mode", e.g. <code>mtext</code> and <code>foreignObject</code>, so you can
     use HTML elements or a new <code>math</code> or <code>svg</code> element.
-    
+
     <p>For instance, a very simple document using some of the
     minimal syntax features could look like:</p>
 
@@ -386,29 +386,29 @@
      <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character
      references now expand to U+27E8 and U+27E9 instead of U+2329 and U+232A,
      respectively.
-     
+
      <li><p>Many new named character references have been added, including all from
      MathML.
-     
+
      <li><p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
      trailing slash.
-     
+
      <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in some more
      cases compared to HTML4.
-     
+
      <li><p>Attributes have to be separated by at least one whitespace character.
-     
+
      <li><p>Attributes with an empty value may be written as just the attribute
      name omitting the equals sign and the value, even if it's not a boolean
      attribute. (HTML4 actually allowed using only the attribute
      <em>value</em> and omitting the attribute name, for enumerated attributes,
      but this was not supported in browsers.)
-     
+
      <li><p>Attributes omitting quotes for the value are allowed to use a larger
      set of characters compared to HTML4.
-     
+
      <li><p>The <code>optgroup</code> end tag is now optional.
-     
+
      <li><p>The <code>colgroup</code> start tag is now optional and is inferred by
      the HTML parser.
     </ul>
@@ -500,7 +500,7 @@
 
       <li><p>WHATWG HTML has <code data-anolis-spec=html>data</code> which
       allows content to be annotated with a machine-readable value.
-      
+
       <li><p>WHATWG HTML has <code data-anolis-spec=html>dialog</code> for showing a dialog.
 
       <li><p><code data-anolis-spec=html>ruby</code>,
@@ -691,7 +691,7 @@
       the <code data-anolis-spec=html title=attr-fs-action>action</code>, <code data-anolis-spec=html title=attr-fs-enctype>enctype</code>, <code data-anolis-spec=html title=attr-fs-method>method</code>,
       <code data-anolis-spec=html title=attr-fs-novalidate>novalidate</code>, and <code data-anolis-spec=html title=attr-fs-target>target</code> attributes on the
       <code data-anolis-spec=html>form</code> element.</p>
-      
+
       <li><p>In WHATWG HTML, the <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> have an <code data-anolis-spec=html title="attr-fe-inputmode">inputmode</code> attribute.
 
       <li><p>The <code data-anolis-spec=html>menu</code> element has two new attributes:
@@ -755,7 +755,7 @@
       prefix it with <code>data-</code> to avoid clashes with future versions of
       HTML. These are intended to be used to store custom data to be consumed by
       the Web page or application itself. They are <em>not</em> intended for
-      data to be consumed by other parties (e.g. user agents). 
+      data to be consumed by other parties (e.g. user agents).
 
       <li><p>The <code data-anolis-spec=html
       title=attr-draggable>draggable</code> and <code data-anolis-spec=html
@@ -764,7 +764,7 @@
 
       <li><p>The <code data-anolis-spec=html title=attr-hidden>hidden</code>
       attribute indicates that an element is not yet, or is no longer, relevant.
-      
+
       <li><p>WHATWG HTML has the <code data-anolis-spec=html title=attr-inert>inert</code> attribute, intended to make <code data-anolis-spec=html>dialog</code> elements modal.
 
       <li><p>The <code data-anolis-spec=html title=wai-aria>role</code> and
@@ -1601,7 +1601,7 @@
       <li><p>The <code data-anolis-spec=html title=attr-fs-action>action</code>
       attribute on <code data-anolis-spec=html>form</code> is no longer allowed
       to have an empty URL.
-      
+
       <li><p>In WHATWG HTML, the <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
 
       <li><p>The <code>border</code> attribute on <code
@@ -1651,7 +1651,7 @@
       <li><p>The <code data-anolis-spec=html title=attr-base-href>href</code>
       attribute on <code data-anolis-spec=html>base</code> is now allowed to
       contain a relative URL.
-      
+
       <li><p>All attributes that take URLs, e.g. <code data-anolis-spec=html
       title=attr-hyperlink-href>href</code> on the <code
       data-anolis-spec=html>a</code> element, now support IRIs if the document's
@@ -2147,7 +2147,7 @@
       title=dom-external-addsearchprovider>AddSearchProvider()</code> and <code
       data-anolis-spec=html
       title=dom-external-issearchproviderinstalled>IsSearchProviderInstalled()</code>).
-      
+
       <li><p>The <code data-anolis-spec=html>Window</code> object has been defined.
     </ul>
 
@@ -2553,11 +2553,11 @@
     changes that affect them early on.</p>
 
     <p>The changes in the changelogs are in rough chronological order.</p>
-    
+
     <h3 id="changes-2012-09-14">Changes from 14 September 2012 to 30 April 2013</h3><!-- rev 7347 - 7862 -->
 
     <p>The following changes were made to WHATWG HTML:
-    
+
     <ul>
      <li>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter.
      <li>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes.
@@ -2600,9 +2600,9 @@
      <li>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute.
      <li>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
     </ul>
-    
+
     <h3 id="changes-2012-03-29">Changes from 29 March 2012 to 14 September 2012</h3><!-- rev 7028 - 7347 -->
-    
+
     <ul>
      <li>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
      <li>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.

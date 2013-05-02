@@ -2323,10 +2323,12 @@
     content attribute.
 
     <p>The following interfaces are marked obsolete since the elements are
-    obsolete: <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlappletelement">HTMLAppletElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframesetelement">HTMLFrameSetElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframeelement">HTMLFrameElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlbasefontelement">HTMLBaseFontElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmldirectoryelement">HTMLDirectoryElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlfontelement">HTMLFontElement</a></code>.
+    obsolete: <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlappletelement">HTMLAppletElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframesetelement">HTMLFrameSetElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframeelement">HTMLFrameElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmldirectoryelement">HTMLDirectoryElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlfontelement">HTMLFontElement</a></code>.
 
     <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
-    the HTML parser expands an <code>isindex</code> tag into other elements.
+    the HTML parser expands an <code>isindex</code> tag into other elements. The
+    <code>HTMLBaseFontElement</code> interface is also removed since <!-- Anne managed to
+    kill it --> the element has no effect.
 
     <p>The following members of the <code>HTMLDocument</code> interface (which
     have now moved to <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code>) are now
@@ -2890,7 +2892,7 @@
 
     <ul>
      <li><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
-     <li><a href="http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol">WebSocket protocol</a></li>
+     <li><a href="http://tools.ietf.org/html/rfc6455">WebSocket protocol</a></li>
      <li><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
      <li><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
      <li><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
@@ -3235,7 +3237,7 @@
 <dd><cite><a href="http://dev.w3.org/csswg/cssom/">CSS Object Model (CSSOM)</a></cite>, Glenn Adams and Simon Pieters. W3C.
 
 <dt id="refsCSSUI">[CSSUI]
-<dd><cite><a href="http://dev.w3.org/csswg/css3-ui/">CSS Basic User Interface Module</a></cite>, Tantek Çelik. W3C.
+<dd><cite><a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module</a></cite>, Tantek Çelik. W3C.
 
 <dt id="refsDOCTYPE">[DOCTYPE]
 <dd><cite><a href="http://hsivonen.iki.fi/doctype/">Activating Browser Modes with Doctype</a></cite>, Henri Sivonen.

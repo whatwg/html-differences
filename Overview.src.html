@@ -2522,12 +2522,13 @@
     obsolete: <code data-anolis-spec=html>HTMLAppletElement</code>, <code
     data-anolis-spec=html>HTMLFrameSetElement</code>, <code
     data-anolis-spec=html>HTMLFrameElement</code>, <code
-    data-anolis-spec=html>HTMLBaseFontElement</code>, <code
     data-anolis-spec=html>HTMLDirectoryElement</code> and <code
     data-anolis-spec=html>HTMLFontElement</code>.
 
     <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
-    the HTML parser expands an <code>isindex</code> tag into other elements.
+    the HTML parser expands an <code>isindex</code> tag into other elements. The
+    <code>HTMLBaseFontElement</code> interface is also removed since <!-- Anne managed to
+    kill it --> the element has no effect.
 
     <p>The following members of the <code>HTMLDocument</code> interface (which
     have now moved to <code data-anolis-spec=html>Document</code>) are now
@@ -3096,7 +3097,7 @@
 
     <ul>
      <li><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
-     <li><a href="http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol">WebSocket protocol</a></li>
+     <li><a href="http://tools.ietf.org/html/rfc6455">WebSocket protocol</a></li>
      <li><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
      <li><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
      <li><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>

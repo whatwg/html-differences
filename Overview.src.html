@@ -184,12 +184,12 @@
     contemporary HTML implementations and deployed content. The specification:</p>
 
     <ol>
-      <li>Defines a single language called HTML which can be written
+      <li><p>Defines a single language called HTML which can be written
       in HTML syntax and in XML syntax.</li>
-      <li>Defines detailed processing models to foster interoperable
+      <li><p>Defines detailed processing models to foster interoperable
       implementations.</li>
-      <li>Improves markup for documents.</li>
-      <li>Introduces markup and APIs for emerging idioms, such as Web
+      <li><p>Improves markup for documents.</li>
+      <li><p>Introduces markup and APIs for emerging idioms, such as Web
       applications.</li>
     </ol>
 
@@ -304,14 +304,14 @@
     character encoding. There are three ways to do that:</p>
 
     <ul>
-      <li>At the transport level. By using the HTTP <code>Content-Type</code>
+      <li><p>At the transport level. By using the HTTP <code>Content-Type</code>
       header for instance.</li>
 
-      <li>Using a Unicode Byte Order Mark (BOM) character at the start of
+      <li><p>Using a Unicode Byte Order Mark (BOM) character at the start of
       the file. This character provides a signature for the encoding
       used.</li>
 
-      <li>Using a <code data-anolis-spec=html>meta</code> element with a <code data-anolis-spec=html title=attr-meta-charset>charset</code>
+      <li><p>Using a <code data-anolis-spec=html>meta</code> element with a <code data-anolis-spec=html title=attr-meta-charset>charset</code>
       attribute that specifies the encoding within the first 1024 bytes of
       the document. For instance, <code>&lt;meta charset="UTF-8"></code>
       could be used to specify the UTF-8 encoding. This replaces the need
@@ -552,7 +552,7 @@
     <p>The <code data-anolis-spec=html>input</code> element's <code data-anolis-spec=html title=attr-input-type>type</code> attribute now has the
     following new values:</p>
 
-    <ul>
+    <ul class=brief>
       <li><code data-anolis-spec=html title=attr-input-type-tel>tel</code>
 
       <li><code data-anolis-spec=html title=attr-input-type-search>search</code>
@@ -1766,7 +1766,7 @@
     <p>The following elements are not in HTML because their effect is
     purely presentational and their function is better handled by CSS:</p>
 
-    <ul>
+    <ul class=brief>
       <li><code data-anolis-spec=html>basefont</code>
 
       <li><code data-anolis-spec=html>big</code>
@@ -1783,7 +1783,7 @@
     <p>The following elements are not in HTML because using them damages
     usability and accessibility:</p>
 
-    <ul>
+    <ul class=brief>
       <li><code data-anolis-spec=html>frame</code>
 
       <li><code data-anolis-spec=html>frameset</code>
@@ -1796,16 +1796,16 @@
     elements:</p>
 
     <ul>
-      <li><code data-anolis-spec=html>acronym</code> is not included because it has created a lot
+      <li><p><code data-anolis-spec=html>acronym</code> is not included because it has created a lot
       of confusion. Web developers are to use <code data-anolis-spec=html>abbr</code> for
       abbreviations.</li>
 
-      <li><code data-anolis-spec=html>applet</code> has been obsoleted in favor of
+      <li><p><code data-anolis-spec=html>applet</code> has been obsoleted in favor of
       <code data-anolis-spec=html>object</code>.
 
-      <li><code data-anolis-spec=html>isindex</code> usage can be replaced by usage of form controls.
+      <li><p><code data-anolis-spec=html>isindex</code> usage can be replaced by usage of form controls.
 
-      <li><code data-anolis-spec=html title=attr-dir>dir</code> has been obsoleted in favor of <code data-anolis-spec=html>ul</code>.
+      <li><p><code data-anolis-spec=html title=attr-dir>dir</code> has been obsoleted in favor of <code data-anolis-spec=html>ul</code>.
     </ul>
 
     <p>Finally the <code data-anolis-spec=html>noscript</code> element is only conforming in the
@@ -1823,43 +1823,43 @@
     on what you can use instead.</p>
 
     <ul>
-      <li><code data-anolis-spec=html title=attr-a-rev>rev</code> and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-a-rev>rev</code> and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
       <code data-anolis-spec=html>link</code> and <code data-anolis-spec=html>a</code>.
 
-      <li><code data-anolis-spec=html title=attr-a-shape>shape</code> and <code data-anolis-spec=html title=attr-a-coords>coords</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-a-shape>shape</code> and <code data-anolis-spec=html title=attr-a-coords>coords</code> attributes on
       <code data-anolis-spec=html>a</code>.
 
-      <li><code data-anolis-spec=html title=attr-iframe-longdesc>longdesc</code> attribute on <code data-anolis-spec=html>img</code> and
+      <li><p><code data-anolis-spec=html title=attr-iframe-longdesc>longdesc</code> attribute on <code data-anolis-spec=html>img</code> and
       <code data-anolis-spec=html>iframe</code>.
 
-      <li><code data-anolis-spec=html title=attr-link-target>target</code> attribute on <code data-anolis-spec=html>link</code>.
+      <li><p><code data-anolis-spec=html title=attr-link-target>target</code> attribute on <code data-anolis-spec=html>link</code>.
 
-      <li><code data-anolis-spec=html title=attr-area-nohref>nohref</code> attribute on <code data-anolis-spec=html>area</code>.
+      <li><p><code data-anolis-spec=html title=attr-area-nohref>nohref</code> attribute on <code data-anolis-spec=html>area</code>.
 
-      <li><code data-anolis-spec=html title=attr-head-profile>profile</code> attribute on <code data-anolis-spec=html>head</code>.
+      <li><p><code data-anolis-spec=html title=attr-head-profile>profile</code> attribute on <code data-anolis-spec=html>head</code>.
 
-      <li><code data-anolis-spec=html title=attr-html-version>version</code> attribute on <code data-anolis-spec=html>html</code>.
+      <li><p><code data-anolis-spec=html title=attr-html-version>version</code> attribute on <code data-anolis-spec=html>html</code>.
 
-      <li><code data-anolis-spec=html title=attr-img-name>name</code> attribute on <code data-anolis-spec=html>img</code>
+      <li><p><code data-anolis-spec=html title=attr-img-name>name</code> attribute on <code data-anolis-spec=html>img</code>
       (use <code data-anolis-spec=html title=attr-id>id</code> instead).
 
-      <li><code data-anolis-spec=html title=attr-meta-scheme>scheme</code> attribute on <code data-anolis-spec=html>meta</code>.
+      <li><p><code data-anolis-spec=html title=attr-meta-scheme>scheme</code> attribute on <code data-anolis-spec=html>meta</code>.
 
-      <li><code data-anolis-spec=html title=attr-object-archive>archive</code>, <code data-anolis-spec=html title=attr-object-classid>classid</code>, <code data-anolis-spec=html title=attr-object-codebase>codebase</code>,
+      <li><p><code data-anolis-spec=html title=attr-object-archive>archive</code>, <code data-anolis-spec=html title=attr-object-classid>classid</code>, <code data-anolis-spec=html title=attr-object-codebase>codebase</code>,
       <code data-anolis-spec=html title=attr-object-codetype>codetype</code>, <code data-anolis-spec=html title=attr-object-declare>declare</code> and <code data-anolis-spec=html title=attr-object-standby>standby</code>
       attributes on <code data-anolis-spec=html>object</code>.
 
-      <li><code data-anolis-spec=html title=attr-param-valuetype>valuetype</code> and <code data-anolis-spec=html title=attr-param-type>type</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-param-valuetype>valuetype</code> and <code data-anolis-spec=html title=attr-param-type>type</code> attributes on
       <code data-anolis-spec=html>param</code>.
 
-      <li><code data-anolis-spec=html title=attr-tdth-axis>axis</code>
+      <li><p><code data-anolis-spec=html title=attr-tdth-axis>axis</code>
       attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
       
-      <li><code data-anolis-spec=html title=attr-td-abbr>abbr</code> and
+      <li><p><code data-anolis-spec=html title=attr-td-abbr>abbr</code> and
       <code data-anolis-spec=html title=attr-td-scope>scope</code> attributes on
       <code data-anolis-spec=html>td</code>.
 
-      <li><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
+      <li><p><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
     </ul>
 
     <p>In addition, HTML has none of the presentational attributes
@@ -1867,7 +1867,7 @@
     CSS:</p>
 
     <ul>
-      <li><code data-anolis-spec=html title=attr-caption-align>align</code> attribute on <code data-anolis-spec=html>caption</code>,
+      <li><p><code data-anolis-spec=html title=attr-caption-align>align</code> attribute on <code data-anolis-spec=html>caption</code>,
       <code data-anolis-spec=html>iframe</code>, <code data-anolis-spec=html>img</code>, <code data-anolis-spec=html>input</code>,
       <code data-anolis-spec=html>object</code>, <code data-anolis-spec=html>legend</code>, <code data-anolis-spec=html>table</code>,
       <code data-anolis-spec=html>hr</code>, <code data-anolis-spec=html>div</code>, <code data-anolis-spec=html>h1</code>, <code data-anolis-spec=html>h2</code>,
@@ -1876,62 +1876,62 @@
       <code data-anolis-spec=html>tbody</code>, <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>tfoot</code>,
       <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code> and <code data-anolis-spec=html>tr</code>.
 
-      <li><code data-anolis-spec=html title=attr-body-alink>alink</code>, <code data-anolis-spec=html title=attr-body-link>link</code>, <code data-anolis-spec=html title=attr-body-text>text</code> and
+      <li><p><code data-anolis-spec=html title=attr-body-alink>alink</code>, <code data-anolis-spec=html title=attr-body-link>link</code>, <code data-anolis-spec=html title=attr-body-text>text</code> and
       <code data-anolis-spec=html title=attr-body-vlink>vlink</code> attributes on <code data-anolis-spec=html>body</code>.
 
-      <li><code data-anolis-spec=html title=attr-background>background</code> attribute on <code data-anolis-spec=html>body</code>.
+      <li><p><code data-anolis-spec=html title=attr-background>background</code> attribute on <code data-anolis-spec=html>body</code>.
 
-      <li><code data-anolis-spec=html title=attr-body-bgcolor>bgcolor</code> attribute on <code data-anolis-spec=html>table</code>, <code data-anolis-spec=html>tr</code>,
+      <li><p><code data-anolis-spec=html title=attr-body-bgcolor>bgcolor</code> attribute on <code data-anolis-spec=html>table</code>, <code data-anolis-spec=html>tr</code>,
       <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>th</code> and <code data-anolis-spec=html>body</code>.
 
-      <li><code data-anolis-spec=html title=attr-object-border>border</code> attribute on <code data-anolis-spec=html>object</code>.
+      <li><p><code data-anolis-spec=html title=attr-object-border>border</code> attribute on <code data-anolis-spec=html>object</code>.
 
-      <li><code data-anolis-spec=html title=attr-table-cellpadding>cellpadding</code> and <code data-anolis-spec=html title=attr-table-cellspacing>cellspacing</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-table-cellpadding>cellpadding</code> and <code data-anolis-spec=html title=attr-table-cellspacing>cellspacing</code> attributes on
       <code data-anolis-spec=html>table</code>.
 
-      <li><code data-anolis-spec=html title=attr-col-char>char</code> and <code data-anolis-spec=html title=attr-col-charoff>charoff</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-col-char>char</code> and <code data-anolis-spec=html title=attr-col-charoff>charoff</code> attributes on
       <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>, <code data-anolis-spec=html>tbody</code>,
       <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code>
       and <code data-anolis-spec=html>tr</code>.
 
-      <li><code data-anolis-spec=html title=attr-br-clear>clear</code> attribute on <code data-anolis-spec=html>br</code>.
+      <li><p><code data-anolis-spec=html title=attr-br-clear>clear</code> attribute on <code data-anolis-spec=html>br</code>.
 
-      <li><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>menu</code>,
+      <li><p><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>menu</code>,
       <code data-anolis-spec=html>ol</code> and <code data-anolis-spec=html>ul</code>.
 
-      <li><code data-anolis-spec=html title=attr-table-frame>frame</code> attribute on <code data-anolis-spec=html>table</code>.
+      <li><p><code data-anolis-spec=html title=attr-table-frame>frame</code> attribute on <code data-anolis-spec=html>table</code>.
 
-      <li><code data-anolis-spec=html title=attr-iframe-frameborder>frameborder</code> attribute on <code data-anolis-spec=html title=attr-iframe-frameborder>iframe</code>.
+      <li><p><code data-anolis-spec=html title=attr-iframe-frameborder>frameborder</code> attribute on <code data-anolis-spec=html title=attr-iframe-frameborder>iframe</code>.
 
-      <li><code data-anolis-spec=html title=attr-tdth-height>height</code> attribute on <code data-anolis-spec=html>td</code> and
+      <li><p><code data-anolis-spec=html title=attr-tdth-height>height</code> attribute on <code data-anolis-spec=html>td</code> and
       <code data-anolis-spec=html>th</code>.
 
-      <li><code data-anolis-spec=html title=attr-img-hspace>hspace</code> and <code data-anolis-spec=html title=attr-img-vspace>vspace</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-img-hspace>hspace</code> and <code data-anolis-spec=html title=attr-img-vspace>vspace</code> attributes on
       <code data-anolis-spec=html>img</code> and <code data-anolis-spec=html>object</code>.
 
-      <li><code data-anolis-spec=html title=attr-iframe-marginheight>marginheight</code> and <code data-anolis-spec=html title=attr-iframe-marginwidth>marginwidth</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-iframe-marginheight>marginheight</code> and <code data-anolis-spec=html title=attr-iframe-marginwidth>marginwidth</code> attributes on
       <code data-anolis-spec=html>iframe</code>.
 
-      <li><code data-anolis-spec=html title=attr-hr-noshade>noshade</code> attribute on <code data-anolis-spec=html>hr</code>.
+      <li><p><code data-anolis-spec=html title=attr-hr-noshade>noshade</code> attribute on <code data-anolis-spec=html>hr</code>.
 
-      <li><code data-anolis-spec=html title=attr-tdth-nowrap>nowrap</code> attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
+      <li><p><code data-anolis-spec=html title=attr-tdth-nowrap>nowrap</code> attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
 
-      <li><code data-anolis-spec=html title=attr-table-rules>rules</code> attribute on <code data-anolis-spec=html>table</code>.
+      <li><p><code data-anolis-spec=html title=attr-table-rules>rules</code> attribute on <code data-anolis-spec=html>table</code>.
 
-      <li><code data-anolis-spec=html title=attr-iframe-scrolling>scrolling</code> attribute on <code data-anolis-spec=html>iframe</code>.
+      <li><p><code data-anolis-spec=html title=attr-iframe-scrolling>scrolling</code> attribute on <code data-anolis-spec=html>iframe</code>.
 
-      <li><code data-anolis-spec=html title=attr-hr-size>size</code> attribute on <code data-anolis-spec=html>hr</code>.
+      <li><p><code data-anolis-spec=html title=attr-hr-size>size</code> attribute on <code data-anolis-spec=html>hr</code>.
 
-      <li><code data-anolis-spec=html title=attr-li-type>type</code> attribute
+      <li><p><code data-anolis-spec=html title=attr-li-type>type</code> attribute
       on <code data-anolis-spec=html>li</code>,  and <code
       data-anolis-spec=html>ul</code>.
 
-      <li><code data-anolis-spec=html title=attr-col-valign>valign</code> attribute on <code data-anolis-spec=html>col</code>,
+      <li><p><code data-anolis-spec=html title=attr-col-valign>valign</code> attribute on <code data-anolis-spec=html>col</code>,
       <code data-anolis-spec=html>colgroup</code>, <code data-anolis-spec=html>tbody</code>, <code data-anolis-spec=html>td</code>,
       <code data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>thead</code> and
       <code data-anolis-spec=html>tr</code>.
 
-      <li><code data-anolis-spec=html title=attr-hr-width>width</code> attribute on <code data-anolis-spec=html>hr</code>, <code data-anolis-spec=html>table</code>,
+      <li><p><code data-anolis-spec=html title=attr-hr-width>width</code> attribute on <code data-anolis-spec=html>hr</code>, <code data-anolis-spec=html>table</code>,
       <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>
       and <code data-anolis-spec=html>pre</code>.
     </ul>

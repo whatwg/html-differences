@@ -212,12 +212,12 @@
     contemporary HTML implementations and deployed content. The specification:</p>
 
     <ol>
-      <li>Defines a single language called HTML which can be written
+      <li><p>Defines a single language called HTML which can be written
       in HTML syntax and in XML syntax.</li>
-      <li>Defines detailed processing models to foster interoperable
+      <li><p>Defines detailed processing models to foster interoperable
       implementations.</li>
-      <li>Improves markup for documents.</li>
-      <li>Introduces markup and APIs for emerging idioms, such as Web
+      <li><p>Improves markup for documents.</li>
+      <li><p>Introduces markup and APIs for emerging idioms, such as Web
       applications.</li>
     </ol>
 
@@ -332,14 +332,14 @@
     character encoding. There are three ways to do that:</p>
 
     <ul>
-      <li>At the transport level. By using the HTTP <code>Content-Type</code>
+      <li><p>At the transport level. By using the HTTP <code>Content-Type</code>
       header for instance.</li>
 
-      <li>Using a Unicode Byte Order Mark (BOM) character at the start of
+      <li><p>Using a Unicode Byte Order Mark (BOM) character at the start of
       the file. This character provides a signature for the encoding
       used.</li>
 
-      <li>Using a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">meta</a></code> element with a <code class="external" title="attr-meta-charset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-meta-charset">charset</a></code>
+      <li><p>Using a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">meta</a></code> element with a <code class="external" title="attr-meta-charset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-meta-charset">charset</a></code>
       attribute that specifies the encoding within the first 1024 bytes of
       the document. For instance, <code>&lt;meta charset="UTF-8"&gt;</code>
       could be used to specify the UTF-8 encoding. This replaces the need
@@ -580,7 +580,7 @@
     <p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> element's <code class="external" title="attr-input-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#attr-input-type">type</a></code> attribute now has the
     following new values:</p>
 
-    <ul>
+    <ul class="brief">
       <li><code class="external" title="attr-input-type-tel"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#telephone-state-(type=tel)">tel</a></code>
 
       <li><code class="external" title="attr-input-type-search"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#text-(type=text)-state-and-search-state-(type=search)">search</a></code>
@@ -1750,7 +1750,7 @@
     <p>The following elements are not in HTML because their effect is
     purely presentational and their function is better handled by CSS:</p>
 
-    <ul>
+    <ul class="brief">
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#basefont">basefont</a></code>
 
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#big">big</a></code>
@@ -1767,7 +1767,7 @@
     <p>The following elements are not in HTML because using them damages
     usability and accessibility:</p>
 
-    <ul>
+    <ul class="brief">
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#frame">frame</a></code>
 
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#frameset">frameset</a></code>
@@ -1780,16 +1780,16 @@
     elements:</p>
 
     <ul>
-      <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#acronym">acronym</a></code> is not included because it has created a lot
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#acronym">acronym</a></code> is not included because it has created a lot
       of confusion. Web developers are to use <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-abbr-element">abbr</a></code> for
       abbreviations.</li>
 
-      <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#the-applet-element">applet</a></code> has been obsoleted in favor of
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#the-applet-element">applet</a></code> has been obsoleted in favor of
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
 
-      <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> usage can be replaced by usage of form controls.
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> usage can be replaced by usage of form controls.
 
-      <li><code class="external" title="attr-dir"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-dir-attribute">dir</a></code> has been obsoleted in favor of <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ul-element">ul</a></code>.
+      <li><p><code class="external" title="attr-dir"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-dir-attribute">dir</a></code> has been obsoleted in favor of <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ul-element">ul</a></code>.
     </ul>
 
     <p>Finally the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-noscript-element">noscript</a></code> element is only conforming in the
@@ -1807,43 +1807,43 @@
     on what you can use instead.</p>
 
     <ul>
-      <li><code class="external" title="attr-a-rev"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-rev">rev</a></code> and <code class="external" title="attr-a-charset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-charset">charset</a></code> attributes on
+      <li><p><code class="external" title="attr-a-rev"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-rev">rev</a></code> and <code class="external" title="attr-a-charset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-charset">charset</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>.
 
-      <li><code class="external" title="attr-a-shape"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-shape">shape</a></code> and <code class="external" title="attr-a-coords"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-coords">coords</a></code> attributes on
+      <li><p><code class="external" title="attr-a-shape"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-shape">shape</a></code> and <code class="external" title="attr-a-coords"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-coords">coords</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>.
 
-      <li><code class="external" title="attr-iframe-longdesc"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-longdesc">longdesc</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> and
+      <li><p><code class="external" title="attr-iframe-longdesc"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-longdesc">longdesc</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> and
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
 
-      <li><code class="external" title="attr-link-target"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-link-target">target</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>.
+      <li><p><code class="external" title="attr-link-target"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-link-target">target</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>.
 
-      <li><code class="external" title="attr-area-nohref"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-area-nohref">nohref</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element">area</a></code>.
+      <li><p><code class="external" title="attr-area-nohref"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-area-nohref">nohref</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element">area</a></code>.
 
-      <li><code class="external" title="attr-head-profile"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-head-profile">profile</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element">head</a></code>.
+      <li><p><code class="external" title="attr-head-profile"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-head-profile">profile</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-head-element">head</a></code>.
 
-      <li><code class="external" title="attr-html-version"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-html-version">version</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-html-element">html</a></code>.
+      <li><p><code class="external" title="attr-html-version"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-html-version">version</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-html-element">html</a></code>.
 
-      <li><code class="external" title="attr-img-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>
+      <li><p><code class="external" title="attr-img-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>
       (use <code class="external" title="attr-id"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> instead).
 
-      <li><code class="external" title="attr-meta-scheme"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-meta-scheme">scheme</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">meta</a></code>.
+      <li><p><code class="external" title="attr-meta-scheme"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-meta-scheme">scheme</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">meta</a></code>.
 
-      <li><code class="external" title="attr-object-archive"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-archive">archive</a></code>, <code class="external" title="attr-object-classid"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-classid">classid</a></code>, <code class="external" title="attr-object-codebase"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-codebase">codebase</a></code>,
+      <li><p><code class="external" title="attr-object-archive"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-archive">archive</a></code>, <code class="external" title="attr-object-classid"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-classid">classid</a></code>, <code class="external" title="attr-object-codebase"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-codebase">codebase</a></code>,
       <code class="external" title="attr-object-codetype"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-codetype">codetype</a></code>, <code class="external" title="attr-object-declare"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-declare">declare</a></code> and <code class="external" title="attr-object-standby"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-standby">standby</a></code>
       attributes on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
 
-      <li><code class="external" title="attr-param-valuetype"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-valuetype">valuetype</a></code> and <code class="external" title="attr-param-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-type">type</a></code> attributes on
+      <li><p><code class="external" title="attr-param-valuetype"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-valuetype">valuetype</a></code> and <code class="external" title="attr-param-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-type">type</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-param-element">param</a></code>.
 
-      <li><code class="external" title="attr-tdth-axis"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-axis">axis</a></code>
+      <li><p><code class="external" title="attr-tdth-axis"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-axis">axis</a></code>
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
       
-      <li><code class="external" title="attr-td-abbr"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-abbr">abbr</a></code> and
+      <li><p><code class="external" title="attr-td-abbr"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-abbr">abbr</a></code> and
       <code class="external" title="attr-td-scope"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-scope">scope</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>.
 
-      <li><code class="external" title="attr-table-summary"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-summary">summary</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
+      <li><p><code class="external" title="attr-table-summary"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-summary">summary</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
     </ul>
 
     <p>In addition, HTML has none of the presentational attributes
@@ -1851,7 +1851,7 @@
     CSS:</p>
 
     <ul>
-      <li><code class="external" title="attr-caption-align"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-caption-align">align</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element">caption</a></code>,
+      <li><p><code class="external" title="attr-caption-align"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-caption-align">align</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element">caption</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-legend-element">legend</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element">div</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h1-element">h1</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h2-element">h2</a></code>,
@@ -1860,61 +1860,61 @@
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tbody-element">tbody</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tfoot-element">tfoot</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-thead-element">thead</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element">tr</a></code>.
 
-      <li><code class="external" title="attr-body-alink"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-alink">alink</a></code>, <code class="external" title="attr-body-link"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-link">link</a></code>, <code class="external" title="attr-body-text"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-text">text</a></code> and
+      <li><p><code class="external" title="attr-body-alink"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-alink">alink</a></code>, <code class="external" title="attr-body-link"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-link">link</a></code>, <code class="external" title="attr-body-text"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-text">text</a></code> and
       <code class="external" title="attr-body-vlink"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-vlink">vlink</a></code> attributes on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element">body</a></code>.
 
-      <li><code class="external" title="attr-background"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-background">background</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element">body</a></code>.
+      <li><p><code class="external" title="attr-background"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-background">background</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element">body</a></code>.
 
-      <li><code class="external" title="attr-body-bgcolor"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-bgcolor">bgcolor</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element">tr</a></code>,
+      <li><p><code class="external" title="attr-body-bgcolor"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-body-bgcolor">bgcolor</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element">tr</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element">body</a></code>.
 
-      <li><code class="external" title="attr-object-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-border">border</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
+      <li><p><code class="external" title="attr-object-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-border">border</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
 
-      <li><code class="external" title="attr-table-cellpadding"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-cellpadding">cellpadding</a></code> and <code class="external" title="attr-table-cellspacing"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-cellspacing">cellspacing</a></code> attributes on
+      <li><p><code class="external" title="attr-table-cellpadding"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-cellpadding">cellpadding</a></code> and <code class="external" title="attr-table-cellspacing"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-cellspacing">cellspacing</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
 
-      <li><code class="external" title="attr-col-char"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-char">char</a></code> and <code class="external" title="attr-col-charoff"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-charoff">charoff</a></code> attributes on
+      <li><p><code class="external" title="attr-col-char"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-char">char</a></code> and <code class="external" title="attr-col-charoff"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-charoff">charoff</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element">col</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element">colgroup</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tbody-element">tbody</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tfoot-element">tfoot</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-thead-element">thead</a></code>
       and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element">tr</a></code>.
 
-      <li><code class="external" title="attr-br-clear"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-br-clear">clear</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-br-element">br</a></code>.
+      <li><p><code class="external" title="attr-br-clear"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-br-clear">clear</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-br-element">br</a></code>.
 
-      <li><code class="external" title="attr-dl-compact"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-dl-compact">compact</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dl-element">dl</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element">menu</a></code>,
+      <li><p><code class="external" title="attr-dl-compact"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-dl-compact">compact</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dl-element">dl</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element">menu</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ol-element">ol</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ul-element">ul</a></code>.
 
-      <li><code class="external" title="attr-table-frame"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-frame">frame</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
+      <li><p><code class="external" title="attr-table-frame"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-frame">frame</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
 
-      <li><code class="external" title="attr-iframe-frameborder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-frameborder">frameborder</a></code> attribute on <code class="external" title="attr-iframe-frameborder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-frameborder">iframe</a></code>.
+      <li><p><code class="external" title="attr-iframe-frameborder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-frameborder">frameborder</a></code> attribute on <code class="external" title="attr-iframe-frameborder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-frameborder">iframe</a></code>.
 
-      <li><code class="external" title="attr-tdth-height"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-height">height</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and
+      <li><p><code class="external" title="attr-tdth-height"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-height">height</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
 
-      <li><code class="external" title="attr-img-hspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-hspace">hspace</a></code> and <code class="external" title="attr-img-vspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-vspace">vspace</a></code> attributes on
+      <li><p><code class="external" title="attr-img-hspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-hspace">hspace</a></code> and <code class="external" title="attr-img-vspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-vspace">vspace</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
 
-      <li><code class="external" title="attr-iframe-marginheight"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginheight">marginheight</a></code> and <code class="external" title="attr-iframe-marginwidth"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginwidth">marginwidth</a></code> attributes on
+      <li><p><code class="external" title="attr-iframe-marginheight"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginheight">marginheight</a></code> and <code class="external" title="attr-iframe-marginwidth"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginwidth">marginwidth</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
 
-      <li><code class="external" title="attr-hr-noshade"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-noshade">noshade</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>.
+      <li><p><code class="external" title="attr-hr-noshade"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-noshade">noshade</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>.
 
-      <li><code class="external" title="attr-tdth-nowrap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-nowrap">nowrap</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
+      <li><p><code class="external" title="attr-tdth-nowrap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-nowrap">nowrap</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
 
-      <li><code class="external" title="attr-table-rules"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-rules">rules</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
+      <li><p><code class="external" title="attr-table-rules"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-rules">rules</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
 
-      <li><code class="external" title="attr-iframe-scrolling"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-scrolling">scrolling</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
+      <li><p><code class="external" title="attr-iframe-scrolling"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-scrolling">scrolling</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
 
-      <li><code class="external" title="attr-hr-size"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-size">size</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>.
+      <li><p><code class="external" title="attr-hr-size"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-size">size</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>.
 
-      <li><code class="external" title="attr-li-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-li-type">type</a></code> attribute
+      <li><p><code class="external" title="attr-li-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-li-type">type</a></code> attribute
       on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-li-element">li</a></code>,  and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-ul-element">ul</a></code>.
 
-      <li><code class="external" title="attr-col-valign"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-valign">valign</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element">col</a></code>,
+      <li><p><code class="external" title="attr-col-valign"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-col-valign">valign</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element">col</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element">colgroup</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tbody-element">tbody</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tfoot-element">tfoot</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-thead-element">thead</a></code> and
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tr-element">tr</a></code>.
 
-      <li><code class="external" title="attr-hr-width"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-width">width</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>,
+      <li><p><code class="external" title="attr-hr-width"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-hr-width">width</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element">col</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element">colgroup</a></code>
       and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-pre-element">pre</a></code>.
     </ul>

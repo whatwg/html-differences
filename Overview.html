@@ -199,7 +199,7 @@
     <p>HTML has been in continuous evolution since it was introduced to the
     Internet in the early 1990s. Some features were introduced in
     specifications; others were introduced in software releases. In some
-    respects, implementations and author practices have converged with each
+    respects, implementations and Web developer practices have converged with each
     other and with specifications and standards, but in other ways, they
     have diverged.</p>
 
@@ -237,21 +237,22 @@
     <h3 id="backwards-compatible"><span class="secno">1.4 </span>Backwards Compatible</h3>
 
     <p>HTML is defined in a way that it is backwards compatible with
-    the way user agents handle deployed content. To keep the authoring
-    language relatively simple for authors, several elements and attributes
+    the way user agents handle deployed content. To keep the
+    language relatively simple for Web developers, several elements and attributes
     are not included, as outlined in the other sections of this document,
     such as presentational elements that are better dealt with using
     CSS.</p>
 
     <p>User agents, however, will always have to support these older
     elements and attributes and this is why the HTML specification clearly
-    separates requirements for authors and user agents. For instance, this
-    means that authors cannot use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> or the
+    separates requirements for Web developers (referred to as "authors" in the
+    specification) and user agents. For instance, this
+    means that Web developers cannot use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> or the
     <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#plaintext">plaintext</a></code> element, but user agents are required to support
     them in a way that is compatible with how these elements need to behave
     for compatibility with deployed content.</p>
 
-    <p>Since HTML has separate conformance requirements for authors
+    <p>Since HTML has separate conformance requirements for Web developers
     and user agents there is no longer a need for marking features
     "deprecated".</p>
 
@@ -265,7 +266,7 @@
 
     <p>The WHATWG HTML standard is under continual development where bugs are fixed
     and new features are introduced over time. Features can also be removed from the
-    specification if they lack implementor interest or are not being used by authors, or
+    specification if they lack implementor interest or are not being used by Web developers, or
     for other reasons. The WHATWG does not publish frozen snapshots.
     
     <p>The W3C HTML5 specification is trying to reach Recommendation status. New features
@@ -332,7 +333,7 @@
 
     <h3 id="character-encoding"><span class="secno">2.1 </span>Character Encoding</h3>
 
-    <p>For the HTML syntax, authors are required to declare the
+    <p>For the HTML syntax, Web developers are required to declare the
     character encoding. There are three ways to do that:</p>
 
     <ul>
@@ -352,7 +353,7 @@
       although that syntax is still allowed.</li>
     </ul>
 
-    <p>For the XML syntax, authors have to use the rules as set forth in the
+    <p>For the XML syntax, Web developers have to use the rules as set forth in the
     XML specifications to set the character encoding.</p>
 
     <h3 id="doctype"><span class="secno">2.2 </span>The Doctype</h3>
@@ -500,7 +501,7 @@
     <ul>
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element">video</a></code> and
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-audio-element">audio</a></code> for multimedia content. Both
-      provide an API so application authors can script their own user
+      provide an API so application Web developers can script their own user
       interface, but there is also a way to trigger a user interface
       provided by the user agent. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-source-element">source</a></code>
       elements are used together with these elements if there are multiple
@@ -773,10 +774,10 @@
       element and manipulate the markup.
 
       <li><p>The <code class="external" title="attr-contextmenu"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#attr-contextmenu">contextmenu</a></code> attribute can be used to point
-      to a context menu provided by the author.
+      to a context menu provided by the Web developer.
 
-      <li><p>The <code class="external" title="attr-data-*"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#attr-data-*">data-<var>*</var></a></code> collection of author-defined
-      attributes. Authors can define any attribute they want as long as they
+      <li><p>The <code class="external" title="attr-data-*"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#attr-data-*">data-<var>*</var></a></code> collection of Web developer-defined
+      attributes. Web developers can define any attribute they want as long as they
       prefix it with <code>data-</code> to avoid clashes with future versions of
       HTML. These are intended to be used to store custom data to be consumed by
       the Web page or application itself. They are <em>not</em> intended for
@@ -1702,27 +1703,27 @@
 
     </ul>
 
-    <p>The following attributes are allowed but authors are discouraged from
+    <p>The following attributes are allowed but Web developers are discouraged from
     using them and instead strongly encouraged to use an alternative solution:</p>
 
     <ul>
      <li><p>The <code class="external" title="attr-img-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-border">border</a></code>
      attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>. It is required to have
-     the value "<code>0</code>" when present. Authors can use CSS
+     the value "<code>0</code>" when present. Web developers can use CSS
      instead.</li>
 
      <li><p>The <code class="external" title="attr-script-language"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-script-language">language</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code>. It is required to have the value
      "<code>JavaScript</code>" (case-insensitive) when present and cannot
-     conflict with the <code class="external" title="attr-script-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">type</a></code> attribute. Authors can simply omit it as
+     conflict with the <code class="external" title="attr-script-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">type</a></code> attribute. Web developers can simply omit it as
      it has no useful function.</li>
 
-     <li><p>The <code class="external" title="attr-a-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>. Authors can use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute instead.</li>
+     <li><p>The <code class="external" title="attr-a-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>. Web developers can use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute instead.</li>
     </ul>
 
 
     <h3 id="obsolete-elements"><span class="secno">3.5 </span>Obsolete Elements</h3>
 
-    <p>The elements in this section are not to be used by authors. User
+    <p>The elements in this section are not to be used by Web developers. User
     agents will still have to support them and various sections in
     HTML define how. E.g. the obsolete <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> element
     is handled by the parser section.</p>
@@ -1761,7 +1762,7 @@
 
     <ul>
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#acronym">acronym</a></code> is not included because it has created a lot
-      of confusion. Authors are to use <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-abbr-element">abbr</a></code> for
+      of confusion. Web developers are to use <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-abbr-element">abbr</a></code> for
       abbreviations.</li>
 
       <li><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#the-applet-element">applet</a></code> has been obsoleted in favor of
@@ -1780,7 +1781,7 @@
 
     <p>Some attributes from HTML4 are no longer allowed in HTML. The
     specification defines how user agents should process them in legacy
-    documents, but authors must not use them and they will not validate.</p>
+    documents, but Web developers must not use them and they will not validate.</p>
 
     <p>HTML
     <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features" title="non-conforming features">has advice</a>
@@ -2214,7 +2215,7 @@
       simulate clicks and moving focus.
 
       <li><p><code class="external" title="dom-accessKeyLabel"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-accesskeylabel">accessKeyLabel</a></code> gives the shortcut key that
-      the user agent has assigned for the element, which the author can
+      the user agent has assigned for the element, which the Web developer can
       influence with the <code class="external" title="attr-accesskey"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#the-accesskey-attribute">accesskey</a></code> attribute.
 
       <li><p><code class="external" title="dom-isContentEditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-iscontenteditable">isContentEditable</a></code> returns true if the
@@ -2519,10 +2520,10 @@
      <li>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
      <li><code>MediaController</code> gained an <code>onended</code> event listener.
      <li>The HTML parser changed its handling of U+0000 characters in some places.
-     <li>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for authors to embed untrusted resources where they expect a certain content type.
+     <li>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for Web developers to embed untrusted resources where they expect a certain content type.
      <li>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
      <li>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
-     <li>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so authors can safely use them for custom data blocks.
+     <li>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so Web developers can safely use them for custom data blocks.
      <li><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
      <li><code>window.status</code> was specified to exist but do nothing.
      <li>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
@@ -2742,7 +2743,7 @@
 
     <p>A whole lot of other smaller issues have also been resolved. The
     above list summarizes what is thought to be of primary interest to
-    authors.</p>
+    Web developers.</p>
 
     <p>In addition to all of the above, Microdata, the 2D context API for
     <code>canvas</code>, and Web Messaging (<code>postMessage()</code> API)
@@ -2910,7 +2911,7 @@
      <code>canvas</code> element and its API.</li>
      <li>Security model for <code>canvas</code> is clarified.</li>
      <li>Various changes to the processing model of <code>canvas</code> have
-     been made in response to implementation and author feedback. E.g.
+     been made in response to implementation and Web developer feedback. E.g.
      clarifying what happens when NaN and Infinity are passed and fixing the
      definitions of <code>arc()</code> and <code>arcTo()</code>.</li>
      <li><code>innerHTML</code> in XML was slightly changed to improve
@@ -2925,7 +2926,7 @@
      <li>Sniffing is now allowed for <code>link</code> when the expected
      type is an image.</li>
      <li>A section on URLs is introduced dealing with how URL values are to
-     be interpreted and what exactly authors are required to do. Every
+     be interpreted and what exactly Web developers are required to do. Every
      feature of the specification that uses URLs has been reworded to take
      the new URL section into account.</li>
      <li>It is now explicit that the <code>href</code> attribute of the
@@ -3031,7 +3032,7 @@
      line with the upcoming Web IDL specification.</li>
      <li>Table headers can now have headers. User agents are required to
      support a <code>headers</code> attribute pointing to a <code>td</code>
-     or <code>th</code> element, but authors are required to only let them
+     or <code>th</code> element, but Web developers are required to only let them
      point to <code>th</code> elements.</li>
      <li>Interested parties can now register new <code>http-equiv</code>
      values.</li>
@@ -3152,7 +3153,7 @@
      method.
      <li>MathML support has been added to the HTML parser section. (SVG
      support is still awaiting input from the SVG WG.)
-     <li>Author-defined attributes have been added. Authors can add
+     <li>Web developer-defined attributes have been added. Web developers can add
      attributes to elements in the form of
      <code>data-<var>name</var></code> and can access these through the DOM
      using <code>dataset[<var>name</var>]</code> on the element in question.

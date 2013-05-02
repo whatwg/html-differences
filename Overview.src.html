@@ -1980,27 +1980,27 @@
     several of them.
 
     <ul>
-      <li>Metadata content, e.g. <code data-anolis-spec=html>link</code>, <code
+      <li><p>Metadata content, e.g. <code data-anolis-spec=html>link</code>, <code
       data-anolis-spec=html>script</code>.
 
-      <li>Flow content, e.g. <code data-anolis-spec=html>span</code>, <code
+      <li><p>Flow content, e.g. <code data-anolis-spec=html>span</code>, <code
       data-anolis-spec=html>div</code>, text. This is roughly like HTML4's
       "block-level" and "inline" together.
 
-      <li>Sectioning content, e.g. <code data-anolis-spec=html>aside</code>,
+      <li><p>Sectioning content, e.g. <code data-anolis-spec=html>aside</code>,
       <code data-anolis-spec=html>section</code>.
 
-      <li>Heading content, e.g. <code data-anolis-spec=html>h1</code>.
+      <li><p>Heading content, e.g. <code data-anolis-spec=html>h1</code>.
 
-      <li>Phrasing content, e.g. <code data-anolis-spec=html>span</code>, <code
+      <li><p>Phrasing content, e.g. <code data-anolis-spec=html>span</code>, <code
       data-anolis-spec=html>img</code>, text. This is roughly like HTML4's
       "inline". Elements that are phrasing content are also flow content.
 
-      <li>Embedded content, e.g. <code data-anolis-spec=html>img</code>, <code
+      <li><p>Embedded content, e.g. <code data-anolis-spec=html>img</code>, <code
       data-anolis-spec=html>iframe</code>, <code
       data-anolis-spec=html>svg</code>.
 
-      <li>Interactive content, e.g. <code data-anolis-spec=html>a</code>, <code
+      <li><p>Interactive content, e.g. <code data-anolis-spec=html>a</code>, <code
       data-anolis-spec=html>button</code>, <code
       data-anolis-spec=html>label</code>. Interactive content is not allowed to
       be nested.
@@ -2603,47 +2603,47 @@
     <p>The following changes were made to WHATWG HTML:
 
     <ul>
-     <li>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter.
-     <li>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes.
-     <li>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional.
-     <li>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class.
-     <li>The <code>HTMLBaseFontElement</code> interface has been removed.
-     <li>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object.
-     <li>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements.
-     <li>The drag and drop API now has a <code>dragexit</code> event.
-     <li>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls).
-     <li>The <code>navigator</code> object now has a <code>product</code> IDL attribute that always returns "Gecko" (for compatibility).
-     <li>The <code>time</code> element's <code>datetime</code> IDL attribute got renamed to <code>dateTime</code>.
-     <li>The <code>pushState()</code> and <code>replaceState()</code> methods can now be invoked with <code>null</code> as the third argument.
-     <li>A new <code>main</code> element has been added.
-     <li>The <code>stepUp()</code> and <code>stepDown()</code> methods on the <code>input</code> element have been tweaked.
-     <li>The <code>img</code> element now supports progress events.
-     <li>A new <code>fillRule</code> IDL attribute has been added to the canvas 2d context.
-     <li>The <code>style</code> IDL attribute on HTML elements is now settable.
-     <li>The <code>media</code> attribute has been dropped from the <code>a</code> and <code>area</code> elements.
-     <li>Heading elements now support automatic sizing in <code>hgroup</code> if they follow an <code>h1</code> element.
-     <li>The <code>navigator</code> object now has a <code>language</code> IDL attribute.
-     <li>The <code>menu</code> API has been revamped. The <code>command</code> element was dropped. An new <code>menuitem</code> element was added. The <code>menu</code> element's <code>type</code> attribute now uses the value "<code>popup</code>" instead of "<code>context</code>". The <code>button</code> element has a new <code>menu</code> attribute and the <code>type</code> attribute supports a new value "<code>menu</code>".
-     <li>The <code>table</code> element now supports sorting columns. The <code>table</code> element has a new <code>sortable</code> attribute and a <code>stopSorting()</code> method. The <code>th</code> element has a new <code>sorted</code> attribute and a <code>sort()</code> method.
-     <li>The <code>autocomplete</code> attribute on form controls now supports the <code>cc-type</code> type.
-     <li>A new <code>currentScript</code> IDL attribute on <code>document</code> was added.
-     <li>The <code>link</code> and <code>script</code> elements now support the <code>crossorigin</code> attribute.
-     <li>The <code>canvas</code> element now supports indirect and proxied rendering contexts, to support drawing from a worker. The <code>CanvasProxy</code>, <code>ImageBitmap</code> interfaces are introduced, the <code>canvas</code> element has new <code>setContext()</code> and <code>transferControlToProxy()</code> methods, and a new <code>createImageBitmap()</code> method on <code>window</code> was introduced.
-     <li>The canvas 2d context has a new <code>direction</code> IDL attribute.
-     <li>The <code>screen</code> object has a new <code>canvasResolution</code> IDL attribute.
-     <li>A new <code>PortCollection()</code> constructor was added to support sending messages to many ports while allowing them to be garbage collected.
-     <li>The <code>getItem()</code> method on <code>Storage</code> can now return null.
-     <li>The <code>sandbox</code> attribute on <code>iframe</code> supports a new value "<code>allow-pointer-lock</code>".
-     <li>The HTML parser now invokes mutation observers.
-     <li>The <code>canvas</code> element has a new <code>supportsContext()</code> method.
-     <li>The <code>abbr</code> attribute on the <code>th</code> element is now conforming.
-     <li>A new <code>forceSpellCheck()</code> method on HTML elements was added.
-     <li>The <code>EventSource</code> API now reconnects for DNS errors and TCP-level connection failures.
-     <li>A new <code>fastSeek()</code> method was added to media elements.
-     <li>The <code>http+aes:</code> and <code>https+aes:</code> schemes were removed due to lack of interest.
-     <li>Navigations with <code>rel=noreferrer</code> now does not clone the <code>sessionStorage</code>.
-     <li>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute.
-     <li>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
+     <li><p>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter.
+     <li><p>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes.
+     <li><p>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional.
+     <li><p>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class.
+     <li><p>The <code>HTMLBaseFontElement</code> interface has been removed.
+     <li><p>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object.
+     <li><p>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements.
+     <li><p>The drag and drop API now has a <code>dragexit</code> event.
+     <li><p>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls).
+     <li><p>The <code>navigator</code> object now has a <code>product</code> IDL attribute that always returns "Gecko" (for compatibility).
+     <li><p>The <code>time</code> element's <code>datetime</code> IDL attribute got renamed to <code>dateTime</code>.
+     <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods can now be invoked with <code>null</code> as the third argument.
+     <li><p>A new <code>main</code> element has been added.
+     <li><p>The <code>stepUp()</code> and <code>stepDown()</code> methods on the <code>input</code> element have been tweaked.
+     <li><p>The <code>img</code> element now supports progress events.
+     <li><p>A new <code>fillRule</code> IDL attribute has been added to the canvas 2d context.
+     <li><p>The <code>style</code> IDL attribute on HTML elements is now settable.
+     <li><p>The <code>media</code> attribute has been dropped from the <code>a</code> and <code>area</code> elements.
+     <li><p>Heading elements now support automatic sizing in <code>hgroup</code> if they follow an <code>h1</code> element.
+     <li><p>The <code>navigator</code> object now has a <code>language</code> IDL attribute.
+     <li><p>The <code>menu</code> API has been revamped. The <code>command</code> element was dropped. An new <code>menuitem</code> element was added. The <code>menu</code> element's <code>type</code> attribute now uses the value "<code>popup</code>" instead of "<code>context</code>". The <code>button</code> element has a new <code>menu</code> attribute and the <code>type</code> attribute supports a new value "<code>menu</code>".
+     <li><p>The <code>table</code> element now supports sorting columns. The <code>table</code> element has a new <code>sortable</code> attribute and a <code>stopSorting()</code> method. The <code>th</code> element has a new <code>sorted</code> attribute and a <code>sort()</code> method.
+     <li><p>The <code>autocomplete</code> attribute on form controls now supports the <code>cc-type</code> type.
+     <li><p>A new <code>currentScript</code> IDL attribute on <code>document</code> was added.
+     <li><p>The <code>link</code> and <code>script</code> elements now support the <code>crossorigin</code> attribute.
+     <li><p>The <code>canvas</code> element now supports indirect and proxied rendering contexts, to support drawing from a worker. The <code>CanvasProxy</code>, <code>ImageBitmap</code> interfaces are introduced, the <code>canvas</code> element has new <code>setContext()</code> and <code>transferControlToProxy()</code> methods, and a new <code>createImageBitmap()</code> method on <code>window</code> was introduced.
+     <li><p>The canvas 2d context has a new <code>direction</code> IDL attribute.
+     <li><p>The <code>screen</code> object has a new <code>canvasResolution</code> IDL attribute.
+     <li><p>A new <code>PortCollection()</code> constructor was added to support sending messages to many ports while allowing them to be garbage collected.
+     <li><p>The <code>getItem()</code> method on <code>Storage</code> can now return null.
+     <li><p>The <code>sandbox</code> attribute on <code>iframe</code> supports a new value "<code>allow-pointer-lock</code>".
+     <li><p>The HTML parser now invokes mutation observers.
+     <li><p>The <code>canvas</code> element has a new <code>supportsContext()</code> method.
+     <li><p>The <code>abbr</code> attribute on the <code>th</code> element is now conforming.
+     <li><p>A new <code>forceSpellCheck()</code> method on HTML elements was added.
+     <li><p>The <code>EventSource</code> API now reconnects for DNS errors and TCP-level connection failures.
+     <li><p>A new <code>fastSeek()</code> method was added to media elements.
+     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> schemes were removed due to lack of interest.
+     <li><p>Navigations with <code>rel=noreferrer</code> now does not clone the <code>sessionStorage</code>.
+     <li><p>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute.
+     <li><p>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
     </ul>
     
     <p class=XXX>Changes in W3C HTML5 and W3C HTML5.1. <!-- hgroup, ... -->
@@ -2651,193 +2651,193 @@
     <h3 id="changes-2012-03-29">Changes from 29 March 2012 to 14 September 2012</h3><!-- rev 7028 - 7347 -->
 
     <ul>
-     <li>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
-     <li>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.
-     <li>The placeholder section for the <code>find()</code> API has been dropped.
-     <li>An encoding declaration is now required in the HTML syntax even if only ASCII characters are used.
-     <li>Some bug fixes in the Drag and Drop API.
-     <li>The <code>inBandMetadataTrackDispatchType</code> IDL attribute was added to <code>TextTrack</code>.
-     <li>The <code>TextTrackCue()</code> constructor now has fewer arguments.
-     <li>The <code>accept</code> attribute now supports file extensions as well as MIME types.
-     <li>The <code>initialTime</code> IDL attribute on media elements has been dropped.
-     <li>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
+     <li><p>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
+     <li><p>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.
+     <li><p>The placeholder section for the <code>find()</code> API has been dropped.
+     <li><p>An encoding declaration is now required in the HTML syntax even if only ASCII characters are used.
+     <li><p>Some bug fixes in the Drag and Drop API.
+     <li><p>The <code>inBandMetadataTrackDispatchType</code> IDL attribute was added to <code>TextTrack</code>.
+     <li><p>The <code>TextTrackCue()</code> constructor now has fewer arguments.
+     <li><p>The <code>accept</code> attribute now supports file extensions as well as MIME types.
+     <li><p>The <code>initialTime</code> IDL attribute on media elements has been dropped.
+     <li><p>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
     </ul>
     
     <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
 
     <ul>
-     <li>Several changes and bug fixes in the Text Track API.
-     <li><code>addElement()</code> was dropped from the Drag and Drop API.
-     <li>Media queries are now proxied for <code>iframe</code> elements with the <code>seamless</code> attribute.
-     <li>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now apply to <code>input</code> elements in the Hidden state.
-     <li>The <code>ssh</code>, <code>sip</code> and <code>magnet</code> schemes are now in the <code>registerProtocolHandler()</code> whitelist.
-     <li><code>table</code> elements now have 'box-sizing:border-box' by default.
-     <li>Bug fixes in the "potentially CORS-enabled fetch" algorithm.
-     <li>The document outline algorithm now ignores elements with the <code>hidden</code> attribute.
-     <li>Markup generators that are unable to provide required <code>alt</code> text can now use a specific attribute on <code>img</code> that makes validators ignore the missing <code>alt</code> error.
-     <li>Workers and shared workers now support <code>data:</code> URLs.
-     <li>The <code>inputmode</code> attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li>The <code>autocomplete</code> attribute has been extended to support prefilling specific things.
-     <li>WebSocket supports sending <code>ArrayBufferView</code> as well as <code>ArrayBuffer</code>.
-     <li>The <code>border</code> attribute on <code>table</code> is non-conforming again.
-     <li>The canvas ImageData methods now assume 96dpi, and a set of "HD" methods have been introduced.
-     <li>The shared worker <code>connect</code> event now also exposes the source port in the <code>source</code> IDL attribute.
-     <li>Lone surrogates are converted to U+FFFD instead of throwing in WebSocket <code>send()</code>.
-     <li>The <code>setRangeText()</code> method has been added to <code>input</code> and <code>textarea</code>.
-     <li>The <code>srcset</code> attribute has been added to <code>img</code>.
-     <li>Application cache now has an <code>prefer-online</code> mode.
-     <li>Dialogs are now supported with the <code>dialog</code> element, the <code>inert</code> global attribute and the <code>dialog</code> method on <code>form</code>.
-     <li>The <code>resetTransform()</code> method, <code>currentTransform</code> IDL attribute, several IDL attributes for font metrics, <code>resetClip()</code> method, <code>imageSmoothingEnabled</code> IDL attribute, <code>addHitRegion()</code> method, <code>removeHitRegion()</code> method, support for dashed lines, have been added to the canvas 2d context.
+     <li><p>Several changes and bug fixes in the Text Track API.
+     <li><p><code>addElement()</code> was dropped from the Drag and Drop API.
+     <li><p>Media queries are now proxied for <code>iframe</code> elements with the <code>seamless</code> attribute.
+     <li><p>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now apply to <code>input</code> elements in the Hidden state.
+     <li><p>The <code>ssh</code>, <code>sip</code> and <code>magnet</code> schemes are now in the <code>registerProtocolHandler()</code> whitelist.
+     <li><p><code>table</code> elements now have 'box-sizing:border-box' by default.
+     <li><p>Bug fixes in the "potentially CORS-enabled fetch" algorithm.
+     <li><p>The document outline algorithm now ignores elements with the <code>hidden</code> attribute.
+     <li><p>Markup generators that are unable to provide required <code>alt</code> text can now use a specific attribute on <code>img</code> that makes validators ignore the missing <code>alt</code> error.
+     <li><p>Workers and shared workers now support <code>data:</code> URLs.
+     <li><p>The <code>inputmode</code> attribute has been added to <code>input</code> and <code>textarea</code>.
+     <li><p>The <code>autocomplete</code> attribute has been extended to support prefilling specific things.
+     <li><p>WebSocket supports sending <code>ArrayBufferView</code> as well as <code>ArrayBuffer</code>.
+     <li><p>The <code>border</code> attribute on <code>table</code> is non-conforming again.
+     <li><p>The canvas ImageData methods now assume 96dpi, and a set of "HD" methods have been introduced.
+     <li><p>The shared worker <code>connect</code> event now also exposes the source port in the <code>source</code> IDL attribute.
+     <li><p>Lone surrogates are converted to U+FFFD instead of throwing in WebSocket <code>send()</code>.
+     <li><p>The <code>setRangeText()</code> method has been added to <code>input</code> and <code>textarea</code>.
+     <li><p>The <code>srcset</code> attribute has been added to <code>img</code>.
+     <li><p>Application cache now has an <code>prefer-online</code> mode.
+     <li><p>Dialogs are now supported with the <code>dialog</code> element, the <code>inert</code> global attribute and the <code>dialog</code> method on <code>form</code>.
+     <li><p>The <code>resetTransform()</code> method, <code>currentTransform</code> IDL attribute, several IDL attributes for font metrics, <code>resetClip()</code> method, <code>imageSmoothingEnabled</code> IDL attribute, <code>addHitRegion()</code> method, <code>removeHitRegion()</code> method, support for dashed lines, have been added to the canvas 2d context.
     </ul>
 
     <h3 id="changes-2011-05-25">Changes from 25 May 2011 to 29 March 2012</h3> <!-- rev 6140 - 7027 -->
 
     <ul>
-     <li>Support for mutation observers was added.
-     <li>The <code>TextTrackCue</code> members <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> and <code>direction</code> were renamed to <code>align</code>, <code>line</code>, <code>position</code> and <code>vertical</code>, respectively.
-     <li>The <code>command</code> element now has a <code>command</code> attribute.
-     <li>Drag and drop content is now suggested to be filtered by user agents to prevent XSS attacks.
-     <li>The <code>translate</code> global attribute was added.
-     <li>The <code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods are now allowed to do nothing during <code>pagehide</code>, <code>beforeunload</code> and <code>unload</code> events.
-     <li>The <code>script</code> element now supports <code>beforescriptexecute</code> and <code>afterscriptexecute</code> events.
-     <li><code>window.onerror</code> now supports a fourth argument for column position.
-     <li>The <code>window.opener</code> IDL attribute can now return null in some cases.
-     <li>The <code>clearTimeout()</code> and <code>clearInterval()</code> methods were made synonymous.
-     <li>The CSS <code>@global</code> at-rule was introduced, for use together with <code>style</code> elements with the <code>scoped</code> attribute.
-     <li>The <code>embed</code> and <code>object</code> elements now have a legacy caller.
-     <li>The handling of <code>window.onerror</code>'s return value was changed to match reality.
-     <li>The <code>setTimeout()</code> API is now allowed to be throttled in background tabs.
-     <li>The <code>:valid</code> and <code>:invalid</code> pseudo-classes now apply to <code>form</code> elements.
-     <li>The <code>toBlob()</code> method on <code>canvas</code> now honors the origin-clean flag.
-     <li>The <code>activeElement</code> IDL attribute now points to the relevant browsing context container (e.g. <code>iframe</code>) when a child document has focus.
-     <li>The <code>atob()</code> method now ignores whitespace.
-     <li>The <code>dropzone</code> attribute was changed to use "<code>string:</code>" and "<code>file:</code>" instead of "<code>s:</code>" and "<code>f:</code>".
-     <li>The HTML parser was fixed to correctly handle a case involving foreign lands and foster parenting.
-     <li>The date-and-time microsyntaxes now allows a single space instead of a "T".
-     <li>Application cache no longer checks the MIME type of the cache manifest.
-     <li>The <code>cueAsSource</code> IDL attribute on <code>TextTrackCue</code> got renamed to <code>text</code>.
-     <li>The <code>window.onerror</code> API is now invoked with dummy arguments for cross-origin scripts.
-     <li>The <code>textarea</code> element's <code>value</code> and <code>textLength</code> IDL attributes have their newlines normalized to LF.
-     <li>The <code>q</code> element now has language-specific quotes rendered by default.
-     <li>The <code>data</code> element was introduced.
-     <li>The <code>time</code> element was redesigned to make it match how people wanted to use it. Its <code>pubdate</code> attribute was dropped.
-     <li>The legacy caller on <code>form</code> was removed.
-     <li>The <code>location.resolveURL()</code> method was removed.
-     <li>The <code>track</code> element now sniffs instead of obeying the MIME type.
-     <li>The <code>load()</code> method on documents created by <code>createDocument()</code> is now defined on the <code>XMLDocument</code> interface.
-     <li>Members of <code>HTMLDocument</code> moved to <code>Document</code> and <code>window.HTMLDocument</code> now just returns <code>window.Document</code>.
-     <li>The <code>MutableTextTrack</code> and <code>TextTrack</code> interfaces were merged and <code>TextTrackCue</code> was made more mutable.
-     <li>The <code>selectedOption</code> IDL attribute on <code>input</code> was dropped.
-     <li>Attribute values in Selectors are now case sensitive for all attributes.
-     <li>The <code>readyState</code> IDL attribute moved from <code>TextTrack</code> to <code>HTMLTrackElement</code>.
-     <li>The <code>text/html-sandboxed</code> MIME type was dropped.
-     <li>Floating point numbers are now allowed to begin with a "<code>.</code>" character.
-     <li>Navigating to an audio or video resource is now supported.
-     <li>Table cells now allow flow content but does not allow <code>header</code>, <code>footer</code>, sectioning content or heading content descendants.
-     <li>Adding a track to a media element now fires an <code>addtrack</code> event on the relevant track list objects.
-     <li>Setting <code>currentTime</code> on media elements before the media has loaded now defers the seek instead of throwing.
-     <li>Plugins are no longer disabled in sandboxed <code>iframe</code>s if they honor the <code>sandbox</code> attribute.
-     <li>Some tweaks to history navigation and related events.
-     <li>Media elements and <code>MediaController</code>s now get paused when they end.
-     <li>Events now support constructors and some <code>init*Event()</code> methods were removed.
-     <li>Media elements now fire a <code>suspend</code> event when the resource is loaded.
-     <li>Form submission now normalizes newlines to CRLF.
-     <li>Some tweaks around bidi and the <code>br</code> element.
-     <li>Large parts of the Editing section moved to HTML Editing APIs.
-     <li><code>UndoManager</code> and related features moved to UndoManager and DOM Transaction.
-     <li><code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> and <code>unregisterContentHandler()</code> were added.
-     <li><code>registerContentHandler()</code> now has a blacklist of MIME types.
-     <li><code>registerProtocolHandler()</code> now has a whitelist of protocols, but also supports any protocol that starts with "<code>web+</code>".
-     <li>Fragment identifiers for <code>text/html</code> resources now don't need to point to an element with a matching ID.
-     <li><code>audio</code> elements are now allowed to have zero <code>source</code> children.
-     <li>There are now some restrictions on the use of bidi formatting characters.
-     <li>The <code>maxlength</code> and <code>size</code> attributes are allowed (but give warnings in validators) on <code>input</code> elements with <code>type=number</code>.
-     <li>The link relation "<code>shortcut icon</code>" is now allowed.
-     <li>Heading elements are now allowed to have the <code>heading</code> and <code>tab</code> roles.
-     <li>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
-     <li>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
-     <li>The <code>select</code> element and its <code>options</code> collection now have a setter.
-     <li><code>rel=help</code> on links now show a help cursor by default.
-     <li>Calls to <code>window.print()</code> before the document is loaded defers the print until it is loaded.
-     <li>Application cache gained an <code>abort()</code> method.
-     <li><code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, HTML-specific overrides to some DOM Core features (like <code>createElement()</code>), some definitions, the <code>id</code> IDL attribute and ID handling moved to DOM4.
-     <li>Fragment identifiers can now survive redirects.
-     <li>The <code>pushState()</code> and <code>replaceState()</code> methods now change the history entry to GET.
-     <li>The command API now has its properties prefixed so they are now <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> and <code>commandChecked</code>.
-     <li>The structured clone algorithm now supports sparse arrays.
-     <li><code>window.postMessage</code> now supports transferring some objects instead of cloning them, and supports transferring <code>ArrayBuffer</code>.
-     <li>Application cache was made stricter in its MIME type checking.
-     <li>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
-     <li><code>MediaController</code> gained an <code>onended</code> event listener.
-     <li>The HTML parser changed its handling of U+0000 characters in some places.
-     <li>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for Web developers to embed untrusted resources where they expect a certain content type.
-     <li>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
-     <li>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
-     <li>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so Web developers can safely use them for custom data blocks.
-     <li><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
-     <li><code>window.status</code> was specified to exist but do nothing.
-     <li>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
-     <li>Application cache now supports 'no-store' and HTTPS.
-     <li>The structured clone algorithm now supports getters.
-     <li>The <code>crossorigin</code> attribute has been added to <code>img</code>, <code>video</code> and <code>audio</code> to use CORS.
-     <li>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
+     <li><p>Support for mutation observers was added.
+     <li><p>The <code>TextTrackCue</code> members <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> and <code>direction</code> were renamed to <code>align</code>, <code>line</code>, <code>position</code> and <code>vertical</code>, respectively.
+     <li><p>The <code>command</code> element now has a <code>command</code> attribute.
+     <li><p>Drag and drop content is now suggested to be filtered by user agents to prevent XSS attacks.
+     <li><p>The <code>translate</code> global attribute was added.
+     <li><p>The <code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods are now allowed to do nothing during <code>pagehide</code>, <code>beforeunload</code> and <code>unload</code> events.
+     <li><p>The <code>script</code> element now supports <code>beforescriptexecute</code> and <code>afterscriptexecute</code> events.
+     <li><p><code>window.onerror</code> now supports a fourth argument for column position.
+     <li><p>The <code>window.opener</code> IDL attribute can now return null in some cases.
+     <li><p>The <code>clearTimeout()</code> and <code>clearInterval()</code> methods were made synonymous.
+     <li><p>The CSS <code>@global</code> at-rule was introduced, for use together with <code>style</code> elements with the <code>scoped</code> attribute.
+     <li><p>The <code>embed</code> and <code>object</code> elements now have a legacy caller.
+     <li><p>The handling of <code>window.onerror</code>'s return value was changed to match reality.
+     <li><p>The <code>setTimeout()</code> API is now allowed to be throttled in background tabs.
+     <li><p>The <code>:valid</code> and <code>:invalid</code> pseudo-classes now apply to <code>form</code> elements.
+     <li><p>The <code>toBlob()</code> method on <code>canvas</code> now honors the origin-clean flag.
+     <li><p>The <code>activeElement</code> IDL attribute now points to the relevant browsing context container (e.g. <code>iframe</code>) when a child document has focus.
+     <li><p>The <code>atob()</code> method now ignores whitespace.
+     <li><p>The <code>dropzone</code> attribute was changed to use "<code>string:</code>" and "<code>file:</code>" instead of "<code>s:</code>" and "<code>f:</code>".
+     <li><p>The HTML parser was fixed to correctly handle a case involving foreign lands and foster parenting.
+     <li><p>The date-and-time microsyntaxes now allows a single space instead of a "T".
+     <li><p>Application cache no longer checks the MIME type of the cache manifest.
+     <li><p>The <code>cueAsSource</code> IDL attribute on <code>TextTrackCue</code> got renamed to <code>text</code>.
+     <li><p>The <code>window.onerror</code> API is now invoked with dummy arguments for cross-origin scripts.
+     <li><p>The <code>textarea</code> element's <code>value</code> and <code>textLength</code> IDL attributes have their newlines normalized to LF.
+     <li><p>The <code>q</code> element now has language-specific quotes rendered by default.
+     <li><p>The <code>data</code> element was introduced.
+     <li><p>The <code>time</code> element was redesigned to make it match how people wanted to use it. Its <code>pubdate</code> attribute was dropped.
+     <li><p>The legacy caller on <code>form</code> was removed.
+     <li><p>The <code>location.resolveURL()</code> method was removed.
+     <li><p>The <code>track</code> element now sniffs instead of obeying the MIME type.
+     <li><p>The <code>load()</code> method on documents created by <code>createDocument()</code> is now defined on the <code>XMLDocument</code> interface.
+     <li><p>Members of <code>HTMLDocument</code> moved to <code>Document</code> and <code>window.HTMLDocument</code> now just returns <code>window.Document</code>.
+     <li><p>The <code>MutableTextTrack</code> and <code>TextTrack</code> interfaces were merged and <code>TextTrackCue</code> was made more mutable.
+     <li><p>The <code>selectedOption</code> IDL attribute on <code>input</code> was dropped.
+     <li><p>Attribute values in Selectors are now case sensitive for all attributes.
+     <li><p>The <code>readyState</code> IDL attribute moved from <code>TextTrack</code> to <code>HTMLTrackElement</code>.
+     <li><p>The <code>text/html-sandboxed</code> MIME type was dropped.
+     <li><p>Floating point numbers are now allowed to begin with a "<code>.</code>" character.
+     <li><p>Navigating to an audio or video resource is now supported.
+     <li><p>Table cells now allow flow content but does not allow <code>header</code>, <code>footer</code>, sectioning content or heading content descendants.
+     <li><p>Adding a track to a media element now fires an <code>addtrack</code> event on the relevant track list objects.
+     <li><p>Setting <code>currentTime</code> on media elements before the media has loaded now defers the seek instead of throwing.
+     <li><p>Plugins are no longer disabled in sandboxed <code>iframe</code>s if they honor the <code>sandbox</code> attribute.
+     <li><p>Some tweaks to history navigation and related events.
+     <li><p>Media elements and <code>MediaController</code>s now get paused when they end.
+     <li><p>Events now support constructors and some <code>init*Event()</code> methods were removed.
+     <li><p>Media elements now fire a <code>suspend</code> event when the resource is loaded.
+     <li><p>Form submission now normalizes newlines to CRLF.
+     <li><p>Some tweaks around bidi and the <code>br</code> element.
+     <li><p>Large parts of the Editing section moved to HTML Editing APIs.
+     <li><p><code>UndoManager</code> and related features moved to UndoManager and DOM Transaction.
+     <li><p><code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> and <code>unregisterContentHandler()</code> were added.
+     <li><p><code>registerContentHandler()</code> now has a blacklist of MIME types.
+     <li><p><code>registerProtocolHandler()</code> now has a whitelist of protocols, but also supports any protocol that starts with "<code>web+</code>".
+     <li><p>Fragment identifiers for <code>text/html</code> resources now don't need to point to an element with a matching ID.
+     <li><p><code>audio</code> elements are now allowed to have zero <code>source</code> children.
+     <li><p>There are now some restrictions on the use of bidi formatting characters.
+     <li><p>The <code>maxlength</code> and <code>size</code> attributes are allowed (but give warnings in validators) on <code>input</code> elements with <code>type=number</code>.
+     <li><p>The link relation "<code>shortcut icon</code>" is now allowed.
+     <li><p>Heading elements are now allowed to have the <code>heading</code> and <code>tab</code> roles.
+     <li><p>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
+     <li><p>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
+     <li><p>The <code>select</code> element and its <code>options</code> collection now have a setter.
+     <li><p><code>rel=help</code> on links now show a help cursor by default.
+     <li><p>Calls to <code>window.print()</code> before the document is loaded defers the print until it is loaded.
+     <li><p>Application cache gained an <code>abort()</code> method.
+     <li><p><code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, HTML-specific overrides to some DOM Core features (like <code>createElement()</code>), some definitions, the <code>id</code> IDL attribute and ID handling moved to DOM4.
+     <li><p>Fragment identifiers can now survive redirects.
+     <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods now change the history entry to GET.
+     <li><p>The command API now has its properties prefixed so they are now <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> and <code>commandChecked</code>.
+     <li><p>The structured clone algorithm now supports sparse arrays.
+     <li><p><code>window.postMessage</code> now supports transferring some objects instead of cloning them, and supports transferring <code>ArrayBuffer</code>.
+     <li><p>Application cache was made stricter in its MIME type checking.
+     <li><p>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
+     <li><p><code>MediaController</code> gained an <code>onended</code> event listener.
+     <li><p>The HTML parser changed its handling of U+0000 characters in some places.
+     <li><p>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for Web developers to embed untrusted resources where they expect a certain content type.
+     <li><p>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
+     <li><p>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
+     <li><p>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so Web developers can safely use them for custom data blocks.
+     <li><p><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
+     <li><p><code>window.status</code> was specified to exist but do nothing.
+     <li><p>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
+     <li><p>Application cache now supports 'no-store' and HTTPS.
+     <li><p>The structured clone algorithm now supports getters.
+     <li><p>The <code>crossorigin</code> attribute has been added to <code>img</code>, <code>video</code> and <code>audio</code> to use CORS.
+     <li><p>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
     </ul>
 
     <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
 
     <ul>
-     <li>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
-     <li>The 2d context now supports <code>Path</code> objects. SVG path data can be added to a <code>Path</code>.
-     <li>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
-     <li>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
-     <li><code>PeerConnection</code> was moved to WebRTC.
-     <li>WebVTT was moved to its own specification.
-     <li>WebSockets no longer receive messages in the <code>CLOSING</code> state.
-     <li>The Atom conversion algorithm was dropped.
-     <li>The <code>itemtype</code> attribute now allows multiple types.
-     <li><code>CanvasPixelArray</code> was dropped in favor of <code>Uint8ClampedArray</code>.
-     <li>The microdata to RDF conversion algorithm was dropped.
-     <li>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
-     <li>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
-     <li>The "storage mutex" is made optional.
-     <li>Web Storage no longer supports structured data.
-     <li>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
-     <li>An experimental specification for the <code>window.find()</code> method was added.
-     <li>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
-     <li>Microdata now handles infinite loops.
-     <li>Web Worker <code>location</code> now stringifies.
-     <li>Script errors in a Web Worker can now be detected in a parent worker or the document with the <code>onerror</code> handler.
-     <li><code>EventSource</code> now supports CORS.
-     <li><code>EventSource</code> was made stricter in its MIME type checking.
-     <li>Web Workers gained the <code>atob()</code> and <code>btoa()</code> methods.
-     <li>Web Workers gained the <code>ononline</code> and <code>onoffline</code> event handlers.
-     <li>WebSockets API has the <code>error</code> event again.
-     <li>WebSockets API now exposes the selected extensions<!-- and allows compression (was dropped in a later rev)-->.
-     <li>Various tweaks to the UDP <code>PeerConnection</code> API.
-     <li>WebSocket close code and reason are now supported in the API.
-     <li>Binary data is now supported in WebSockets.
-     <li>Redirects in WebSockets are now blocked for security reasons.
+     <li><p>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
+     <li><p>The 2d context now supports <code>Path</code> objects. SVG path data can be added to a <code>Path</code>.
+     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
+     <li><p>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
+     <li><p><code>PeerConnection</code> was moved to WebRTC.
+     <li><p>WebVTT was moved to its own specification.
+     <li><p>WebSockets no longer receive messages in the <code>CLOSING</code> state.
+     <li><p>The Atom conversion algorithm was dropped.
+     <li><p>The <code>itemtype</code> attribute now allows multiple types.
+     <li><p><code>CanvasPixelArray</code> was dropped in favor of <code>Uint8ClampedArray</code>.
+     <li><p>The microdata to RDF conversion algorithm was dropped.
+     <li><p>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
+     <li><p>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
+     <li><p>The "storage mutex" is made optional.
+     <li><p>Web Storage no longer supports structured data.
+     <li><p>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
+     <li><p>An experimental specification for the <code>window.find()</code> method was added.
+     <li><p>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
+     <li><p>Microdata now handles infinite loops.
+     <li><p>Web Worker <code>location</code> now stringifies.
+     <li><p>Script errors in a Web Worker can now be detected in a parent worker or the document with the <code>onerror</code> handler.
+     <li><p><code>EventSource</code> now supports CORS.
+     <li><p><code>EventSource</code> was made stricter in its MIME type checking.
+     <li><p>Web Workers gained the <code>atob()</code> and <code>btoa()</code> methods.
+     <li><p>Web Workers gained the <code>ononline</code> and <code>onoffline</code> event handlers.
+     <li><p>WebSockets API has the <code>error</code> event again.
+     <li><p>WebSockets API now exposes the selected extensions<!-- and allows compression (was dropped in a later rev)-->.
+     <li><p>Various tweaks to the UDP <code>PeerConnection</code> API.
+     <li><p>WebSocket close code and reason are now supported in the API.
+     <li><p>Binary data is now supported in WebSockets.
+     <li><p>Redirects in WebSockets are now blocked for security reasons.
     </ul>
 
     <h3 id="changes-2011-04-05">Changes from 5 April 2011 to 25 May 2011</h3> <!-- rev 5974 - 6139 -->
 
     <ul>
-     <li>Support for the <code>javascript:</code> scheme in <code>img</code>, <code>object</code>, CSS, etc, has been dropped.
-     <li>The <code>toBlob()</code> method has been added to <code>canvas</code>.
-     <li>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
-     <li>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
-     <li>The <code>select</code> event has been specified.
-     <li>The <code>selectDirection</code> IDL attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now match <code>fieldset</code>, and the <code>:indeterminate</code> pseudo-class can now match <code>progress</code>.
-     <li>The <code>getKind()</code> method has been added to <code>TrackList</code>.
-     <li>The <code>MediaController</code> API and the <code>mediagroup</code> attribute have been added to synchronize playback of media elements.
-     <li>Some ARIA defaults have changed, and it is now invalid to specify ARIA attributes that match the defaults.
-     <li>The <code>getName()</code> method on <code>TrackList</code> was renamed to <code>getLabel()</code>.
-     <li>The <code>border</code> attribute on <code>table</code> is now conforming.
-     <li>The <code>u</code> element is now conforming.
-     <li>The <code>summary</code> attribute on <code>table</code> is now non-conforming.
-     <li>The <code>audio</code> attribute on <code>video</code> was changed to a boolean <code>muted</code> attribute.
-     <li>The <code>Content-Language</code> meta pragma is now non-conforming.
+     <li><p>Support for the <code>javascript:</code> scheme in <code>img</code>, <code>object</code>, CSS, etc, has been dropped.
+     <li><p>The <code>toBlob()</code> method has been added to <code>canvas</code>.
+     <li><p>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
+     <li><p>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
+     <li><p>The <code>select</code> event has been specified.
+     <li><p>The <code>selectDirection</code> IDL attribute has been added to <code>input</code> and <code>textarea</code>.
+     <li><p>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now match <code>fieldset</code>, and the <code>:indeterminate</code> pseudo-class can now match <code>progress</code>.
+     <li><p>The <code>getKind()</code> method has been added to <code>TrackList</code>.
+     <li><p>The <code>MediaController</code> API and the <code>mediagroup</code> attribute have been added to synchronize playback of media elements.
+     <li><p>Some ARIA defaults have changed, and it is now invalid to specify ARIA attributes that match the defaults.
+     <li><p>The <code>getName()</code> method on <code>TrackList</code> was renamed to <code>getLabel()</code>.
+     <li><p>The <code>border</code> attribute on <code>table</code> is now conforming.
+     <li><p>The <code>u</code> element is now conforming.
+     <li><p>The <code>summary</code> attribute on <code>table</code> is now non-conforming.
+     <li><p>The <code>audio</code> attribute on <code>video</code> was changed to a boolean <code>muted</code> attribute.
+     <li><p>The <code>Content-Language</code> meta pragma is now non-conforming.
     </ul>
 
     <!-- XXX WHATWG HTML changes -->
@@ -2845,35 +2845,35 @@
     <h3 id="changes-2011-01-13">Changes from 13 January 2011 to 5 April 2011</h3> <!-- rev 5779 - 5974 -->
 
     <ul>
-     <li>The <code>pushState</code> and <code>replaceState</code> features have
+     <li><p>The <code>pushState</code> and <code>replaceState</code> features have
      been changed based on implementation feedback in Firefox, and <code>history.state</code>
      has been introduced.
-     <li>The <code>tracks</code> IDL attribute on media elements has been renamed
+     <li><p>The <code>tracks</code> IDL attribute on media elements has been renamed
      to <code>textTracks</code>.
-     <li>Event handler content attributes now support JavaScript strict mode.
-     <li>The <code>forminput</code> and <code>formchange</code> events, and
+     <li><p>Event handler content attributes now support JavaScript strict mode.
+     <li><p>The <code>forminput</code> and <code>formchange</code> events, and
      the <code>dispatchFormInput()</code> and <code>dispatchFormChange()</code>
      methods have been dropped.
-     <li>The <code>rel</code> keywords <code>archives</code>, <code>up</code>,
+     <li><p>The <code>rel</code> keywords <code>archives</code>, <code>up</code>,
      <code>last</code>, <code>index</code>, <code>first</code> and related synonyms
      have been dropped.
-     <li>Removing a media element from the DOM and inserting it again in the same
+     <li><p>Removing a media element from the DOM and inserting it again in the same
      script now doesn't pause the media element.
-     <li>The <code>video</code> element's letterboxing rules are now specified in
+     <li><p>The <code>video</code> element's letterboxing rules are now specified in
      terms of CSS 'object-fit'.
-     <li>Cross-origin fonts now don't leak information about the font when drawn
+     <li><p>Cross-origin fonts now don't leak information about the font when drawn
      on a <code>canvas</code>.
-     <li>The character encoding declaration is now allowed to be within the first
+     <li><p>The character encoding declaration is now allowed to be within the first
      1024 bytes instead of the first 512 bytes.
-     <li>The <code>onerror</code> event handler on <code>window</code> is now invoked
+     <li><p>The <code>onerror</code> event handler on <code>window</code> is now invoked
      for compile-time script errors as well as runtime errors.
-     <li>Script-inserted <code>script</code> elements now have <code>async</code>
+     <li><p>Script-inserted <code>script</code> elements now have <code>async</code>
      default to <code>true</code>, which can be set to <code>false</code> to make
      the scripts execute in insertion order.
-     <li>The <code>atob()</code> and <code>btoa()</code> methods have been specified.
-     <li>The suggested file extension for application cache manifest files has been
+     <li><p>The <code>atob()</code> and <code>btoa()</code> methods have been specified.
+     <li><p>The suggested file extension for application cache manifest files has been
      changed from <code>.manifest</code> to <code>.appcache</code>.
-     <li>The <code>action</code> and <code>formaction</code> attributes are
+     <li><p>The <code>action</code> and <code>formaction</code> attributes are
      no longer allowed to have the empty string as value.
     </ul>
 
@@ -2882,17 +2882,17 @@
     <h3 id="changes-2010-10-19">Changes from 19 October 2010 to 13 January 2011</h3> <!-- rev 5643 - 5779 -->
 
     <ul>
-     <li>Drag and drop model was refined.</li>
-     <li>A new global <code>dropzone</code> attribute was added.</li>
-     <li>A new <code>bdi</code> element was added to aid with user-generated
+     <li><p>Drag and drop model was refined.</li>
+     <li><p>A new global <code>dropzone</code> attribute was added.</li>
+     <li><p>A new <code>bdi</code> element was added to aid with user-generated
      content that may have bidi implications.</li>
-     <li>The <code>dir</code> attribute gained a new "<code>auto</code>"
+     <li><p>The <code>dir</code> attribute gained a new "<code>auto</code>"
      value.</li>
-     <li>A <code>dirname</code> attribute was added to <code>input</code>
+     <li><p>A <code>dirname</code> attribute was added to <code>input</code>
      elements. When specified the directionality as specified by the user
      will be submitted to the server as well.</li>
-     <li>A new <code>track</code> element and associated TextTrack API were added for video text tracks.</li>
-     <li>The <code>type</code> attribute on the <code>ol</code> element is now allowed.
+     <li><p>A new <code>track</code> element and associated TextTrack API were added for video text tracks.</li>
+     <li><p>The <code>type</code> attribute on the <code>ol</code> element is now allowed.
     </ul>
 
     <p>The <code>getSelection()</code> API moved to a separate
@@ -2905,23 +2905,23 @@
     <h3 id="changes-2010-06-24">Changes from 24 June 2010 to 19 October 2010</h3> <!-- rev 5108 - 5642 -->
 
     <ul>
-     <li>Numerous changes to the HTML parsing algorithm based on
+     <li><p>Numerous changes to the HTML parsing algorithm based on
      implementation feedback.</li>
-     <li>The <code>hidden</code> attribute now works for table-related
+     <li><p>The <code>hidden</code> attribute now works for table-related
      elements.</li>
-     <li>The <code>canvas</code> <code>getContext()</code> method is now
+     <li><p>The <code>canvas</code> <code>getContext()</code> method is now
      defined to be able to handle multiple contexts better.</li>
-     <li>The media elements' <code>startTime</code> IDL attribute was
+     <li><p>The media elements' <code>startTime</code> IDL attribute was
      renamed to <code>initialTime</code> and <code>startOffsetTime</code>
      was added.</li>
-     <li>The <code>prefetch</code> link relationship can now be used on
+     <li><p>The <code>prefetch</code> link relationship can now be used on
      <code>a</code> elements.</li>
-     <li>The <code>datetime</code> attribute of <code>ins</code> and
+     <li><p>The <code>datetime</code> attribute of <code>ins</code> and
      <code>del</code> no longer requires a time to be specified.</li>
-     <li>Using PUT and DELETE as HTTP methods for the <code>form</code>
+     <li><p>Using PUT and DELETE as HTTP methods for the <code>form</code>
      element is no longer supported.</li>
-     <li>The <code>s</code> element is no longer deprecated.</li>
-     <li>The <code>video</code> element has a new <code>audio</code>
+     <li><p>The <code>s</code> element is no longer deprecated.</li>
+     <li><p>The <code>video</code> element has a new <code>audio</code>
      attribute.</li>
     </ul>
 
@@ -2932,22 +2932,22 @@
     <h3 id="changes-2010-03-04">Changes from 4 March 2010 to 24 June 2010</h3> <!-- rev 4647 - 5107 -->
 
     <ul>
-     <li>The <code>ping</code> attribute has been removed from the W3C
+     <li><p>The <code>ping</code> attribute has been removed from the W3C
      version of HTML5.</li>
-     <li>The <code>title</code> element is optional for
+     <li><p>The <code>title</code> element is optional for
      <code>iframe</code> <code>srcdoc</code> documents and other scenarios
      where a title is already available. As is the case with email.</li>
-     <li><code>keywords</code> is now a standard metadata name for the
+     <li><p><code>keywords</code> is now a standard metadata name for the
      <code>meta</code> element.</li>
-     <li>The <code>allow-top-navigation</code> value has been added for the
+     <li><p>The <code>allow-top-navigation</code> value has been added for the
      <code>sandbox</code> attribute on the <code>iframe</code> element. It
      allows the embedded content to navigate its parent when specified.</li>
-     <li>The <code>wbr</code> element has been added.</li>
-     <li>The <code>alternate</code> keyword for the <code>rel</code>
+     <li><p>The <code>wbr</code> element has been added.</li>
+     <li><p>The <code>alternate</code> keyword for the <code>rel</code>
      attribute of the <code>link</code> element can now be used to point to
      feeds again, even if the feed is not an alternative for the
      document.</li>
-     <li>The HTML to Atom mapping has been removed from the W3C version of
+     <li><p>The HTML to Atom mapping has been removed from the W3C version of
      HTML5.</li>
     </ul>
 
@@ -2959,35 +2959,35 @@
     <h3 id="changes-2009-08-25">Changes from 25 August 2009 to 4 March 2010</h3> <!-- since rev 3673 -->
 
     <ul>
-     <li>The <code>dialog</code> element has been removed. A section with
+     <li><p>The <code>dialog</code> element has been removed. A section with
      advice on how to mark up conversations has effectively replaced
      it.</li>
-     <li><code>document.head</code> has been introduced to provide
+     <li><p><code>document.head</code> has been introduced to provide
      convenient access to the <code>head</code> element from script.</li>
-     <li>The link type <code title="">feed</code> has been removed.
+     <li><p>The link type <code title="">feed</code> has been removed.
      <code title="rel-alternate">alternate</code> with specific media types
      is to be used instead.</li>
-     <li><code>createHTMLDocument()</code> has been introduced as API to
+     <li><p><code>createHTMLDocument()</code> has been introduced as API to
      allow easy creation of HTML documents.</li>
-     <li>Both the <code>meter</code> and <code>progress</code> elements no
+     <li><p>Both the <code>meter</code> and <code>progress</code> elements no
      longer have "magic" processing of their contents because it could not
      be made to work internationally.</li>
-     <li>The <code>meter</code> and <code>progress</code> elements, as well
+     <li><p>The <code>meter</code> and <code>progress</code> elements, as well
      as the <code>output</code> element, can now be labeled using the
      <code>label</code> element.</li>
-     <li>A new media type, <code>text/html-sandboxed</code>, was introduced
+     <li><p>A new media type, <code>text/html-sandboxed</code>, was introduced
      to allow hosting of potentially hostile content without it causing
      harm.</li>
-     <li>A <code>srcdoc</code> attribute for the <code>iframe</code> element
+     <li><p>A <code>srcdoc</code> attribute for the <code>iframe</code> element
      was introduced to allow embedding of potentially hostile content
      inline. It is expected to be used together with the
      <code>sandbox</code> and <code>seamless</code> attributes.</li>
-     <li>The <code>figure</code> element now uses a new element
+     <li><p>The <code>figure</code> element now uses a new element
      <code>figcaption</code> rather than <code>legend</code> because people
      want to use HTML long before it reaches W3C Recommendation.</li>
-     <li>The <code>details</code> element now uses a new element
+     <li><p>The <code>details</code> element now uses a new element
      <code>summary</code> for exactly the same reason.</li>
-     <li>The <code>autobuffer</code> attribute on media elements was renamed
+     <li><p>The <code>autobuffer</code> attribute on media elements was renamed
      to <code>preload</code>.</li>
     </ul>
 
@@ -3001,9 +3001,9 @@
     publishes a version of HTML that includes them):</p>
 
     <ul>
-     <li><a href="http://dev.w3.org/html5/md/">HTML Microdata</a></li>
-     <li><a href="http://dev.w3.org/html5/2dcontext/">HTML Canvas 2D Context</a></li>
-     <li><a href="http://dev.w3.org/html5/postmsg/">HTML5 Web Messaging</a></li>
+     <li><p><a href="http://dev.w3.org/html5/md/">HTML Microdata</a></li>
+     <li><p><a href="http://dev.w3.org/html5/2dcontext/">HTML Canvas 2D Context</a></li>
+     <li><p><a href="http://dev.w3.org/html5/postmsg/">HTML5 Web Messaging</a></li>
     </ul>
 
     <p>Specific microdata vocabularies are gone altogether in the W3C draft
@@ -3015,61 +3015,61 @@
     <h3 id="changes-2009-04-23">Changes from 23 April 2009 to 25 August 2009</h3> <!-- since rev 2975 -->
 
     <ul>
-     <li>When the <code>time</code> element is empty user agents have to
+     <li><p>When the <code>time</code> element is empty user agents have to
      render the time in a locale-specific manner.</li>
-     <li>The <code>load</code> event is dispatched at <code>Window</code>,
+     <li><p>The <code>load</code> event is dispatched at <code>Window</code>,
      but now has <code>Document</code> as its target.</li>
-     <li><code>pushState()</code> now affects the <code>Referer</code> (sic)
+     <li><p><code>pushState()</code> now affects the <code>Referer</code> (sic)
      header.</li>
-     <li><code>onundo</code> and <code>onredo</code> are now on
+     <li><p><code>onundo</code> and <code>onredo</code> are now on
      <code>Window</code>.</li>
-     <li>Media elements now have a <code>startTime</code> member that
+     <li><p>Media elements now have a <code>startTime</code> member that
      indicates where the current resource starts.</li>
-     <li><code>header</code> has been renamed to <code>hgroup</code> and a
+     <li><p><code>header</code> has been renamed to <code>hgroup</code> and a
      new <code>header</code> element has been introduced.</li>
-     <li><code>createImageData()</code> now also takes
+     <li><p><code>createImageData()</code> now also takes
      <code>ImageData</code> objects.</li>
-     <li><code>createPattern()</code> can now take a <code>video</code>
+     <li><p><code>createPattern()</code> can now take a <code>video</code>
      element as argument too.</li>
-     <li>The <code>footer</code> element is no longer allowed in
+     <li><p>The <code>footer</code> element is no longer allowed in
      <code>header</code> and <code>header</code> is not allowed in
      <code>address</code> or <code>footer</code>.</li>
-     <li>A new control has been introduced:
+     <li><p>A new control has been introduced:
      <code>&lt;input type="tel"></code></li>
-     <li>The Command API now works for all elements.</li>
-     <li><code>accesskey</code> is now properly defined.</li>
-     <li><code>section</code> and <code>article</code> now take a
+     <li><p>The Command API now works for all elements.</li>
+     <li><p><code>accesskey</code> is now properly defined.</li>
+     <li><p><code>section</code> and <code>article</code> now take a
      <code>cite</code> attribute.</li>
-     <li>A new feature called Microdata has been introduced which allows
+     <li><p>A new feature called Microdata has been introduced which allows
      people to embed custom data structures in their HTML documents.</li>
-     <li>Using the Microdata model three predefined vocabularies have also
+     <li><p>Using the Microdata model three predefined vocabularies have also
      been included: vCard, vEvent, and a model for licensing.</li>
-     <li>Drag and drop has been updated to work with the Microdata
+     <li><p>Drag and drop has been updated to work with the Microdata
      model.</li>
-     <li>The <a href="http://hsivonen.iki.fi/last-html-quirk/">last of the
+     <li><p>The <a href="http://hsivonen.iki.fi/last-html-quirk/">last of the
      parsing quirks</a> has been defined.</li> <!-- don't kill my easter egg -->
-     <li><code>textLength</code> has been added as member of the
+     <li><p><code>textLength</code> has been added as member of the
      <code>textarea</code> element.</li>
-     <li>The <code>rp</code> element now takes phrasing content rather than
+     <li><p>The <code>rp</code> element now takes phrasing content rather than
      a single character.</li>
-     <li><code>location.reload()</code> is now defined.</li>
-     <li>The <code>hashchange</code> event now fires asynchronously.</li>
-     <li>Rules for compatibility with XPath 1.0 and XSLT 1.0 have been
+     <li><p><code>location.reload()</code> is now defined.</li>
+     <li><p>The <code>hashchange</code> event now fires asynchronously.</li>
+     <li><p>Rules for compatibility with XPath 1.0 and XSLT 1.0 have been
      added.</li>
-     <li>The <code>spellcheck</code> IDL attribute now maps to a
+     <li><p>The <code>spellcheck</code> IDL attribute now maps to a
      <code>DOMString</code>.</li>
-     <li><code>hasFeature()</code> support has been reduced to a
+     <li><p><code>hasFeature()</code> support has been reduced to a
      minimum.</li>
-     <li>The <code>Audio()</code> constructor sets the
+     <li><p>The <code>Audio()</code> constructor sets the
      <code>autobuffer</code> attribute.</li>
-     <li>The <code>td</code> element is no longer allowed in
+     <li><p>The <code>td</code> element is no longer allowed in
      <code>thead</code>.</li>
-     <li>The <code>input</code> element and <code>DataTransfer</code> object
+     <li><p>The <code>input</code> element and <code>DataTransfer</code> object
      now have a <code>files</code> IDL attribute.</li>
-     <li>The <code>datagrid</code> and <code>bb</code> have been removed due
+     <li><p>The <code>datagrid</code> and <code>bb</code> have been removed due
      to their design not being agreed upon.</li>
-     <li>The cue range API has been removed from the media elements.</li>
-     <li>Support for WAI-ARIA has been integrated.</li>
+     <li><p>The cue range API has been removed from the media elements.</li>
+     <li><p>Support for WAI-ARIA has been integrated.</li>
     </ul>
 
     <p>On top of this list quite a few minor clarifications, typos,
@@ -3080,8 +3080,8 @@
     and will likely be further developed at the IETF:</p>
 
     <ul>
-     <li>Definition of URLs.</li>
-     <li>Definition of Content-Type sniffing.</li>
+     <li><p>Definition of URLs.</li>
+     <li><p>Definition of Content-Type sniffing.</li>
     </ul>
 
     <!-- XXX WHATWG HTML changes -->
@@ -3089,51 +3089,51 @@
     <h3 id="changes-2009-02-12">Changes from 12 February 2009 to 23 April 2009</h3>
 
     <ul>
-     <li>A new global attribute called <code>spellcheck</code> has been
+     <li><p>A new global attribute called <code>spellcheck</code> has been
      added.</li>
-     <li>Defined that JavaScript <code>this</code> in the global object
+     <li><p>Defined that JavaScript <code>this</code> in the global object
      returns a <code>WindowProxy</code> object rather than the
      <code>Window</code> object.</li>
-     <li>The <code>value</code> IDL attribute for <code>input</code>
+     <li><p>The <code>value</code> IDL attribute for <code>input</code>
      elements in the File Upload state is now defined.</li>
-     <li>Definition of <code>designMode</code> was changed to be more in
+     <li><p>Definition of <code>designMode</code> was changed to be more in
      line with legacy implementations.</li>
-     <li>The <code>drawImage()</code> method of the 2D drawing API can now
+     <li><p>The <code>drawImage()</code> method of the 2D drawing API can now
      take a <code>video</code> element as well.</li>
-     <li>The way media elements load resources has been changed.</li>
-     <li><code>document.domain</code> is now IPv6-compatible.</li>
-     <li>The <code>video</code> element gained an <code>autobuffer</code>
+     <li><p>The way media elements load resources has been changed.</li>
+     <li><p><code>document.domain</code> is now IPv6-compatible.</li>
+     <li><p>The <code>video</code> element gained an <code>autobuffer</code>
      boolean attribute that serves as a hint.</li>
-     <li>You are now allowed to specify the <code>meta</code> element with a
+     <li><p>You are now allowed to specify the <code>meta</code> element with a
      <code>charset</code> attribute in XML documents if the value of that
      attribute matches the encoding of the document. (Note that it does not
      specify the value, it is just a talisman.)</li>
-     <li>The <code>bufferingRate</code> and <code>bufferingThrottled</code>
+     <li><p>The <code>bufferingRate</code> and <code>bufferingThrottled</code>
      members of media elements have been removed.</li>
-     <li>The media element resource selection algorithm is now
+     <li><p>The media element resource selection algorithm is now
      asynchronous.</li>
-     <li>The <code>postMessage()</code> API now takes an array of
+     <li><p>The <code>postMessage()</code> API now takes an array of
      <code>MessagePort</code> objects rather than just one.</li>
-     <li>The second argument of the <code>add()</code> method on the
+     <li><p>The second argument of the <code>add()</code> method on the
      <code>select</code> element and the <code>options</code> member of the
      <code>select</code> element is now optional.</li>
-     <li>The <code>action</code>, <code>enctype</code>, <code>method</code>,
+     <li><p>The <code>action</code>, <code>enctype</code>, <code>method</code>,
      <code>novalidate</code>, and <code>target</code> attributes on
      <code>input</code> and <code>button</code> elements have been
      renamed to <code>formaction</code>, <code>formenctype</code>,
      <code>formmethod</code>, <code>formnovalidate</code>, and
      <code>formtarget</code>.</li>
-     <li>A "storage mutex" concept has been added to deal with separate
+     <li><p>A "storage mutex" concept has been added to deal with separate
      pages trying to change a storage object (<code>document.cookie</code>
      and <code>localStorage</code>) at the same time. The
      <code>Navigator</code> gained a <code>getStorageUpdates()</code> method
      to allow it to be explicitly released.</li>
-     <li>A syntax for SVG similar to MathML is now defined so that SVG can
+     <li><p>A syntax for SVG similar to MathML is now defined so that SVG can
      be included in <code>text/html</code> resources.</li>
-     <li>The <code>placeholder</code> attribute has been added to
+     <li><p>The <code>placeholder</code> attribute has been added to
      the <code>textarea</code> element.</li>
-     <li>Added a <code>keygen</code> element for key pair generation.</li>
-     <li>The <code>datagrid</code> element was revised to make the API more
+     <li><p>Added a <code>keygen</code> element for key pair generation.</li>
+     <li><p>The <code>datagrid</code> element was revised to make the API more
      asynchronous and allow for unloaded parts of the grid.</li>
     </ul>
 
@@ -3142,11 +3142,11 @@
     standalone specifications:</p>
 
     <ul>
-     <li><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
-     <li><a href="http://tools.ietf.org/html/rfc6455">WebSocket protocol</a></li>
-     <li><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
-     <li><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
-     <li><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
+     <li><p><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
+     <li><p><a href="http://tools.ietf.org/html/rfc6455">WebSocket protocol</a></li>
+     <li><p><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
+     <li><p><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
+     <li><p><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
     </ul>
 
     <!-- XXX WHATWG HTML changes -->
@@ -3154,160 +3154,160 @@
     <h3 id="changes-2008-06-10">Changes from 10 June 2008 to 12 February 2009</h3>
 
     <ul>
-     <li>The <code>data</code> member of <code>ImageData</code> objects has
+     <li><p>The <code>data</code> member of <code>ImageData</code> objects has
      been changed from an array to a <code>CanvasPixelArray</code>
      object.</li>
-     <li>Shadows are now required from implementations of the
+     <li><p>Shadows are now required from implementations of the
      <code>canvas</code> element and its API.</li>
-     <li>Security model for <code>canvas</code> is clarified.</li>
-     <li>Various changes to the processing model of <code>canvas</code> have
+     <li><p>Security model for <code>canvas</code> is clarified.</li>
+     <li><p>Various changes to the processing model of <code>canvas</code> have
      been made in response to implementation and Web developer feedback. E.g.
      clarifying what happens when NaN and Infinity are passed and fixing the
      definitions of <code>arc()</code> and <code>arcTo()</code>.</li>
-     <li><code>innerHTML</code> in XML was slightly changed to improve
+     <li><p><code>innerHTML</code> in XML was slightly changed to improve
      round-tripping.</li>
-     <li>The <code>toDataURL()</code> method on the <code>canvas</code>
+     <li><p>The <code>toDataURL()</code> method on the <code>canvas</code>
      element now supports setting a quality level when the media type
      argument is <code>image/jpeg</code>.</li>
-     <li>The <code>poster</code> attribute of the <code>video</code> element
+     <li><p>The <code>poster</code> attribute of the <code>video</code> element
      now affects its intrinsic dimensions.</li>
-     <li>The behavior of the <code>type</code> attribute of the
+     <li><p>The behavior of the <code>type</code> attribute of the
      <code>link</code> element has been clarified.</li>
-     <li>Sniffing is now allowed for <code>link</code> when the expected
+     <li><p>Sniffing is now allowed for <code>link</code> when the expected
      type is an image.</li>
-     <li>A section on URLs is introduced dealing with how URL values are to
+     <li><p>A section on URLs is introduced dealing with how URL values are to
      be interpreted and what exactly Web developers are required to do. Every
      feature of the specification that uses URLs has been reworded to take
      the new URL section into account.</li>
-     <li>It is now explicit that the <code>href</code> attribute of the
+     <li><p>It is now explicit that the <code>href</code> attribute of the
      <code>base</code> element does not depend on
      <code>xml:base</code>.</li>
-     <li>It is now defined what the behavior should be when the base URL
+     <li><p>It is now defined what the behavior should be when the base URL
      changes.</li>
-     <li>URL decomposition IDL attributes are now more aligned with Internet
+     <li><p>URL decomposition IDL attributes are now more aligned with Internet
      Explorer.</li>
-     <li>The <code>xmlns</code> attribute with the value
+     <li><p>The <code>xmlns</code> attribute with the value
      <code>http://www.w3.org/1999/xhtml</code> is now allowed on all HTML
      elements.</li>
-     <li><code>data-<var>*</var></code> attributes and custom attributes on
+     <li><p><code>data-<var>*</var></code> attributes and custom attributes on
      the <code>embed</code> element now have to match the XML
      <code>Name</code> production and cannot contain a colon.</li>
-     <li>WebSocket API is introduced for bidirectional communication with a
+     <li><p>WebSocket API is introduced for bidirectional communication with a
      server.</li>
-     <li>The default value of <code>volume</code> on media elements is now
+     <li><p>The default value of <code>volume</code> on media elements is now
      1.0 rather than 0.5.</li>
-     <li><code>event-source</code> was renamed to <code>eventsource</code>
+     <li><p><code>event-source</code> was renamed to <code>eventsource</code>
      because no other HTML element uses a hyphen.</li>
-     <li>A message channel API has been introduced augmenting
+     <li><p>A message channel API has been introduced augmenting
      <code>postMessage()</code>.</li>
-     <li>A new element named <code>bb</code> has been added. It represents a
+     <li><p>A new element named <code>bb</code> has been added. It represents a
      user agent command that the user can invoke.</li>
-     <li>The <code>addCueRange()</code> method on media elements has been
+     <li><p>The <code>addCueRange()</code> method on media elements has been
      modified to take an identifier which is exposed in the callbacks.</li>
-     <li>It is now defined how to mutate a DOM into an infoset.</li>
-     <li>The <code>parent</code> attribute of the <code>Window</code> object
+     <li><p>It is now defined how to mutate a DOM into an infoset.</li>
+     <li><p>The <code>parent</code> attribute of the <code>Window</code> object
      is now defined.</li>
-     <li>The <code>embed</code> element is defined to do extension sniffing
+     <li><p>The <code>embed</code> element is defined to do extension sniffing
      for compatibility with servers that deliver Flash as
      <code>text/plain</code>. (This is marked as an issue in the
      specification to figure out if there is a better way to make this
      work.)</li> <!-- and no, the answer is not to simply break stuff -->
-     <li>The <code>embed</code> can now be used without its <code>src</code>
+     <li><p>The <code>embed</code> can now be used without its <code>src</code>
      attribute.</li>
-     <li><code>getElementsByClassName()</code> is defined to be ASCII
+     <li><p><code>getElementsByClassName()</code> is defined to be ASCII
      case-insensitive in quirks mode for consistency with CSS.</li>
-     <li>In HTML documents <code>localName</code> no longer returns the node
+     <li><p>In HTML documents <code>localName</code> no longer returns the node
      name in uppercase.</li>
-     <li><code>data-<var>*</var></code> attributes are defined to be always
+     <li><p><code>data-<var>*</var></code> attributes are defined to be always
      lowercase.</li>
-     <li>The <code>opener</code> attribute of the <code>Window</code> object
+     <li><p>The <code>opener</code> attribute of the <code>Window</code> object
      is not to be present when the page was opened from a link with
      <code>target="_blank"</code> and <code>rel="noreferrer"</code>.</li>
-     <li>The <code>top</code> attribute of the <code>Window</code> object is
+     <li><p>The <code>top</code> attribute of the <code>Window</code> object is
      now defined.</li>
-     <li>The <code>a</code> element now allows nested flow content, but not
+     <li><p>The <code>a</code> element now allows nested flow content, but not
      nested interactive content.</li>
-     <li>It is now defined what the <code>header</code> element means to
+     <li><p>It is now defined what the <code>header</code> element means to
      document summaries and table of contents.</li>
-     <li>What it means to fetch a resource is now defined.</li>
-     <li>Patterns are now required for the <code>canvas</code> element.</li>
-     <li>The <code>autosubmit</code> attribute has been removed from the
+     <li><p>What it means to fetch a resource is now defined.</li>
+     <li><p>Patterns are now required for the <code>canvas</code> element.</li>
+     <li><p>The <code>autosubmit</code> attribute has been removed from the
      <code>menu</code> element.</li>
-     <li>Support for <code>outerHTML</code> and
+     <li><p>Support for <code>outerHTML</code> and
      <code>insertAdjacentHTML()</code> has been added.</li>
-     <li><code>xml:lang</code> is now allowed in HTML when <code>lang</code>
+     <li><p><code>xml:lang</code> is now allowed in HTML when <code>lang</code>
      is also specified and they have the same value. In XML
      <code>lang</code> is allowed if <code>xml:lang</code> is also specified
      and they have the same value.</li>
-     <li>The <code>frameElement</code> attribute of the <code>Window</code>
+     <li><p>The <code>frameElement</code> attribute of the <code>Window</code>
      object is now defined.</li>
-     <li>An event loop and task queue is now defined detailing script
+     <li><p>An event loop and task queue is now defined detailing script
      execution and events. All features have been updated to be defined in
      terms of this mechanism.</li>
-     <li>If the <code>alt</code> attribute is omitted a <code>title</code>
+     <li><p>If the <code>alt</code> attribute is omitted a <code>title</code>
      attribute, an enclosing <code>figure</code> element with a
      <code>legend</code> element descendant, or an
      enclosing section with an associated heading must be present.</li>
-     <li>The <code>irrelevant</code> attribute has been renamed to
+     <li><p>The <code>irrelevant</code> attribute has been renamed to
      <code>hidden</code>.</li>
-     <li>The <code>definitionURL</code> attribute of MathML is now properly
+     <li><p>The <code>definitionURL</code> attribute of MathML is now properly
      supported. Previously it would have ended up being all lowercase during
      parsing.</li>
-     <li>User agents must treat US-ASCII as Windows-1252 for compatibility
+     <li><p>User agents must treat US-ASCII as Windows-1252 for compatibility
      reasons.</li>
-     <li>An alternative syntax for the DOCTYPE is
+     <li><p>An alternative syntax for the DOCTYPE is
      allowed for compatibility with some XML tools.</li>
-     <li>Data templates have been removed (consisted of the
+     <li><p>Data templates have been removed (consisted of the
      <code>datatemplate</code>, <code>rule</code> and <code>nest</code>
      elements).</li>
-     <li>The media elements now support just a single <code>loop</code>
+     <li><p>The media elements now support just a single <code>loop</code>
      attribute.</li>
-     <li>The <code>load()</code> method on media elements has been
+     <li><p>The <code>load()</code> method on media elements has been
      redefined as asynchronous. It also tries out files in turn now rather
      than just looking at the <code>type</code> attribute of the
      <code>source</code> element.</li>
-     <li>A new member called <code>canPlayType()</code> has been added to
+     <li><p>A new member called <code>canPlayType()</code> has been added to
      the media elements.</li>
-     <li>The <code>totalBytes</code> and <code>bufferedBytes</code>
+     <li><p>The <code>totalBytes</code> and <code>bufferedBytes</code>
      attributes have been removed from the media elements.</li>
-     <li>The <code>Location</code> object gained a
+     <li><p>The <code>Location</code> object gained a
      <code>resolveURL()</code> method.</li>
-     <li>The <code>q</code> element has changed again. Punctuation is to be
+     <li><p>The <code>q</code> element has changed again. Punctuation is to be
      provided by the user agent again.</li>
-     <li>Various changes were made to the HTML parser algorithm to be more
+     <li><p>Various changes were made to the HTML parser algorithm to be more
      in line with the behavior Web sites require.</li>
-     <li>The <code>unload</code> and <code>beforeunload</code> events are
+     <li><p>The <code>unload</code> and <code>beforeunload</code> events are
      now defined.</li>
-     <li>The IDL blocks in the specification have been revamped to be in
+     <li><p>The IDL blocks in the specification have been revamped to be in
      line with the upcoming Web IDL specification.</li>
-     <li>Table headers can now have headers. User agents are required to
+     <li><p>Table headers can now have headers. User agents are required to
      support a <code>headers</code> attribute pointing to a <code>td</code>
      or <code>th</code> element, but Web developers are required to only let them
      point to <code>th</code> elements.</li>
-     <li>Interested parties can now register new <code>http-equiv</code>
+     <li><p>Interested parties can now register new <code>http-equiv</code>
      values.</li>
-     <li>When the <code>meta</code> element has a <code>charset</code>
+     <li><p>When the <code>meta</code> element has a <code>charset</code>
      attribute it must occur within the first 512 bytes.</li>
-     <li>The <code>StorageEvent</code> object now has a
+     <li><p>The <code>StorageEvent</code> object now has a
      <code>storageArea</code> attribute.</li>
-     <li>It is now defined how HTML is to be used within the SVG
+     <li><p>It is now defined how HTML is to be used within the SVG
      <code>foreignObject</code> element.</li>
-     <li>The notification API has been dropped.</li>
-     <li>How [[Get]] works for the <code>HTMLDocument</code> and
+     <li><p>The notification API has been dropped.</li>
+     <li><p>How [[Get]] works for the <code>HTMLDocument</code> and
      <code>Window</code> objects is now defined.</li>
-     <li>The <code>Window</code> object gained the
+     <li><p>The <code>Window</code> object gained the
      <code>locationbar</code>, <code>menubar</code>,
      <code>personalbar</code>, <code>scrollbars</code>,
      <code>statusbar</code> and <code>toolbar</code> attributes giving
      information about the user interface.</li>
-     <li>The application cache section has been significantly revised and
+     <li><p>The application cache section has been significantly revised and
      updated.</li>
-     <li><code>document.domain</code> now relies on the Public Suffix List.
+     <li><p><code>document.domain</code> now relies on the Public Suffix List.
      <span data-anolis-ref>PSL</span>
-     <li>A non-normative rendering section has been added that describes
+     <li><p>A non-normative rendering section has been added that describes
      user agent rendering rules for both obsolete and conforming
      elements.</li>
-     <li>A normative section has been added that defines when certain
+     <li><p>A normative section has been added that defines when certain
      selectors as defined in the Selectors and the
      CSS3 Basic User Interface Module match HTML elements.
      <span data-anolis-ref>SELECTORS</span>
@@ -3319,50 +3319,50 @@
     changes were made to the forms chapter:</p>
 
     <ul>
-     <li>Support for XML submission has been removed.</li>
-     <li>Support for form filling has been removed.</li>
-     <li>Support for filling of the <code>select</code> and
+     <li><p>Support for XML submission has been removed.</li>
+     <li><p>Support for form filling has been removed.</li>
+     <li><p>Support for filling of the <code>select</code> and
      <code>datalist</code> elements through the <code>data</code> attribute
      has been removed.</li>
-     <li>Support for associating a field with multiple forms has been
+     <li><p>Support for associating a field with multiple forms has been
      removed. A field can still be associated with a form it is not nested
      in through the <code>form</code> attribute.</li>
-     <li>The <code>dispatchChangeInput()</code> and
+     <li><p>The <code>dispatchChangeInput()</code> and
      <code>dispatchFormChange()</code> methods have been removed from the
      <code>select</code>, <code>input</code>, <code>textarea</code>, and
      <code>button</code> elements.</li>
-     <li>Repetition templates have been removed.</li>
-     <li>The <code>inputmode</code> attribute has been removed.</li>
-     <li>The <code>input</code> element in the File Upload state no longer
+     <li><p>Repetition templates have been removed.</li>
+     <li><p>The <code>inputmode</code> attribute has been removed.</li>
+     <li><p>The <code>input</code> element in the File Upload state no longer
      supports the <code>min</code> and <code>max</code> attributes.</li>
-     <li>The <code>allow</code> attribute on <code>input</code> elements in
+     <li><p>The <code>allow</code> attribute on <code>input</code> elements in
      the File Upload state is no longer authoritative.</li>
-     <li>The <code>pattern</code> and <code>accept</code> attributes for
+     <li><p>The <code>pattern</code> and <code>accept</code> attributes for
      <code>textarea</code> have been removed.</li>
-     <li>RFC 3106 is no longer explicitly supported.</li>
-     <li>The <code>submit()</code> method now just submits, it no longer
+     <li><p>RFC 3106 is no longer explicitly supported.</li>
+     <li><p>The <code>submit()</code> method now just submits, it no longer
      ensures the form controls are valid.</li>
-     <li>The <code>input</code> element in the Range state now defaults to
+     <li><p>The <code>input</code> element in the Range state now defaults to
      the middle, rather than the minimum value.</li>
-     <li>The <code>size</code> attribute on the <code>input</code> element
+     <li><p>The <code>size</code> attribute on the <code>input</code> element
      is now conforming (rather than deprecated).</li>
-     <li><code>object</code> elements now partake in form submission.</li>
-     <li>The <code>type</code> attribute of the <code>input</code> element
+     <li><p><code>object</code> elements now partake in form submission.</li>
+     <li><p>The <code>type</code> attribute of the <code>input</code> element
      gained the values <code>color</code> and <code>search</code>.</li>
-     <li>The <code>input</code> element gained a <code>multiple</code>
+     <li><p>The <code>input</code> element gained a <code>multiple</code>
      attribute which allows for either multiple e-mails or multiple files to
      be uploaded depending on the value of the <code>type</code>
      attribute.</li>
-     <li>The <code>input</code>, <code>button</code> and <code>form</code>
+     <li><p>The <code>input</code>, <code>button</code> and <code>form</code>
      elements now have a <code>novalidate</code> attribute to indicate that
      the form fields should not be required to have valid values upon
      submission.</li>
-     <li>When the <code>label</code> element contains an <code>input</code>
+     <li><p>When the <code>label</code> element contains an <code>input</code>
      it may still have a <code>for</code> attribute as long as it points to
      the <code>input</code> element it contains.</li>
-     <li>The <code>input</code> element now has an
+     <li><p>The <code>input</code> element now has an
      <code>indeterminate</code> IDL attribute.</li>
-     <li>The <code>input</code> element gained a <code>placeholder</code>
+     <li><p>The <code>input</code> element gained a <code>placeholder</code>
      attribute.</li>
     </ul>
 
@@ -3371,67 +3371,67 @@
     <h3 id="changes-2008-01-22">Changes from 22 January 2008 to 10 June 2008</h3>
 
     <ul>
-     <li>Implementation and authoring details around the <code>ping</code>
+     <li><p>Implementation and authoring details around the <code>ping</code>
      attribute have changed.
-     <li><code>&lt;meta http-equiv=content-type></code> is now a
+     <li><p><code>&lt;meta http-equiv=content-type></code> is now a
      conforming way to set the character encoding.</li>
-     <li>API for the <code>canvas</code> element has been cleaned up. Text
+     <li><p>API for the <code>canvas</code> element has been cleaned up. Text
      support has been added.
-     <li><code>globalStorage</code> is now restricted to the same-origin
+     <li><p><code>globalStorage</code> is now restricted to the same-origin
      policy and renamed to <code>localStorage</code>. Related event
      dispatching has been clarified.
-     <li><code>postMessage()</code> API changed. Only the origin of the
+     <li><p><code>postMessage()</code> API changed. Only the origin of the
      message is exposed, no longer the URL. It also requires a second
      argument that indicates the origin of the target document.
-     <li>Drag and drop API has got clarification. The
+     <li><p>Drag and drop API has got clarification. The
      <code>dataTransfer</code> object now has a <code>types</code>
      attribute indicating the type of data being transferred.
-     <li>The <code>m</code> element is now called <code>mark</code>.
-     <li>Server-sent events has changed and gotten clarification. It uses a
+     <li><p>The <code>m</code> element is now called <code>mark</code>.
+     <li><p>Server-sent events has changed and gotten clarification. It uses a
      new format so that older implementations are not broken.
-     <li>The <code>figure</code> element no longer requires a caption.
-     <li>The <code>ol</code> element has a new <code>reversed</code>
+     <li><p>The <code>figure</code> element no longer requires a caption.
+     <li><p>The <code>ol</code> element has a new <code>reversed</code>
      attribute.
-     <li>Character encoding detection has changed in response to feedback.
-     <li>Various changes have been made to the HTML parser section in
+     <li><p>Character encoding detection has changed in response to feedback.
+     <li><p>Various changes have been made to the HTML parser section in
      response to implementation feedback.
-     <li>Various changes to the editing section have been made, including
+     <li><p>Various changes to the editing section have been made, including
      adding <code>queryCommandEnabled()</code> and related methods.
-     <li>The <code>headers</code> attribute has been added for
+     <li><p>The <code>headers</code> attribute has been added for
      <code>td</code> elements.
-     <li>The <code>table</code> element has a new <code>createTBody()</code>
+     <li><p>The <code>table</code> element has a new <code>createTBody()</code>
      method.
-     <li>MathML support has been added to the HTML parser section. (SVG
+     <li><p>MathML support has been added to the HTML parser section. (SVG
      support is still awaiting input from the SVG WG.)
-     <li>Web developer-defined attributes have been added. Web developers can add
+     <li><p>Web developer-defined attributes have been added. Web developers can add
      attributes to elements in the form of
      <code>data-<var>name</var></code> and can access these through the DOM
      using <code>dataset[<var>name</var>]</code> on the element in question.
-     <li>The <code>q</code> element has changed to require punctuation
+     <li><p>The <code>q</code> element has changed to require punctuation
      inside rather than having the browser render it.
-     <li>The <code>target</code> attribute can now have the value
+     <li><p>The <code>target</code> attribute can now have the value
      <code>_blank</code>.
-     <li>The <code>showModalDialog</code> API has been added.
-     <li>The <code>document.domain</code> API has been defined.
-     <li>The <code>source</code> element now has a new
+     <li><p>The <code>showModalDialog</code> API has been added.
+     <li><p>The <code>document.domain</code> API has been defined.
+     <li><p>The <code>source</code> element now has a new
      <code>pixelratio</code> attribute useful for videos that have some kind
      encoding error.
-     <li><code>bufferedBytes</code>, <code>totalBytes</code> and
+     <li><p><code>bufferedBytes</code>, <code>totalBytes</code> and
      <code>bufferingThrottled</code> IDL attributes have been added to the
      <code>video</code> element.
-     <li>Media <code>begin</code> event has been renamed to
+     <li><p>Media <code>begin</code> event has been renamed to
      <code>loadstart</code> for consistency with the Progress Events
      specification.
-     <li><code>charset</code> attribute has been added to
+     <li><p><code>charset</code> attribute has been added to
      <code>script</code>.
-     <li>The <code>iframe</code> element has gained the <code>sandbox</code>
+     <li><p>The <code>iframe</code> element has gained the <code>sandbox</code>
      and <code>seamless</code> attributes which provide sandboxing
      functionality.
-     <li>The <code>ruby</code>, <code>rt</code> and <code>rp</code>
+     <li><p>The <code>ruby</code>, <code>rt</code> and <code>rp</code>
      elements have been added to support ruby annotation.
-     <li>A <code>showNotification()</code> method has been added to show
+     <li><p>A <code>showNotification()</code> method has been added to show
      notification messages to the user.
-     <li>Support for <code>beforeprint</code> and <code>afterprint</code>
+     <li><p>Support for <code>beforeprint</code> and <code>afterprint</code>
      events has been added.</li>
     </ul>
 

@@ -50,9 +50,9 @@
         <dt>Participate:</dt>
         <dd><span class=not-w3c>Send feedback to
          <a href="http://www.whatwg.org/mailing-list">whatwg@whatwg.org</a>
-         <!--(<a href=XXX>archives</a>)--> or</span>
-         <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">file a bug</a>
-         (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29&amp;resolution=---">open bugs</a>)
+         (<a href=http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/>archives</a>) or</span>
+         <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4">file a bug</a>XXX
+         (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4&amp;resolution=---">open bugs</a>)XXX
         <dd class=not-w3c><a href="http://wiki.whatwg.org/wiki/IRC">IRC: #whatwg on Freenode</a>
 
         <dt>Version History:
@@ -127,8 +127,8 @@
     <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
     Group Note</a>.
     The appropriate forum for comments is
-    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">W3C
-    Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
+    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4">W3C
+    Bugzilla</a>.XXX (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
     a mailing list with a
     <a href="http://lists.w3.org/Archives/Public/public-html-comments/" title="Archive for HTML comments mailing-list">public
     archive</a>, is no longer used for tracking comments.)</p>
@@ -437,6 +437,10 @@
       represents an independent piece of content of a document, such as a
       blog entry or newspaper article.</p></li>
 
+      <li><p><code data-anolis-spec=html>main</code>
+      can be used as a container for the dominant contents of another element, such as
+      the main content of the page.</p></li>
+
       <li><p><code data-anolis-spec=html>aside</code>
       represents a piece of content that is only slightly related to the
       rest of the page.</p></li>
@@ -519,8 +523,8 @@
       <li><p><code data-anolis-spec=html>canvas</code> is used for rendering
       dynamic bitmap graphics on the fly, such as graphs or games.
 
-      <li><p><code title>command</code><!--XXX-->
-      represents a command the user can invoke.</p></li>
+      <li><p><code data-anolis-spec=html>menuitem</code>
+      represents a command the user can invoke from a popup menu.</p></li>
 
       <li><p><code data-anolis-spec=html>details</code>
       represents additional information or controls which the user can
@@ -594,9 +598,11 @@
     that were already part of HTML4:</p>
 
     <ul>
-      <li><p>The <code data-anolis-spec=html>a</code> and <code data-anolis-spec=html>area</code> elements now have a
-      <code title>media</code><!--XXX--> attribute for consistency with the <code data-anolis-spec=html>link</code>
-      element. WHATWG HTML also has the <code data-anolis-spec=html title=attr-hyperlink-download>download</code> and <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attributes.
+      <li><p>The <code data-anolis-spec=html>a</code> and
+      <code data-anolis-spec=html>area</code> elements have the new
+      <code data-anolis-spec=html title=attr-hyperlink-download>download</code> attribute
+      in WHATWG HTML and W3C HTML5.1. WHATWG HTML also has the
+      <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attribute.
 
       <li><p>The <code data-anolis-spec=html>area</code> element, for consistency with the
       <code data-anolis-spec=html>a</code> and <code data-anolis-spec=html>link</code> elements, now also has the
@@ -610,6 +616,12 @@
       attribute now as this was already widely supported and provides a nice
       way to specify the
       <a href="#character-encoding">character encoding</a> for the document.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>table</code>
+      element now has a <code data-anolis-spec=html title=attr-table-sortable>sortable</code> attribute and the
+      <code data-anolis-spec=html>th</code> element has a
+      <code data-anolis-spec=html title=attr-th-sorted>sorted</code> attribute, which provide a means to sort
+      table columns.
 
       <li><p>A new <code data-anolis-spec=html title=attr-fe-autofocus>autofocus</code> attribute can be specified on the
       <code data-anolis-spec=html>input</code> (except when the <code data-anolis-spec=html title=attr-input-type>type</code> attribute is
@@ -700,6 +712,10 @@
       allow the element to transform into a menu as found in typical user
       interfaces as well as providing for context menus in conjunction with the
       global <code data-anolis-spec=html title=attr-contextmenu>contextmenu</code> attribute.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>button</code>
+      element has a new <code data-anolis-spec=html title=attr-button-menu>menu</code>
+      attribute, used together with popup menus.
 
       <li><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
       attribute which can be used to enable scoped style sheets. Style rules
@@ -728,7 +744,15 @@
 
       <li><p>The <code data-anolis-spec=html>object</code> element has a new attribute called <code data-anolis-spec=html title=attr-object-typemustmatch>typemustmatch</code> which allows safer embedding of external resources.
 
-      <li><p>The <code data-anolis-spec=html>img</code> element has a new attribute called <code data-anolis-spec=html title=attr-img-crossorigin>crossorigin</code> to use CORS in the fetch and if it is successful, allows the image data to be read with the <code data-anolis-spec=html>canvas</code> API. In WHATWG HTML, there is also a new attribute called <code data-anolis-spec=html title=attr-img-srcset>srcset</code> to support multiple images for different resolutions and different images for different viewport sizes.
+      <li><p>The <code data-anolis-spec=html>img</code> element has a new attribute called
+      <code data-anolis-spec=html title=attr-img-crossorigin>crossorigin</code> to use CORS in the fetch and if it is successful, allows the image data to be
+      read with the <code data-anolis-spec=html>canvas</code> API. In WHATWG HTML and W3C HTML 5.1, the <code data-anolis-spec=html>script</code> element has a
+      <code data-anolis-spec=html title=attr-script-crossorigin>crossorigin</code> attribute to allow script
+      <span data-anolis-spec=html title="report the error">errors to be reported</span> to <code data-anolis-spec=html title=handler-onerror>onerror</code>
+      with information about the error. WHATWG HTML and W3C HTML 5.1 also has the <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code>
+      attribute on the <code data-anolis-spec=html>link</code> element.
+      
+      <li><p>In WHATWG HTML, the <code data-anolis-spec=html>img</code> element has a new attribute called <code data-anolis-spec=html title=attr-img-srcset>srcset</code> to support multiple images for different resolutions and different images for different viewport sizes.
     </ul>
 
     <p>Several attributes from HTML4 now apply to all elements. These
@@ -1274,7 +1298,7 @@
       -->
 
       <li><p>The <code data-anolis-spec=html>menu</code> element is redefined to
-      be useful for toolbars and context menus.</p></li>
+      be useful for toolbars and popup menus.</p></li>
 
       <!--
       META
@@ -1672,7 +1696,7 @@
       attribute takes the empty string in addition to a valid language
       identifier, just like <code>xml:lang</code> does in XML.
 
-      <li><p>The <code title>media</code><!--XXX--> attribute on <code
+      <li><p>The <code data-anolis-spec=html title=attr-link-media>media</code> attribute on <code
       data-anolis-spec=html>link</code> now accepts a media query and defaults
       to "all".
 
@@ -1833,10 +1857,12 @@
       <li><code data-anolis-spec=html title=attr-param-valuetype>valuetype</code> and <code data-anolis-spec=html title=attr-param-type>type</code> attributes on
       <code data-anolis-spec=html>param</code>.
 
-      <li><code data-anolis-spec=html title=attr-tdth-axis>axis</code> and <code title>abbr</code><!--XXX-->
-      attributes on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
-
-      <li><code data-anolis-spec=html title=attr-td-scope>scope</code> attribute on <code data-anolis-spec=html>td</code>.
+      <li><code data-anolis-spec=html title=attr-tdth-axis>axis</code>
+      attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
+      
+      <li><code data-anolis-spec=html title=attr-td-abbr>abbr</code> and
+      <code data-anolis-spec=html title=attr-td-scope>scope</code> attributes on
+      <code data-anolis-spec=html>td</code>.
 
       <li><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
     </ul>
@@ -2088,15 +2114,13 @@
       data-anolis-spec=html>audio</code>) have APIs for controlling playback,
       syncronising multiple media elements, and timed text tracks (e.g.
       subtitles).
-
+      
       <li><p>An API for form constraint validation (e.g. the <code
       data-anolis-spec=html
       title=dom-cva-setcustomvalidity>setCustomValidity()</code> method).
 
       <li><p>An API for <span data-anolis-spec=html
-      title=concept-command>commands</span> that the user can invoke (used
-      together with the <code title>command</code><!--XXX--> element among
-      others).
+      title=concept-command>commands</span> that the user can invoke.
 
       <li><p>An API that enables offline Web applications, with an <span
       data-anolis-spec=html>application cache</span>.</li>
@@ -2105,8 +2129,7 @@
       protocols or media types, using <code data-anolis-spec=html
       title=dom-navigator-registerProtocolHandler>registerProtocolHandler()</code>
       and <code data-anolis-spec=html
-      title=dom-navigator-registerContentHandler>registerContentHandler()</code>
-      .</li>
+      title=dom-navigator-registerContentHandler>registerContentHandler()</code>.</li>
 
       <li><p>Editing API in combination with a new global <code
       data-anolis-spec=html title=attr-contenteditable>contenteditable</code>
@@ -2273,12 +2296,18 @@
       data-anolis-spec=html title=dom-document-plugins>plugins</code>, <code
       data-anolis-spec=html title=dom-document-scripts>scripts</code>, <code
       data-anolis-spec=html title=dom-document-commands>commands</code>, and a
-      generic name getter, to access various parts of the DOM tree. WHATWG HTML
-      also has <code data-anolis-spec=html
-      title=dom-document-getItems>getItems()</code> for microdata and <code
+      generic name getter, to access various parts of the DOM tree.
+      
+      <li><p>WHATWG HTML has <code data-anolis-spec=html
+      title=dom-document-getItems>getItems()</code> for microdata.
+      
+      <li><p>WHATWG HTML and W3C HTML5.1 has <code
       data-anolis-spec=html
       title=dom-document-cssElementMap>cssElementMap</code> to accompany the CSS
       <code>element()</code> feature.
+      
+      <li><p>WHATWG HTML and W3C HTML5.1 has <code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
+      running <code data-anolis-spec=html>script</code> element (or null).
 
       <li><p><code data-anolis-spec=html
       title=dom-document-activeElement>activeElement</code> and <code
@@ -2330,13 +2359,6 @@
       <code data-anolis-spec=html title=dom-style>style</code> reflect content
       attributes.
 
-      <li><p><code data-anolis-spec=html title=dom-classList>classList</code> is
-      a convenient accessor for <code data-anolis-spec=html
-      title=dom-className>className</code>. The object it returns, exposes
-      methods (<code>contains()</code>, <code>add()</code>,
-      <code>remove()</code>, and <code>toggle()</code>) for manipulating the
-      element's classes.
-
       <li><p><code data-anolis-spec=html title=dom-dataset>dataset</code> is a
       convenience feature for handling the <code data-anolis-spec=html
       title="attr-data-*">data-*</code> attributes, which are exposed as
@@ -2367,6 +2389,8 @@
       <li><p><code data-anolis-spec=html
       title=dom-isContentEditable>isContentEditable</code> returns true if the
       element is editable.
+      
+      <li><p><code data-anolis-spec=html title=dom-forcespellcheck>forceSpellCheck()</code> causes the user agent to check spelling of an element.
 
       <li><p><code data-anolis-spec=html
       title=dom-command-ro-commandType>commandType</code>, <code data-anolis-spec=html
@@ -2378,6 +2402,23 @@
       part of the command API.
 
       <li><p>All event handler IDL attributes.
+    </ul>
+    
+    <p>Some members were previously defined on <code data-anolis-spec=html>HTMLElement</code> but been moved to the <code data-anolis-spec=dom>Element</code>
+    interface in the DOM standard: <span data-anolis-ref>DOM</span>
+    
+    <ul>
+      <li><p><code data-anolis-spec=dom title=dom-element-id>id</code> which reflects the <code>id</code> content attribute.
+      
+      <li><p><code data-anolis-spec=dom title=dom-element-className>className</code> which reflects the <code>class</code> content attribute.
+    
+      <li><p><code data-anolis-spec=dom title=dom-element-classList>classList</code> is a convenient accessor for
+      <code data-anolis-spec=dom title=dom-element-className>className</code>. The object it returns, exposes methods (<code>contains()</code>, <code>add()</code>,
+      <code>remove()</code>, and <code>toggle()</code>) for manipulating the element's classes.
+      
+      <li><p><code data-anolis-spec=dom title=dom-element-getElementsByClassName>getElementsByClassName()</code> returns a list of elements with the specified
+      classes.
+
     </ul>
 
 
@@ -2398,7 +2439,7 @@
       data-anolis-spec=html>HTMLStyleElement</code> now implement the
       <code>LinkStyle</code> interface from CSSOM. <span
       data-anolis-ref>CSSOM</span>
-
+      
       <li><p><code data-anolis-spec=html>HTMLFormElement</code> now has a named
       getter and an indexed getter.
 
@@ -2466,15 +2507,17 @@
 
       <li><p><code data-anolis-spec=html>HTMLAnchorElement</code> now has the
       members <code data-anolis-spec=html title=dom-a-relList>relList</code>,
-      <code data-anolis-spec=html title=dom-a-text>text</code>, the URL
-      decomposition IDL attributes: <!--XXX--><code title>protocol</code>,
-      <code title>host</code>, <code title>hostname</code>, <code title>port</code>,
-      <code title>pathname</code>, <code title>search</code> and <code title>hash</code>.
+      <code data-anolis-spec=html title=dom-a-text>text</code>, implements the <code data-anolis-spec=url>URLUtils</code> interface which has the members
+      <code data-anolis-spec=url title=dom-URL-href>href</code>, <code data-anolis-spec=url title=dom-URL-origin>origin</code>,
+      <code data-anolis-spec=url title=dom-URL-protocol>protocol</code>, <code data-anolis-spec=url title=dom-URL-username>username</code>,
+      <code data-anolis-spec=url title=dom-URL-password>password</code>, <code data-anolis-spec=url title=dom-URL-host>host</code>,
+      <code data-anolis-spec=url title=dom-URL-hostname>hostname</code>, <code data-anolis-spec=url title=dom-URL-port>port</code>,
+      <code data-anolis-spec=url title=dom-URL-pathname>pathname</code>, <code data-anolis-spec=url title=dom-URL-search>search</code>,
+      <code data-anolis-spec=url title=dom-URL-query>query</code> and <code data-anolis-spec=url title=dom-URL-hash>hash</code>.
       <code data-anolis-spec=html>HTMLLinkElement</code> and <code
       data-anolis-spec=html>HTMLAreaElement</code> also have the <code
       data-anolis-spec=html title=dom-link-relList>relList</code> IDL attribute.
-      <code data-anolis-spec=html>HTMLAreaElement</code> also has the URL
-      decomposition IDL attributes.
+      <code data-anolis-spec=html>HTMLAreaElement</code> also implements the <code data-anolis-spec=url>URLUtils</code> interface.
 
       <li><p><code data-anolis-spec=html>HTMLImageElement</code> now has a
       constructor <code data-anolis-spec=html title=dom-Image>Image</code>, the
@@ -2492,8 +2535,13 @@
       member <code data-anolis-spec=html title=dom-map-images>images</code>.
 
       <li><p><code data-anolis-spec=html>HTMLTableElement</code> now has the
-      member <code data-anolis-spec=html
-      title=dom-table-createTBody>createTBody()</code>.
+      members <code data-anolis-spec=html
+      title=dom-table-createTBody>createTBody()</code> and, in WHATWG HTML and W3C HTML5.1,
+      <code data-anolis-spec=html title=dom-table-stopsorting>stopSorting()</code>.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1,
+      <code data-anolis-spec=html>HTMLTableHeaderCellElement</code> now has the member
+      <code data-anolis-spec=html title=dom-th-sort>sort()</code>.
 
       <li><p><code data-anolis-spec=html>HTMLIFrameElement</code> now has the
       member <code data-anolis-spec=html
@@ -2566,6 +2614,7 @@
      <li>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional.
      <li>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class.
      <li>The <code>HTMLBaseFontElement</code> interface has been removed.
+     <li>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object.
      <li>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements.
      <li>The drag and drop API now has a <code>dragexit</code> event.
      <li>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls).

@@ -36,8 +36,8 @@
         <dt>This Version:</dt>
         <dd class="not-tr not-whatwg"><a href="http://dev.w3.org/html5/html4-differences/">http://dev.w3.org/html5/html4-differences/</a>
         <dt>Participate:</dt>
-        <dd><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">file a bug</a>
-         (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29&amp;resolution=---">open bugs</a>)
+        <dd><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4">file a bug</a>XXX
+         (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4&amp;resolution=---">open bugs</a>)XXX
         <dt>Version History:
         <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
 
@@ -104,8 +104,8 @@
     <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
     Group Note</a>.
     The appropriate forum for comments is
-    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">W3C
-    Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
+    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4">W3C
+    Bugzilla</a>.XXX (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
     a mailing list with a
     <a href="http://lists.w3.org/Archives/Public/public-html-comments/" title="Archive for HTML comments mailing-list">public
     archive</a>, is no longer used for tracking comments.)</p>
@@ -465,6 +465,10 @@
       represents an independent piece of content of a document, such as a
       blog entry or newspaper article.</li>
 
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-main-element">main</a></code>
+      can be used as a container for the dominant contents of another element, such as
+      the main content of the page.</li>
+
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element">aside</a></code>
       represents a piece of content that is only slightly related to the
       rest of the page.</li>
@@ -547,8 +551,8 @@
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">canvas</a></code> is used for rendering
       dynamic bitmap graphics on the fly, such as graphs or games.
 
-      <li><p><code title="">command</code><!--XXX-->
-      represents a command the user can invoke.</li>
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menuitem-element">menuitem</a></code>
+      represents a command the user can invoke from a popup menu.</li>
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element">details</a></code>
       represents additional information or controls which the user can
@@ -622,9 +626,11 @@
     that were already part of HTML4:</p>
 
     <ul>
-      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element">area</a></code> elements now have a
-      <code title="">media</code><!--XXX--> attribute for consistency with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>
-      element. WHATWG HTML also has the <code class="external" title="attr-hyperlink-download"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#attr-hyperlink-download">download</a></code> and <code class="external" title="attr-hyperlink-ping"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#ping">ping</a></code> attributes.
+      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code> and
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element">area</a></code> elements have the new
+      <code class="external" title="attr-hyperlink-download"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#attr-hyperlink-download">download</a></code> attribute
+      in WHATWG HTML and W3C HTML5.1. WHATWG HTML also has the
+      <code class="external" title="attr-hyperlink-ping"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#ping">ping</a></code> attribute.
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-area-element">area</a></code> element, for consistency with the
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> elements, now also has the
@@ -638,6 +644,12 @@
       attribute now as this was already widely supported and provides a nice
       way to specify the
       <a href="#character-encoding">character encoding</a> for the document.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>
+      element now has a <code class="external" title="attr-table-sortable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#attr-table-sortable">sortable</a></code> attribute and the
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code> element has a
+      <code class="external" title="attr-th-sorted"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#attr-th-sorted">sorted</a></code> attribute, which provide a means to sort
+      table columns.
 
       <li><p>A new <code class="external" title="attr-fe-autofocus"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fe-autofocus">autofocus</a></code> attribute can be specified on the
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> (except when the <code class="external" title="attr-input-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#attr-input-type">type</a></code> attribute is
@@ -728,6 +740,10 @@
       allow the element to transform into a menu as found in typical user
       interfaces as well as providing for context menus in conjunction with the
       global <code class="external" title="attr-contextmenu"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#attr-contextmenu">contextmenu</a></code> attribute.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>
+      element has a new <code class="external" title="attr-button-menu"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#attr-button-menu">menu</a></code>
+      attribute, used together with popup menus.
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-style-element">style</a></code> element has a new <code class="external" title="attr-style-scoped"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-style-scoped">scoped</a></code>
       attribute which can be used to enable scoped style sheets. Style rules
@@ -756,7 +772,15 @@
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> element has a new attribute called <code class="external" title="attr-object-typemustmatch"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-object-typemustmatch">typemustmatch</a></code> which allows safer embedding of external resources.
 
-      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> element has a new attribute called <code class="external" title="attr-img-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be read with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">canvas</a></code> API. In WHATWG HTML, there is also a new attribute called <code class="external" title="attr-img-srcset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-srcset">srcset</a></code> to support multiple images for different resolutions and different images for different viewport sizes.
+      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> element has a new attribute called
+      <code class="external" title="attr-img-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be
+      read with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">canvas</a></code> API. In WHATWG HTML and W3C HTML 5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> element has a
+      <code class="external" title="attr-script-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-crossorigin">crossorigin</a></code> attribute to allow script
+      <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#report-the-error" title="report the error">errors to be reported</a> to <code class="external" title="handler-onerror"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-onerror">onerror</a></code>
+      with information about the error. WHATWG HTML and W3C HTML 5.1 also has the <code class="external" title="attr-link-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-link-crossorigin">crossorigin</a></code>
+      attribute on the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> element.
+      
+      <li><p>In WHATWG HTML, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> element has a new attribute called <code class="external" title="attr-img-srcset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-srcset">srcset</a></code> to support multiple images for different resolutions and different images for different viewport sizes.
     </ul>
 
     <p>Several attributes from HTML4 now apply to all elements. These
@@ -1293,7 +1317,7 @@
       -->
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-menu-element">menu</a></code> element is redefined to
-      be useful for toolbars and context menus.</li>
+      be useful for toolbars and popup menus.</li>
 
       <!--
       META
@@ -1672,7 +1696,7 @@
       attribute takes the empty string in addition to a valid language
       identifier, just like <code>xml:lang</code> does in XML.
 
-      <li><p>The <code title="">media</code><!--XXX--> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> now accepts a media query and defaults
+      <li><p>The <code class="external" title="attr-link-media"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-link-media">media</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> now accepts a media query and defaults
       to "all".
 
       <li><p>The event handler attributes (e.g. <code class="external" title="handler-onclick"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-onclick">onclick</a></code>) now always use JavaScript as the
@@ -1817,10 +1841,12 @@
       <li><code class="external" title="attr-param-valuetype"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-valuetype">valuetype</a></code> and <code class="external" title="attr-param-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-param-type">type</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-param-element">param</a></code>.
 
-      <li><code class="external" title="attr-tdth-axis"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-axis">axis</a></code> and <code title="">abbr</code><!--XXX-->
-      attributes on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
-
-      <li><code class="external" title="attr-td-scope"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-scope">scope</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>.
+      <li><code class="external" title="attr-tdth-axis"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-axis">axis</a></code>
+      attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
+      
+      <li><code class="external" title="attr-td-abbr"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-abbr">abbr</a></code> and
+      <code class="external" title="attr-td-scope"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-scope">scope</a></code> attributes on
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>.
 
       <li><code class="external" title="attr-table-summary"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-summary">summary</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
     </ul>
@@ -2037,19 +2063,16 @@
       <li><p>Media elements (<code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element">video</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-audio-element">audio</a></code>) have APIs for controlling playback,
       syncronising multiple media elements, and timed text tracks (e.g.
       subtitles).
-
+      
       <li><p>An API for form constraint validation (e.g. the <code class="external" title="dom-cva-setcustomvalidity"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#dom-cva-setcustomvalidity">setCustomValidity()</a></code> method).
 
-      <li><p>An API for <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#concept-command" title="concept-command">commands</a> that the user can invoke (used
-      together with the <code title="">command</code><!--XXX--> element among
-      others).
+      <li><p>An API for <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#concept-command" title="concept-command">commands</a> that the user can invoke.
 
       <li><p>An API that enables offline Web applications, with an <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#application-cache">application cache</a>.</li>
 
       <li><p>An API that allows a Web application to register itself for certain
       protocols or media types, using <code class="external" title="dom-navigator-registerProtocolHandler"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-navigator-registerprotocolhandler">registerProtocolHandler()</a></code>
-      and <code class="external" title="dom-navigator-registerContentHandler"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-navigator-registercontenthandler">registerContentHandler()</a></code>
-      .</li>
+      and <code class="external" title="dom-navigator-registerContentHandler"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-navigator-registercontenthandler">registerContentHandler()</a></code>.</li>
 
       <li><p>Editing API in combination with a new global <code class="external" title="attr-contenteditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#attr-contenteditable">contenteditable</a></code>
       attribute.</li>
@@ -2162,9 +2185,15 @@
 
       <li><p><code class="external" title="dom-document-dir"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-dir">dir</a></code>,
       <code class="external" title="dom-document-head"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-head">head</a></code>, <code class="external" title="dom-document-embeds"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-embeds">embeds</a></code>, <code class="external" title="dom-document-plugins"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-plugins">plugins</a></code>, <code class="external" title="dom-document-scripts"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts">scripts</a></code>, <code class="external" title="dom-document-commands"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-document-commands">commands</a></code>, and a
-      generic name getter, to access various parts of the DOM tree. WHATWG HTML
-      also has <code class="external" title="dom-document-getItems"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/microdata.html#dom-document-getitems">getItems()</a></code> for microdata and <code class="external" title="dom-document-cssElementMap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-csselementmap">cssElementMap</a></code> to accompany the CSS
+      generic name getter, to access various parts of the DOM tree.
+      
+      <li><p>WHATWG HTML has <code class="external" title="dom-document-getItems"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/microdata.html#dom-document-getitems">getItems()</a></code> for microdata.
+      
+      <li><p>WHATWG HTML and W3C HTML5.1 has <code class="external" title="dom-document-cssElementMap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-csselementmap">cssElementMap</a></code> to accompany the CSS
       <code>element()</code> feature.
+      
+      <li><p>WHATWG HTML and W3C HTML5.1 has <code class="external" title="dom-document-currentscript"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript">currentScript</a></code> which returns the currently
+      running <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> element (or null).
 
       <li><p><code class="external" title="dom-document-activeElement"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-document-activeelement">activeElement</a></code> and <code class="external" title="dom-document-hasFocus"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-document-hasfocus">hasFocus</a></code> to
       determine which element is currently focused and whether the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code> has focus respectively.
@@ -2197,12 +2226,6 @@
       <code class="external" title="dom-style"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-style">style</a></code> reflect content
       attributes.
 
-      <li><p><code class="external" title="dom-classList"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist">classList</a></code> is
-      a convenient accessor for <code class="external" title="dom-className"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classname">className</a></code>. The object it returns, exposes
-      methods (<code>contains()</code>, <code>add()</code>,
-      <code>remove()</code>, and <code>toggle()</code>) for manipulating the
-      element's classes.
-
       <li><p><code class="external" title="dom-dataset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-dataset">dataset</a></code> is a
       convenience feature for handling the <code class="external" title="attr-data-*"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#attr-data-*">data-*</a></code> attributes, which are exposed as
       camel-cased properties. For instance, <code><var>elm</var>.dataset.fooBar
@@ -2220,11 +2243,30 @@
 
       <li><p><code class="external" title="dom-isContentEditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-iscontenteditable">isContentEditable</a></code> returns true if the
       element is editable.
+      
+      <li><p><code class="external" title="dom-forcespellcheck"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-forcespellcheck">forceSpellCheck()</a></code> causes the user agent to check spelling of an element.
 
       <li><p><code class="external" title="dom-command-ro-commandType"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandtype">commandType</a></code>, <code class="external" title="dom-command-ro-commandLabel"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandlabel">commandLabel</a></code>, <code class="external" title="dom-command-ro-commandIcon"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandicon">commandIcon</a></code>, <code class="external" title="dom-command-ro-commandHidden"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandhidden">commandHidden</a></code>, <code class="external" title="dom-command-ro-commandDisabled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commanddisabled">commandDisabled</a></code> and <code class="external" title="dom-command-ro-commandChecked"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandchecked">commandChecked</a></code> is
       part of the command API.
 
       <li><p>All event handler IDL attributes.
+    </ul>
+    
+    <p>Some members were previously defined on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#htmlelement">HTMLElement</a></code> but been moved to the <code class="external"><a href="http://dom.spec.whatwg.org/#element">Element</a></code>
+    interface in the DOM standard: <a href="#refsDOM">[DOM]</a>
+    
+    <ul>
+      <li><p><code class="external" title="dom-element-id"><a href="http://dom.spec.whatwg.org/#dom-element-id">id</a></code> which reflects the <code>id</code> content attribute.
+      
+      <li><p><code class="external" title="dom-element-className"><a href="http://dom.spec.whatwg.org/#dom-element-classname">className</a></code> which reflects the <code>class</code> content attribute.
+    
+      <li><p><code class="external" title="dom-element-classList"><a href="http://dom.spec.whatwg.org/#dom-element-classlist">classList</a></code> is a convenient accessor for
+      <code class="external" title="dom-element-className"><a href="http://dom.spec.whatwg.org/#dom-element-classname">className</a></code>. The object it returns, exposes methods (<code>contains()</code>, <code>add()</code>,
+      <code>remove()</code>, and <code>toggle()</code>) for manipulating the element's classes.
+      
+      <li><p><code class="external" title="dom-element-getElementsByClassName"><a href="http://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">getElementsByClassName()</a></code> returns a list of elements with the specified
+      classes.
+
     </ul>
 
 
@@ -2238,7 +2280,7 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmllinkelement">HTMLLinkElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmlstyleelement">HTMLStyleElement</a></code> now implement the
       <code>LinkStyle</code> interface from CSSOM. <a href="#refsCSSOM">[CSSOM]</a>
-
+      
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#htmlformelement">HTMLFormElement</a></code> now has a named
       getter and an indexed getter.
 
@@ -2281,13 +2323,15 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#htmlanchorelement">HTMLAnchorElement</a></code> now has the
       members <code class="external" title="dom-a-relList"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#dom-a-rellist">relList</a></code>,
-      <code class="external" title="dom-a-text"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#dom-a-text">text</a></code>, the URL
-      decomposition IDL attributes: <!--XXX--><code title="">protocol</code>,
-      <code title="">host</code>, <code title="">hostname</code>, <code title="">port</code>,
-      <code title="">pathname</code>, <code title="">search</code> and <code title="">hash</code>.
+      <code class="external" title="dom-a-text"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#dom-a-text">text</a></code>, implements the <code class="external"><a href="http://url.spec.whatwg.org/#urlutils">URLUtils</a></code> interface which has the members
+      <code class="external" title="dom-URL-href"><a href="http://url.spec.whatwg.org/#dom-url-href">href</a></code>, <code class="external" title="dom-URL-origin"><a href="http://url.spec.whatwg.org/#dom-url-origin">origin</a></code>,
+      <code class="external" title="dom-URL-protocol"><a href="http://url.spec.whatwg.org/#dom-url-protocol">protocol</a></code>, <code class="external" title="dom-URL-username"><a href="http://url.spec.whatwg.org/#dom-url-username">username</a></code>,
+      <code class="external" title="dom-URL-password"><a href="http://url.spec.whatwg.org/#dom-url-password">password</a></code>, <code class="external" title="dom-URL-host"><a href="http://url.spec.whatwg.org/#dom-url-host">host</a></code>,
+      <code class="external" title="dom-URL-hostname"><a href="http://url.spec.whatwg.org/#dom-url-hostname">hostname</a></code>, <code class="external" title="dom-URL-port"><a href="http://url.spec.whatwg.org/#dom-url-port">port</a></code>,
+      <code class="external" title="dom-URL-pathname"><a href="http://url.spec.whatwg.org/#dom-url-pathname">pathname</a></code>, <code class="external" title="dom-URL-search"><a href="http://url.spec.whatwg.org/#dom-url-search">search</a></code>,
+      <code class="external" title="dom-URL-query"><a href="http://url.spec.whatwg.org/#dom-url-query">query</a></code> and <code class="external" title="dom-URL-hash"><a href="http://url.spec.whatwg.org/#dom-url-hash">hash</a></code>.
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmllinkelement">HTMLLinkElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#htmlareaelement">HTMLAreaElement</a></code> also have the <code class="external" title="dom-link-relList"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#dom-link-rellist">relList</a></code> IDL attribute.
-      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#htmlareaelement">HTMLAreaElement</a></code> also has the URL
-      decomposition IDL attributes.
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#htmlareaelement">HTMLAreaElement</a></code> also implements the <code class="external"><a href="http://url.spec.whatwg.org/#urlutils">URLUtils</a></code> interface.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#htmlimageelement">HTMLImageElement</a></code> now has a
       constructor <code class="external" title="dom-Image"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#dom-image">Image</a></code>, the
@@ -2302,7 +2346,12 @@
       member <code class="external" title="dom-map-images"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#dom-map-images">images</a></code>.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#htmltableelement">HTMLTableElement</a></code> now has the
-      member <code class="external" title="dom-table-createTBody"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-table-createtbody">createTBody()</a></code>.
+      members <code class="external" title="dom-table-createTBody"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-table-createtbody">createTBody()</a></code> and, in WHATWG HTML and W3C HTML5.1,
+      <code class="external" title="dom-table-stopsorting"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-table-stopsorting">stopSorting()</a></code>.
+      
+      <li><p>In WHATWG HTML and W3C HTML5.1,
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#htmltableheadercellelement">HTMLTableHeaderCellElement</a></code> now has the member
+      <code class="external" title="dom-th-sort"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-th-sort">sort()</a></code>.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#htmliframeelement">HTMLIFrameElement</a></code> now has the
       member <code class="external" title="dom-iframe-contentWindow"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#dom-iframe-contentwindow">contentWindow</a></code>.
@@ -2361,6 +2410,7 @@
      <li>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional.
      <li>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class.
      <li>The <code>HTMLBaseFontElement</code> interface has been removed.
+     <li>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object.
      <li>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements.
      <li>The drag and drop API now has a <code>dragexit</code> event.
      <li>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls).
@@ -3242,6 +3292,9 @@
 
 <dt id="refsDOCTYPE">[DOCTYPE]
 <dd><cite><a href="http://hsivonen.iki.fi/doctype/">Activating Browser Modes with Doctype</a></cite>, Henri Sivonen.
+
+<dt id="refsDOM">[DOM]
+<dd><cite><a href="http://dom.spec.whatwg.org/">DOM</a></cite>, Anne van Kesteren, Aryeh Gregor and Ms2ger. WHATWG.
 
 <dt id="refsDOM2HTML">[DOM2HTML]
 <dd><cite><a href="http://www.w3.org/TR/DOM-Level-2-HTML/">Document Object Model (DOM) Level 2 HTML Specification</a></cite>, Johnny Stenback, Philippe Le Hégaret and Arnaud Le Hors. W3C.

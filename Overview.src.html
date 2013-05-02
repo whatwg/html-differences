@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title class=not-whatwg>HTML5 differences from HTML4</title>
-    <title class=not-w3c>HTML differences from HTML4</title>
+    <title>HTML differences from HTML4</title>
     <style type="text/css">
       .note { margin-left:2em; font-weight:bold; font-style:italic; color:green }
       p.note::before { content:"Note: " }
@@ -30,8 +29,7 @@
       <p class=not-w3c><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
  
       <hgroup>
-        <h1 id="html5-diff" class=not-whatwg>HTML5 differences from HTML4</h1>
-        <h1 class=not-w3c>HTML differences from HTML4</h1>
+        <h1>HTML differences from HTML4</h1>
   
         <h2 class="no-num no-toc not-whatwg" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
         <h2 class="no-num no-toc not-w3c">Living Document &mdash; Last Updated [DATE: 1 August 1986]</h2>
@@ -104,14 +102,14 @@
 
     <h2 class="no-num no-toc" id="abstract">Abstract</h2>
 
-    <p>HTML is the core language of the World Wide Web. The W3C publishes HTML5,
-    which is the fifth major revision of HTML. The WHATWG publishes HTML, which
-    is a rough superset of HTML5. "HTML5 differences from HTML4" describes the
-    differences of these documents from HTML4, and calls out cases where HTML is
-    different from HTML5. This document may not provide accurate information as
+    <p>HTML is the core language of the World Wide Web. The W3C publish HTML5 and HTML5.1.
+    The WHATWG publishes HTML, which is a rough superset of W3C HTML5.1.
+    "HTML differences from HTML4" describes the
+    differences of these documents from HTML4, and calls out cases where they differ from
+    each other. This document may not provide accurate information as
     the specifications are still actively in development. When in doubt, always
     check the specifications themselves. <span data-anolis-ref>HTML5</span>
-    <span data-anolis-ref>HTML</span></p>
+    <span data-anolis-ref>HTML5NIGHTLY</span> <span data-anolis-ref>HTML</span></p>
 
     <div class="not-whatwg">
     <h2 class="no-num no-toc" id="sotd">Status of this Document</h2>
@@ -127,8 +125,7 @@
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
     <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
-    Group Note</a> to accompany the
-    <a href="http://www.w3.org/TR/html5/">HTML5 specification</a>.
+    Group Note</a>.
     The appropriate forum for comments is
     <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4%20%28editor%3A%20Anne%20van%20Kesteren%29">W3C
     Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
@@ -161,6 +158,15 @@
 
 
     <h2 id="introduction">Introduction</h2>
+    
+    <h3 id="scope">Scope of this document</h3>
+    
+    <p>This document covers the W3C HTML5 specification, W3C HTML5.1 specification, and
+    the WHATWG HTML standard. These are referred to as if they were a single specification
+    as "the HTML specification" or simply "HTML" when something applies equally to all of
+    them, and otherwise they are called out explicitly.
+    
+    <h3 id="history">History of HTML</h3>
 
     <p>HTML has been in continuous evolution since it was introduced to the
     Internet in the early 1990s. Some features were introduced in
@@ -175,13 +181,12 @@
     interoperate with each other and, more importantly, with a critical mass
     of deployed content. The same goes for XHTML1, which defines an
     XML serialization for HTML4, and DOM Level 2 HTML, which defines
-    JavaScript APIs for both HTML and XHTML. HTML5 will replace these
-    documents. <span data-anolis-ref>DOM2HTML</span>
+    JavaScript APIs for both HTML and XHTML. HTML replaces these documents. <span data-anolis-ref>DOM2HTML</span>
     <span data-anolis-ref>HTML4</span>
     <span data-anolis-ref>XHTML1</span>
 
-    <p>The HTML5 draft reflects an effort, started in 2004, to study
-    contemporary HTML implementations and deployed content. The draft:</p>
+    <p>The HTML specification reflects an effort, started in 2004, to study
+    contemporary HTML implementations and deployed content. The specification:</p>
 
     <ol>
       <li>Defines a single language called HTML which can be written
@@ -196,16 +201,14 @@
 
     <h3 id="open-issues">Open Issues</h3>
 
-    <p><strong>HTML5 is still a draft.</strong> The contents of
-    HTML5, as well as the contents of this document which depend on
-    HTML5, are still being discussed on the HTML Working Group
-    and WHATWG mailing lists. The open issues are linked from the HTML5
-    draft.</p>
+    <p>The contents of HTML, as well as the contents of this document which depend on
+    HTML, are still being discussed on the HTML Working Group
+    and WHATWG mailing lists. The open issues are linked from the HTML specification.</p>
 
 
     <h3 id="backwards-compatible">Backwards Compatible</h3>
 
-    <p>HTML5 is defined in a way that it is backwards compatible with
+    <p>HTML is defined in a way that it is backwards compatible with
     the way user agents handle deployed content. To keep the authoring
     language relatively simple for authors, several elements and attributes
     are not included, as outlined in the other sections of this document,
@@ -213,34 +216,43 @@
     CSS.</p>
 
     <p>User agents, however, will always have to support these older
-    elements and attributes and this is why the HTML5 specification clearly
+    elements and attributes and this is why the HTML specification clearly
     separates requirements for authors and user agents. For instance, this
     means that authors cannot use the <code data-anolis-spec=html>isindex</code> or the
     <code data-anolis-spec=html>plaintext</code> element, but user agents are required to support
     them in a way that is compatible with how these elements need to behave
     for compatibility with deployed content.</p>
 
-    <p>Since HTML5 has separate conformance requirements for authors
+    <p>Since HTML has separate conformance requirements for authors
     and user agents there is no longer a need for marking features
     "deprecated".</p>
 
 
     <h3 id="development-model">Development Model</h3>
+    
+    <p>The HTML4 specification reached Recommendation status before it was completely
+    implemented in user agents. HTML4 still is not completely implemented, because it
+    contains various bugs that have been fixed in the current HTML specification, which
+    user agents are much closer to than HTML4.
 
-    <p>The HTML5 specification will not be considered finished before
-    there are at least two complete implementations of the specification. A
-    test suite will be used to measure completeness of the implementations.
-    This approach differs from previous versions of HTML, where the final
-    specification would typically be approved by a committee before being
-    actually implemented. The goal of this change is to ensure that the
-    specification is implementable, and usable by authors once it is
-    finished.</p>
-
+    <p>The WHATWG HTML standard is under continual development where bugs are fixed
+    and new features are introduced over time. Features can also be removed from the
+    specification if they lack implementor interest or are not being used by authors, or
+    for other reasons. The WHATWG does not publish frozen snapshots.
+    
+    <p>The W3C HTML5 specification is trying to reach Recommendation status. New features
+    are generally not added unless they are implemented by at least two browsers and has
+    tests demonstrating interoperability. Minor bug fixes can be applied. This means that
+    it may contain bugs that have been fixed in WHATWG HTML or W3C HTML5.1, or both.
+    
+    <p>The W3C HTML5.1 specification cherry-picks changes from the WHATWG HTML
+    specification and also gets direct changes. It is expected to eventually go through
+    the same procedure as W3C HTML5, and then a new version will be minted.
 
 
     <h2 id="syntax">Syntax</h2>
 
-    <p>HTML5 defines an HTML syntax that is
+    <p>HTML defines an HTML syntax that is
     compatible with HTML4 and XHTML1 documents published on the
     Web, but is not compatible with the more esoteric SGML features of
     HTML4, such as
@@ -251,7 +263,7 @@
     syntax are served with the <code>text/html</code> media
     type.</p>
 
-    <p>HTML5 also defines detailed parsing rules (including "error
+    <p>HTML also defines detailed parsing rules (including "error
     handling") for this syntax which are largely compatible with HTML4-era
     implementations. User agents must use these rules for resources that
     have the <code>text/html</code> media type. Here is an example document
@@ -268,7 +280,7 @@
   &lt;/body>
 &lt;/html></code></pre>
 
-    <p>The other syntax that can be used for HTML5 is XML. This syntax
+    <p>The other syntax that can be used for HTML is XML. This syntax
     is compatible with XHTML1 documents and implementations. Documents
     using this syntax need to be served with an XML media type and elements
     need to be put in the <code>http://www.w3.org/1999/xhtml</code>
@@ -276,7 +288,7 @@
     <span data-anolis-ref>XML</span>
 
     <p>Below is an example document that conforms to the XML syntax of
-    HTML5. Note that XML documents must be served with an XML media type
+    HTML. Note that XML documents must be served with an XML media type
     such as <code>application/xhtml+xml</code> or
     <code>application/xml</code>.</p>
 
@@ -317,14 +329,14 @@
 
     <h3 id="doctype">The Doctype</h3>
 
-    <p>The HTML syntax of HTML5 requires a doctype to be specified to ensure
+    <p>The HTML syntax requires a doctype to be specified to ensure
     that the browser renders the page in standards mode. The doctype has no
     other purpose. <span data-anolis-ref>DOCTYPE</span>
 
     <p>The doctype declaration for the HTML syntax is <code>&lt;!DOCTYPE html></code> and is
     case-insensitive. Doctypes from earlier versions of
     HTML were longer because the HTML language was SGML-based and therefore
-    required a reference to a DTD. With HTML5 this is no longer the case and
+    required a reference to a DTD. This is no longer the case and
     the doctype is only needed to enable standards mode for documents
     written using the HTML syntax. Browsers already do this for
     <code>&lt;!DOCTYPE html></code>.</p>
@@ -343,7 +355,7 @@
 
     <h3 id="mathml-svg">MathML and SVG</h3>
 
-    <p>The HTML syntax of HTML5 allows for MathML and SVG elements to
+    <p>The HTML syntax allows for MathML and SVG elements to
     be used inside a document. An <code>math</code> or <code>svg</code> start
     tag causes the HTML parser to switch to a special insertion mode which puts
     elements and attributes in the appropriate namespaces, does case fixups for
@@ -405,8 +417,7 @@
     <h2 id="language">Language</h2>
 
     <p>This section is split up in several subsections to more clearly
-    illustrate the various differences there are between HTML4 and
-    HTML5.</p>
+    illustrate the various differences there are from HTML4.</p>
 
 
     <h3 id="new-elements">New Elements</h3>
@@ -771,7 +782,7 @@
 
     </ul>
 
-    <p>HTML5 also makes all event handler attributes from HTML4, which take the
+    <p>HTML also makes all event handler attributes from HTML4, which take the
     form <code>on<var>event</var></code>, global attributes and adds
     several new event handler attributes for new events it defines. For
     instance, the <code data-anolis-spec=html title=handler-onplay>onplay</code>
@@ -783,7 +794,7 @@
 
     <h3 id="changed-elements">Changed Elements</h3>
 
-    <p>These elements have slightly modified meanings in HTML5 to
+    <p>These elements have slightly modified meanings in HTML to
     better reflect how they are used on the Web or to make them more
     useful:</p>
 
@@ -807,7 +818,7 @@
       doesn't specify href, name, or id. Values for these attributes may be set
       at a later time through scripts.
 
-      html5:
+      html:
       If the a element has an href attribute, then it represents a hyperlink (a
       hypertext anchor).
 
@@ -826,7 +837,7 @@
       html4:
       Indicates an abbreviated form (e.g., WWW, HTTP, URI, Mass., etc.).
 
-      html5:
+      html:
       The abbr element represents an abbreviation or acronym, optionally with
       its expansion.
 
@@ -840,7 +851,7 @@
 
       <!--
       AREA
-      html4 doesn't really have a definition of area, but html5 does, but that's
+      html4 doesn't really have a definition of area, but html does, but that's
       hardly worth calling out here.
       -->
 
@@ -857,7 +868,7 @@
       The BASE element allows authors to specify a document's base URI
       explicitly.
 
-      html5:
+      html:
       The base element allows authors to specify the document base URL for the
       purposes of resolving relative URLs, and the name of the default browsing
       context for the purposes of following hyperlinks. The element does not
@@ -870,7 +881,7 @@
       The BDO element allows authors to turn off the bidirectional algorithm for
       selected fragments of text.
 
-      html5:
+      html:
       The bdo element represents explicit text directionality formatting control
       for its children. It allows authors to override the Unicode bidirectional
       algorithm by explicitly specifying a direction override.
@@ -885,7 +896,7 @@
       These two elements designate quoted text.  BLOCKQUOTE is for long
       quotations (block-level content)
 
-      html5:
+      html:
       The blockquote element represents a section that is quoted from another
       source.
       -->
@@ -895,7 +906,7 @@
       html4:
       The body of a document contains the document's content.
 
-      html5:
+      html:
       The body element represents the main content of the document.
       -->
 
@@ -904,7 +915,7 @@
       html4:
       The  BR element forcibly breaks (ends) the current line of text.
 
-      html5:
+      html:
       The br element represents a line break.
       -->
 
@@ -913,7 +924,7 @@
       html4:
       Buttons created with the BUTTON element function just like buttons created
       with the INPUT element
-      html5:
+      html:
       The button element represents a button.
       -->
 
@@ -923,7 +934,7 @@
       When present, the CAPTION element's text should describe the nature of the
       table.
 
-      html5:
+      html:
       The caption element represents the title of the table that is its parent,
       if it has a parent and that is a table element.
       -->
@@ -940,7 +951,7 @@
       CODE
       html4:
       Designates a fragment of computer code.
-      html5:
+      html:
       The code element represents a fragment of computer code.
       -->
 
@@ -950,7 +961,7 @@
       The  COL element allows authors to group together attribute specifications
       for table columns.
 
-      html5:
+      html:
       If a col element has a parent and that is a colgroup element that itself
       has a parent that is a table element, then the col element represents one
       or more columns in the column group represented by that colgroup.
@@ -961,7 +972,7 @@
       html4:
       The  COLGROUP element creates an explicit column group.
 
-      html5:
+      html:
       The colgroup element represents a group of one or more columns in the
       table that is its parent, if it has a parent and that is a table element.
       -->
@@ -977,7 +988,7 @@
       INS and DEL are used to markup sections of the document that have been
       inserted or deleted with respect to a different version of a document
 
-      html5:
+      html:
       The del element represents a removal from the document.
       -->
 
@@ -986,7 +997,7 @@
       html4:
       Indicates that this is the defining instance of the enclosed term.
 
-      html5:
+      html:
       The dfn element represents the defining instance of a term.
       -->
 
@@ -1000,7 +1011,7 @@
       use these elements in conjunction with style sheets, the lang attribute,
       etc., to tailor HTML to their own needs and tastes.
 
-      html5:
+      html:
       The div element has no special meaning at all. It represents its children.
       It can be used with the class, lang, and title attributes to mark up
       semantics common to a group of consecutive elements.
@@ -1020,7 +1031,7 @@
       html4:
       Indicates emphasis.
 
-      html5:
+      html:
       The em element represents stress emphasis of its contents.
       -->
 
@@ -1030,7 +1041,7 @@
       The FIELDSET element allows authors to group thematically related controls
       and labels.
 
-      html5:
+      html:
       The fieldset element represents a set of form controls optionally grouped
       under a common name.
       -->
@@ -1040,14 +1051,14 @@
       html4:
       The  FORM element acts as a container for  controls.
 
-      html5:
+      html:
       The form element represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing.
       -->
 
       <!--
       <li><p>The <code data-anolis-spec=html>h1</code>-<code
       data-anolis-spec=html>h6</code> elements in HTML4 are said to have
-      different importance. In HTML5, they are said to have different <span
+      different importance. In HTML, they are said to have different <span
       data-anolis-spec=html>ranks</span>, which affect the outline algorithm,
       but do not affect importance.
 
@@ -1060,7 +1071,7 @@
       H6 as the least. Visual browsers usually render more important headings in
       larger fonts than less important ones.
 
-      html5:
+      html:
       These elements represent headings for their sections.
 
       The semantics and meaning of these elements are defined in the section on
@@ -1080,7 +1091,7 @@
       its title, keywords that may be useful to search engines, and other data
       that is not considered document content.
 
-      html5:
+      html:
       The head element represents a collection of metadata for the Document.
       -->
 
@@ -1093,7 +1104,7 @@
       After document type declaration, the remainder of an HTML document is
       contained by the HTML element.
 
-      html5:
+      html:
       The html element represents the root of an HTML document.
       -->
 
@@ -1112,7 +1123,7 @@
       an HTML document in the middle of another, they may both be aligned with
       surrounding text, etc.
 
-      html5:
+      html:
       The iframe element represents a nested browsing context.
       -->
 
@@ -1122,14 +1133,14 @@
       The  IMG element embeds an image in the current document at the location
       of the element's definition.
 
-      html5:
+      html:
       An img element represents an image.
       -->
 
       <!--
       INPUT
 
-      type         html4         html5
+      type         html4         html
       text         Creates a single-line text input control.
                                  Text with no line breaks; A text field. The
                                  input element represents a one line plain text
@@ -1211,7 +1222,7 @@
       html4:
       Indicates text to be entered by the user.
 
-      html5:
+      html:
       The kbd element represents user input (typically keyboard input, although
       it may also be used to represent other input, such as voice commands).
       -->
@@ -1226,7 +1237,7 @@
       html4:
       The  LEGEND element allows authors to assign a caption to a  FIELDSET.
 
-      html5:
+      html:
       The legend element represents a caption for the rest of the contents of
       the legend element's parent fieldset element, if any.
       -->
@@ -1237,7 +1248,7 @@
       Both types of lists are made up of sequences of list items defined by the
       LI element
 
-      html5:
+      html:
       The li element represents a list item.
       -->
 
@@ -1246,7 +1257,7 @@
       html4:
       This element defines a link.
 
-      html5:
+      html:
       The link element allows authors to link their document to other resources.
       -->
 
@@ -1256,7 +1267,7 @@
       The  MAP element specifies a client-side image map (or other navigation
       mechanism)
 
-      html5:
+      html:
       The map element, in conjunction with any area element descendants, defines
       an image map. The element represents its children.
       -->
@@ -1271,7 +1282,7 @@
       author, expiration date, a list of key words, etc.) and assign values to
       those properties.
 
-      html5:
+      html:
       The meta element represents various kinds of metadata that cannot be
       expressed using the title, base, link, style, and script elements.
       -->
@@ -1288,7 +1299,7 @@
       rendered externally or by some program, specified by the author, that
       renders the data within the user agent.
 
-      html5:
+      html:
       The object element can represent an external resource, which, depending on
       the type of the resource, will either be treated as an image, as a nested
       browsing context, or as an external resource to be processed by a plugin.
@@ -1301,7 +1312,7 @@
       that visual user agents number ordered list items. User agents may present
       those numbers in a variety of ways. Unordered list items are not numbered.
 
-      html5:
+      html:
       The ol element represents a list of items, where the items have been
       intentionally ordered, such that changing the order would change the
       meaning of the document.
@@ -1312,7 +1323,7 @@
       html4:
       The OPTGROUP element allows authors to group choices logically.
 
-      html5:
+      html:
       The optgroup element represents a group of option elements with a common
       label.
       -->
@@ -1322,7 +1333,7 @@
       html4:
       Each choice offered by the menu is represented by an OPTION element.
 
-      html5:
+      html:
       The option element represents an option in a select element ...
       -->
 
@@ -1331,7 +1342,7 @@
       html4:
       The  P element represents a paragraph.
 
-      html5:
+      html:
       The p element represents a paragraph.
       -->
 
@@ -1341,7 +1352,7 @@
       PARAM elements specify a set of values that may be required by an object
       at run-time.
 
-      html5:
+      html:
       The param element defines parameters for plugins invoked by object
       elements. It does not represent anything on its own.
       -->
@@ -1352,7 +1363,7 @@
       The  PRE element tells visual user agents that the enclosed text is
       "preformatted".
 
-      html5:
+      html:
       The pre element represents a block of preformatted text, in which
       structure is represented by typographic conventions rather than by
       elements.
@@ -1364,7 +1375,7 @@
       These two elements designate quoted text.  ... Q is intended for short
       quotations (inline content) that don't require paragraph breaks.
 
-      html5:
+      html:
       The q element represents some phrasing content quoted from another source.
       -->
 
@@ -1376,7 +1387,7 @@
       html4:
       Designates sample output from programs, scripts, etc.
 
-      html5:
+      html:
       The samp element represents (sample) output from a program or computing
       system.
       -->
@@ -1390,7 +1401,7 @@
       The  SELECT element creates a menu. Menus offer users options from which
       to choose.
 
-      html5:
+      html:
       The select element represents a control for selecting amongst a set of
       options.
       -->
@@ -1408,7 +1419,7 @@
       use these elements in conjunction with style sheets, the lang attribute,
       etc., to tailor HTML to their own needs and tastes.
 
-      html5:
+      html:
       The span element doesn't mean anything on its own, but can be useful when
       used together with the global attributes, e.g. class, lang, or dir. It
       represents its children.
@@ -1423,7 +1434,7 @@
       The  STYLE element allows authors to put style sheet rules in the head of
       the document.
 
-      html5:
+      html:
       The style element allows authors to embed style information in their
       documents. The style element is one of several inputs to the styling
       processing model. The element does not represent content for the user.
@@ -1436,7 +1447,7 @@
       rendering. The  SUB and SUP elements should be used to markup text in
       these cases.
 
-      html5:
+      html:
       The sup element represents a superscript and the sub element represents a
       subscript.
       -->
@@ -1447,7 +1458,7 @@
       The  TABLE element contains all other elements that specify caption, rows,
       content, and formatting.
 
-      html5:
+      html:
       The table element represents data with more than one dimension, in the
       form of a table.
       -->
@@ -1457,7 +1468,7 @@
       html4:
       The table body should contain rows of table data.
 
-      html5:
+      html:
       The tbody element represents a block of rows that consist of a body of
       data for the parent table element, if the tbody element has a parent and
       it is a table.
@@ -1468,7 +1479,7 @@
       html4:
       The  TD element defines a cell that contains data.
 
-      html5:
+      html:
       The td element represents a data cell in a table.
       -->
 
@@ -1479,7 +1490,7 @@
       agents should use the contents of this element as the initial value of
       the control and should render this text initially.
 
-      html5:
+      html:
       The textarea element represents a multiline plain text edit control for
       the element's raw value. The contents of the control represent the control's default value.
       -->
@@ -1490,7 +1501,7 @@
       The table head and table foot should contain information about the table's
       columns.
 
-      html5:
+      html:
       The tfoot element represents the block of rows that consist of the column
       summaries (footers) for the parent table element, if the tfoot element has
       a parent and it is a table.
@@ -1501,7 +1512,7 @@
       html4:
       The  TH element defines a cell that contains header information.
 
-      html5:
+      html:
       The th element represents a header cell in a table.
       -->
 
@@ -1510,7 +1521,7 @@
       html4:
       The table head and table foot should contain information about the table's columns.
 
-      html5:
+      html:
       The thead element represents the block of rows that consist of the column
       labels (headers) for the parent table element, if the thead element has a
       parent and it is a table.
@@ -1523,7 +1534,7 @@
       document. Since users often consult documents out of context, authors
       should provide context-rich titles.
 
-      html5:
+      html:
       The title element represents the document's title or name. Authors should
       use titles that identify their documents even when they are used out of
       context, for example in a user's history or bookmarks, or in search
@@ -1535,7 +1546,7 @@
       html4:
       The  TR elements acts as a container for a row of table cells.
 
-      html5:
+      html:
       The tr element represents a row of cells in a table.
       -->
 
@@ -1552,7 +1563,7 @@
       that visual user agents number ordered list items. User agents may present
       those numbers in a variety of ways. Unordered list items are not numbered.
 
-      html5:
+      html:
       The ul element represents a list of items, where the order of the items is
       not important — that is, where changing the order would not materially
       change the meaning of the document.
@@ -1563,7 +1574,7 @@
       html4:
       Indicates an instance of a variable or program argument.
 
-      html5:
+      html:
       The var element represents a variable. This could be an actual variable in
       a mathematical expression or programming context, an identifier
       representing a constant, a function parameter, or just be a term used as a
@@ -1729,10 +1740,10 @@
 
     <p>The elements in this section are not to be used by authors. User
     agents will still have to support them and various sections in
-    HTML5 define how. E.g. the obsolete <code data-anolis-spec=html>isindex</code> element
+    HTML define how. E.g. the obsolete <code data-anolis-spec=html>isindex</code> element
     is handled by the parser section.</p>
 
-    <p>The following elements are not in HTML5 because their effect is
+    <p>The following elements are not in HTML because their effect is
     purely presentational and their function is better handled by CSS:</p>
 
     <ul>
@@ -1749,7 +1760,7 @@
       <li><code data-anolis-spec=html>tt</code>
     </ul>
 
-    <p>The following elements are not in HTML5 because using them damages
+    <p>The following elements are not in HTML because using them damages
     usability and accessibility:</p>
 
     <ul>
@@ -1783,11 +1794,11 @@
 
     <h3 id="obsolete-attributes">Obsolete Attributes</h3>
 
-    <p>Some attributes from HTML4 are no longer allowed in HTML5. The
+    <p>Some attributes from HTML4 are no longer allowed in HTML. The
     specification defines how user agents should process them in legacy
     documents, but authors must not use them and they will not validate.</p>
 
-    <p>HTML5
+    <p>HTML
     <span data-anolis-spec=html title="non-conforming features">has advice</span>
     on what you can use instead.</p>
 
@@ -1829,7 +1840,7 @@
       <li><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
     </ul>
 
-    <p>In addition, HTML5 has none of the presentational attributes
+    <p>In addition, HTML has none of the presentational attributes
     that were in HTML4 as their functions are better handled by
     CSS:</p>
 
@@ -1940,7 +1951,7 @@
     is related to CSS's 'display' property and has nothing to do with HTML's
     content model rules.
 
-    <p>HTML5 does not use the terms "block-level" or "inline" as part of its
+    <p>HTML does not use the terms "block-level" or "inline" as part of its
     content model rules, to reduce confusion with CSS. However, it has more
     <span data-anolis-spec=html title="content categories">categories</span>
     than HTML4, and an element can be part of none of them, one of them, or
@@ -1974,7 +1985,7 @@
       be nested.
     </ul>
 
-    <p>As broad changes from HTML4, HTML5 no longer has any element that only
+    <p>As broad changes from HTML4, HTML no longer has any element that only
     accepts what HTML4 called "block-level" elements; e.g. the <code
     data-anolis-spec=html>body</code> element now allows flow content. This is
     thus closer to HTML4 Transitional than HTML4 Strict.
@@ -1990,14 +2001,14 @@
       data-anolis-spec=html>address</code> element descendants.
 
       <li><p>HTML4 allowed <code data-anolis-spec=html>object</code> in <code
-      data-anolis-spec=html>head</code>. HTML5 does not.
+      data-anolis-spec=html>head</code>. HTML does not.
 
       <li><p>WHATWG HTML allows <code data-anolis-spec=html>link</code> and
       <code data-anolis-spec=html>meta</code> as descendants of <code
       data-anolis-spec=html>body</code> if they use microdata attributes.
 
       <li><p>The <code data-anolis-spec=html>noscript</code> element was a
-      "block-level" element in HTML4, but is phrasing content in HTML5.
+      "block-level" element in HTML4, but is phrasing content in HTML.
 
       <li><p>The <code data-anolis-spec=html>table</code>, <code
       data-anolis-spec=html>thead</code>, <code
@@ -2005,7 +2016,7 @@
       data-anolis-spec=html>tfoot</code>, <code data-anolis-spec=html>tr</code>,
       <code data-anolis-spec=html>ol</code>, <code
       data-anolis-spec=html>ul</code> and <code data-anolis-spec=html>dl</code> elements are
-      allowed to be empty in HTML5.
+      allowed to be empty in HTML.
 
       <li><p>Table elements have to conform to the <span
       data-anolis-spec=html>table model</span> (e.g. two cells are not allowed
@@ -2061,13 +2072,13 @@
 
     <h2 id="apis">APIs</h2>
 
-    <p>HTML5 has introduced many new APIs and have extended, changed or
+    <p>HTML has introduced many new APIs and have extended, changed or
     obsoleted some existing APIs.
 
 
     <h3 id="new-apis">New APIs</h3>
 
-    <p>HTML5 introduces a number of APIs that help in creating Web
+    <p>HTML introduces a number of APIs that help in creating Web
     applications. These can be used together with the new elements introduced
     for applications:</p>
 
@@ -2140,7 +2151,7 @@
       <li><p>The <code data-anolis-spec=html>Window</code> object has been defined.
     </ul>
 
-    <p>WHATWG HTML has further APIs that are not in HTML5 but are separate specifications at the W3C:
+    <p>WHATWG HTML has further APIs that are not in W3C HTML5 but are separate specifications at the W3C:
 
     <ul>
       <li><p>An API for microdata.
@@ -2242,7 +2253,7 @@
 
     <p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
     inherited from <code>Document</code> and provided HTML-specific members on
-    documents. HTML5 has moved these members to the <code
+    documents. HTML has moved these members to the <code
     data-anolis-spec=html>Document</code> interface, and extended it in a number
     of ways. Since all documents use the <code data-anolis-spec=html>Document</code> interface, the
     HTML-specific members are now available on all documents, so they are usable
@@ -2303,7 +2314,7 @@
     <h3 id="htmlelement-extensions">Extensions to <code>HTMLElement</code></h3>
 
     <p>The <code data-anolis-spec=html>HTMLElement</code> interface has also gained several extensions
-    in HTML5:</p>
+    in HTML:</p>
 
     <ul>
       <li><p><code data-anolis-spec=html title=dom-translate>translate</code>,
@@ -2525,11 +2536,11 @@
     title=dom-document-applets>applets</code>.
 
 
-    <h2 id="changelog">HTML5 Changelogs</h2>
+    <h2 id="changelog">HTML Changelogs</h2>
 
     <p>The changelogs in this section indicate what has been changed between
-    publications of the HTML5 drafts (or between arbitrary dates in some cases), as well as changes in WHATWG HTML that do
-    not affect HTML5. Rationale for changes can be found in the <a
+    publications of the W3C HTML5 drafts (or between arbitrary dates in some cases), as well as changes in WHATWG HTML that do
+    not affect W3C HTML5. Rationale for changes can be found in the <a
     href="http://lists.w3.org/Archives/Public/public-html/">public-html@w3.org</a> and <a
     href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg@whatwg.
     org</a> mailing list archives, and the <a
@@ -2605,7 +2616,7 @@
      <li>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
     </ul>
     
-    <p>Further changes to WHATWG HTML that do not affect HTML5:</p>
+    <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
 
     <ul>
      <li>Several changes and bug fixes in the Text Track API.
@@ -2725,7 +2736,7 @@
      <li>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
     </ul>
 
-    <p>Further changes to WHATWG HTML that do not affect HTML5:</p>
+    <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
 
     <ul>
      <li>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
@@ -2743,7 +2754,7 @@
      <li>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
      <li>The "storage mutex" is made optional.
      <li>Web Storage no longer supports structured data.
-     <li>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in HTML5.
+     <li>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
      <li>An experimental specification for the <code>window.find()</code> method was added.
      <li>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
      <li>Microdata now handles infinite loops.
@@ -2926,7 +2937,7 @@
      <code>sandbox</code> and <code>seamless</code> attributes.</li>
      <li>The <code>figure</code> element now uses a new element
      <code>figcaption</code> rather than <code>legend</code> because people
-     want to use HTML5 long before it reaches W3C Recommendation.</li>
+     want to use HTML long before it reaches W3C Recommendation.</li>
      <li>The <code>details</code> element now uses a new element
      <code>summary</code> for exactly the same reason.</li>
      <li>The <code>autobuffer</code> attribute on media elements was renamed
@@ -2940,7 +2951,7 @@
     <p>In addition to all of the above, Microdata, the 2D context API for
     <code>canvas</code>, and Web Messaging (<code>postMessage()</code> API)
     have been split into their own drafts at the W3C (the WHATWG still
-    publishes a version of HTML5 that includes them):</p>
+    publishes a version of HTML that includes them):</p>
 
     <ul>
      <li><a href="http://dev.w3.org/html5/md/">HTML Microdata</a></li>
@@ -2950,7 +2961,7 @@
 
     <p>Specific microdata vocabularies are gone altogether in the W3C draft
     of HTML5 and are not published as a separate draft. The WHATWG draft of
-    HTML5 still includes them.</p>
+    HTML still includes them.</p>
 
     <!-- XXX WHATWG HTML changes -->
 
@@ -3018,7 +3029,7 @@
     issues specific to implementors, and other small problems have been
     resolved.</p>
 
-    <p>In addition, the following parts of HTML5 have been taken out
+    <p>In addition, the following parts of HTML have been taken out
     and will likely be further developed at the IETF:</p>
 
     <ul>
@@ -3079,7 +3090,7 @@
      asynchronous and allow for unloaded parts of the grid.</li>
     </ul>
 
-    <p>In addition, several parts of HTML5 have been taken out and
+    <p>In addition, several parts of HTML have been taken out and
     will be further developed by the Web Applications Working Group as
     standalone specifications:</p>
 
@@ -3257,7 +3268,7 @@
     </ul>
 
     <p>Web Forms 2.0, previously a standalone specification, has been fully
-    integrated into HTML5 since last publication. The following
+    integrated into HTML since last publication. The following
     changes were made to the forms chapter:</p>
 
     <ul>

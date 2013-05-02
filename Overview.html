@@ -293,7 +293,7 @@
     have the <code>text/html</code> media type. Here is an example document
     that conforms to the HTML syntax:</p>
 
-    <pre><code>&lt;!doctype html&gt;
+    <pre>&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -302,7 +302,7 @@
   &lt;body&gt;
     &lt;p&gt;Example paragraph&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
     <p>The other syntax that can be used for HTML is XML. This syntax
     is compatible with XHTML1 documents and implementations. Documents
@@ -316,7 +316,7 @@
     such as <code>application/xhtml+xml</code> or
     <code>application/xml</code>.</p>
 
-    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
   &lt;head&gt;
     &lt;title&gt;Example document&lt;/title&gt;
@@ -324,7 +324,7 @@
   &lt;body&gt;
     &lt;p&gt;Example paragraph&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
     <h3 id="character-encoding"><span class="secno">2.1 </span>Character Encoding</h3>
 
@@ -395,12 +395,12 @@
     <p>For instance, a very simple document using some of the
     minimal syntax features could look like:</p>
 
-    <pre><code>&lt;!doctype html&gt;
+    <pre>&lt;!doctype html&gt;
 &lt;title&gt;SVG in text/html&lt;/title&gt;
 &lt;p&gt;
  A green circle:
  <strong>&lt;svg&gt; &lt;circle r="50" cx="50" cy="50" fill="green"/&gt; &lt;/svg&gt;</strong>
-&lt;/p&gt;</code></pre>
+&lt;/p&gt;</pre>
 
     <h3 id="syntax-misc"><span class="secno">2.4 </span>Miscellaneous</h3>
 
@@ -486,10 +486,10 @@
         represents a piece of self-contained flow content, typically
         referenced as a single unit from the main flow of the document.</p>
 
-        <pre><code>&lt;figure&gt;
+        <pre>&lt;figure&gt;
  &lt;video src="example.webm" controls&gt;&lt;/video&gt;
  &lt;figcaption&gt;Example&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
+&lt;/figure&gt;</pre>
 
         <p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-figcaption-element">figcaption</a></code> can be used as caption (it is optional).</p>
       </li>
@@ -560,13 +560,13 @@
         together with the a new <code class="external" title="attr-input-list"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-list">list</a></code> attribute for
         <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> can be used to make comboboxes:</p>
 
-        <pre><code>&lt;input <strong>list="browsers"</strong>&gt;
+        <pre>&lt;input <strong>list="browsers"</strong>&gt;
 &lt;datalist <strong>id="browsers"</strong>&gt;
  &lt;option value="Safari"&gt;
  &lt;option value="Internet Explorer"&gt;
  &lt;option value="Opera"&gt;
  &lt;option value="Firefox"&gt;
-&lt;/datalist&gt;</code></pre>
+&lt;/datalist&gt;</pre>
       </li>
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-keygen-element">keygen</a></code>
@@ -658,7 +658,7 @@
        <p>A new <code class="external" title="attr-input-placeholder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-placeholder">placeholder</a></code> attribute can be specified on
       the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code> elements. It
       represents a hint intended to aid the user with data entry.</p>
-       <pre><code>&lt;input type=email <strong>placeholder="a@b.com"</strong>&gt;</code></pre>
+       <pre>&lt;input type=email <strong>placeholder="a@b.com"</strong>&gt;</pre>
       </li>
 
       <li>
@@ -689,12 +689,12 @@
       <code class="external" title="attr-input-type-submit"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#submit-button-state-(type=submit)">submit</a></code>), <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element">select</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code>. It indicates that the user
       has to fill in a value in order to submit the form. For <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element">select</a></code>, the first <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-option-element">option</a></code> element has to be a placeholder with an empty value.
 
-      <pre><code>&lt;label&gt;Color: &lt;select name=color <strong>required</strong>&gt;
+      <pre>&lt;label&gt;Color: &lt;select name=color <strong>required</strong>&gt;
  &lt;option <strong>value=""</strong>&gt;Choose one
  &lt;option&gt;Red
  &lt;option&gt;Green
  &lt;option&gt;Blue
-&lt;/select&gt;&lt;/label&gt;</code></pre>
+&lt;/select&gt;&lt;/label&gt;</pre>
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-fieldset-element">fieldset</a></code> element now allows the
       <code class="external" title="attr-fieldset-disabled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-fieldset-disabled">disabled</a></code> attribute which disables all descendant controls (excluding those that are descendants of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-legend-element">legend</a></code> element)

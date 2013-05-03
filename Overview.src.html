@@ -2601,54 +2601,54 @@
 
     <h3 id="changes-2012-09-14">Changes from 14 September 2012 to 30 April 2013</h3><!-- rev 7347 - 7862 -->
 
-    <p>The following changes were made to WHATWG HTML:
+    <p>The following changes were made to WHATWG HTML, W3C HTML5 and W3C HTML5.1:
 
     <ul>
-     <li><p>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter.
-     <li><p>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes.
-     <li><p>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional.
-     <li><p>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class.
-     <li><p>The <code>HTMLBaseFontElement</code> interface has been removed.
-     <li><p>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object.
-     <li><p>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements.
-     <li><p>The drag and drop API now has a <code>dragexit</code> event.
-     <li><p>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls).
-     <li><p>The <code>navigator</code> object now has a <code>product</code> IDL attribute that always returns "Gecko" (for compatibility).
-     <li><p>The <code>time</code> element's <code>datetime</code> IDL attribute got renamed to <code>dateTime</code>.
+     <li><p>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes. (<code>bitcoin:</code> is WHATWG HTML only.)
+     <li><p>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>HTMLBaseFontElement</code> interface has been removed. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>hgroup</code> element has been dropped. (W3C HTML5 and W3C HTML5.1.)
+     <li><p>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>Various things that were present in WHATWG HTML but missing in W3C HTML5.1 were "un-forked": The <code>download</code> attribute on <code>a</code> and <code>area</code>, the application cache prefer-online feature, the text range API on <code>input</code> and <code>textarea</code>, the <code>cssElementMap</code> IDL attribute on <code>Document</code>, various bits for microdata. (W3C HTML5.1 only.)
+     <li><p>The drag and drop API now has a <code>dragexit</code> event. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls). (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>navigator</code> object now has a <code>product</code> IDL attribute that always returns "Gecko" (for compatibility). (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>time</code> element's <code>datetime</code> IDL attribute got renamed to <code>dateTime</code>. (WHATWG HTML and W3C HTML5.1.)
      <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods can now be invoked with <code>null</code> as the third argument.
      <li><p>A new <code>main</code> element has been added.
-     <li><p>The <code>stepUp()</code> and <code>stepDown()</code> methods on the <code>input</code> element have been tweaked.
-     <li><p>The <code>img</code> element now supports progress events.
-     <li><p>A new <code>fillRule</code> IDL attribute has been added to the canvas 2d context.
-     <li><p>The <code>style</code> IDL attribute on HTML elements is now settable.
-     <li><p>The <code>media</code> attribute has been dropped from the <code>a</code> and <code>area</code> elements.
-     <li><p>Heading elements now support automatic sizing in <code>hgroup</code> if they follow an <code>h1</code> element.
-     <li><p>The <code>navigator</code> object now has a <code>language</code> IDL attribute.
-     <li><p>The <code>menu</code> API has been revamped. The <code>command</code> element was dropped. An new <code>menuitem</code> element was added. The <code>menu</code> element's <code>type</code> attribute now uses the value "<code>popup</code>" instead of "<code>context</code>". The <code>button</code> element has a new <code>menu</code> attribute and the <code>type</code> attribute supports a new value "<code>menu</code>".
-     <li><p>The <code>table</code> element now supports sorting columns. The <code>table</code> element has a new <code>sortable</code> attribute and a <code>stopSorting()</code> method. The <code>th</code> element has a new <code>sorted</code> attribute and a <code>sort()</code> method.
-     <li><p>The <code>autocomplete</code> attribute on form controls now supports the <code>cc-type</code> type.
-     <li><p>A new <code>currentScript</code> IDL attribute on <code>document</code> was added.
-     <li><p>The <code>link</code> and <code>script</code> elements now support the <code>crossorigin</code> attribute.
-     <li><p>The <code>canvas</code> element now supports indirect and proxied rendering contexts, to support drawing from a worker. The <code>CanvasProxy</code>, <code>ImageBitmap</code> interfaces are introduced, the <code>canvas</code> element has new <code>setContext()</code> and <code>transferControlToProxy()</code> methods, and a new <code>createImageBitmap()</code> method on <code>window</code> was introduced.
-     <li><p>The canvas 2d context has a new <code>direction</code> IDL attribute.
-     <li><p>The <code>screen</code> object has a new <code>canvasResolution</code> IDL attribute.
-     <li><p>A new <code>PortCollection()</code> constructor was added to support sending messages to many ports while allowing them to be garbage collected.
-     <li><p>The <code>getItem()</code> method on <code>Storage</code> can now return null.
-     <li><p>The <code>sandbox</code> attribute on <code>iframe</code> supports a new value "<code>allow-pointer-lock</code>".
-     <li><p>The HTML parser now invokes mutation observers.
-     <li><p>The <code>canvas</code> element has a new <code>supportsContext()</code> method.
+     <li><p>The <code>stepUp()</code> and <code>stepDown()</code> methods on the <code>input</code> element have been tweaked. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>img</code> element now supports progress events. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>A new <code>fillRule</code> IDL attribute has been added to the canvas 2d context. (WHATWG HTML only.)
+     <li><p>The <code>style</code> IDL attribute on HTML elements is now settable. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>media</code> attribute has been dropped from the <code>a</code> and <code>area</code> elements. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>Heading elements now support automatic sizing in <code>hgroup</code> if they follow an <code>h1</code> element. (WHATWG HTML only.)
+     <li><p>The <code>navigator</code> object now has a <code>language</code> IDL attribute. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>menu</code> API has been revamped. The <code>command</code> element was dropped. An new <code>menuitem</code> element was added. The <code>menu</code> element's <code>type</code> attribute now uses the value "<code>popup</code>" instead of "<code>context</code>". The <code>button</code> element has a new <code>menu</code> attribute and the <code>type</code> attribute supports a new value "<code>menu</code>". (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>table</code> element now supports sorting columns. The <code>table</code> element has a new <code>sortable</code> attribute and a <code>stopSorting()</code> method. The <code>th</code> element has a new <code>sorted</code> attribute and a <code>sort()</code> method. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>autocomplete</code> attribute on form controls now supports the <code>cc-type</code> type. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>A new <code>currentScript</code> IDL attribute on <code>document</code> was added. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>link</code> and <code>script</code> elements now support the <code>crossorigin</code> attribute. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>canvas</code> element now supports indirect and proxied rendering contexts, to support drawing from a worker. The <code>CanvasProxy</code>, <code>ImageBitmap</code> interfaces are introduced, the <code>canvas</code> element has new <code>setContext()</code> and <code>transferControlToProxy()</code> methods, and a new <code>createImageBitmap()</code> method on <code>window</code> was introduced. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The canvas 2d context has a new <code>direction</code> IDL attribute. (WHATWG HTML only.)
+     <li><p>The <code>screen</code> object has a new <code>canvasResolution</code> IDL attribute. (WHATWG HTML only.)
+     <li><p>A new <code>PortCollection()</code> constructor was added to support sending messages to many ports while allowing them to be garbage collected. (WHATWG HTML only.)
+     <li><p>The <code>getItem()</code> method on <code>Storage</code> can now return null. (WHATWG HTML only.)
+     <li><p>The <code>sandbox</code> attribute on <code>iframe</code> supports a new value "<code>allow-pointer-lock</code>". (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The HTML parser now invokes mutation observers. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>canvas</code> element has a new <code>supportsContext()</code> method. (WHATWG HTML and W3C HTML5.1.)
      <li><p>The <code>abbr</code> attribute on the <code>th</code> element is now conforming.
-     <li><p>A new <code>forceSpellCheck()</code> method on HTML elements was added.
-     <li><p>The <code>EventSource</code> API now reconnects for DNS errors and TCP-level connection failures.
-     <li><p>A new <code>fastSeek()</code> method was added to media elements.
-     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> schemes were removed due to lack of interest.
+     <li><p>A new <code>forceSpellCheck()</code> method on HTML elements was added. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>EventSource</code> API now reconnects for DNS errors and TCP-level connection failures. (WHATWG HTML only.)
+     <li><p>A new <code>fastSeek()</code> method was added to media elements. (WHATWG HTML and W3C HTML5.1.)
+     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> schemes were removed due to lack of interest. (WHATWG HTML only.)
      <li><p>Navigations with <code>rel=noreferrer</code> now does not clone the <code>sessionStorage</code>.
-     <li><p>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute.
+     <li><p>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute. (WHATWG HTML only.)
      <li><p>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
     </ul>
     
-    <p class=XXX>Changes in W3C HTML5 and W3C HTML5.1. <!-- hgroup, ... -->
-
     <h3 id="changes-2012-03-29">Changes from 29 March 2012 to 14 September 2012</h3><!-- rev 7028 - 7347 -->
 
     <ul>

@@ -5,6 +5,7 @@
       @media screen { code { color: #D93B00; } code :link, code :visited { color: inherit; } }
       pre, code { font-size: inherit; font-family: monospace; font-variant: normal; }
       pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+      .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
     </style>
     <link class="not-whatwg" href="http://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
     </head>
@@ -24,7 +25,7 @@
 <!--end-logo--></div>
       <hgroup>
         <h1>HTML differences from HTML4</h1>
-        <h2 class="no-num no-toc not-whatwg" id="w3c-doctype">Editor's Draft 2 May 2013</h2>
+        <h2 class="no-num no-toc not-whatwg" id="w3c-doctype">Editor's Draft 3 May 2013</h2>
         </hgroup>
 
       <dl>
@@ -92,7 +93,7 @@
     found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
     at http://www.w3.org/TR/.</i></p>
 
-    <p>This is the 2 May 2013 Editor's Draft produced by the
+    <p>This is the 3 May 2013 Editor's Draft produced by the
     <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
@@ -462,7 +463,7 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-main-element">main</a></code>
       can be used as a container for the dominant contents of another element, such as
-      the main content of the page.</li>
+      the main content of the page. In W3C HTML5 and W3C HTML 5.1, only one such element is allowed in a document.</li>
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-aside-element">aside</a></code>
       represents a piece of content that is only slightly related to the
@@ -813,7 +814,7 @@
       <li><p>The <code class="external" title="wai-aria"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">role</a></code> and
       <code class="external" title="wai-aria"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">aria-<var>*</var></a></code>
       collection attributes which can be used to instruct assistive
-      technology.</li>
+      technology. These attributes have slightly different requirements in WHATWG HTML and W3C HTML5/W3C HTML5.1.
 
       <li><p>The <code class="external" title="attr-spellcheck"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#attr-spellcheck">spellcheck</a></code> attribute allows for hinting
       whether content can be checked for spelling or not.

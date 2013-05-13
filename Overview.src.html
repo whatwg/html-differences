@@ -405,6 +405,11 @@
 
      <li><p>Attributes omitting quotes for the value are allowed to use a larger
      set of characters compared to HTML4.
+     
+     <li><p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the 
+     <code data-anolis-spec=html title=attr-id>id</code> attribute is not ignored (and thus now invalid), and newline characters can be used in the
+     <code data-anolis-spec=html title=attr-input-value>value</code> attribute of the <code data-anolis-spec=html>input</code> element without using character
+     references.
 
      <li><p>The <code>optgroup</code> end tag is now optional.
 

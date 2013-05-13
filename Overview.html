@@ -433,6 +433,11 @@
 
      <li><p>Attributes omitting quotes for the value are allowed to use a larger
      set of characters compared to HTML4.
+     
+     <li><p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the 
+     <code class="external" title="attr-id"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute is not ignored (and thus now invalid), and newline characters can be used in the
+     <code class="external" title="attr-input-value"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#attr-input-value">value</a></code> attribute of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> element without using character
+     references.
 
      <li><p>The <code>optgroup</code> end tag is now optional.
 

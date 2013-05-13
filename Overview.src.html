@@ -98,17 +98,17 @@
 
     <h2 class="no-num no-toc" id="abstract">Abstract</h2>
 
-    <p>HTML is the core language of the World Wide Web. The W3C publish HTML5 and HTML5.1.
+    <p>HTML is the core language of the World Wide Web. The W3C publishes HTML5 and HTML5.1.
     The WHATWG publishes HTML, which is a rough superset of W3C HTML5.1.
     "Differences from HTML4" describes the
-    differences of these documents from HTML4, and calls out cases where they differ from
-    each other. This document may not provide accurate information as
+    differences of the HTML specifications from those of HTML4, and calls out cases where they differ from
+    each other. This document may not provide accurate information, as
     the specifications are still actively in development. When in doubt, always
     check the specifications themselves. <span data-anolis-ref>HTML5</span>
     <span data-anolis-ref>HTML5NIGHTLY</span> <span data-anolis-ref>HTML</span></p>
 
     <div class="not-whatwg">
-    <h2 class="no-num no-toc" id="sotd">Status of this Document</h2>
+    <h2 class="no-num no-toc" id="sotd">Status of This Document</h2>
 
     <p><i>This section describes the status of this document at the time of its
     publication. Other documents may supersede this document. A list of current
@@ -155,12 +155,12 @@
 
     <h2 id="introduction">Introduction</h2>
     
-    <h3 id="scope">Scope of this document</h3>
+    <h3 id="scope">Scope of This Document</h3>
     
     <p>This document covers the W3C HTML5 specification, W3C HTML5.1 specification, and
-    the WHATWG HTML standard. For readability, these are referred to as if they were a single specification
-    as "the HTML specification" or simply "HTML" when something applies equally to all of
-    them, and otherwise they are called out explicitly.
+    the WHATWG HTML standard. For readability, these are referred to as if they were a single specification:
+    "the HTML specification" or simply "HTML" when something applies equally to all of
+    them; otherwise, they are called out explicitly.
     
     <h3 id="history">History of HTML</h3>
 
@@ -174,15 +174,15 @@
     <p>HTML4 became a W3C Recommendation in 1997. While it continues
     to serve as a rough guide to many of the core features of HTML, it does
     not provide enough information to build implementations that
-    interoperate with each other and, more importantly, with a critical mass
-    of deployed content. The same goes for XHTML1, which defines an
+    interoperate with each other and, more importantly, with
+    Web content. The same goes for XHTML1, which defines an
     XML serialization for HTML4, and DOM Level 2 HTML, which defines
     JavaScript APIs for both HTML and XHTML. HTML replaces these documents. <span data-anolis-ref>DOM2HTML</span>
     <span data-anolis-ref>HTML4</span>
     <span data-anolis-ref>XHTML1</span>
 
     <p>The HTML specification reflects an effort, started in 2004, to study
-    contemporary HTML implementations and deployed content. The specification:</p>
+    contemporary HTML implementations and Web content. The specification:</p>
 
     <ol>
       <li><p>Defines a single language called HTML which can be written
@@ -199,26 +199,30 @@
 
     <p>The contents of HTML, as well as the contents of this document which depend on
     HTML, are still being discussed on the HTML Working Group
-    and WHATWG mailing lists. The open issues are linked from the HTML specification.</p>
+    and WHATWG mailing lists.</p>
+    
+    <p>Open issues for WHATWG HTML, see "Issues:" at the top of the specification. The specification also has annotation boxes in the margin which can link to bugs.
+    
+    <p>Open issues for W3C HTML5 and W3C HTML5.1, see the "Status of This Document" section.
 
 
-    <h3 id="backwards-compatible">Backwards Compatible</h3>
+    <h3 id="backward-compatibility">Backward Compatibility</h3>
 
-    <p>HTML is defined in a way that it is backwards compatible with
-    the way user agents handle deployed content. To keep the
-    language relatively simple for Web developers, several elements and attributes
+    <p>HTML is defined in a way that is backward compatible with
+    the way user agents handle content. To keep the
+    language relatively simple for Web developers, several older elements and attributes
     are not included, as outlined in the other sections of this document,
-    such as presentational elements that are better dealt with using
+    such as presentational elements that are better handled using
     CSS.</p>
 
     <p>User agents, however, will always have to support these older
-    elements and attributes and this is why the HTML specification clearly
+    elements and attributes. This is why the HTML specification clearly
     separates requirements for Web developers (referred to as "authors" in the
-    specification) and user agents. For instance, this
+    specification) and user agents; for instance, this
     means that Web developers cannot use the <code data-anolis-spec=html>isindex</code> or the
     <code data-anolis-spec=html>plaintext</code> element, but user agents are required to support
     them in a way that is compatible with how these elements need to behave
-    for compatibility with deployed content.</p>
+    for compatibility with Web content.</p>
 
     <p>Since HTML has separate conformance requirements for Web developers
     and user agents there is no longer a need for marking features
@@ -230,17 +234,17 @@
     <p>The HTML4 specification reached Recommendation status before it was completely
     implemented in user agents. HTML4 still is not completely implemented, because it
     contains various bugs that have been fixed in the current HTML specification, which
-    user agents are much closer to than HTML4.
+    user agents are much closer to implementing than HTML4.
 
     <p>The WHATWG HTML standard is under continual development where bugs are fixed
     and new features are introduced over time. Features can also be removed from the
-    specification if they lack implementor interest or are not being used by Web developers, or
+    specification if they lack implementor interest, are not being used by Web developers, or
     for other reasons. The WHATWG does not publish frozen snapshots.
     
     <p>The W3C HTML5 specification is trying to reach Recommendation status. New features
-    are generally not added unless they are implemented by at least two browsers and has
+    are generally not added unless they are implemented by at least two browsers and have
     tests demonstrating interoperability. Minor bug fixes can be applied. This means that
-    it may contain bugs that have been fixed in WHATWG HTML or W3C HTML5.1, or both.
+    W3C HTML5 may contain bugs that have been fixed in WHATWG HTML or W3C HTML5.1, or both.
     
     <p>The W3C HTML5.1 specification is similar to WHATWG HTML: it is under continual development where bugs are fixed and new features are introduced over time,
     and features can be removed from the specification for the same reasons as with WHATWG HTML. It cherry-picks changes from the WHATWG HTML standard and also
@@ -249,7 +253,7 @@
 
     <h2 id="syntax">Syntax</h2>
 
-    <p>HTML defines an HTML syntax that is
+    <p>HTML defines a syntax, referred to as "the HTML syntax", that is
     compatible with HTML4 and XHTML1 documents published on the
     Web, but is not compatible with the more esoteric SGML features of
     HTML4, such as
@@ -262,7 +266,7 @@
 
     <p>HTML also defines detailed parsing rules (including "error
     handling") for this syntax which are largely compatible with HTML4-era
-    implementations. User agents must use these rules for resources that
+    implementations. User agents have to use these rules for resources that
     have the <code>text/html</code> media type. Here is an example document
     that conforms to the HTML syntax:</p>
 
@@ -279,15 +283,14 @@
 
     <p>The other syntax that can be used for HTML is XML. This syntax
     is compatible with XHTML1 documents and implementations. Documents
-    using this syntax need to be served with an XML media type and elements
+    using this syntax need to be served with an XML media type (such as
+    <code>application/xhtml+xml</code> or <code>application/xml</code>) and elements
     need to be put in the <code>http://www.w3.org/1999/xhtml</code>
     namespace following the rules set forth by the XML specifications.
-    <span data-anolis-ref>XML</span>
+    <span data-anolis-ref>XML</span> <span data-anolis-ref>XMLNS</span>
 
     <p>Below is an example document that conforms to the XML syntax of
-    HTML. Note that XML documents must be served with an XML media type
-    such as <code>application/xhtml+xml</code> or
-    <code>application/xml</code>.</p>
+    HTML.</p>
 
     <pre>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;html xmlns="http://www.w3.org/1999/xhtml">
@@ -305,8 +308,8 @@
     character encoding. There are three ways to do that:</p>
 
     <ul>
-      <li><p>At the transport level. By using the HTTP <code>Content-Type</code>
-      header for instance.</li>
+      <li><p>At the transport level; for instance, by using the HTTP <code>Content-Type</code>
+      header.</li>
 
       <li><p>Using a Unicode Byte Order Mark (BOM) character at the start of
       the file. This character provides a signature for the encoding
@@ -314,7 +317,7 @@
 
       <li><p>Using a <code data-anolis-spec=html>meta</code> element with a <code data-anolis-spec=html title=attr-meta-charset>charset</code>
       attribute that specifies the encoding within the first 1024 bytes of
-      the document. For instance, <code>&lt;meta charset="UTF-8"></code>
+      the document; for instance, <code>&lt;meta charset="UTF-8"></code>
       could be used to specify the UTF-8 encoding. This replaces the need
       for
       <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></code>
@@ -322,7 +325,7 @@
     </ul>
 
     <p>For the XML syntax, Web developers have to use the rules as set forth in the
-    XML specifications to set the character encoding.</p>
+    XML specification to set the character encoding.</p>
 
     <h3 id="doctype">The Doctype</h3>
 
@@ -380,24 +383,23 @@
     <p>There are a few other changes in the HTML syntax worthy of mentioning:</p>
 
     <ul>
-     <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character
-     references now expand to U+27E8 and U+27E9 instead of U+2329 and U+232A,
-     respectively.
+     <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character references now expand to U+27E8 and U+27E9 (mathematical left/right angle
+     bracket) instead of U+2329 and U+232A (left/right-pointing angle bracket), respectively.
 
-     <li><p>Many new named character references have been added, including all from
+     <li><p>Many new named character references have been added, including all named character references from
      MathML.
 
      <li><p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
      trailing slash.
 
-     <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in some more
+     <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in more
      cases compared to HTML4.
 
      <li><p>Attributes have to be separated by at least one whitespace character.
 
      <li><p>Attributes with an empty value may be written as just the attribute
-     name omitting the equals sign and the value, even if it's not a boolean
-     attribute. (HTML4 actually allowed using only the attribute
+     name omitting the equals sign and the value, even if the attribute is not a boolean
+     attribute. (It is commonly believed that HTML4 allowed the value to be omitted for boolean attributes. Instead, HTML4 allowed using only the attribute
      <em>value</em> and omitting the attribute name, for enumerated attributes,
      but this was not supported in browsers.)
 
@@ -414,7 +416,7 @@
     <h2 id="language">Language</h2>
 
     <p>This section is split up in several subsections to more clearly
-    illustrate the various differences there are from HTML4.</p>
+    illustrate the various differences from HTML4.</p>
 
 
     <h3 id="new-elements">New Elements</h3>
@@ -499,7 +501,7 @@
       <li><p><code data-anolis-spec=html>time</code> represents a date
       and/or time.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 has <code data-anolis-spec=html>data</code> which
+      <li><p>WHATWG HTML and W3C HTML5.1 has <code data-anolis-spec=html>data</code>, which
       allows content to be annotated with a machine-readable value.
 
       <li><p><code data-anolis-spec=html>dialog</code> for showing a dialog.
@@ -728,7 +730,7 @@
       <code data-anolis-spec=html title=attr-link-sizes>sizes</code>. It can be used in conjunction with the
       <code data-anolis-spec=html title=rel-icon>icon</code> relationship (set through the <code data-anolis-spec=html title=attr-link-rel>rel</code>
       attribute; can be used for e.g. favicons) to indicate the size of the
-      referenced icon. Thus allowing for icons of distinct dimensions.
+      referenced icon, thus allowing for icons of distinct dimensions.
 
       <li><p>The <code data-anolis-spec=html>ol</code> element has a new attribute called
       <code data-anolis-spec=html title=attr-ol-reversed>reversed</code>. When present, it indicates that the list order
@@ -805,7 +807,7 @@
 
     <p>HTML also makes all event handler attributes from HTML4, which take the
     form <code>on<var>event</var></code>, global attributes and adds
-    several new event handler attributes for new events it defines. For
+    several new event handler attributes for new events it defines; for
     instance, the <code data-anolis-spec=html title=handler-onplay>onplay</code>
     event handler attribute for the <code data-anolis-spec=html
     title=event-media-play>play</code> event which is used by the API for the
@@ -1817,7 +1819,7 @@
 
     <p>Some attributes from HTML4 are no longer allowed in HTML. The
     specification defines how user agents should process them in legacy
-    documents, but Web developers must not use them and they will not validate.</p>
+    documents, but Web developers are not allowed use them and they will not validate.</p>
 
     <p>HTML
     <span data-anolis-spec=html title="non-conforming features">has advice</span>
@@ -1939,7 +1941,7 @@
 
     <h2 id="content-model">Content Model</h2>
 
-    <p>Content model is what defines how elements may be nested &mdash; what is
+    <p>The content model is what defines how elements may be nested &mdash; what is
     allowed as children (or descendants) of a certain element.
 
     <p>At a high level, HTML4 had two major categories of elements, "inline"
@@ -1955,17 +1957,17 @@
     data-anolis-spec=html>div</code>), while other elements did not allow either
     category but only allowed other specific elements (e.g. <code
     data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>table</code>),
-    or did now allow any children at all (e.g. <code
+    or did not allow any children at all (e.g. <code
     data-anolis-spec=html>link</code>, <code data-anolis-spec=html>img</code>,
     <code data-anolis-spec=html>hr</code>).
 
     <p>Notice the difference between an element itself being in a
-    certain category, and having a content model of a certain category. For
+    certain category, and having a content model of a certain category; for
     instance, the <code data-anolis-spec=html>p</code> element is itself a
     "block-level" element, but has a content model of "inline".
 
     <p>To make it more confusing, HTML4 had different content model rules in its
-    Strict, Transitional and Frameset flavors. For instance, in Strict, the
+    Strict, Transitional and Frameset flavors; for instance, in Strict, the
     <code data-anolis-spec=html>body</code> element allowed only "block-level"
     elements, but in Transitional, it allowed both "inline" and "block-level".
 
@@ -2007,10 +2009,10 @@
       be nested.
     </ul>
 
-    <p>As broad changes from HTML4, HTML no longer has any element that only
+    <p>As a broad change from HTML4, HTML no longer has any element that only
     accepts what HTML4 called "block-level" elements; e.g. the <code
-    data-anolis-spec=html>body</code> element now allows flow content. This is
-    thus closer to HTML4 Transitional than HTML4 Strict.
+    data-anolis-spec=html>body</code> element now allows flow content. Thus, This is
+    closer to HTML4 Transitional than HTML4 Strict.
 
     <p>Further changes include:
 
@@ -2094,7 +2096,7 @@
 
     <h2 id="apis">APIs</h2>
 
-    <p>HTML has introduced many new APIs and have extended, changed or
+    <p>HTML has introduced many new APIs and has extended, changed or
     obsoleted some existing APIs.
 
 
@@ -2223,9 +2225,9 @@
       <code data-anolis-spec=html
       title=dom-document-close>document.writeln()</code> throw an exception in
       XML. The latter two now support variadic arguments; they can add text to
-      the document's input stream while it is still being parsed, or can imply a
+      the document's input stream while it is still being parsed, imply a
       call to <code data-anolis-spec=html
-      title=dom-document-open>document.open()</code> or be ignored altogether in
+      title=dom-document-open>document.open()</code>, or be ignored altogether in
       some cases.
 
       <li><p><code data-anolis-spec=html
@@ -2296,12 +2298,12 @@
       <li><p>WHATWG HTML has <code data-anolis-spec=html
       title=dom-document-getItems>getItems()</code> for microdata.
       
-      <li><p>WHATWG HTML and W3C HTML5.1 has <code
+      <li><p>WHATWG HTML and W3C HTML5.1 have <code
       data-anolis-spec=html
       title=dom-document-cssElementMap>cssElementMap</code> to accompany the CSS
       <code>element()</code> feature.
       
-      <li><p>WHATWG HTML and W3C HTML5.1 has <code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
+      <li><p>WHATWG HTML and W3C HTML5.1 have <code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
       running <code data-anolis-spec=html>script</code> element (or null).
 
       <li><p><code data-anolis-spec=html
@@ -2357,7 +2359,7 @@
       <li><p><code data-anolis-spec=html title=dom-dataset>dataset</code> is a
       convenience feature for handling the <code data-anolis-spec=html
       title="attr-data-*">data-*</code> attributes, which are exposed as
-      camel-cased properties. For instance, <code><var>elm</var>.dataset.fooBar
+      camel-cased properties; for instance, <code><var>elm</var>.dataset.fooBar
       = 'test'</code> sets the <code>data-foo-bar</code> content attribute on
       <code><var>elm</var></code>.
 
@@ -2372,7 +2374,7 @@
 
       <li><p><code data-anolis-spec=html title=dom-click>click()</code>, <code
       data-anolis-spec=html title=dom-focus>focus()</code> and <code
-      data-anolis-spec=html title=dom-blur>blur()</code> allows scripts to
+      data-anolis-spec=html title=dom-blur>blur()</code> allow scripts to
       simulate clicks and moving focus.
 
       <li><p><code data-anolis-spec=html
@@ -2403,12 +2405,12 @@
     interface in the DOM standard: <span data-anolis-ref>DOM</span>
     
     <ul>
-      <li><p><code data-anolis-spec=dom title=dom-element-id>id</code> which reflects the <code>id</code> content attribute.
+      <li><p><code data-anolis-spec=dom title=dom-element-id>id</code> reflects the <code>id</code> content attribute.
       
-      <li><p><code data-anolis-spec=dom title=dom-element-className>className</code> which reflects the <code>class</code> content attribute.
+      <li><p><code data-anolis-spec=dom title=dom-element-className>className</code> reflects the <code>class</code> content attribute.
     
       <li><p><code data-anolis-spec=dom title=dom-element-classList>classList</code> is a convenient accessor for
-      <code data-anolis-spec=dom title=dom-element-className>className</code>. The object it returns, exposes methods (<code>contains()</code>, <code>add()</code>,
+      <code data-anolis-spec=dom title=dom-element-className>className</code>. The object it returns exposes methods (<code>contains()</code>, <code>add()</code>,
       <code>remove()</code>, and <code>toggle()</code>) for manipulating the element's classes.
       
       <li><p><code data-anolis-spec=dom title=dom-element-getElementsByClassName>getElementsByClassName()</code> returns a list of elements with the specified
@@ -2469,7 +2471,7 @@
       data-anolis-spec=html title=dom-input-stepUp>stepUp()</code>, <code
       data-anolis-spec=html title=dom-input-stepDown>stepDown()</code>, the form
       constraint validation API members, <code data-anolis-spec=html
-      title=dom-lfe-labels>labels</code>, members for the text field selection
+      title=dom-lfe-labels>labels</code>, and members for the text field selection
       API: <code data-anolis-spec=html
       title="dom-textarea/input-selectionStart">selectionStart</code>, <code
       data-anolis-spec=html
@@ -2502,7 +2504,7 @@
 
       <li><p><code data-anolis-spec=html>HTMLAnchorElement</code> now has the
       members <code data-anolis-spec=html title=dom-a-relList>relList</code>,
-      <code data-anolis-spec=html title=dom-a-text>text</code>, implements the <code data-anolis-spec=url>URLUtils</code> interface which has the members
+      <code data-anolis-spec=html title=dom-a-text>text</code>, and implements the <code data-anolis-spec=url>URLUtils</code> interface which has the members
       <code data-anolis-spec=url title=dom-URL-href>href</code>, <code data-anolis-spec=url title=dom-URL-origin>origin</code>,
       <code data-anolis-spec=url title=dom-URL-protocol>protocol</code>, <code data-anolis-spec=url title=dom-URL-username>username</code>,
       <code data-anolis-spec=url title=dom-URL-password>password</code>, <code data-anolis-spec=url title=dom-URL-host>host</code>,
@@ -2515,7 +2517,7 @@
       <code data-anolis-spec=html>HTMLAreaElement</code> also implements the <code data-anolis-spec=url>URLUtils</code> interface.
 
       <li><p><code data-anolis-spec=html>HTMLImageElement</code> now has a
-      constructor <code data-anolis-spec=html title=dom-Image>Image</code>, the
+      constructor <code data-anolis-spec=html title=dom-Image>Image</code>, and the
       members <code data-anolis-spec=html
       title=dom-img-naturalWidth>naturalWidth</code>, <code
       data-anolis-spec=html title=dom-img-naturalHeight>naturalHeight</code> and
@@ -2556,11 +2558,11 @@
     <p>Some APIs are now either removed altogether, or marked as obsolete.
 
     <p>All IDL attributes that reflect a content attribute that is itself
-    obsolete, are now also obsolete. For instance, the <code
+    obsolete, are now also obsolete; for instance, the <code
     data-anolis-spec=html title=dom-body-bgColor>bgColor</code> IDL attribute on
     <code data-anolis-spec=html>HTMLBodyElement</code> which reflects the
     obsolete <code data-anolis-spec=html title=attr-body-bgcolor>bgcolor</code>
-    content attribute.
+    content attribute is now obsolete.
 
     <p>The following interfaces are marked obsolete since the elements are
     obsolete: <code data-anolis-spec=html>HTMLAppletElement</code>, <code
@@ -3455,7 +3457,8 @@
     Philip Taylor,
     Randy Peterman,
     Steve Faulkner,
-    Toby Inkster, and
+    Toby Inkster,
+    Xaxio Brandish, and
     Yngve Spjeld Landro
 
     for their contributions to this document as well as to all the people

@@ -415,9 +415,9 @@
      <code data-anolis-spec=html title=attr-input-value>value</code> attribute of the <code data-anolis-spec=html>input</code> element without using character
      references.
 
-     <li><p>The <code>optgroup</code> end tag is now optional.
+     <li><p>The <code data-anolis-spec=html>optgroup</code> end tag is now optional.
 
-     <li><p>The <code>colgroup</code> start tag is now optional and is inferred by
+     <li><p>The <code data-anolis-spec=html>colgroup</code> start tag is now optional and is inferred by
      the HTML parser.
     </ul>
 
@@ -1636,7 +1636,8 @@
 
       <li><p>In WHATWG HTML, the <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
 
-      <li><p>The <code>border</code> attribute on <code
+      <li><p>The <code data-anolis-spec=html
+      title=attr-table-border>border</code> attribute on <code
       data-anolis-spec=html>table</code> only allows the values "1" and the
       empty string. In WHATWG HTML, the <code data-anolis-spec=html
       title=attr-table-border>border</code> attribute is obsolete.
@@ -1653,7 +1654,7 @@
 
       <li><p>The <code data-anolis-spec=html title=attr-object-data>data</code>
       attribute on <code data-anolis-spec=html>object</code> is no longer said
-      to be relative to the <code>codebase</code> attribute.
+      to be relative to the <code data-anolis-spec=html title=attr-object-codebase>codebase</code> attribute.
 
       <li><p>The <code data-anolis-spec=html
       title=attr-script-defer>defer</code> attribute on <code
@@ -2282,7 +2283,7 @@
     <code>Document</code></h3>
 
     <p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
-    inherited from <code>Document</code> and provided HTML-specific members on
+    inherited from <code data-anolis-spec=html>Document</code> and provided HTML-specific members on
     documents. HTML has moved these members to the <code
     data-anolis-spec=html>Document</code> interface, and extended it in a number
     of ways. Since all documents use the <code data-anolis-spec=html>Document</code> interface, the
@@ -2581,7 +2582,7 @@
     data-anolis-spec=html>HTMLFontElement</code>.
 
     <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
-    the HTML parser expands an <code>isindex</code> tag into other elements. The
+    the HTML parser expands an <code data-anolis-spec=html>isindex</code> tag into other elements. The
     <code>HTMLBaseFontElement</code> interface is also removed since <!-- Anne managed to
     kill it --> the element has no effect.
 

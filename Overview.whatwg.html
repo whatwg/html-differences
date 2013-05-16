@@ -383,9 +383,9 @@
      <code class="external" title="attr-input-value"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#attr-input-value">value</a></code> attribute of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> element without using character
      references.
 
-     <li><p>The <code>optgroup</code> end tag is now optional.
+     <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-optgroup-element">optgroup</a></code> end tag is now optional.
 
-     <li><p>The <code>colgroup</code> start tag is now optional and is inferred by
+     <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element">colgroup</a></code> start tag is now optional and is inferred by
      the HTML parser.
     </ul>
 
@@ -1592,7 +1592,7 @@
 
       <li><p>In WHATWG HTML, the <code class="external" title="attr-fs-method"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-method">method</a></code> attribute has a new keyword <code class="external" title="attr-fs-method-dialog-keyword"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-method-dialog-keyword">dialog</a></code>, intended to close a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> element.
 
-      <li><p>The <code>border</code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code> only allows the values "1" and the
+      <li><p>The <code class="external" title="attr-table-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-border">border</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code> only allows the values "1" and the
       empty string. In WHATWG HTML, the <code class="external" title="attr-table-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-border">border</a></code> attribute is obsolete.
 
       <li><p>The <code class="external" title="attr-tdth-colspan"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#attr-tdth-colspan">colspan</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>
@@ -1603,7 +1603,7 @@
 
       <li><p>The <code class="external" title="attr-object-data"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-object-data">data</a></code>
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> is no longer said
-      to be relative to the <code>codebase</code> attribute.
+      to be relative to the <code class="external" title="attr-object-codebase"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-object-codebase">codebase</a></code> attribute.
 
       <li><p>The <code class="external" title="attr-script-defer"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-defer">defer</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> now explicitly makes the script
       execute when the page has finished parsing.
@@ -2120,7 +2120,7 @@
     <code>Document</code></h3>
 
     <p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
-    inherited from <code>Document</code> and provided HTML-specific members on
+    inherited from <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code> and provided HTML-specific members on
     documents. HTML has moved these members to the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code> interface, and extended it in a number
     of ways. Since all documents use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code> interface, the
     HTML-specific members are now available on all documents, so they are usable
@@ -2323,7 +2323,7 @@
     obsolete: <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlappletelement">HTMLAppletElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframesetelement">HTMLFrameSetElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlframeelement">HTMLFrameElement</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmldirectoryelement">HTMLDirectoryElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#htmlfontelement">HTMLFontElement</a></code>.
 
     <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
-    the HTML parser expands an <code>isindex</code> tag into other elements. The
+    the HTML parser expands an <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#isindex-0">isindex</a></code> tag into other elements. The
     <code>HTMLBaseFontElement</code> interface is also removed since <!-- Anne managed to
     kill it --> the element has no effect.
 

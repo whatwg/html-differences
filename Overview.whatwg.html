@@ -1,6 +1,8 @@
 <!DOCTYPE html><html lang="en-US"><head>
     <meta charset="utf-8">
     <title>Differences from HTML4</title>
+    
+    
     <link class="not-w3c" href="http://www.whatwg.org/style/specification" rel="stylesheet">
   </head>
   <body>
@@ -12,16 +14,26 @@
 
     -->
     <div class="head">
+      
       <p class="not-w3c"><a class="logo" href="//www.whatwg.org/"><img alt="WHATWG" height="100" src="http://resources.whatwg.org/logo.svg" width="100"></a></p>
 
       <hgroup class="not-w3c">
         <h1>Differences from HTML4</h1>
-        <h2 class="no-num no-toc">Living Document — Last Updated 16 May 2013</h2>
+        <h2 class="no-num no-toc">Living Document — Last Updated 5 August 2013</h2>
       </hgroup>
       
+      
+
       <dl>
         <dt>This Version:</dt>
+        
         <dd class="not-w3c"><a href="http://html-differences.whatwg.org/">http://html-differences.whatwg.org/</a>
+
+        </dd>
+        
+
+        
+        
 
         <dt>Participate:</dt>
         <dd class="not-w3c">Send feedback to
@@ -34,6 +46,21 @@
         <dt>Version History:
         <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
 
+        </dd>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
         <dt>Editor:</dt>
         <dd>Simon Pieters
         (<a href="http://www.opera.com/">Opera Software ASA</a>)
@@ -45,10 +72,12 @@
 
       <script async="" class="not-tr" src="https://w3c-test.org/resources.whatwg.org/file-bug.js"></script>
 
+      
+
       <p class="copyright not-w3c"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/80x15.png"></a>
       To the extent possible under law, the editors have waived all copyright and
       related or neighboring rights to this work. In addition, as of
-      16 May 2013, the editors have made this specification available
+      5 August 2013, the editors have made this specification available
       under the
       <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
       which is available at
@@ -69,44 +98,46 @@
     check the specifications themselves. <a href="#refsHTML5">[HTML5]</a>
     <a href="#refsHTML5NIGHTLY">[HTML5NIGHTLY]</a> <a href="#refsHTML">[HTML]</a></p>
 
+    
+
     <h2 class="no-num no-toc" id="toc">Table of Contents</h2>
 
     
 <!--begin-toc-->
-<ol class="toc">
+<ul class="toc">
  <li><a href="#introduction"><span class="secno">1 </span>Introduction</a>
-  <ol class="toc">
+  <ul class="toc">
    <li><a href="#scope"><span class="secno">1.1 </span>Scope of This Document</a></li>
    <li><a href="#history"><span class="secno">1.2 </span>History of HTML</a></li>
    <li><a href="#open-issues"><span class="secno">1.3 </span>Open Issues</a></li>
    <li><a href="#backward-compatibility"><span class="secno">1.4 </span>Backward Compatibility</a></li>
-   <li><a href="#development-model"><span class="secno">1.5 </span>Development Model</a></ol></li>
+   <li><a href="#development-model"><span class="secno">1.5 </span>Development Model</a></ul></li>
  <li><a href="#syntax"><span class="secno">2 </span>Syntax</a>
-  <ol class="toc">
+  <ul class="toc">
    <li><a href="#character-encoding"><span class="secno">2.1 </span>Character Encoding</a></li>
    <li><a href="#doctype"><span class="secno">2.2 </span>The Doctype</a></li>
    <li><a href="#mathml-svg"><span class="secno">2.3 </span>MathML and SVG</a></li>
-   <li><a href="#syntax-misc"><span class="secno">2.4 </span>Miscellaneous</a></ol></li>
+   <li><a href="#syntax-misc"><span class="secno">2.4 </span>Miscellaneous</a></ul></li>
  <li><a href="#language"><span class="secno">3 </span>Language</a>
-  <ol class="toc">
+  <ul class="toc">
    <li><a href="#new-elements"><span class="secno">3.1 </span>New Elements</a></li>
    <li><a href="#new-attributes"><span class="secno">3.2 </span>New Attributes</a></li>
    <li><a href="#changed-elements"><span class="secno">3.3 </span>Changed Elements</a></li>
    <li><a href="#changed-attributes"><span class="secno">3.4 </span>Changed Attributes</a></li>
    <li><a href="#obsolete-elements"><span class="secno">3.5 </span>Obsolete Elements</a></li>
-   <li><a href="#obsolete-attributes"><span class="secno">3.6 </span>Obsolete Attributes</a></ol></li>
+   <li><a href="#obsolete-attributes"><span class="secno">3.6 </span>Obsolete Attributes</a></ul></li>
  <li><a href="#content-model"><span class="secno">4 </span>Content Model</a></li>
  <li><a href="#apis"><span class="secno">5 </span>APIs</a>
-  <ol class="toc">
+  <ul class="toc">
    <li><a href="#new-apis"><span class="secno">5.1 </span>New APIs</a></li>
    <li><a href="#changed-apis"><span class="secno">5.2 </span>Changed APIs</a></li>
    <li><a href="#document-extensions"><span class="secno">5.3 </span>Extensions to
     <code>Document</code></a></li>
    <li><a href="#htmlelement-extensions"><span class="secno">5.4 </span>Extensions to <code>HTMLElement</code></a></li>
    <li><a href="#other-extensions"><span class="secno">5.5 </span>Extensions to Other Interfaces</a></li>
-   <li><a href="#obsolete-apis"><span class="secno">5.6 </span>Obsolete APIs</a></ol></li>
+   <li><a href="#obsolete-apis"><span class="secno">5.6 </span>Obsolete APIs</a></ul></li>
  <li><a class="appendix" href="#changelog"><span class="secno">6 </span>HTML Changelogs</a>
-  <ol class="toc">
+  <ul class="toc">
    <li><a href="#changes-2012-09-14"><span class="secno">6.1 </span>Changes from 14 September 2012 to 6 May 2013</a></li>
    <li><a href="#changes-2012-03-29"><span class="secno">6.2 </span>Changes from 29 March 2012 to 14 September 2012</a></li>
    <li><a href="#changes-2011-05-25"><span class="secno">6.3 </span>Changes from 25 May 2011 to 29 March 2012</a></li>
@@ -119,9 +150,9 @@
    <li><a href="#changes-2009-04-23"><span class="secno">6.10 </span>Changes from 23 April 2009 to 25 August 2009</a></li>
    <li><a href="#changes-2009-02-12"><span class="secno">6.11 </span>Changes from 12 February 2009 to 23 April 2009</a></li>
    <li><a href="#changes-2008-06-10"><span class="secno">6.12 </span>Changes from 10 June 2008 to 12 February 2009</a></li>
-   <li><a href="#changes-2008-01-22"><span class="secno">6.13 </span>Changes from 22 January 2008 to 10 June 2008</a></ol></li>
+   <li><a href="#changes-2008-01-22"><span class="secno">6.13 </span>Changes from 22 January 2008 to 10 June 2008</a></ul></li>
  <li><a class="no-num" href="#acknowledgments">Acknowledgments</a></li>
- <li><a class="no-num" href="#references">References</a></ol>
+ <li><a class="no-num" href="#references">References</a></ul>
 <!--end-toc-->
 
 
@@ -3215,7 +3246,7 @@
 
 <h2 class="no-num" id="references">References</h2>
 <div id="anolis-references"><dl><dt id="refsCSSOM">[CSSOM]
-<dd><cite><a href="http://dev.w3.org/csswg/cssom/">CSS Object Model (CSSOM)</a></cite>, Glenn Adams and Simon Pieters. W3C.
+<dd><cite><a href="http://dev.w3.org/csswg/cssom/">CSS Object Model (CSSOM)</a></cite>, Simon Pieters and Glenn Adams. W3C.
 
 <dt id="refsCSSUI">[CSSUI]
 <dd><cite><a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module</a></cite>, Tantek Çelik. W3C.
@@ -3245,7 +3276,7 @@
 <dd><cite><a href="http://publicsuffix.org/">Public Suffix List</a></cite>. Mozilla.
 
 <dt id="refsSELECTORS">[SELECTORS]
-<dd><cite><a href="http://dev.w3.org/csswg/selectors4/">Selectors Level 4</a></cite>, Elika J. Etemad. W3C.
+<dd><cite><a href="http://dev.w3.org/csswg/selectors4/">Selectors</a></cite>, Elika J. Etemad. W3C.
 
 <dt id="refsXHTML1">[XHTML1]
 <dd><cite><a href="http://www.w3.org/TR/xhtml11/">XHTML™ 1.1 - Module-based XHTML - Second Edition</a></cite>, Murray Altheim and Shane McCarron.

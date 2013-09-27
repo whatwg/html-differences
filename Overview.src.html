@@ -1745,29 +1745,6 @@
 
     </ul>
 
-    <p>The following attributes are allowed but Web developers are discouraged from
-    using them and instead strongly encouraged to use an alternative solution:</p>
-
-    <ul>
-     <li><p>The <code data-anolis-spec=html title=attr-img-border>border</code>
-     attribute on <code data-anolis-spec=html>img</code>. It is required to have
-     the value "<code>0</code>" when present. Web developers can use CSS
-     instead.</p></li>
-
-     <li><p>The <code data-anolis-spec=html
-     title=attr-script-language>language</code> attribute on <code
-     data-anolis-spec=html>script</code>. It is required to have the value
-     "<code>JavaScript</code>" (case-insensitive) when present and cannot
-     conflict with the <code data-anolis-spec=html
-     title=attr-script-type>type</code> attribute. Web developers can simply omit it as
-     it has no useful function.</p></li>
-
-     <li><p>The <code data-anolis-spec=html
-     title=attr-a-name>name</code> attribute on <code
-     data-anolis-spec=html>a</code>. Web developers can use the <code
-     data-anolis-spec=html>id</code> attribute instead.</p></li>
-    </ul>
-
 
     <h3 id="obsolete-elements">Obsolete Elements</h3>
 
@@ -1873,6 +1850,10 @@
       <code data-anolis-spec=html>td</code>.
 
       <li><p><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
+      
+      <li><p><code data-anolis-spec=html title=attr-form-accept>accept</code> attribute on <code data-anolis-spec=html>form</code>.
+
+      <li><p><code data-anolis-spec=html title=attr-input-usemap>usemap</code> attribute on <code data-anolis-spec=html>input</code>.
     </ul>
 
     <p>In addition, HTML has none of the presentational attributes
@@ -1948,6 +1929,30 @@
       <code data-anolis-spec=html>td</code>, <code data-anolis-spec=html>th</code>, <code data-anolis-spec=html>col</code>, <code data-anolis-spec=html>colgroup</code>
       and <code data-anolis-spec=html>pre</code>.
     </ul>
+
+    <p>The following attributes are allowed but Web developers are discouraged from
+    using them and instead strongly encouraged to use an alternative solution:</p>
+
+    <ul>
+     <li><p>The <code data-anolis-spec=html title=attr-img-border>border</code>
+     attribute on <code data-anolis-spec=html>img</code>. It is required to have
+     the value "<code>0</code>" when present. Web developers can use CSS
+     instead.</p></li>
+
+     <li><p>The <code data-anolis-spec=html
+     title=attr-script-language>language</code> attribute on <code
+     data-anolis-spec=html>script</code>. It is required to have the value
+     "<code>JavaScript</code>" (case-insensitive) when present and cannot
+     conflict with the <code data-anolis-spec=html
+     title=attr-script-type>type</code> attribute. Web developers can simply omit it as
+     it has no useful function.</p></li>
+
+     <li><p>The <code data-anolis-spec=html
+     title=attr-a-name>name</code> attribute on <code
+     data-anolis-spec=html>a</code>. Web developers can use the <code
+     data-anolis-spec=html>id</code> attribute instead.</p></li>
+    </ul>
+
 
     <h2 id="content-model">Content Model</h2>
 
@@ -3441,7 +3446,7 @@
     Dennis German,
     Frank Ellermann,
     Frank Palinkas,
-    Futomi Hatano<!-- 羽田野太巳 -->,
+    &#x7FBD;&#x7530;&#x91CE;&#x592A;&#x5DF3; (Futomi Hatano),
     Gordon P. Hemsley,
     Henri Sivonen,
     James Graham,
@@ -3469,8 +3474,9 @@
     Randy Peterman,
     Steve Faulkner,
     Toby Inkster,
-    Xaxio Brandish, and
-    Yngve Spjeld Landro
+    Xaxio Brandish,
+    Yngve Spjeld Landro and
+    Zhong Yu
 
     for their contributions to this document as well as to all the people
     who have contributed to HTML over the years for improving the Web!

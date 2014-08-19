@@ -27,10 +27,10 @@
       
 
       
-      
+
       <div class="not-whatwg">
         <h1>Differences from HTML4</h1>
-        <p id="w3c-doctype">Editor's Draft 27 September 2013</p>
+        <p id="w3c-doctype">Editor's Draft 19 August 2014</p>
       </div>
 
       <dl>
@@ -77,7 +77,7 @@
 
       <div class="not-whatwg">
 <!--begin-copyright-->
-<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2013 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2014 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
 <!--end-copyright--></div>
 
       </div>
@@ -105,7 +105,7 @@
     found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
     at http://www.w3.org/TR/.</i></p>
 
-    <p>This is the 27 September 2013 Editor's Draft produced by the
+    <p>This is the 19 August 2014 Editor's Draft produced by the
     <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
@@ -173,35 +173,20 @@
    <li><a href="#htmlelement-extensions"><span class="secno">5.4 </span>Extensions to <code>HTMLElement</code></a></li>
    <li><a href="#other-extensions"><span class="secno">5.5 </span>Extensions to Other Interfaces</a></li>
    <li><a href="#obsolete-apis"><span class="secno">5.6 </span>Obsolete APIs</a></ul></li>
- <li><a class="appendix" href="#changelog"><span class="secno">6 </span>HTML Changelogs</a>
-  <ul class="toc">
-   <li><a href="#changes-2012-09-14"><span class="secno">6.1 </span>Changes from 14 September 2012 to 6 May 2013</a></li>
-   <li><a href="#changes-2012-03-29"><span class="secno">6.2 </span>Changes from 29 March 2012 to 14 September 2012</a></li>
-   <li><a href="#changes-2011-05-25"><span class="secno">6.3 </span>Changes from 25 May 2011 to 29 March 2012</a></li>
-   <li><a href="#changes-2011-04-05"><span class="secno">6.4 </span>Changes from 5 April 2011 to 25 May 2011</a></li>
-   <li><a href="#changes-2011-01-13"><span class="secno">6.5 </span>Changes from 13 January 2011 to 5 April 2011</a></li>
-   <li><a href="#changes-2010-10-19"><span class="secno">6.6 </span>Changes from 19 October 2010 to 13 January 2011</a></li>
-   <li><a href="#changes-2010-06-24"><span class="secno">6.7 </span>Changes from 24 June 2010 to 19 October 2010</a></li>
-   <li><a href="#changes-2010-03-04"><span class="secno">6.8 </span>Changes from 4 March 2010 to 24 June 2010</a></li>
-   <li><a href="#changes-2009-08-25"><span class="secno">6.9 </span>Changes from 25 August 2009 to 4 March 2010</a></li>
-   <li><a href="#changes-2009-04-23"><span class="secno">6.10 </span>Changes from 23 April 2009 to 25 August 2009</a></li>
-   <li><a href="#changes-2009-02-12"><span class="secno">6.11 </span>Changes from 12 February 2009 to 23 April 2009</a></li>
-   <li><a href="#changes-2008-06-10"><span class="secno">6.12 </span>Changes from 10 June 2008 to 12 February 2009</a></li>
-   <li><a href="#changes-2008-01-22"><span class="secno">6.13 </span>Changes from 22 January 2008 to 10 June 2008</a></ul></li>
  <li><a class="no-num" href="#acknowledgments">Acknowledgments</a></li>
  <li><a class="no-num" href="#references">References</a></ul>
 <!--end-toc-->
 
 
     <h2 id="introduction"><span class="secno">1 </span>Introduction</h2>
-    
+
     <h3 id="scope"><span class="secno">1.1 </span>Scope of This Document</h3>
-    
+
     <p>This document covers the W3C HTML5 specification, W3C HTML5.1 specification, and
     the WHATWG HTML standard. For readability, these are referred to as if they were a single specification:
     "the HTML specification" or simply "HTML" when something applies equally to all of
     them; otherwise, they are called out explicitly.
-    
+
     <h3 id="history"><span class="secno">1.2 </span>History of HTML</h3>
 
     <p>HTML has been in continuous evolution since it was introduced to the
@@ -240,9 +225,9 @@
     <p>The contents of HTML, as well as the contents of this document which depend on
     HTML, are still being discussed on the HTML Working Group
     and WHATWG mailing lists.</p>
-    
+
     <p>Open issues for WHATWG HTML, see "Issues:" at the top of the specification. The specification also has annotation boxes in the margin which can link to bugs.
-    
+
     <p>Open issues for W3C HTML5 and W3C HTML5.1, see the "Status of This Document" section.
 
 
@@ -270,7 +255,7 @@
 
 
     <h3 id="development-model"><span class="secno">1.5 </span>Development Model</h3>
-    
+
     <p>The HTML4 specification reached Recommendation status before it was completely
     implemented in user agents. HTML4 still is not completely implemented, because it
     contains various bugs that have been fixed in the current HTML specification, which
@@ -280,12 +265,12 @@
     and new features are introduced over time. Features can also be removed from the
     specification if they lack implementor interest, are not being used by Web developers, or
     for other reasons. The WHATWG does not publish frozen snapshots.
-    
+
     <p>The W3C HTML5 specification is trying to reach Recommendation status. New features
     are generally not added unless they are implemented by at least two browsers and have
     tests demonstrating interoperability. Minor bug fixes can be applied. This means that
     W3C HTML5 may contain bugs that have been fixed in WHATWG HTML or W3C HTML5.1, or both.
-    
+
     <p>The W3C HTML5.1 specification is similar to WHATWG HTML: it is under continual development where bugs are fixed and new features are introduced over time,
     and features can be removed from the specification for the same reasons as with WHATWG HTML. It cherry-picks changes from the WHATWG HTML standard and also
     gets direct changes. It is expected to eventually go through the same procedure as W3C HTML5, and then a new version will be minted.
@@ -445,8 +430,8 @@
 
      <li><p>Attributes omitting quotes for the value are allowed to use a larger
      set of characters compared to HTML4.
-     
-     <li><p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the 
+
+     <li><p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the
      <code class="external" title="attr-id"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute is not ignored (and thus now invalid), and newline characters can be used in the
      <code class="external" title="attr-input-value"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#attr-input-value">value</a></code> attribute of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> element without using character
      references.
@@ -659,7 +644,7 @@
       attribute now as this was already widely supported and provides a nice
       way to specify the
       <a href="#character-encoding">character encoding</a> for the document.
-      
+
       <li><p>In WHATWG HTML and W3C HTML5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>
       element now has a <code class="external" title="attr-table-sortable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#attr-table-sortable">sortable</a></code> attribute and the
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code> element has a
@@ -684,7 +669,7 @@
       <li>
        <p>The new <code class="external" title="attr-fae-form"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fae-form">form</a></code> attribute for <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>,
        <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-output-element">output</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element">select</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code>,
-       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">label</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-fieldset-element">fieldset</a></code> elements allows for
+       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">label</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-fieldset-element">fieldset</a></code> elements allows for
        controls to be associated with a form. These elements can now be
        placed anywhere on a page, not just as descendants of the
        <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code> element, and still be associated with a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code>.</p>
@@ -716,8 +701,8 @@
  &lt;option&gt;Blue
 &lt;/select&gt;&lt;/label&gt;</pre>
 
-      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-fieldset-element">fieldset</a></code> element now allows the
-      <code class="external" title="attr-fieldset-disabled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-fieldset-disabled">disabled</a></code> attribute which disables all descendant controls (excluding those that are descendants of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-legend-element">legend</a></code> element)
+      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-fieldset-element">fieldset</a></code> element now allows the
+      <code class="external" title="attr-fieldset-disabled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#attr-fieldset-disabled">disabled</a></code> attribute which disables all descendant controls (excluding those that are descendants of the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-legend-element">legend</a></code> element)
       when specified, and the <code class="external" title="attr-fe-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fe-name">name</a></code> attribute which can be used for script access.
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code> element has several new attributes to
@@ -755,7 +740,7 @@
       allow the element to transform into a menu as found in typical user
       interfaces as well as providing for context menus in conjunction with the
       global <code class="external" title="attr-contextmenu"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#attr-contextmenu">contextmenu</a></code> attribute.
-      
+
       <li><p>In WHATWG HTML and W3C HTML5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>
       element has a new <code class="external" title="attr-button-menu"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#attr-button-menu">menu</a></code>
       attribute, used together with popup menus.
@@ -787,15 +772,15 @@
 
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> element has a new attribute called <code class="external" title="attr-object-typemustmatch"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-object-typemustmatch">typemustmatch</a></code> which allows safer embedding of external resources.
 
-      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> element has a new attribute called
-      <code class="external" title="attr-img-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be
+      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code> element has a new attribute called
+      <code class="external" title="attr-img-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be
       read with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#the-canvas-element">canvas</a></code> API. In WHATWG HTML and W3C HTML5.1, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> element has a
       <code class="external" title="attr-script-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-crossorigin">crossorigin</a></code> attribute to allow script
       <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#report-the-error" title="report the error">errors to be reported</a> to <code class="external" title="handler-onerror"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-onerror">onerror</a></code>
       with information about the error. WHATWG HTML and W3C HTML5.1 also has the <code class="external" title="attr-link-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-link-crossorigin">crossorigin</a></code>
       attribute on the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code> element.
-      
-      <li><p>In WHATWG HTML, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> element has a new attribute called <code class="external" title="attr-img-srcset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#attr-img-srcset">srcset</a></code> to support multiple images for different resolutions and different images for different viewport sizes.
+
+      <li><p>In WHATWG HTML, the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code> element has a new attribute called <code class="external" title="attr-img-srcset"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#attr-img-srcset">srcset</a></code> to support multiple images for different resolutions and different images for different viewport sizes.
     </ul>
 
     <p>Several attributes from HTML4 now apply to all elements. These
@@ -828,7 +813,7 @@
       <li><p>The <code class="external" title="attr-hidden"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#the-hidden-attribute">hidden</a></code>
       attribute indicates that an element is not yet, or is no longer, relevant.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 has the <code class="external" title="attr-inert"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#the-inert-attribute">inert</a></code> attribute, intended to make <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> elements modal.
+      <li><p>WHATWG HTML and W3C HTML5.1 has the <code title="">inert</code> attribute, intended to make <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element">dialog</a></code> elements modal.
 
       <li><p>The <code class="external" title="wai-aria"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">role</a></code> and
       <code class="external" title="wai-aria"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">aria-<var>*</var></a></code>
@@ -1684,7 +1669,7 @@
 
       <li><p>The <code class="external" title="attr-dim-width"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#attr-dim-width">width</a></code>
       and <code class="external" title="attr-dim-height"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#attr-dim-height">height</a></code>
-      attributes on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> are no longer allowed to contain
+      attributes on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code> are no longer allowed to contain
       percentages. They are also not allowed to be used to stretch the image to
       a different aspect ratio than its intrinsic aspect ratio.</p>
 
@@ -1737,26 +1722,9 @@
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-style-element">style</a></code> is no longer required if the scripting
       language is JavaScript and the styling language is CSS, respectively.</p>
 
-      <li><p>The <code class="external" title="attr-hyperlink-usemap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#attr-hyperlink-usemap">usemap</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> no longer takes a URL, but instead takes
+      <li><p>The <code class="external" title="attr-hyperlink-usemap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#attr-hyperlink-usemap">usemap</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code> no longer takes a URL, but instead takes
       a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#valid-hash-name-reference">valid hash-name reference</a> to a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-map-element">map</a></code> element.
 
-    </ul>
-
-    <p>The following attributes are allowed but Web developers are discouraged from
-    using them and instead strongly encouraged to use an alternative solution:</p>
-
-    <ul>
-     <li><p>The <code class="external" title="attr-img-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-border">border</a></code>
-     attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>. It is required to have
-     the value "<code>0</code>" when present. Web developers can use CSS
-     instead.</li>
-
-     <li><p>The <code class="external" title="attr-script-language"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-script-language">language</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code>. It is required to have the value
-     "<code>JavaScript</code>" (case-insensitive) when present and cannot
-     conflict with the <code class="external" title="attr-script-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">type</a></code> attribute. Web developers can simply omit it as
-     it has no useful function.</li>
-
-     <li><p>The <code class="external" title="attr-a-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>. Web developers can use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute instead.</li>
     </ul>
 
 
@@ -1833,7 +1801,7 @@
       <li><p><code class="external" title="attr-a-shape"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-shape">shape</a></code> and <code class="external" title="attr-a-coords"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-coords">coords</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>.
 
-      <li><p><code class="external" title="attr-iframe-longdesc"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-longdesc">longdesc</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> and
+      <li><p><code class="external" title="attr-iframe-longdesc"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-longdesc">longdesc</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code> and
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
 
       <li><p><code class="external" title="attr-link-target"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-link-target">target</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>.
@@ -1844,7 +1812,7 @@
 
       <li><p><code class="external" title="attr-html-version"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-html-version">version</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-html-element">html</a></code>.
 
-      <li><p><code class="external" title="attr-img-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>
+      <li><p><code class="external" title="attr-img-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>
       (use <code class="external" title="attr-id"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> instead).
 
       <li><p><code class="external" title="attr-meta-scheme"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-meta-scheme">scheme</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-meta-element">meta</a></code>.
@@ -1858,13 +1826,13 @@
 
       <li><p><code class="external" title="attr-tdth-axis"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-tdth-axis">axis</a></code>
       attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
-      
+
       <li><p><code class="external" title="attr-td-abbr"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-abbr">abbr</a></code> and
       <code class="external" title="attr-td-scope"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-td-scope">scope</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element">td</a></code>.
 
       <li><p><code class="external" title="attr-table-summary"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-summary">summary</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>.
-      
+
       <li><p><code class="external" title="attr-form-accept"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-form-accept">accept</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code>.
 
       <li><p><code class="external" title="attr-input-usemap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-input-usemap">usemap</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>.
@@ -1876,8 +1844,8 @@
 
     <ul>
       <li><p><code class="external" title="attr-caption-align"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-caption-align">align</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-caption-element">caption</a></code>,
-      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>,
-      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-legend-element">legend</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>,
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>,
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-legend-element">legend</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element">div</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h1-element">h1</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h2-element">h2</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h3-element">h3</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h4-element">h4</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h5-element">h5</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h6-element">h6</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-p-element">p</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-col-element">col</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-colgroup-element">colgroup</a></code>,
@@ -1915,7 +1883,7 @@
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-th-element">th</a></code>.
 
       <li><p><code class="external" title="attr-img-hspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-hspace">hspace</a></code> and <code class="external" title="attr-img-vspace"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-vspace">vspace</a></code> attributes on
-      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>.
 
       <li><p><code class="external" title="attr-iframe-marginheight"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginheight">marginheight</a></code> and <code class="external" title="attr-iframe-marginwidth"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-iframe-marginwidth">marginwidth</a></code> attributes on
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>.
@@ -1943,20 +1911,38 @@
       and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-pre-element">pre</a></code>.
     </ul>
 
+    <p>The following attributes are allowed but Web developers are discouraged from
+    using them and instead strongly encouraged to use an alternative solution:</p>
+
+    <ul>
+     <li><p>The <code class="external" title="attr-img-border"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-img-border">border</a></code>
+     attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>. It is required to have
+     the value "<code>0</code>" when present. Web developers can use CSS
+     instead.</li>
+
+     <li><p>The <code class="external" title="attr-script-language"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-script-language">language</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code>. It is required to have the value
+     "<code>JavaScript</code>" (case-insensitive) when present and cannot
+     conflict with the <code class="external" title="attr-script-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">type</a></code> attribute. Web developers can simply omit it as
+     it has no useful function.</li>
+
+     <li><p>The <code class="external" title="attr-a-name"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-a-name">name</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>. Web developers can use the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-id-attribute">id</a></code> attribute instead.</li>
+    </ul>
+
+
     <h2 id="content-model"><span class="secno">4 </span>Content Model</h2>
 
     <p>The content model is what defines how elements may be nested — what is
     allowed as children (or descendants) of a certain element.
 
     <p>At a high level, HTML4 had two major categories of elements, "inline"
-    (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-span-element">span</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, text), and "block-level" (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element">div</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>,
+    (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-span-element">span</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>, text), and "block-level" (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element">div</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>,
     <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>). Some elements did not fit in
     either category.
 
     <p>Some elements allowed "inline" elements (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-p-element">p</a></code>), some allowed "block-level" elements (e.g.
     <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-body-element">body</a></code>), some allowed both (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-div-element">div</a></code>), while other elements did not allow either
     category but only allowed other specific elements (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-dl-element">dl</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-table-element">table</a></code>),
-    or did not allow any children at all (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>,
+    or did not allow any children at all (e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-link-element">link</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>,
     <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-hr-element">hr</a></code>).
 
     <p>Notice the difference between an element itself being in a
@@ -1991,10 +1977,10 @@
 
       <li><p>Heading content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-h1-element">h1</a></code>.
 
-      <li><p>Phrasing content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-span-element">span</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, text. This is roughly like HTML4's
+      <li><p>Phrasing content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-span-element">span</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>, text. This is roughly like HTML4's
       "inline". Elements that are phrasing content are also flow content.
 
-      <li><p>Embedded content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#svg">svg</a></code>.
+      <li><p>Embedded content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#the-img-element">img</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-iframe-element">iframe</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#svg">svg</a></code>.
 
       <li><p>Interactive content, e.g. <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-a-element">a</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">label</a></code>. Interactive content is not allowed to
       be nested.
@@ -2060,8 +2046,8 @@
       element is considered phrasing content if there is a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-map-element">map</a></code> element ancestor, which means that they
       do not need to be direct children of <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#the-map-element">map</a></code>.
 
-      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-fieldset-element">fieldset</a></code> element no longer
-      requires a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-legend-element">legend</a></code> child.
+      <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-fieldset-element">fieldset</a></code> element no longer
+      requires a <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-legend-element">legend</a></code> child.
 
     </ul>
 
@@ -2082,7 +2068,7 @@
       <li><p>Media elements (<code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element">video</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-audio-element">audio</a></code>) have APIs for controlling playback,
       syncronising multiple media elements, and timed text tracks (e.g.
       subtitles).
-      
+
       <li><p>An API for form constraint validation (e.g. the <code class="external" title="dom-cva-setcustomvalidity"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#dom-cva-setcustomvalidity">setCustomValidity()</a></code> method).
 
       <li><p>An API for <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#concept-command" title="concept-command">commands</a> that the user can invoke.
@@ -2152,15 +2138,15 @@
       <li><p><code class="external" title="dom-document-domain"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#dom-document-domain">document.domain</a></code> is made settable, which
       can change the document's effective script origin.
 
-      <li><p><code class="external" title="dom-document-open"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-open">document.open()</a></code> now either clears the
+      <li><p><code class="external" title="dom-document-open"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#dom-document-open">document.open()</a></code> now either clears the
       document (if invoked with two or less arguments), or acts like <code class="external" title="dom-open"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-open">window.open()</a></code> (if invoked with
       three or four arguments). In the former case, throws an exception in XML.
 
-      <li><p><code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-close">document.close()</a></code>, <code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-close">document.write()</a></code> and
-      <code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-close">document.writeln()</a></code> throw an exception in
+      <li><p><code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#dom-document-close">document.close()</a></code>, <code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#dom-document-close">document.write()</a></code> and
+      <code class="external" title="dom-document-close"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#dom-document-close">document.writeln()</a></code> throw an exception in
       XML. The latter two now support variadic arguments; they can add text to
       the document's input stream while it is still being parsed, imply a
-      call to <code class="external" title="dom-document-open"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-open">document.open()</a></code>, or be ignored altogether in
+      call to <code class="external" title="dom-document-open"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#dom-document-open">document.open()</a></code>, or be ignored altogether in
       some cases.
 
       <li><p><code class="external" title="dom-document-getElementsByName"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-getelementsbyname">document.getElementsByName()</a></code>
@@ -2169,7 +2155,7 @@
 
       <li><p><code class="external" title="dom-form-elements"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-form-elements">elements</a></code>
       on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#htmlformelement">HTMLFormElement</a></code> now returns an
-      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#htmlformcontrolscollection">HTMLFormControlsCollection</a></code> of <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-fieldset-element">fieldset</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-keygen-element">keygen</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-output-element">output</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element">select</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code> elements. <code class="external" title="dom-form-length"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-form-length">length</a></code> returns the
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#htmlformcontrolscollection">HTMLFormControlsCollection</a></code> of <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-button-element">button</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-fieldset-element">fieldset</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#the-input-element">input</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-keygen-element">keygen</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#the-object-element">object</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-output-element">output</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-select-element">select</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-textarea-element">textarea</a></code> elements. <code class="external" title="dom-form-length"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-form-length">length</a></code> returns the
       number of nodes in <code class="external" title="dom-form-elements"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-form-elements">elements</a></code>.
 
       <li><p><code class="external" title="dom-select-add"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#dom-select-add">add()</a></code> on
@@ -2205,12 +2191,12 @@
       <li><p><code class="external" title="dom-document-dir"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-document-dir">dir</a></code>,
       <code class="external" title="dom-document-head"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-head">head</a></code>, <code class="external" title="dom-document-embeds"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-embeds">embeds</a></code>, <code class="external" title="dom-document-plugins"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-plugins">plugins</a></code>, <code class="external" title="dom-document-scripts"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts">scripts</a></code>, <code class="external" title="dom-document-commands"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-document-commands">commands</a></code>, and a
       generic name getter, to access various parts of the DOM tree.
-      
+
       <li><p>WHATWG HTML has <code class="external" title="dom-document-getItems"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/microdata.html#dom-document-getitems">getItems()</a></code> for microdata.
-      
+
       <li><p>WHATWG HTML and W3C HTML5.1 have <code class="external" title="dom-document-cssElementMap"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-csselementmap">cssElementMap</a></code> to accompany the CSS
       <code>element()</code> feature.
-      
+
       <li><p>WHATWG HTML and W3C HTML5.1 have <code class="external" title="dom-document-currentscript"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript">currentScript</a></code> which returns the currently
       running <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-script-element">script</a></code> element (or null).
 
@@ -2262,7 +2248,7 @@
 
       <li><p><code class="external" title="dom-isContentEditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-iscontenteditable">isContentEditable</a></code> returns true if the
       element is editable.
-      
+
       <li><p><code class="external" title="dom-forcespellcheck"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#dom-forcespellcheck">forceSpellCheck()</a></code> causes the user agent to check spelling of an element.
 
       <li><p><code class="external" title="dom-command-ro-commandType"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandtype">commandType</a></code>, <code class="external" title="dom-command-ro-commandLabel"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandlabel">commandLabel</a></code>, <code class="external" title="dom-command-ro-commandIcon"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandicon">commandIcon</a></code>, <code class="external" title="dom-command-ro-commandHidden"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandhidden">commandHidden</a></code>, <code class="external" title="dom-command-ro-commandDisabled"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commanddisabled">commandDisabled</a></code> and <code class="external" title="dom-command-ro-commandChecked"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#dom-command-ro-commandchecked">commandChecked</a></code> is
@@ -2270,19 +2256,19 @@
 
       <li><p>All event handler IDL attributes.
     </ul>
-    
+
     <p>Some members were previously defined on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#htmlelement">HTMLElement</a></code> but been moved to the <code class="external"><a href="http://dom.spec.whatwg.org/#element">Element</a></code>
     interface in the DOM standard: <a href="#refsDOM">[DOM]</a>
-    
+
     <ul>
       <li><p><code class="external" title="dom-element-id"><a href="http://dom.spec.whatwg.org/#dom-element-id">id</a></code> reflects the <code>id</code> content attribute.
-      
+
       <li><p><code class="external" title="dom-element-className"><a href="http://dom.spec.whatwg.org/#dom-element-classname">className</a></code> reflects the <code>class</code> content attribute.
-    
+
       <li><p><code class="external" title="dom-element-classList"><a href="http://dom.spec.whatwg.org/#dom-element-classlist">classList</a></code> is a convenient accessor for
       <code class="external" title="dom-element-className"><a href="http://dom.spec.whatwg.org/#dom-element-classname">className</a></code>. The object it returns exposes methods (<code>contains()</code>, <code>add()</code>,
       <code>remove()</code>, and <code>toggle()</code>) for manipulating the element's classes.
-      
+
       <li><p><code class="external" title="dom-element-getElementsByClassName"><a href="http://dom.spec.whatwg.org/#dom-element-getelementsbyclassname">getElementsByClassName()</a></code> returns a list of elements with the specified
       classes.
 
@@ -2299,7 +2285,7 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmllinkelement">HTMLLinkElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmlstyleelement">HTMLStyleElement</a></code> now implement the
       <code>LinkStyle</code> interface from CSSOM. <a href="#refsCSSOM">[CSSOM]</a>
-      
+
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#htmlformelement">HTMLFormElement</a></code> now has a named
       getter and an indexed getter.
 
@@ -2335,9 +2321,9 @@
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#htmllabelelement">HTMLLabelElement</a></code> now has the
       member <code class="external" title="dom-label-control"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-label-control">control</a></code>.
 
-      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#htmlfieldsetelement">HTMLFieldSetElement</a></code> now has the
-      members <code class="external" title="dom-fieldset-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-fieldset-type">type</a></code>,
-      <code class="external" title="dom-fieldset-elements"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#dom-fieldset-elements">elements</a></code>
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#htmlfieldsetelement">HTMLFieldSetElement</a></code> now has the
+      members <code class="external" title="dom-fieldset-type"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#dom-fieldset-type">type</a></code>,
+      <code class="external" title="dom-fieldset-elements"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#dom-fieldset-elements">elements</a></code>
       and the form constraint validation API members.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#htmlanchorelement">HTMLAnchorElement</a></code> now has the
@@ -2348,14 +2334,14 @@
       <code class="external" title="dom-URL-password"><a href="http://url.spec.whatwg.org/#dom-url-password">password</a></code>, <code class="external" title="dom-URL-host"><a href="http://url.spec.whatwg.org/#dom-url-host">host</a></code>,
       <code class="external" title="dom-URL-hostname"><a href="http://url.spec.whatwg.org/#dom-url-hostname">hostname</a></code>, <code class="external" title="dom-URL-port"><a href="http://url.spec.whatwg.org/#dom-url-port">port</a></code>,
       <code class="external" title="dom-URL-pathname"><a href="http://url.spec.whatwg.org/#dom-url-pathname">pathname</a></code>, <code class="external" title="dom-URL-search"><a href="http://url.spec.whatwg.org/#dom-url-search">search</a></code>,
-      <code class="external" title="dom-URL-query"><a href="http://url.spec.whatwg.org/#dom-url-query">query</a></code> and <code class="external" title="dom-URL-hash"><a href="http://url.spec.whatwg.org/#dom-url-hash">hash</a></code>.
+      <code class="external" title="dom-URL-searchParams"><a href="http://url.spec.whatwg.org/#dom-url-searchparams">searchParams</a></code> and <code class="external" title="dom-URL-hash"><a href="http://url.spec.whatwg.org/#dom-url-hash">hash</a></code>.
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#htmllinkelement">HTMLLinkElement</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#htmlareaelement">HTMLAreaElement</a></code> also have the <code class="external" title="dom-link-relList"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#dom-link-rellist">relList</a></code> IDL attribute.
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-map-element.html#htmlareaelement">HTMLAreaElement</a></code> also implements the <code class="external"><a href="http://url.spec.whatwg.org/#urlutils">URLUtils</a></code> interface.
 
-      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#htmlimageelement">HTMLImageElement</a></code> now has a
-      constructor <code class="external" title="dom-Image"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#dom-image">Image</a></code>, and the
-      members <code class="external" title="dom-img-naturalWidth"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#dom-img-naturalwidth">naturalWidth</a></code>, <code class="external" title="dom-img-naturalHeight"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#dom-img-naturalheight">naturalHeight</a></code> and
-      <code class="external" title="dom-img-complete"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content-1.html#dom-img-complete">complete</a></code>.
+      <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#htmlimageelement">HTMLImageElement</a></code> now has a
+      constructor <code class="external" title="dom-Image"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#dom-image">Image</a></code>, and the
+      members <code class="external" title="dom-img-naturalWidth"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#dom-img-naturalwidth">naturalWidth</a></code>, <code class="external" title="dom-img-naturalHeight"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#dom-img-naturalheight">naturalHeight</a></code> and
+      <code class="external" title="dom-img-complete"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html#dom-img-complete">complete</a></code>.
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#htmlobjectelement">HTMLObjectElement</a></code> now has the
       members <code class="external" title="dom-object-contentWindow"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#dom-object-contentwindow">contentWindow</a></code>, the form constraint
@@ -2367,7 +2353,7 @@
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#htmltableelement">HTMLTableElement</a></code> now has the
       members <code class="external" title="dom-table-createTBody"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-table-createtbody">createTBody()</a></code> and, in WHATWG HTML and W3C HTML5.1,
       <code class="external" title="dom-table-stopsorting"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-table-stopsorting">stopSorting()</a></code>.
-      
+
       <li><p>In WHATWG HTML and W3C HTML5.1,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#htmltableheadercellelement">HTMLTableHeaderCellElement</a></code> now has the member
       <code class="external" title="dom-th-sort"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#dom-th-sort">sort()</a></code>.
@@ -2403,838 +2389,6 @@
     have now moved to <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#document">Document</a></code>) are now
     obsolete: <code class="external" title="dom-document-anchors"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-anchors">anchors</a></code> and <code class="external" title="dom-document-applets"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-applets">applets</a></code>.
 
-
-    <h2 class="appendix" id="changelog"><span class="secno">6 </span>HTML Changelogs</h2>
-
-    <p>The changelogs in this section indicate what has been changed in WHATWG HTML, W3C HTML5 and W3C HTML5.1 between somewhat arbitrary dates, often close to
-    publications of the W3C HTML5 or W3C HTML5.1 drafts. Rationale for changes can be found in the <a href="http://lists.w3.org/Archives/Public/public-html/">public-html@w3.org</a> and <a href="http://lists.whatwg.org/pipermail/whatwg-whatwg.org/">whatwg@whatwg.org</a>
-    mailing list archives, and the <a href="http://blog.whatwg.org/category/weekly-review">WHATWG Weekly</a>
-    series of blog posts. More fundamental rationale is being collected on the
-    WHATWG <a href="http://wiki.whatwg.org/wiki/Rationale">Rationale</a> wiki
-    page. Many editorial and minor technical changes are not included in these
-    changelogs. Implementors are strongly encouraged to follow the development
-    of the main specification on a frequent basis so they become aware of all
-    changes that affect them early on.</p>
-
-    <p>The changes in the changelogs are in rough reverse chronological order.</p>
-
-    <h3 id="changes-2012-09-14"><span class="secno">6.1 </span>Changes from 14 September 2012 to 6 May 2013</h3><!-- rev 7347 - 7867 -->
-
-    <ul>
-     <li><p>The canvas 2d context has a new method <code>isPointInStroke()</code>. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>DataTransferItemList</code> interface (part of drag and drop API) now has a <code>remove()</code> method instead of a deleter. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>registerProtocolHandler()</code> API now supports <code>bitcoin:</code> and <code>geo:</code> schemes. (<code>bitcoin:</code> is WHATWG HTML only.)
-     <li><p>The <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods now have all arguments optional. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>fieldset</code> element can now match the <code>:invalid</code> pseudo-class. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>HTMLBaseFontElement</code> interface has been removed. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The specification has integrated with the URL standard which effectively added the <code>origin</code>, <code>username</code>, <code>password</code> and <code>query</code> IDL attributes to the <code>a</code> and <code>area</code> elements and the <code>location</code> object. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>hgroup</code> element has been dropped. (W3C HTML5 and W3C HTML5.1.)
-     <li><p>The HTML parser now better supports <code>innerHTML</code> on non-HTML elements. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>Various things that were present in WHATWG HTML but missing in W3C HTML5.1 were "un-forked": The <code>download</code> attribute on <code>a</code> and <code>area</code>, the application cache prefer-online feature, the text range API on <code>input</code> and <code>textarea</code>, the <code>cssElementMap</code> IDL attribute on <code>Document</code>, various bits for microdata. (W3C HTML5.1 only.)
-     <li><p>The drag and drop API now has a <code>dragexit</code> event. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>form</code> element now recieves an <code>invalid</code> event when submission fails due to form validation (in addition to the individual controls). (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>navigator</code> object now has a <code>product</code> IDL attribute that always returns "Gecko" (for compatibility). (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>time</code> element's <code>datetime</code> IDL attribute got renamed to <code>dateTime</code>. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods can now be invoked with <code>null</code> as the third argument.
-     <li><p>A new <code>main</code> element has been added.
-     <li><p>The <code>stepUp()</code> and <code>stepDown()</code> methods on the <code>input</code> element have been tweaked. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>img</code> element now supports progress events. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>A new <code>fillRule</code> IDL attribute has been added to the canvas 2d context. (WHATWG HTML only.)
-     <li><p>The <code>style</code> IDL attribute on HTML elements is now settable. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>media</code> attribute has been dropped from the <code>a</code> and <code>area</code> elements. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>Heading elements now support automatic sizing in <code>hgroup</code> if they follow an <code>h1</code> element. (WHATWG HTML only.)
-     <li><p>The <code>navigator</code> object now has a <code>language</code> IDL attribute. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>menu</code> API has been revamped. The <code>command</code> element was dropped. An new <code>menuitem</code> element was added. The <code>menu</code> element's <code>type</code> attribute now uses the value "<code>popup</code>" instead of "<code>context</code>". The <code>button</code> element has a new <code>menu</code> attribute and the <code>type</code> attribute supports a new value "<code>menu</code>". (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>table</code> element now supports sorting columns. The <code>table</code> element has a new <code>sortable</code> attribute and a <code>stopSorting()</code> method. The <code>th</code> element has a new <code>sorted</code> attribute and a <code>sort()</code> method. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>autocomplete</code> attribute on form controls now supports the <code>cc-type</code> type. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>A new <code>currentScript</code> IDL attribute on <code>document</code> was added. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>link</code> and <code>script</code> elements now support the <code>crossorigin</code> attribute. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>canvas</code> element now supports indirect and proxied rendering contexts, to support drawing from a worker. The <code>CanvasProxy</code>, <code>ImageBitmap</code> interfaces are introduced, the <code>canvas</code> element has new <code>setContext()</code> and <code>transferControlToProxy()</code> methods, and a new <code>createImageBitmap()</code> method on <code>window</code> was introduced. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The canvas 2d context has a new <code>direction</code> IDL attribute. (WHATWG HTML only.)
-     <li><p>The <code>screen</code> object has a new <code>canvasResolution</code> IDL attribute. (WHATWG HTML only.)
-     <li><p>A new <code>PortCollection()</code> constructor was added to support sending messages to many ports while allowing them to be garbage collected. (WHATWG HTML only.)
-     <li><p>The <code>getItem()</code> method on <code>Storage</code> can now return null. (WHATWG HTML only.)
-     <li><p>The <code>sandbox</code> attribute on <code>iframe</code> supports a new value "<code>allow-pointer-lock</code>". (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The HTML parser now invokes mutation observers. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>canvas</code> element has a new <code>supportsContext()</code> method. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>abbr</code> attribute on the <code>th</code> element is now conforming.
-     <li><p>A new <code>forceSpellCheck()</code> method on HTML elements was added. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>EventSource</code> API now reconnects for DNS errors and TCP-level connection failures. (WHATWG HTML only.)
-     <li><p>A new <code>fastSeek()</code> method was added to media elements. (WHATWG HTML and W3C HTML5.1.)
-     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> schemes were removed due to lack of interest. (WHATWG HTML only.)
-     <li><p>Navigations with <code>rel=noreferrer</code> now does not clone the <code>sessionStorage</code>.
-     <li><p>The <code>error</code> event for <code>Worker</code> objects now has a <code>column</code> IDL attribute. (WHATWG HTML only.)
-     <li><p>The <code>autofocus</code> attribute on form controls in <code>dialog</code> elements now has an effect when the <code>showModal()</code> method is invoked.
-    </ul>
-    
-    <h3 id="changes-2012-03-29"><span class="secno">6.2 </span>Changes from 29 March 2012 to 14 September 2012</h3><!-- rev 7028 - 7347 -->
-
-    <ul>
-     <li><p>The content model for <code>ruby</code> was changed with regards to nested <code>ruby</code> elements.
-     <li><p>Self-closing SVG <code>script</code> tags in the HTML syntax now execute.
-     <li><p>The placeholder section for the <code>find()</code> API has been dropped.
-     <li><p>An encoding declaration is now required in the HTML syntax even if only ASCII characters are used.
-     <li><p>Some bug fixes in the Drag and Drop API.
-     <li><p>The <code>inBandMetadataTrackDispatchType</code> IDL attribute was added to <code>TextTrack</code>.
-     <li><p>The <code>TextTrackCue()</code> constructor now has fewer arguments.
-     <li><p>The <code>accept</code> attribute now supports file extensions as well as MIME types.
-     <li><p>The <code>initialTime</code> IDL attribute on media elements has been dropped.
-     <li><p>The <code>startOffsetTime</code> IDL attribute on media elements has been renamed to <code>startDate</code>.
-    </ul>
-    
-    <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
-
-    <ul>
-     <li><p>Several changes and bug fixes in the Text Track API.
-     <li><p><code>addElement()</code> was dropped from the Drag and Drop API.
-     <li><p>Media queries are now proxied for <code>iframe</code> elements with the <code>seamless</code> attribute.
-     <li><p>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now apply to <code>input</code> elements in the Hidden state.
-     <li><p>The <code>ssh</code>, <code>sip</code> and <code>magnet</code> schemes are now in the <code>registerProtocolHandler()</code> whitelist.
-     <li><p><code>table</code> elements now have 'box-sizing:border-box' by default.
-     <li><p>Bug fixes in the "potentially CORS-enabled fetch" algorithm.
-     <li><p>The document outline algorithm now ignores elements with the <code>hidden</code> attribute.
-     <li><p>Markup generators that are unable to provide required <code>alt</code> text can now use a specific attribute on <code>img</code> that makes validators ignore the missing <code>alt</code> error.
-     <li><p>Workers and shared workers now support <code>data:</code> URLs.
-     <li><p>The <code>inputmode</code> attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>autocomplete</code> attribute has been extended to support prefilling specific things.
-     <li><p>WebSocket supports sending <code>ArrayBufferView</code> as well as <code>ArrayBuffer</code>.
-     <li><p>The <code>border</code> attribute on <code>table</code> is non-conforming again.
-     <li><p>The canvas ImageData methods now assume 96dpi, and a set of "HD" methods have been introduced.
-     <li><p>The shared worker <code>connect</code> event now also exposes the source port in the <code>source</code> IDL attribute.
-     <li><p>Lone surrogates are converted to U+FFFD instead of throwing in WebSocket <code>send()</code>.
-     <li><p>The <code>setRangeText()</code> method has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>srcset</code> attribute has been added to <code>img</code>.
-     <li><p>Application cache now has an <code>prefer-online</code> mode.
-     <li><p>Dialogs are now supported with the <code>dialog</code> element, the <code>inert</code> global attribute and the <code>dialog</code> method on <code>form</code>.
-     <li><p>The <code>resetTransform()</code> method, <code>currentTransform</code> IDL attribute, several IDL attributes for font metrics, <code>resetClip()</code> method, <code>imageSmoothingEnabled</code> IDL attribute, <code>addHitRegion()</code> method, <code>removeHitRegion()</code> method, support for dashed lines, have been added to the canvas 2d context.
-    </ul>
-
-    <h3 id="changes-2011-05-25"><span class="secno">6.3 </span>Changes from 25 May 2011 to 29 March 2012</h3> <!-- rev 6140 - 7027 -->
-
-    <ul>
-     <li><p>Support for mutation observers was added.
-     <li><p>The <code>TextTrackCue</code> members <code>alignment</code>, <code>linePosition</code>, <code>textPosition</code> and <code>direction</code> were renamed to <code>align</code>, <code>line</code>, <code>position</code> and <code>vertical</code>, respectively.
-     <li><p>The <code>command</code> element now has a <code>command</code> attribute.
-     <li><p>Drag and drop content is now suggested to be filtered by user agents to prevent XSS attacks.
-     <li><p>The <code>translate</code> global attribute was added.
-     <li><p>The <code>showModalDialog()</code>, <code>alert()</code>, <code>confirm()</code> and <code>prompt()</code> methods are now allowed to do nothing during <code>pagehide</code>, <code>beforeunload</code> and <code>unload</code> events.
-     <li><p>The <code>script</code> element now supports <code>beforescriptexecute</code> and <code>afterscriptexecute</code> events.
-     <li><p><code>window.onerror</code> now supports a fourth argument for column position.
-     <li><p>The <code>window.opener</code> IDL attribute can now return null in some cases.
-     <li><p>The <code>clearTimeout()</code> and <code>clearInterval()</code> methods were made synonymous.
-     <li><p>The CSS <code>@global</code> at-rule was introduced, for use together with <code>style</code> elements with the <code>scoped</code> attribute.
-     <li><p>The <code>embed</code> and <code>object</code> elements now have a legacy caller.
-     <li><p>The handling of <code>window.onerror</code>'s return value was changed to match reality.
-     <li><p>The <code>setTimeout()</code> API is now allowed to be throttled in background tabs.
-     <li><p>The <code>:valid</code> and <code>:invalid</code> pseudo-classes now apply to <code>form</code> elements.
-     <li><p>The <code>toBlob()</code> method on <code>canvas</code> now honors the origin-clean flag.
-     <li><p>The <code>activeElement</code> IDL attribute now points to the relevant browsing context container (e.g. <code>iframe</code>) when a child document has focus.
-     <li><p>The <code>atob()</code> method now ignores whitespace.
-     <li><p>The <code>dropzone</code> attribute was changed to use "<code>string:</code>" and "<code>file:</code>" instead of "<code>s:</code>" and "<code>f:</code>".
-     <li><p>The HTML parser was fixed to correctly handle a case involving foreign lands and foster parenting.
-     <li><p>The date-and-time microsyntaxes now allows a single space instead of a "T".
-     <li><p>Application cache no longer checks the MIME type of the cache manifest.
-     <li><p>The <code>cueAsSource</code> IDL attribute on <code>TextTrackCue</code> got renamed to <code>text</code>.
-     <li><p>The <code>window.onerror</code> API is now invoked with dummy arguments for cross-origin scripts.
-     <li><p>The <code>textarea</code> element's <code>value</code> and <code>textLength</code> IDL attributes have their newlines normalized to LF.
-     <li><p>The <code>q</code> element now has language-specific quotes rendered by default.
-     <li><p>The <code>data</code> element was introduced.
-     <li><p>The <code>time</code> element was redesigned to make it match how people wanted to use it. Its <code>pubdate</code> attribute was dropped.
-     <li><p>The legacy caller on <code>form</code> was removed.
-     <li><p>The <code>location.resolveURL()</code> method was removed.
-     <li><p>The <code>track</code> element now sniffs instead of obeying the MIME type.
-     <li><p>The <code>load()</code> method on documents created by <code>createDocument()</code> is now defined on the <code>XMLDocument</code> interface.
-     <li><p>Members of <code>HTMLDocument</code> moved to <code>Document</code> and <code>window.HTMLDocument</code> now just returns <code>window.Document</code>.
-     <li><p>The <code>MutableTextTrack</code> and <code>TextTrack</code> interfaces were merged and <code>TextTrackCue</code> was made more mutable.
-     <li><p>The <code>selectedOption</code> IDL attribute on <code>input</code> was dropped.
-     <li><p>Attribute values in Selectors are now case sensitive for all attributes.
-     <li><p>The <code>readyState</code> IDL attribute moved from <code>TextTrack</code> to <code>HTMLTrackElement</code>.
-     <li><p>The <code>text/html-sandboxed</code> MIME type was dropped.
-     <li><p>Floating point numbers are now allowed to begin with a "<code>.</code>" character.
-     <li><p>Navigating to an audio or video resource is now supported.
-     <li><p>Table cells now allow flow content but does not allow <code>header</code>, <code>footer</code>, sectioning content or heading content descendants.
-     <li><p>Adding a track to a media element now fires an <code>addtrack</code> event on the relevant track list objects.
-     <li><p>Setting <code>currentTime</code> on media elements before the media has loaded now defers the seek instead of throwing.
-     <li><p>Plugins are no longer disabled in sandboxed <code>iframe</code>s if they honor the <code>sandbox</code> attribute.
-     <li><p>Some tweaks to history navigation and related events.
-     <li><p>Media elements and <code>MediaController</code>s now get paused when they end.
-     <li><p>Events now support constructors and some <code>init*Event()</code> methods were removed.
-     <li><p>Media elements now fire a <code>suspend</code> event when the resource is loaded.
-     <li><p>Form submission now normalizes newlines to CRLF.
-     <li><p>Some tweaks around bidi and the <code>br</code> element.
-     <li><p>Large parts of the Editing section moved to HTML Editing APIs.
-     <li><p><code>UndoManager</code> and related features moved to UndoManager and DOM Transaction.
-     <li><p><code>isProtocolHandlerRegistered()</code>, <code>isContentHandlerRegistered()</code>, <code>unregisterProtocolHandler()</code> and <code>unregisterContentHandler()</code> were added.
-     <li><p><code>registerContentHandler()</code> now has a blacklist of MIME types.
-     <li><p><code>registerProtocolHandler()</code> now has a whitelist of protocols, but also supports any protocol that starts with "<code>web+</code>".
-     <li><p>Fragment identifiers for <code>text/html</code> resources now don't need to point to an element with a matching ID.
-     <li><p><code>audio</code> elements are now allowed to have zero <code>source</code> children.
-     <li><p>There are now some restrictions on the use of bidi formatting characters.
-     <li><p>The <code>maxlength</code> and <code>size</code> attributes are allowed (but give warnings in validators) on <code>input</code> elements with <code>type=number</code>.
-     <li><p>The link relation "<code>shortcut icon</code>" is now allowed.
-     <li><p>Heading elements are now allowed to have the <code>heading</code> and <code>tab</code> roles.
-     <li><p>Things that use <code>EventTarget</code> now inherit from it instead of using "implements".
-     <li><p>The <code>setInterval()</code> API now clamps to 4ms instead of 10ms.
-     <li><p>The <code>select</code> element and its <code>options</code> collection now have a setter.
-     <li><p><code>rel=help</code> on links now show a help cursor by default.
-     <li><p>Calls to <code>window.print()</code> before the document is loaded defers the print until it is loaded.
-     <li><p>Application cache gained an <code>abort()</code> method.
-     <li><p><code>HTMLCollection</code>, <code>DOMTokenList</code>, <code>getElementsByClassName()</code>, <code>createHTMLDocument()</code>, HTML-specific overrides to some DOM Core features (like <code>createElement()</code>), some definitions, the <code>id</code> IDL attribute and ID handling moved to DOM4.
-     <li><p>Fragment identifiers can now survive redirects.
-     <li><p>The <code>pushState()</code> and <code>replaceState()</code> methods now change the history entry to GET.
-     <li><p>The command API now has its properties prefixed so they are now <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code> and <code>commandChecked</code>.
-     <li><p>The structured clone algorithm now supports sparse arrays.
-     <li><p><code>window.postMessage</code> now supports transferring some objects instead of cloning them, and supports transferring <code>ArrayBuffer</code>.
-     <li><p>Application cache was made stricter in its MIME type checking.
-     <li><p>The <code>placeholder</code> attribute is now allowed on <code>input</code> elements with <code>type=number</code>.
-     <li><p><code>MediaController</code> gained an <code>onended</code> event listener.
-     <li><p>The HTML parser changed its handling of U+0000 characters in some places.
-     <li><p>The <code>object</code> element gained a new attribute <code>typemustmatch</code>, to make it safer for Web developers to embed untrusted resources where they expect a certain content type.
-     <li><p>The <code>form</code> attribute was removed from <code>meter</code> and <code>progress</code>.
-     <li><p>The HTML parser was made more forward compatible in its handling of <code>ruby</code>.
-     <li><p>Some MIME types (e.g. <code>text/plain</code>) that are guaranteed to never be supported as scripting types for <code>script</code> were specified, so Web developers can safely use them for custom data blocks.
-     <li><p><code>about:blank</code> documents created from <code>window.open()</code> now get a <code>load</code> event.
-     <li><p><code>window.status</code> was specified to exist but do nothing.
-     <li><p>Drag and drop <code>DataTransferItems</code> was renamed to <code>DataTransferItemList</code>.
-     <li><p>Application cache now supports 'no-store' and HTTPS.
-     <li><p>The structured clone algorithm now supports getters.
-     <li><p>The <code>crossorigin</code> attribute has been added to <code>img</code>, <code>video</code> and <code>audio</code> to use CORS.
-     <li><p>The <code>external</code> IDL attribute has been added on <code>window</code> and has the members <code>AddSearchProvider()</code> and <code>IsSearchProviderInstalled()</code>.
-    </ul>
-
-    <p>Further changes to WHATWG HTML that do not affect W3C HTML5:</p>
-
-    <ul>
-     <li><p>The 2d context now supports ellipses with the <code>arc()</code> and <code>arcTo()</code> methods and the new <code>ellipse()</code> method.
-     <li><p>The 2d context now supports <code>Path</code> objects. SVG path data can be added to a <code>Path</code>.
-     <li><p>The <code>http+aes:</code> and <code>https+aes:</code> URL schemes were added to allow sensitive resources to be held on untrusted servers.
-     <li><p>When the <code>itemprop</code> attribute is used on an element where microdata gets its value from an attribute (like <code>href</code> on <code>a</code> elements), that attribute is now required.
-     <li><p><code>PeerConnection</code> was moved to WebRTC.
-     <li><p>WebVTT was moved to its own specification.
-     <li><p>WebSockets no longer receive messages in the <code>CLOSING</code> state.
-     <li><p>The Atom conversion algorithm was dropped.
-     <li><p>The <code>itemtype</code> attribute now allows multiple types.
-     <li><p><code>CanvasPixelArray</code> was dropped in favor of <code>Uint8ClampedArray</code>.
-     <li><p>The microdata to RDF conversion algorithm was dropped.
-     <li><p>The <code>link</code> element is no longer allowed to have both <code>rel</code> and <code>itemprop</code>.
-     <li><p>WebSocket API disallows opening an insecure connection if the document uses a secure connection.
-     <li><p>The "storage mutex" is made optional.
-     <li><p>Web Storage no longer supports structured data.
-     <li><p>The <code>a</code> element got a new <code>download</code> attribute. This attribute is not included in W3C HTML5.
-     <li><p>An experimental specification for the <code>window.find()</code> method was added.
-     <li><p>The 2d context <code>fillText()</code> and <code>strokeText()</code> methods now do not collapse whitespace.
-     <li><p>Microdata now handles infinite loops.
-     <li><p>Web Worker <code>location</code> now stringifies.
-     <li><p>Script errors in a Web Worker can now be detected in a parent worker or the document with the <code>onerror</code> handler.
-     <li><p><code>EventSource</code> now supports CORS.
-     <li><p><code>EventSource</code> was made stricter in its MIME type checking.
-     <li><p>Web Workers gained the <code>atob()</code> and <code>btoa()</code> methods.
-     <li><p>Web Workers gained the <code>ononline</code> and <code>onoffline</code> event handlers.
-     <li><p>WebSockets API has the <code>error</code> event again.
-     <li><p>WebSockets API now exposes the selected extensions<!-- and allows compression (was dropped in a later rev)-->.
-     <li><p>Various tweaks to the UDP <code>PeerConnection</code> API.
-     <li><p>WebSocket close code and reason are now supported in the API.
-     <li><p>Binary data is now supported in WebSockets.
-     <li><p>Redirects in WebSockets are now blocked for security reasons.
-    </ul>
-
-    <h3 id="changes-2011-04-05"><span class="secno">6.4 </span>Changes from 5 April 2011 to 25 May 2011</h3> <!-- rev 5974 - 6139 -->
-
-    <ul>
-     <li><p>Support for the <code>javascript:</code> scheme in <code>img</code>, <code>object</code>, CSS, etc, has been dropped.
-     <li><p>The <code>toBlob()</code> method has been added to <code>canvas</code>.
-     <li><p>The <code>drawFocusRing()</code> method on the <code>canvas</code> 2d context has been split into two methods, <code>drawSystemFocusRing()</code> and <code>drawCustomFocusRing()</code>.
-     <li><p>The <code>values</code> attribute on <code>PropertyNodeList</code> has been replaced with a <code>getValues()</code> method.
-     <li><p>The <code>select</code> event has been specified.
-     <li><p>The <code>selectDirection</code> IDL attribute has been added to <code>input</code> and <code>textarea</code>.
-     <li><p>The <code>:enabled</code> and <code>:disabled</code> pseudo-classes now match <code>fieldset</code>, and the <code>:indeterminate</code> pseudo-class can now match <code>progress</code>.
-     <li><p>The <code>getKind()</code> method has been added to <code>TrackList</code>.
-     <li><p>The <code>MediaController</code> API and the <code>mediagroup</code> attribute have been added to synchronize playback of media elements.
-     <li><p>Some ARIA defaults have changed, and it is now invalid to specify ARIA attributes that match the defaults.
-     <li><p>The <code>getName()</code> method on <code>TrackList</code> was renamed to <code>getLabel()</code>.
-     <li><p>The <code>border</code> attribute on <code>table</code> is now conforming.
-     <li><p>The <code>u</code> element is now conforming.
-     <li><p>The <code>summary</code> attribute on <code>table</code> is now non-conforming.
-     <li><p>The <code>audio</code> attribute on <code>video</code> was changed to a boolean <code>muted</code> attribute.
-     <li><p>The <code>Content-Language</code> meta pragma is now non-conforming.
-    </ul>
-
-    <h3 id="changes-2011-01-13"><span class="secno">6.5 </span>Changes from 13 January 2011 to 5 April 2011</h3> <!-- rev 5779 - 5974 -->
-
-    <ul>
-     <li><p>The <code>pushState</code> and <code>replaceState</code> features have
-     been changed based on implementation feedback in Firefox, and <code>history.state</code>
-     has been introduced.
-     <li><p>The <code>tracks</code> IDL attribute on media elements has been renamed
-     to <code>textTracks</code>.
-     <li><p>Event handler content attributes now support JavaScript strict mode.
-     <li><p>The <code>forminput</code> and <code>formchange</code> events, and
-     the <code>dispatchFormInput()</code> and <code>dispatchFormChange()</code>
-     methods have been dropped.
-     <li><p>The <code>rel</code> keywords <code>archives</code>, <code>up</code>,
-     <code>last</code>, <code>index</code>, <code>first</code> and related synonyms
-     have been dropped.
-     <li><p>Removing a media element from the DOM and inserting it again in the same
-     script now doesn't pause the media element.
-     <li><p>The <code>video</code> element's letterboxing rules are now specified in
-     terms of CSS 'object-fit'.
-     <li><p>Cross-origin fonts now don't leak information about the font when drawn
-     on a <code>canvas</code>.
-     <li><p>The character encoding declaration is now allowed to be within the first
-     1024 bytes instead of the first 512 bytes.
-     <li><p>The <code>onerror</code> event handler on <code>window</code> is now invoked
-     for compile-time script errors as well as runtime errors.
-     <li><p>Script-inserted <code>script</code> elements now have <code>async</code>
-     default to <code>true</code>, which can be set to <code>false</code> to make
-     the scripts execute in insertion order.
-     <li><p>The <code>atob()</code> and <code>btoa()</code> methods have been specified.
-     <li><p>The suggested file extension for application cache manifest files has been
-     changed from <code>.manifest</code> to <code>.appcache</code>.
-     <li><p>The <code>action</code> and <code>formaction</code> attributes are
-     no longer allowed to have the empty string as value.
-    </ul>
-
-    <h3 id="changes-2010-10-19"><span class="secno">6.6 </span>Changes from 19 October 2010 to 13 January 2011</h3> <!-- rev 5643 - 5779 -->
-
-    <ul>
-     <li><p>Drag and drop model was refined.</li>
-     <li><p>A new global <code>dropzone</code> attribute was added.</li>
-     <li><p>A new <code>bdi</code> element was added to aid with user-generated
-     content that may have bidi implications.</li>
-     <li><p>The <code>dir</code> attribute gained a new "<code>auto</code>"
-     value.</li>
-     <li><p>A <code>dirname</code> attribute was added to <code>input</code>
-     elements. When specified the directionality as specified by the user
-     will be submitted to the server as well.</li>
-     <li><p>A new <code>track</code> element and associated TextTrack API were added for video text tracks.</li>
-     <li><p>The <code>type</code> attribute on the <code>ol</code> element is now allowed.
-    </ul>
-
-    <p>The <code>getSelection()</code> API moved to a separate
-    <a href="http://html5.org/specs/dom-range.html">DOM Range</a> draft.
-    Similarly <code>UndoManager</code> has been removed from the W3C copy of
-    HTML5 for now as it is not ready yet.</p>
-
-    <h3 id="changes-2010-06-24"><span class="secno">6.7 </span>Changes from 24 June 2010 to 19 October 2010</h3> <!-- rev 5108 - 5642 -->
-
-    <ul>
-     <li><p>Numerous changes to the HTML parsing algorithm based on
-     implementation feedback.</li>
-     <li><p>The <code>hidden</code> attribute now works for table-related
-     elements.</li>
-     <li><p>The <code>canvas</code> <code>getContext()</code> method is now
-     defined to be able to handle multiple contexts better.</li>
-     <li><p>The media elements' <code>startTime</code> IDL attribute was
-     renamed to <code>initialTime</code> and <code>startOffsetTime</code>
-     was added.</li>
-     <li><p>The <code>prefetch</code> link relationship can now be used on
-     <code>a</code> elements.</li>
-     <li><p>The <code>datetime</code> attribute of <code>ins</code> and
-     <code>del</code> no longer requires a time to be specified.</li>
-     <li><p>Using PUT and DELETE as HTTP methods for the <code>form</code>
-     element is no longer supported.</li>
-     <li><p>The <code>s</code> element is no longer deprecated.</li>
-     <li><p>The <code>video</code> element has a new <code>audio</code>
-     attribute.</li>
-    </ul>
-
-    <p>Per usual, lots of other minor fixes have been made as well.</p>
-
-    <h3 id="changes-2010-03-04"><span class="secno">6.8 </span>Changes from 4 March 2010 to 24 June 2010</h3> <!-- rev 4647 - 5107 -->
-
-    <ul>
-     <li><p>The <code>ping</code> attribute has been removed from the W3C
-     version of HTML5.</li>
-     <li><p>The <code>title</code> element is optional for
-     <code>iframe</code> <code>srcdoc</code> documents and other scenarios
-     where a title is already available. As is the case with email.</li>
-     <li><p><code>keywords</code> is now a standard metadata name for the
-     <code>meta</code> element.</li>
-     <li><p>The <code>allow-top-navigation</code> value has been added for the
-     <code>sandbox</code> attribute on the <code>iframe</code> element. It
-     allows the embedded content to navigate its parent when specified.</li>
-     <li><p>The <code>wbr</code> element has been added.</li>
-     <li><p>The <code>alternate</code> keyword for the <code>rel</code>
-     attribute of the <code>link</code> element can now be used to point to
-     feeds again, even if the feed is not an alternative for the
-     document.</li>
-     <li><p>The HTML to Atom mapping has been removed from the W3C version of
-     HTML5.</li>
-    </ul>
-
-    <p>In addition lots of minor changes, clarifications, and fixes have
-    been made to the document.</p>
-
-    <h3 id="changes-2009-08-25"><span class="secno">6.9 </span>Changes from 25 August 2009 to 4 March 2010</h3> <!-- since rev 3673 -->
-
-    <ul>
-     <li><p>The <code>dialog</code> element has been removed. A section with
-     advice on how to mark up conversations has effectively replaced
-     it.</li>
-     <li><p><code>document.head</code> has been introduced to provide
-     convenient access to the <code>head</code> element from script.</li>
-     <li><p>The link type <code title="">feed</code> has been removed.
-     <code title="rel-alternate">alternate</code> with specific media types
-     is to be used instead.</li>
-     <li><p><code>createHTMLDocument()</code> has been introduced as API to
-     allow easy creation of HTML documents.</li>
-     <li><p>Both the <code>meter</code> and <code>progress</code> elements no
-     longer have "magic" processing of their contents because it could not
-     be made to work internationally.</li>
-     <li><p>The <code>meter</code> and <code>progress</code> elements, as well
-     as the <code>output</code> element, can now be labeled using the
-     <code>label</code> element.</li>
-     <li><p>A new media type, <code>text/html-sandboxed</code>, was introduced
-     to allow hosting of potentially hostile content without it causing
-     harm.</li>
-     <li><p>A <code>srcdoc</code> attribute for the <code>iframe</code> element
-     was introduced to allow embedding of potentially hostile content
-     inline. It is expected to be used together with the
-     <code>sandbox</code> and <code>seamless</code> attributes.</li>
-     <li><p>The <code>figure</code> element now uses a new element
-     <code>figcaption</code> rather than <code>legend</code> because people
-     want to use HTML long before it reaches W3C Recommendation.</li>
-     <li><p>The <code>details</code> element now uses a new element
-     <code>summary</code> for exactly the same reason.</li>
-     <li><p>The <code>autobuffer</code> attribute on media elements was renamed
-     to <code>preload</code>.</li>
-    </ul>
-
-    <p>A whole lot of other smaller issues have also been resolved. The
-    above list summarizes what is thought to be of primary interest to
-    Web developers.</p>
-
-    <p>In addition to all of the above, Microdata, the 2D context API for
-    <code>canvas</code>, and Web Messaging (<code>postMessage()</code> API)
-    have been split into their own drafts at the W3C (the WHATWG still
-    publishes a version of HTML that includes them):</p>
-
-    <ul>
-     <li><p><a href="http://dev.w3.org/html5/md/">HTML Microdata</a></li>
-     <li><p><a href="http://dev.w3.org/html5/2dcontext/">HTML Canvas 2D Context</a></li>
-     <li><p><a href="http://dev.w3.org/html5/postmsg/">HTML5 Web Messaging</a></li>
-    </ul>
-
-    <p>Specific microdata vocabularies are gone altogether in the W3C draft
-    of HTML5 and are not published as a separate draft. The WHATWG draft of
-    HTML still includes them.</p>
-
-    <h3 id="changes-2009-04-23"><span class="secno">6.10 </span>Changes from 23 April 2009 to 25 August 2009</h3> <!-- since rev 2975 -->
-
-    <ul>
-     <li><p>When the <code>time</code> element is empty user agents have to
-     render the time in a locale-specific manner.</li>
-     <li><p>The <code>load</code> event is dispatched at <code>Window</code>,
-     but now has <code>Document</code> as its target.</li>
-     <li><p><code>pushState()</code> now affects the <code>Referer</code> (sic)
-     header.</li>
-     <li><p><code>onundo</code> and <code>onredo</code> are now on
-     <code>Window</code>.</li>
-     <li><p>Media elements now have a <code>startTime</code> member that
-     indicates where the current resource starts.</li>
-     <li><p><code>header</code> has been renamed to <code>hgroup</code> and a
-     new <code>header</code> element has been introduced.</li>
-     <li><p><code>createImageData()</code> now also takes
-     <code>ImageData</code> objects.</li>
-     <li><p><code>createPattern()</code> can now take a <code>video</code>
-     element as argument too.</li>
-     <li><p>The <code>footer</code> element is no longer allowed in
-     <code>header</code> and <code>header</code> is not allowed in
-     <code>address</code> or <code>footer</code>.</li>
-     <li><p>A new control has been introduced:
-     <code>&lt;input type="tel"&gt;</code></li>
-     <li><p>The Command API now works for all elements.</li>
-     <li><p><code>accesskey</code> is now properly defined.</li>
-     <li><p><code>section</code> and <code>article</code> now take a
-     <code>cite</code> attribute.</li>
-     <li><p>A new feature called Microdata has been introduced which allows
-     people to embed custom data structures in their HTML documents.</li>
-     <li><p>Using the Microdata model three predefined vocabularies have also
-     been included: vCard, vEvent, and a model for licensing.</li>
-     <li><p>Drag and drop has been updated to work with the Microdata
-     model.</li>
-     <li><p>The <a href="http://hsivonen.iki.fi/last-html-quirk/">last of the
-     parsing quirks</a> has been defined.</li> <!-- don't kill my easter egg -->
-     <li><p><code>textLength</code> has been added as member of the
-     <code>textarea</code> element.</li>
-     <li><p>The <code>rp</code> element now takes phrasing content rather than
-     a single character.</li>
-     <li><p><code>location.reload()</code> is now defined.</li>
-     <li><p>The <code>hashchange</code> event now fires asynchronously.</li>
-     <li><p>Rules for compatibility with XPath 1.0 and XSLT 1.0 have been
-     added.</li>
-     <li><p>The <code>spellcheck</code> IDL attribute now maps to a
-     <code>DOMString</code>.</li>
-     <li><p><code>hasFeature()</code> support has been reduced to a
-     minimum.</li>
-     <li><p>The <code>Audio()</code> constructor sets the
-     <code>autobuffer</code> attribute.</li>
-     <li><p>The <code>td</code> element is no longer allowed in
-     <code>thead</code>.</li>
-     <li><p>The <code>input</code> element and <code>DataTransfer</code> object
-     now have a <code>files</code> IDL attribute.</li>
-     <li><p>The <code>datagrid</code> and <code>bb</code> have been removed due
-     to their design not being agreed upon.</li>
-     <li><p>The cue range API has been removed from the media elements.</li>
-     <li><p>Support for WAI-ARIA has been integrated.</li>
-    </ul>
-
-    <p>On top of this list quite a few minor clarifications, typos,
-    issues specific to implementors, and other small problems have been
-    resolved.</p>
-
-    <p>In addition, the following parts of HTML have been taken out
-    and will likely be further developed at the IETF:</p>
-
-    <ul>
-     <li><p>Definition of URLs.</li>
-     <li><p>Definition of Content-Type sniffing.</li>
-    </ul>
-
-    <h3 id="changes-2009-02-12"><span class="secno">6.11 </span>Changes from 12 February 2009 to 23 April 2009</h3>
-
-    <ul>
-     <li><p>A new global attribute called <code>spellcheck</code> has been
-     added.</li>
-     <li><p>Defined that JavaScript <code>this</code> in the global object
-     returns a <code>WindowProxy</code> object rather than the
-     <code>Window</code> object.</li>
-     <li><p>The <code>value</code> IDL attribute for <code>input</code>
-     elements in the File Upload state is now defined.</li>
-     <li><p>Definition of <code>designMode</code> was changed to be more in
-     line with legacy implementations.</li>
-     <li><p>The <code>drawImage()</code> method of the 2D drawing API can now
-     take a <code>video</code> element as well.</li>
-     <li><p>The way media elements load resources has been changed.</li>
-     <li><p><code>document.domain</code> is now IPv6-compatible.</li>
-     <li><p>The <code>video</code> element gained an <code>autobuffer</code>
-     boolean attribute that serves as a hint.</li>
-     <li><p>You are now allowed to specify the <code>meta</code> element with a
-     <code>charset</code> attribute in XML documents if the value of that
-     attribute matches the encoding of the document. (Note that it does not
-     specify the value, it is just a talisman.)</li>
-     <li><p>The <code>bufferingRate</code> and <code>bufferingThrottled</code>
-     members of media elements have been removed.</li>
-     <li><p>The media element resource selection algorithm is now
-     asynchronous.</li>
-     <li><p>The <code>postMessage()</code> API now takes an array of
-     <code>MessagePort</code> objects rather than just one.</li>
-     <li><p>The second argument of the <code>add()</code> method on the
-     <code>select</code> element and the <code>options</code> member of the
-     <code>select</code> element is now optional.</li>
-     <li><p>The <code>action</code>, <code>enctype</code>, <code>method</code>,
-     <code>novalidate</code>, and <code>target</code> attributes on
-     <code>input</code> and <code>button</code> elements have been
-     renamed to <code>formaction</code>, <code>formenctype</code>,
-     <code>formmethod</code>, <code>formnovalidate</code>, and
-     <code>formtarget</code>.</li>
-     <li><p>A "storage mutex" concept has been added to deal with separate
-     pages trying to change a storage object (<code>document.cookie</code>
-     and <code>localStorage</code>) at the same time. The
-     <code>Navigator</code> gained a <code>getStorageUpdates()</code> method
-     to allow it to be explicitly released.</li>
-     <li><p>A syntax for SVG similar to MathML is now defined so that SVG can
-     be included in <code>text/html</code> resources.</li>
-     <li><p>The <code>placeholder</code> attribute has been added to
-     the <code>textarea</code> element.</li>
-     <li><p>Added a <code>keygen</code> element for key pair generation.</li>
-     <li><p>The <code>datagrid</code> element was revised to make the API more
-     asynchronous and allow for unloaded parts of the grid.</li>
-    </ul>
-
-    <p>In addition, several parts of HTML have been taken out and
-    will be further developed by the Web Applications Working Group as
-    standalone specifications:</p>
-
-    <ul>
-     <li><p><a href="http://dev.w3.org/html5/websockets/">WebSocket API</a></li>
-     <li><p><a href="http://tools.ietf.org/html/rfc6455">WebSocket protocol</a></li>
-     <li><p><a href="http://dev.w3.org/html5/eventsource/">Server-Sent Events</a></li>
-     <li><p><a href="http://dev.w3.org/html5/webstorage/">Web Storage</a> (<code>localStorage</code> and <code>sessionStorage</code>)</li>
-     <li><p><a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
-    </ul>
-
-    <h3 id="changes-2008-06-10"><span class="secno">6.12 </span>Changes from 10 June 2008 to 12 February 2009</h3>
-
-    <ul>
-     <li><p>The <code>data</code> member of <code>ImageData</code> objects has
-     been changed from an array to a <code>CanvasPixelArray</code>
-     object.</li>
-     <li><p>Shadows are now required from implementations of the
-     <code>canvas</code> element and its API.</li>
-     <li><p>Security model for <code>canvas</code> is clarified.</li>
-     <li><p>Various changes to the processing model of <code>canvas</code> have
-     been made in response to implementation and Web developer feedback. E.g.
-     clarifying what happens when NaN and Infinity are passed and fixing the
-     definitions of <code>arc()</code> and <code>arcTo()</code>.</li>
-     <li><p><code>innerHTML</code> in XML was slightly changed to improve
-     round-tripping.</li>
-     <li><p>The <code>toDataURL()</code> method on the <code>canvas</code>
-     element now supports setting a quality level when the media type
-     argument is <code>image/jpeg</code>.</li>
-     <li><p>The <code>poster</code> attribute of the <code>video</code> element
-     now affects its intrinsic dimensions.</li>
-     <li><p>The behavior of the <code>type</code> attribute of the
-     <code>link</code> element has been clarified.</li>
-     <li><p>Sniffing is now allowed for <code>link</code> when the expected
-     type is an image.</li>
-     <li><p>A section on URLs is introduced dealing with how URL values are to
-     be interpreted and what exactly Web developers are required to do. Every
-     feature of the specification that uses URLs has been reworded to take
-     the new URL section into account.</li>
-     <li><p>It is now explicit that the <code>href</code> attribute of the
-     <code>base</code> element does not depend on
-     <code>xml:base</code>.</li>
-     <li><p>It is now defined what the behavior should be when the base URL
-     changes.</li>
-     <li><p>URL decomposition IDL attributes are now more aligned with Internet
-     Explorer.</li>
-     <li><p>The <code>xmlns</code> attribute with the value
-     <code>http://www.w3.org/1999/xhtml</code> is now allowed on all HTML
-     elements.</li>
-     <li><p><code>data-<var>*</var></code> attributes and custom attributes on
-     the <code>embed</code> element now have to match the XML
-     <code>Name</code> production and cannot contain a colon.</li>
-     <li><p>WebSocket API is introduced for bidirectional communication with a
-     server.</li>
-     <li><p>The default value of <code>volume</code> on media elements is now
-     1.0 rather than 0.5.</li>
-     <li><p><code>event-source</code> was renamed to <code>eventsource</code>
-     because no other HTML element uses a hyphen.</li>
-     <li><p>A message channel API has been introduced augmenting
-     <code>postMessage()</code>.</li>
-     <li><p>A new element named <code>bb</code> has been added. It represents a
-     user agent command that the user can invoke.</li>
-     <li><p>The <code>addCueRange()</code> method on media elements has been
-     modified to take an identifier which is exposed in the callbacks.</li>
-     <li><p>It is now defined how to mutate a DOM into an infoset.</li>
-     <li><p>The <code>parent</code> attribute of the <code>Window</code> object
-     is now defined.</li>
-     <li><p>The <code>embed</code> element is defined to do extension sniffing
-     for compatibility with servers that deliver Flash as
-     <code>text/plain</code>. (This is marked as an issue in the
-     specification to figure out if there is a better way to make this
-     work.)</li> <!-- and no, the answer is not to simply break stuff -->
-     <li><p>The <code>embed</code> can now be used without its <code>src</code>
-     attribute.</li>
-     <li><p><code>getElementsByClassName()</code> is defined to be ASCII
-     case-insensitive in quirks mode for consistency with CSS.</li>
-     <li><p>In HTML documents <code>localName</code> no longer returns the node
-     name in uppercase.</li>
-     <li><p><code>data-<var>*</var></code> attributes are defined to be always
-     lowercase.</li>
-     <li><p>The <code>opener</code> attribute of the <code>Window</code> object
-     is not to be present when the page was opened from a link with
-     <code>target="_blank"</code> and <code>rel="noreferrer"</code>.</li>
-     <li><p>The <code>top</code> attribute of the <code>Window</code> object is
-     now defined.</li>
-     <li><p>The <code>a</code> element now allows nested flow content, but not
-     nested interactive content.</li>
-     <li><p>It is now defined what the <code>header</code> element means to
-     document summaries and table of contents.</li>
-     <li><p>What it means to fetch a resource is now defined.</li>
-     <li><p>Patterns are now required for the <code>canvas</code> element.</li>
-     <li><p>The <code>autosubmit</code> attribute has been removed from the
-     <code>menu</code> element.</li>
-     <li><p>Support for <code>outerHTML</code> and
-     <code>insertAdjacentHTML()</code> has been added.</li>
-     <li><p><code>xml:lang</code> is now allowed in HTML when <code>lang</code>
-     is also specified and they have the same value. In XML
-     <code>lang</code> is allowed if <code>xml:lang</code> is also specified
-     and they have the same value.</li>
-     <li><p>The <code>frameElement</code> attribute of the <code>Window</code>
-     object is now defined.</li>
-     <li><p>An event loop and task queue is now defined detailing script
-     execution and events. All features have been updated to be defined in
-     terms of this mechanism.</li>
-     <li><p>If the <code>alt</code> attribute is omitted a <code>title</code>
-     attribute, an enclosing <code>figure</code> element with a
-     <code>legend</code> element descendant, or an
-     enclosing section with an associated heading must be present.</li>
-     <li><p>The <code>irrelevant</code> attribute has been renamed to
-     <code>hidden</code>.</li>
-     <li><p>The <code>definitionURL</code> attribute of MathML is now properly
-     supported. Previously it would have ended up being all lowercase during
-     parsing.</li>
-     <li><p>User agents must treat US-ASCII as Windows-1252 for compatibility
-     reasons.</li>
-     <li><p>An alternative syntax for the DOCTYPE is
-     allowed for compatibility with some XML tools.</li>
-     <li><p>Data templates have been removed (consisted of the
-     <code>datatemplate</code>, <code>rule</code> and <code>nest</code>
-     elements).</li>
-     <li><p>The media elements now support just a single <code>loop</code>
-     attribute.</li>
-     <li><p>The <code>load()</code> method on media elements has been
-     redefined as asynchronous. It also tries out files in turn now rather
-     than just looking at the <code>type</code> attribute of the
-     <code>source</code> element.</li>
-     <li><p>A new member called <code>canPlayType()</code> has been added to
-     the media elements.</li>
-     <li><p>The <code>totalBytes</code> and <code>bufferedBytes</code>
-     attributes have been removed from the media elements.</li>
-     <li><p>The <code>Location</code> object gained a
-     <code>resolveURL()</code> method.</li>
-     <li><p>The <code>q</code> element has changed again. Punctuation is to be
-     provided by the user agent again.</li>
-     <li><p>Various changes were made to the HTML parser algorithm to be more
-     in line with the behavior Web sites require.</li>
-     <li><p>The <code>unload</code> and <code>beforeunload</code> events are
-     now defined.</li>
-     <li><p>The IDL blocks in the specification have been revamped to be in
-     line with the upcoming Web IDL specification.</li>
-     <li><p>Table headers can now have headers. User agents are required to
-     support a <code>headers</code> attribute pointing to a <code>td</code>
-     or <code>th</code> element, but Web developers are required to only let them
-     point to <code>th</code> elements.</li>
-     <li><p>Interested parties can now register new <code>http-equiv</code>
-     values.</li>
-     <li><p>When the <code>meta</code> element has a <code>charset</code>
-     attribute it must occur within the first 512 bytes.</li>
-     <li><p>The <code>StorageEvent</code> object now has a
-     <code>storageArea</code> attribute.</li>
-     <li><p>It is now defined how HTML is to be used within the SVG
-     <code>foreignObject</code> element.</li>
-     <li><p>The notification API has been dropped.</li>
-     <li><p>How [[Get]] works for the <code>HTMLDocument</code> and
-     <code>Window</code> objects is now defined.</li>
-     <li><p>The <code>Window</code> object gained the
-     <code>locationbar</code>, <code>menubar</code>,
-     <code>personalbar</code>, <code>scrollbars</code>,
-     <code>statusbar</code> and <code>toolbar</code> attributes giving
-     information about the user interface.</li>
-     <li><p>The application cache section has been significantly revised and
-     updated.</li>
-     <li><p><code>document.domain</code> now relies on the Public Suffix List.
-     <a href="#refsPSL">[PSL]</a>
-     <li><p>A non-normative rendering section has been added that describes
-     user agent rendering rules for both obsolete and conforming
-     elements.</li>
-     <li><p>A normative section has been added that defines when certain
-     selectors as defined in the Selectors and the
-     CSS3 Basic User Interface Module match HTML elements.
-     <a href="#refsSELECTORS">[SELECTORS]</a>
-     <a href="#refsCSSUI">[CSSUI]</a>
-    </ul>
-
-    <p>Web Forms 2.0, previously a standalone specification, has been fully
-    integrated into HTML since last publication. The following
-    changes were made to the forms chapter:</p>
-
-    <ul>
-     <li><p>Support for XML submission has been removed.</li>
-     <li><p>Support for form filling has been removed.</li>
-     <li><p>Support for filling of the <code>select</code> and
-     <code>datalist</code> elements through the <code>data</code> attribute
-     has been removed.</li>
-     <li><p>Support for associating a field with multiple forms has been
-     removed. A field can still be associated with a form it is not nested
-     in through the <code>form</code> attribute.</li>
-     <li><p>The <code>dispatchChangeInput()</code> and
-     <code>dispatchFormChange()</code> methods have been removed from the
-     <code>select</code>, <code>input</code>, <code>textarea</code>, and
-     <code>button</code> elements.</li>
-     <li><p>Repetition templates have been removed.</li>
-     <li><p>The <code>inputmode</code> attribute has been removed.</li>
-     <li><p>The <code>input</code> element in the File Upload state no longer
-     supports the <code>min</code> and <code>max</code> attributes.</li>
-     <li><p>The <code>allow</code> attribute on <code>input</code> elements in
-     the File Upload state is no longer authoritative.</li>
-     <li><p>The <code>pattern</code> and <code>accept</code> attributes for
-     <code>textarea</code> have been removed.</li>
-     <li><p>RFC 3106 is no longer explicitly supported.</li>
-     <li><p>The <code>submit()</code> method now just submits, it no longer
-     ensures the form controls are valid.</li>
-     <li><p>The <code>input</code> element in the Range state now defaults to
-     the middle, rather than the minimum value.</li>
-     <li><p>The <code>size</code> attribute on the <code>input</code> element
-     is now conforming (rather than deprecated).</li>
-     <li><p><code>object</code> elements now partake in form submission.</li>
-     <li><p>The <code>type</code> attribute of the <code>input</code> element
-     gained the values <code>color</code> and <code>search</code>.</li>
-     <li><p>The <code>input</code> element gained a <code>multiple</code>
-     attribute which allows for either multiple e-mails or multiple files to
-     be uploaded depending on the value of the <code>type</code>
-     attribute.</li>
-     <li><p>The <code>input</code>, <code>button</code> and <code>form</code>
-     elements now have a <code>novalidate</code> attribute to indicate that
-     the form fields should not be required to have valid values upon
-     submission.</li>
-     <li><p>When the <code>label</code> element contains an <code>input</code>
-     it may still have a <code>for</code> attribute as long as it points to
-     the <code>input</code> element it contains.</li>
-     <li><p>The <code>input</code> element now has an
-     <code>indeterminate</code> IDL attribute.</li>
-     <li><p>The <code>input</code> element gained a <code>placeholder</code>
-     attribute.</li>
-    </ul>
-
-    <h3 id="changes-2008-01-22"><span class="secno">6.13 </span>Changes from 22 January 2008 to 10 June 2008</h3>
-
-    <ul>
-     <li><p>Implementation and authoring details around the <code>ping</code>
-     attribute have changed.
-     <li><p><code>&lt;meta http-equiv=content-type&gt;</code> is now a
-     conforming way to set the character encoding.</li>
-     <li><p>API for the <code>canvas</code> element has been cleaned up. Text
-     support has been added.
-     <li><p><code>globalStorage</code> is now restricted to the same-origin
-     policy and renamed to <code>localStorage</code>. Related event
-     dispatching has been clarified.
-     <li><p><code>postMessage()</code> API changed. Only the origin of the
-     message is exposed, no longer the URL. It also requires a second
-     argument that indicates the origin of the target document.
-     <li><p>Drag and drop API has got clarification. The
-     <code>dataTransfer</code> object now has a <code>types</code>
-     attribute indicating the type of data being transferred.
-     <li><p>The <code>m</code> element is now called <code>mark</code>.
-     <li><p>Server-sent events has changed and gotten clarification. It uses a
-     new format so that older implementations are not broken.
-     <li><p>The <code>figure</code> element no longer requires a caption.
-     <li><p>The <code>ol</code> element has a new <code>reversed</code>
-     attribute.
-     <li><p>Character encoding detection has changed in response to feedback.
-     <li><p>Various changes have been made to the HTML parser section in
-     response to implementation feedback.
-     <li><p>Various changes to the editing section have been made, including
-     adding <code>queryCommandEnabled()</code> and related methods.
-     <li><p>The <code>headers</code> attribute has been added for
-     <code>td</code> elements.
-     <li><p>The <code>table</code> element has a new <code>createTBody()</code>
-     method.
-     <li><p>MathML support has been added to the HTML parser section. (SVG
-     support is still awaiting input from the SVG WG.)
-     <li><p>Web developer-defined attributes have been added. Web developers can add
-     attributes to elements in the form of
-     <code>data-<var>name</var></code> and can access these through the DOM
-     using <code>dataset[<var>name</var>]</code> on the element in question.
-     <li><p>The <code>q</code> element has changed to require punctuation
-     inside rather than having the browser render it.
-     <li><p>The <code>target</code> attribute can now have the value
-     <code>_blank</code>.
-     <li><p>The <code>showModalDialog</code> API has been added.
-     <li><p>The <code>document.domain</code> API has been defined.
-     <li><p>The <code>source</code> element now has a new
-     <code>pixelratio</code> attribute useful for videos that have some kind
-     encoding error.
-     <li><p><code>bufferedBytes</code>, <code>totalBytes</code> and
-     <code>bufferingThrottled</code> IDL attributes have been added to the
-     <code>video</code> element.
-     <li><p>Media <code>begin</code> event has been renamed to
-     <code>loadstart</code> for consistency with the Progress Events
-     specification.
-     <li><p><code>charset</code> attribute has been added to
-     <code>script</code>.
-     <li><p>The <code>iframe</code> element has gained the <code>sandbox</code>
-     and <code>seamless</code> attributes which provide sandboxing
-     functionality.
-     <li><p>The <code>ruby</code>, <code>rt</code> and <code>rp</code>
-     elements have been added to support ruby annotation.
-     <li><p>A <code>showNotification()</code> method has been added to show
-     notification messages to the user.
-     <li><p>Support for <code>beforeprint</code> and <code>afterprint</code>
-     events has been added.</li>
-    </ul>
 
     <h2 class="no-num" id="acknowledgments">Acknowledgments</h2>
 
@@ -3290,9 +2444,6 @@
 <div id="anolis-references"><dl><dt id="refsCSSOM">[CSSOM]
 <dd><cite><a href="http://dev.w3.org/csswg/cssom/">CSS Object Model (CSSOM)</a></cite>, Simon Pieters and Glenn Adams. W3C.
 
-<dt id="refsCSSUI">[CSSUI]
-<dd><cite><a href="http://dev.w3.org/csswg/css-ui/">CSS Basic User Interface Module</a></cite>, Tantek Çelik. W3C.
-
 <dt id="refsDOCTYPE">[DOCTYPE]
 <dd><cite><a href="http://hsivonen.iki.fi/doctype/">Activating Browser Modes with Doctype</a></cite>, Henri Sivonen.
 
@@ -3313,12 +2464,6 @@
 
 <dt id="refsHTML5NIGHTLY">[HTML5NIGHTLY]
 <dd><cite><a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 Nightly</a></cite>, Robin Berjon, Steve Faulkner, Travis Leithead et al.. W3C.
-
-<dt id="refsPSL">[PSL]
-<dd><cite><a href="http://publicsuffix.org/">Public Suffix List</a></cite>. Mozilla.
-
-<dt id="refsSELECTORS">[SELECTORS]
-<dd><cite><a href="http://dev.w3.org/csswg/selectors/">Selectors</a></cite>, Elika J. Etemad and Tab Atkins Jr.. W3C.
 
 <dt id="refsXHTML1">[XHTML1]
 <dd><cite><a href="http://www.w3.org/TR/xhtml11/">XHTML™ 1.1 - Module-based XHTML - Second Edition</a></cite>, Murray Altheim and Shane McCarron.

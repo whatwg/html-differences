@@ -2,7 +2,8 @@
 <html lang="en-US">
   <head>
     <meta charset=utf-8>
-    <title>Differences from HTML4</title>
+    <title class=not-w3c>Differences from HTML4</title>
+    <title class=not-whatwg>HTML5 Differences from HTML4</title>
     <link class=not-w3c rel=icon href=http://resources.whatwg.org/logo-differences.svg>
     <style class=not-whatwg>
       #w3c-doctype { font-size:140%; background-color:white; color:#005A9C; margin-bottom: 0.83em; margin-top: 0.83em; }
@@ -32,7 +33,7 @@
       </hgroup>
 
       <div class=not-whatwg>
-        <h1>Differences from HTML4</h1>
+        <h1>HTML5 Differences from HTML4</h1>
         <p id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</p>
       </div>
 
@@ -60,6 +61,7 @@
         <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
 
         <dt class=not-whatwg>Previous Versions:</dt>
+        <dd class=not-whatwg><a href="http://www.w3.org/TR/2013/WD-html5-diff-20130528/">http://www.w3.org/TR/2013/WD-html5-diff-20130528/</a></dd>
         <dd class=not-whatwg><a href="http://www.w3.org/TR/2012/WD-html5-diff-20121025/">http://www.w3.org/TR/2012/WD-html5-diff-20121025/</a></dd>
         <dd class=not-whatwg><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
         <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
@@ -100,17 +102,11 @@
 
     <hr>
 
-
     <h2 class="no-num no-toc" id="abstract">Abstract</h2>
 
-    <p>HTML is the core language of the World Wide Web. The W3C publishes HTML5 and HTML5.1.
-    The WHATWG publishes HTML, which is a rough superset of W3C HTML5.1.
-    "Differences from HTML4" describes the
-    differences of the HTML specifications from those of HTML4, and calls out cases where they differ from
-    each other. This document may not provide accurate information, as
-    the specifications are still actively in development. When in doubt, always
-    check the specifications themselves. <span data-anolis-ref>HTML5</span>
-    <span data-anolis-ref>HTML5NIGHTLY</span> <span data-anolis-ref>HTML</span></p>
+    <p class="not-w3c">"Differences from HTML4" describes the differences of the HTML specification from those of HTML4.</p>
+    <p class="not-whatwg">"HTML5 Differences from HTML4" describes the differences of the HTML5 specification from those of HTML4.</p>
+
 
     <div class="not-whatwg">
     <h2 class="no-num no-toc" id="sotd">Status of This Document</h2>
@@ -162,10 +158,17 @@
 
     <h3 id="scope">Scope of This Document</h3>
 
-    <p>This document covers the W3C HTML5 specification, W3C HTML5.1 specification, and
-    the WHATWG HTML standard. For readability, these are referred to as if they were a single specification:
-    "the HTML specification" or simply "HTML" when something applies equally to all of
-    them; otherwise, they are called out explicitly.
+    <p class="not-w3c">This document covers the WHATWG HTML standard.
+    It does not cover the W3C HTML5 or W3C HTML5.1 specifications.
+    <span data-anolis-ref>HTML</span>
+    <span data-anolis-ref>HTML5</span>
+    <span data-anolis-ref>HTML5NIGHTLY</span></p>
+
+    <p class="not-whatwg">This document covers the W3C HTML5 specification.
+    It does not cover the W3C HTML5.1 specification or the WHATWG HTML standard.
+    <span data-anolis-ref>HTML5</span>
+    <span data-anolis-ref>HTML5NIGHTLY</span>
+    <span data-anolis-ref>HTML</span></p>
 
     <h3 id="history">History of HTML</h3>
 
@@ -202,13 +205,9 @@
 
     <h3 id="open-issues">Open Issues</h3>
 
-    <p>The contents of HTML, as well as the contents of this document which depend on
-    HTML, are still being discussed on the HTML Working Group
-    and WHATWG mailing lists.</p>
+    <p class="not-w3c">See "Issues:" at the top of the HTML standard. The specification also has annotation boxes in the margin which can link to bugs.
 
-    <p>Open issues for WHATWG HTML, see "Issues:" at the top of the specification. The specification also has annotation boxes in the margin which can link to bugs.
-
-    <p>Open issues for W3C HTML5 and W3C HTML5.1, see the "Status of This Document" section.
+    <p class="not-whatwg">See the "Status of This Document" section of the HTML5 specification.
 
 
     <h3 id="backward-compatibility">Backward Compatibility</h3>
@@ -234,6 +233,7 @@
     "deprecated".</p>
 
 
+    <div class="not-w3c">
     <h3 id="development-model">Development Model</h3>
 
     <p>The HTML4 specification reached Recommendation status before it was completely
@@ -241,19 +241,11 @@
     contains various bugs that have been fixed in the current HTML specification, which
     user agents are much closer to implementing than HTML4.
 
-    <p>The WHATWG HTML standard is under continual development where bugs are fixed
+    <p>The HTML standard is under continual development where bugs are fixed
     and new features are introduced over time. Features can also be removed from the
     specification if they lack implementor interest, are not being used by Web developers, or
-    for other reasons. The WHATWG does not publish frozen snapshots.
-
-    <p>The W3C HTML5 specification is trying to reach Recommendation status. New features
-    are generally not added unless they are implemented by at least two browsers and have
-    tests demonstrating interoperability. Minor bug fixes can be applied. This means that
-    W3C HTML5 may contain bugs that have been fixed in WHATWG HTML or W3C HTML5.1, or both.
-
-    <p>The W3C HTML5.1 specification is similar to WHATWG HTML: it is under continual development where bugs are fixed and new features are introduced over time,
-    and features can be removed from the specification for the same reasons as with WHATWG HTML. It cherry-picks changes from the WHATWG HTML standard and also
-    gets direct changes. It is expected to eventually go through the same procedure as W3C HTML5, and then a new version will be minted.
+    for other reasons.
+    </div>
 
 
     <h2 id="syntax">Syntax</h2>
@@ -447,13 +439,13 @@
 
       <li><p><code data-anolis-spec=html>main</code>
       can be used as a container for the dominant contents of another element, such as
-      the main content of the page. In W3C HTML5 and W3C HTML 5.1, only one such element is allowed in a document.</p></li>
+      the main content of the page.</p></li>
 
       <li><p><code data-anolis-spec=html>aside</code>
       represents a piece of content that is only slightly related to the
       rest of the page.</p></li>
 
-      <li><p>In WHATWG HTML, <code data-anolis-spec=html>hgroup</code>
+      <li class="not-w3c"><p><code data-anolis-spec=html>hgroup</code>
       represents the header of a section.</p></li>
 
       <li><p><code data-anolis-spec=html>header</code>
@@ -515,7 +507,7 @@
       <li><p><code data-anolis-spec=html>time</code> represents a date
       and/or time.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 has <code data-anolis-spec=html>data</code>, which
+      <li class="not-w3c"><p><code data-anolis-spec=html>data</code>
       allows content to be annotated with a machine-readable value.
 
       <li><p><code data-anolis-spec=html>dialog</code> for showing a dialog.
@@ -610,11 +602,10 @@
     that were already part of HTML4:</p>
 
     <ul>
-      <li><p>The <code data-anolis-spec=html>a</code> and
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>a</code> and
       <code data-anolis-spec=html>area</code> elements have the new
-      <code data-anolis-spec=html title=attr-hyperlink-download>download</code> attribute
-      in WHATWG HTML and W3C HTML5.1. WHATWG HTML also has the
-      <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attribute.
+      <code data-anolis-spec=html title=attr-hyperlink-download>download</code> and
+      <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attributes.
 
       <li><p>The <code data-anolis-spec=html>area</code> element, for consistency with the
       <code data-anolis-spec=html>a</code> and <code data-anolis-spec=html>link</code> elements, now also has the
@@ -629,7 +620,7 @@
       way to specify the
       <a href="#character-encoding">character encoding</a> for the document.
 
-      <li><p>In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>table</code>
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>table</code>
       element now has a <code data-anolis-spec=html title=attr-table-sortable>sortable</code> attribute and the
       <code data-anolis-spec=html>th</code> element has a
       <code data-anolis-spec=html title=attr-th-sorted>sorted</code> attribute, which provide a means to sort
@@ -722,7 +713,9 @@
       <li><p>The <code data-anolis-spec=html>input</code> element also has the new
       <code data-anolis-spec=html title=attr-input-minlength>minlength</code> attribute.
 
-      <li><p>In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> have an <code data-anolis-spec=html title="attr-fe-inputmode">inputmode</code> attribute.
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>input</code> and
+      <code data-anolis-spec=html>textarea</code> elements have an
+      <code data-anolis-spec=html title="attr-fe-inputmode">inputmode</code> attribute.
 
       <li><p>The <code data-anolis-spec=html>menu</code> element has two new attributes:
       <code data-anolis-spec=html title=attr-menu-type>type</code> and <code data-anolis-spec=html title=attr-menu-label>label</code>. They
@@ -730,7 +723,7 @@
       interfaces as well as providing for context menus in conjunction with the
       global <code data-anolis-spec=html title=attr-contextmenu>contextmenu</code> attribute.
 
-      <li><p>In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>button</code>
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>button</code>
       element has a new <code data-anolis-spec=html title=attr-button-menu>menu</code>
       attribute, used together with popup menus.
 
@@ -763,13 +756,15 @@
 
       <li><p>The <code data-anolis-spec=html>img</code> element has a new attribute called
       <code data-anolis-spec=html title=attr-img-crossorigin>crossorigin</code> to use CORS in the fetch and if it is successful, allows the image data to be
-      read with the <code data-anolis-spec=html>canvas</code> API. In WHATWG HTML and W3C HTML5.1, the <code data-anolis-spec=html>script</code> element has a
+      read with the <code data-anolis-spec=html>canvas</code> API.
+      <span class="not-w3c">The <code data-anolis-spec=html>script</code> element has a
       <code data-anolis-spec=html title=attr-script-crossorigin>crossorigin</code> attribute to allow script
-      <span data-anolis-spec=html title="report the error">errors to be reported</span> to <code data-anolis-spec=html title=handler-onerror>onerror</code>
-      with information about the error. WHATWG HTML and W3C HTML5.1 also has the <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code>
-      attribute on the <code data-anolis-spec=html>link</code> element.
+      <span data-anolis-spec=html title="report the error">errors to be reported</span> to
+      <code data-anolis-spec=html title=handler-onerror>onerror</code> with information about the error.
+      The <code data-anolis-spec=html>link</code> element also has a
+      <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code> attribute.</span>
 
-      <li><p>The <code data-anolis-spec=html>img</code> element has new attributes called
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>img</code> element has new attributes called
       <code data-anolis-spec=html title=attr-img-srcset>srcset</code>
       and <code data-anolis-spec=html title=attr-img-sizes>sizes</code>,
       along with the new elements <code data-anolis-spec=html>picture</code> and
@@ -814,12 +809,10 @@
       <li><p>The <code data-anolis-spec=html title=attr-hidden>hidden</code>
       attribute indicates that an element is not yet, or is no longer, relevant.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 has the <code title>inert</code> attribute, intended to make <code data-anolis-spec=html>dialog</code> elements modal.
-
       <li><p>The <code data-anolis-spec=html title=wai-aria>role</code> and
       <code data-anolis-spec=html title=wai-aria>aria-<var>*</var></code>
       collection attributes which can be used to instruct assistive
-      technology. These attributes have slightly different requirements in WHATWG HTML and W3C HTML5/W3C HTML5.1.
+      technology.
 
       <li><p>The <code data-anolis-spec=html
       title=attr-spellcheck>spellcheck</code> attribute allows for hinting
@@ -1651,13 +1644,12 @@
       attribute on <code data-anolis-spec=html>form</code> is no longer allowed
       to have an empty URL.
 
-      <li><p>In WHATWG HTML, the <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
+      <li class="not-w3c"><p>The <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
 
-      <li><p>The <code data-anolis-spec=html
+      <li class="not-whatwg"><p>The <code data-anolis-spec=html
       title=attr-table-border>border</code> attribute on <code
       data-anolis-spec=html>table</code> only allows the values "1" and the
-      empty string. In WHATWG HTML, the <code data-anolis-spec=html
-      title=attr-table-border>border</code> attribute is obsolete.
+      empty string.
 
       <li><p>The <code data-anolis-spec=html
       title=attr-tdth-colspan>colspan</code> attribute on <code
@@ -1866,7 +1858,9 @@
       <code data-anolis-spec=html title=attr-td-scope>scope</code> attributes on
       <code data-anolis-spec=html>td</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute on <code data-anolis-spec=html>table</code>.
+      <li><p><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute
+      <span class=not-w3c>and <code data-anolis-spec=html title=attr-table-border>border</code> attribute</span>
+      on <code data-anolis-spec=html>table</code>.
 
       <li><p><code data-anolis-spec=html title=attr-form-accept>accept</code> attribute on <code data-anolis-spec=html>form</code>.
 
@@ -2059,9 +2053,9 @@
       <li><p>HTML4 allowed <code data-anolis-spec=html>object</code> in <code
       data-anolis-spec=html>head</code>. HTML does not.
 
-      <li><p>WHATWG HTML allows <code data-anolis-spec=html>link</code> and
-      <code data-anolis-spec=html>meta</code> as descendants of <code
-      data-anolis-spec=html>body</code> if they use microdata attributes.
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>link</code> and
+      <code data-anolis-spec=html>meta</code> elements are allowed as descendants of
+      <code data-anolis-spec=html>body</code> if they use microdata attributes.
 
       <li><p>The <code data-anolis-spec=html>noscript</code> element was a
       "block-level" element in HTML4, but is phrasing content in HTML.
@@ -2205,34 +2199,30 @@
       <code data-anolis-spec=html>Navigator</code> and
       <code data-anolis-spec=html>External</code>
       interfaces have been defined.
-    </ul>
 
-    <p>WHATWG HTML has further APIs that are not in W3C HTML5 but are separate specifications at the W3C:
+      <li class="not-w3c"><p>An API for microdata.
 
-    <ul>
-      <li><p>An API for microdata.
-
-      <li><p>An API for immediate-mode bitmap graphics (the <code
+      <li class="not-w3c"><p>An API for immediate-mode bitmap graphics (the <code
       data-anolis-spec=html title=canvas-context-2d>2d</code> context for the
       <code data-anolis-spec=html>canvas</code> element).
 
-      <li><p>An API for cross-document messaging, channel messaging and
+      <li class="not-w3c"><p>An API for cross-document messaging, channel messaging and
       sending messages to other tabs in the same origin (<code
       data-anolis-spec=html title=dom-window-postMessage>postMessage()</code>,
       <code data-anolis-spec=html>MessageChannel</code> and <code data-anolis-spec=html>BroadcastChannel</code>).
 
-      <li><p>An API for runnings scripts in the background (<code
+      <li class="not-w3c"><p>An API for runnings scripts in the background (<code
       data-anolis-spec=html>Worker</code> and <code
       data-anolis-spec=html>SharedWorker</code>).
 
-      <li><p>An API for client-side storage (<code data-anolis-spec=html
+      <li class="not-w3c"><p>An API for client-side storage (<code data-anolis-spec=html
       title=dom-localStorage>localStorage</code> and <code data-anolis-spec=html
       title=dom-sessionStorage>sessionStorage</code>).
 
-      <li><p>An API for bidirectional client-server communication (<code
+      <li class="not-w3c"><p>An API for bidirectional client-server communication (<code
       data-anolis-spec=html>WebSocket</code>).
 
-      <li><p>An API for server-to-client data push (<code data-anolis-spec=html>EventSource</code>).
+      <li class="not-w3c"><p>An API for server-to-client data push (<code data-anolis-spec=html>EventSource</code>).
     </ul>
 
 
@@ -2331,15 +2321,13 @@
       data-anolis-spec=html title=dom-document-commands>commands</code>, and a
       generic name getter, to access various parts of the DOM tree.
 
-      <li><p>WHATWG HTML has <code data-anolis-spec=html
+      <li class="not-w3c"><p><code data-anolis-spec=html
       title=dom-document-getItems>getItems()</code> for microdata.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 have <code
-      data-anolis-spec=html
-      title=dom-document-cssElementMap>cssElementMap</code> to accompany the CSS
-      <code>element()</code> feature.
+      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-document-cssElementMap>cssElementMap</code>
+      to accompany the CSS <code>element()</code> feature.
 
-      <li><p>WHATWG HTML and W3C HTML5.1 have <code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
+      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
       running <code data-anolis-spec=html>script</code> element (or null).
 
       <li><p><code data-anolis-spec=html
@@ -2399,7 +2387,7 @@
       = 'test'</code> sets the <code>data-foo-bar</code> content attribute on
       <code><var>elm</var></code>.
 
-      <li><p>WHATWG HTML has <code data-anolis-spec=html
+      <li class="not-w3c"><p><code data-anolis-spec=html
       title=dom-itemScope>itemScope</code>, <code data-anolis-spec=html
       title=dom-itemType>itemType</code>, <code data-anolis-spec=html
       title=dom-itemId>itemId</code>, <code data-anolis-spec=html
@@ -2573,11 +2561,10 @@
 
       <li><p><code data-anolis-spec=html>HTMLTableElement</code> now has the
       members <code data-anolis-spec=html
-      title=dom-table-createTBody>createTBody()</code> and, in WHATWG HTML and W3C HTML5.1,
-      <code data-anolis-spec=html title=dom-table-stopsorting>stopSorting()</code>.
+      title=dom-table-createTBody>createTBody()</code>
+      <span class="not-w3c">and <code data-anolis-spec=html title=dom-table-stopsorting>stopSorting()</code></span>.
 
-      <li><p>In WHATWG HTML and W3C HTML5.1,
-      <code data-anolis-spec=html>HTMLTableHeaderCellElement</code> now has the member
+      <li class="not-w3c"><p><code data-anolis-spec=html>HTMLTableHeaderCellElement</code> now has the member
       <code data-anolis-spec=html title=dom-th-sort>sort()</code>.
 
       <li><p><code data-anolis-spec=html>HTMLIFrameElement</code> now has the

@@ -769,7 +769,14 @@
       with information about the error. WHATWG HTML and W3C HTML5.1 also has the <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code>
       attribute on the <code data-anolis-spec=html>link</code> element.
 
-      <li><p>In WHATWG HTML, the <code data-anolis-spec=html>img</code> element has a new attribute called <code data-anolis-spec=html title=attr-img-srcset>srcset</code> to support multiple images for different resolutions and different images for different viewport sizes.
+      <li><p>The <code data-anolis-spec=html>img</code> element has new attributes called
+      <code data-anolis-spec=html title=attr-img-srcset>srcset</code>
+      and <code data-anolis-spec=html title=attr-img-sizes>sizes</code>,
+      along with the new elements <code data-anolis-spec=html>picture</code> and
+      <code data-anolis-spec=html title=picture-source>source</code>
+      to allow authors to declaratively control or give hints to the user agent
+      about which image resource to use, based on the screen pixel density,
+      viewport size, image format, and other factors.
     </ul>
 
     <p>Several attributes from HTML4 now apply to all elements. These

@@ -12,6 +12,9 @@
       pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
       .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
     </style>
+    <style>
+      .bad { color: gray; }
+    </style>
     <link class=not-whatwg rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/W3C-[STATUS]">
     <link class=not-w3c rel="stylesheet" href="http://www.whatwg.org/style/specification">
   </head>
@@ -641,7 +644,12 @@
        <p>A new <code data-anolis-spec=html title=attr-input-placeholder>placeholder</code> attribute can be specified on
       the <code data-anolis-spec=html>input</code> and <code data-anolis-spec=html>textarea</code> elements. It
       represents a hint intended to aid the user with data entry.</p>
-       <pre>&lt;input type=email <strong>placeholder="a@b.com"</strong>></pre>
+       <pre>&lt;input type=search name=q <strong>placeholder="Enter search phrase..."</strong>> &lt;button>Search&lt;/button></pre>
+       <pre>&lt;label>Email &lt;input type=email name=email <strong>placeholder="john@example.com"</strong>>&lt;/label></pre>
+       <p>The <code data-anolis-spec=html title=attr-input-placeholder>placeholder</code> attribute should not be used as a replacement for the
+       <code data-anolis-spec=html>label</code> element.
+       <pre class=bad>&lt;!-- Do not do this: -->
+&lt;input type=email name=email placeholder="Email"></pre>
       </li>
 
       <li>

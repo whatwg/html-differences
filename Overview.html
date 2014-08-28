@@ -10,6 +10,9 @@
       pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
       .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
     </style>
+    <style>
+      .bad { color: gray; }
+    </style>
     <link class="not-whatwg" href="https://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
     
   </head>
@@ -32,7 +35,7 @@
 
       <div class="not-whatwg">
         <h1>HTML5 Differences from HTML4</h1>
-        <p id="w3c-doctype">Editor's Draft 22 August 2014</p>
+        <p id="w3c-doctype">Editor's Draft 28 August 2014</p>
       </div>
 
       <dl>
@@ -102,7 +105,7 @@
     found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
     at http://www.w3.org/TR/.</i></p>
 
-    <p>This is the 22 August 2014 Editor's Draft produced by the
+    <p>This is the 28 August 2014 Editor's Draft produced by the
     <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
@@ -610,7 +613,12 @@
        <p>A new <code class="external" title="attr-input-placeholder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">placeholder</a></code> attribute can be specified on
       the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-input-element">input</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-textarea-element">textarea</a></code> elements. It
       represents a hint intended to aid the user with data entry.</p>
-       <pre>&lt;input type=email <strong>placeholder="a@b.com"</strong>&gt;</pre>
+       <pre>&lt;input type=search name=q <strong>placeholder="Enter search phrase..."</strong>&gt; &lt;button&gt;Search&lt;/button&gt;</pre>
+       <pre>&lt;label&gt;Email &lt;input type=email name=email <strong>placeholder="john@example.com"</strong>&gt;&lt;/label&gt;</pre>
+       <p>The <code class="external" title="attr-input-placeholder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">placeholder</a></code> attribute should not be used as a replacement for the
+       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">label</a></code> element.
+       <pre class="bad">&lt;!-- Do not do this: --&gt;
+&lt;input type=email name=email placeholder="Email"&gt;</pre>
       </li>
 
       <li>

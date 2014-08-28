@@ -4,6 +4,9 @@
     
     <link class="not-w3c" href="http://resources.whatwg.org/logo-differences.svg" rel="icon">
     
+    <style>
+      .bad { color: gray; }
+    </style>
     
     <link class="not-w3c" href="http://www.whatwg.org/style/specification" rel="stylesheet">
   </head>
@@ -21,7 +24,7 @@
 
       <hgroup class="not-w3c">
         <h1>Differences from HTML4</h1>
-        <h2 class="no-num no-toc">Living Document — Last Updated 22 August 2014</h2>
+        <h2 class="no-num no-toc">Living Document — Last Updated 28 August 2014</h2>
       </hgroup>
 
       
@@ -80,7 +83,7 @@
       <p class="copyright not-w3c"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/80x15.png"></a>
       To the extent possible under law, the editors have waived all copyright and
       related or neighboring rights to this work. In addition, as of
-      22 August 2014, the editors have made this specification available
+      28 August 2014, the editors have made this specification available
       under the
       <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
       which is available at
@@ -616,7 +619,12 @@
        <p>A new <code class="external" title="attr-input-placeholder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">placeholder</a></code> attribute can be specified on
       the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-input-element">input</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-textarea-element">textarea</a></code> elements. It
       represents a hint intended to aid the user with data entry.</p>
-       <pre>&lt;input type=email <strong>placeholder="a@b.com"</strong>&gt;</pre>
+       <pre>&lt;input type=search name=q <strong>placeholder="Enter search phrase..."</strong>&gt; &lt;button&gt;Search&lt;/button&gt;</pre>
+       <pre>&lt;label&gt;Email &lt;input type=email name=email <strong>placeholder="john@example.com"</strong>&gt;&lt;/label&gt;</pre>
+       <p>The <code class="external" title="attr-input-placeholder"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">placeholder</a></code> attribute should not be used as a replacement for the
+       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">label</a></code> element.
+       <pre class="bad">&lt;!-- Do not do this: --&gt;
+&lt;input type=email name=email placeholder="Email"&gt;</pre>
       </li>
 
       <li>

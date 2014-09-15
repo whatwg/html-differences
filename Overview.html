@@ -1,8 +1,6 @@
 <!DOCTYPE html><html lang="en-US"><head>
     <meta charset="utf-8">
-    
     <title class="not-whatwg">HTML5 Differences from HTML4</title>
-    
     <style class="not-whatwg">
       #w3c-doctype { font-size:140%; background-color:white; color:#005A9C; margin-bottom: 0.83em; margin-top: 0.83em; }
       @media screen { code { color: #D93B00; } code :link, code :visited { color: inherit; } }
@@ -14,8 +12,7 @@
       .bad { color: gray; }
     </style>
     <link class="not-whatwg" href="https://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
-    
-  </head>
+    </head>
   <body>
     <!--
 
@@ -27,27 +24,16 @@
     <div class="head">
       <div class="not-whatwg">
 <!--begin-logo-->
-<p><a href="http://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a></p>
+<p><a href="http://www.w3.org/"><img alt="W3C" height="48" src="http://www.w3.org/Icons/w3c_home" width="72"></a></p>
 <!--end-logo--></div>
-      
-
-      
-
       <div class="not-whatwg">
         <h1>HTML5 Differences from HTML4</h1>
-        <p id="w3c-doctype">Editor's Draft 29 August 2014</p>
+        <p id="w3c-doctype">Editor's Draft 15 September 2014</p>
       </div>
 
       <dl>
         <dt>This Version:</dt>
-        
         <dd class="not-tr not-whatwg"><a href="https://rawgit.com/whatwg/html-differences/master/Overview.html">https://rawgit.com/whatwg/html-differences/master/Overview.html</a>
-        </dd>
-        
-
-        
-        
-
         <dt>Participate:</dt>
         <dd class="not-whatwg"><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4">File a bug</a>
          (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4&amp;resolution=---">open bugs</a>)
@@ -75,15 +61,15 @@
         (<a href="http://www.opera.com/">Opera Software ASA</a>)
         &lt;<a href="mailto:simonp@opera.com">simonp@opera.com</a>&gt;</dd>
         <dt>Previous Editor:</dt>
-        <dd><a href="http://annevankesteren.nl/">Anne van Kesteren</a>
+        <dd><a href="//annevankesteren.nl/">Anne van Kesteren</a>
         &lt;<a href="mailto:annevk@annevk.nl">annevk@annevk.nl</a>&gt;</dd>
       </dl>
 
-      <script async="" class="not-tr" src="http://resources.whatwg.org/file-bug.js"></script>
+      <script async="" class="not-tr" src="//resources.whatwg.org/file-bug.js"></script>
 
       <div class="not-whatwg">
 <!--begin-copyright-->
-<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2014 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2014 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
 <!--end-copyright--></div>
 
       </div>
@@ -92,7 +78,6 @@
 
     <h2 class="no-num no-toc" id="abstract">Abstract</h2>
 
-    
     <p class="not-whatwg">"HTML5 Differences from HTML4" describes the differences of the HTML5 specification from those of HTML4.</p>
 
 
@@ -105,7 +90,7 @@
     found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
     at http://www.w3.org/TR/.</i></p>
 
-    <p>This is the 29 August 2014 Editor's Draft produced by the
+    <p>This is the 15 September 2014 Editor's Draft produced by the
     <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
@@ -141,47 +126,45 @@
 
     
 <!--begin-toc-->
-<ul class="toc">
+<ol class="toc">
  <li><a href="#introduction"><span class="secno">1 </span>Introduction</a>
-  <ul class="toc">
+  <ol class="toc">
    <li><a href="#scope"><span class="secno">1.1 </span>Scope of This Document</a></li>
    <li><a href="#history"><span class="secno">1.2 </span>History of HTML</a></li>
    <li><a href="#open-issues"><span class="secno">1.3 </span>Open Issues</a></li>
-   <li><a href="#backward-compatibility"><span class="secno">1.4 </span>Backward Compatibility</a></ul></li>
+   <li><a href="#backward-compatibility"><span class="secno">1.4 </span>Backward Compatibility</a></ol></li>
  <li><a href="#syntax"><span class="secno">2 </span>Syntax</a>
-  <ul class="toc">
+  <ol class="toc">
    <li><a href="#character-encoding"><span class="secno">2.1 </span>Character Encoding</a></li>
    <li><a href="#doctype"><span class="secno">2.2 </span>The Doctype</a></li>
    <li><a href="#mathml-svg"><span class="secno">2.3 </span>MathML and SVG</a></li>
-   <li><a href="#syntax-misc"><span class="secno">2.4 </span>Miscellaneous</a></ul></li>
+   <li><a href="#syntax-misc"><span class="secno">2.4 </span>Miscellaneous</a></ol></li>
  <li><a href="#language"><span class="secno">3 </span>Language</a>
-  <ul class="toc">
+  <ol class="toc">
    <li><a href="#new-elements"><span class="secno">3.1 </span>New Elements</a></li>
    <li><a href="#new-attributes"><span class="secno">3.2 </span>New Attributes</a></li>
    <li><a href="#changed-elements"><span class="secno">3.3 </span>Changed Elements</a></li>
    <li><a href="#changed-attributes"><span class="secno">3.4 </span>Changed Attributes</a></li>
    <li><a href="#obsolete-elements"><span class="secno">3.5 </span>Obsolete Elements</a></li>
-   <li><a href="#obsolete-attributes"><span class="secno">3.6 </span>Obsolete Attributes</a></ul></li>
+   <li><a href="#obsolete-attributes"><span class="secno">3.6 </span>Obsolete Attributes</a></ol></li>
  <li><a href="#content-model"><span class="secno">4 </span>Content Model</a></li>
  <li><a href="#apis"><span class="secno">5 </span>APIs</a>
-  <ul class="toc">
+  <ol class="toc">
    <li><a href="#new-apis"><span class="secno">5.1 </span>New APIs</a></li>
    <li><a href="#changed-apis"><span class="secno">5.2 </span>Changed APIs</a></li>
    <li><a href="#document-extensions"><span class="secno">5.3 </span>Extensions to
     <code>Document</code></a></li>
    <li><a href="#htmlelement-extensions"><span class="secno">5.4 </span>Extensions to <code>HTMLElement</code></a></li>
    <li><a href="#other-extensions"><span class="secno">5.5 </span>Extensions to Other Interfaces</a></li>
-   <li><a href="#obsolete-apis"><span class="secno">5.6 </span>Obsolete APIs</a></ul></li>
+   <li><a href="#obsolete-apis"><span class="secno">5.6 </span>Obsolete APIs</a></ol></li>
  <li><a class="no-num" href="#acknowledgments">Acknowledgments</a></li>
- <li><a class="no-num" href="#references">References</a></ul>
+ <li><a class="no-num" href="#references">References</a></ol>
 <!--end-toc-->
 
 
     <h2 id="introduction"><span class="secno">1 </span>Introduction</h2>
 
     <h3 id="scope"><span class="secno">1.1 </span>Scope of This Document</h3>
-
-    
 
     <p class="not-whatwg">This document covers the W3C HTML5 specification.
     It does not cover the W3C HTML5.1 specification or the WHATWG HTML standard.
@@ -248,9 +231,6 @@
     <p>Since HTML has separate conformance requirements for Web developers
     and user agents there is no longer a need for marking features
     "deprecated".</p>
-
-
-    
 
 
     <h2 id="syntax"><span class="secno">2 </span>Syntax</h2>
@@ -432,7 +412,7 @@
 
   <ul>
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-section-element">section</a></code>
-      represents a generic document or application section. It  <span class="not-whatwg" title="">should</span> be
+      represents a generic document or application section. It <span class="not-whatwg" title="">should</span> be
       <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#headings-and-sections" title="Headings and sections">used together</a>
       with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h1-element">h1</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h2-element">h2</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h3-element">h3</a></code>,
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h4-element">h4</a></code>, <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h5-element">h5</a></code>, and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-h6-element">h6</a></code> elements to
@@ -443,14 +423,11 @@
       blog entry or newspaper article.</li>
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-main-element">main</a></code>
-      
       <span class="not-whatwg" title="">represents the main content of the body of a document or application.</span></li>
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-aside-element">aside</a></code>
       represents a piece of content that is only slightly related to the
       rest of the page.</li>
-
-      
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#the-header-element">header</a></code>
       represents a group of introductory or navigational aids.</li>
@@ -525,10 +502,6 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-canvas-element">canvas</a></code> is used for rendering
       dynamic bitmap graphics on the fly, such as graphs or games.
-
-      </li>
-
-      
 
       <li>
         <p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-datalist-element">datalist</a></code>
@@ -723,8 +696,6 @@
       <li><p>The <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#the-img-element">img</a></code> element has a new attribute called
       <code class="external" title="attr-img-crossorigin"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be
       read with the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting.html#the-canvas-element">canvas</a></code> API.
-      
-
       </ul>
 
     <p>Several attributes from HTML4 now apply to all elements. These
@@ -770,7 +741,7 @@
     instance, the <code class="external" title="handler-onplay"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-onplay">onplay</a></code>
     event handler attribute for the <code class="external" title="event-media-play"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#event-media-play">play</a></code> event which is used by the API for the
     media elements (<code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#the-video-element">video</a></code> and <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#the-audio-element">audio</a></code>).
-    The specification has an <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/indices.html#events-2">index of all events</a>.</p>
+    The specification has an <a href="//www.whatwg.org/specs/web-apps/current-work/multipage/indices.html#events-2">index of all events</a>.</p>
 
 
     <h3 id="changed-elements"><span class="secno">3.3 </span>Changed Elements</h3>
@@ -924,8 +895,6 @@
       The caption element represents the title of the table that is its parent,
       if it has a parent and that is a table element.
       -->
-
-      
 
       <!--
       CODE
@@ -1571,7 +1540,7 @@
     <ul>
       <li><p>The <code class="external" title="attr-img-alt"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#attr-img-alt">alt</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#the-img-element">img</a></code>
       has more elaborate requirements, and in some cases can also be omitted.
-      For details, see <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#alt">the specification</a>.
+      For details, see <a href="//www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#alt">the specification</a>.
 
       <li><p>The <code class="external" title="attr-input-accept"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-accept">accept</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-input-element">input</a></code> now allows the values
       <code>audio/*</code>, <code>video/*</code> and <code>image/*</code>.
@@ -1770,8 +1739,7 @@
       <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tables.html#the-td-element">td</a></code>.
 
       <li><p><code class="external" title="attr-table-summary"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-table-summary">summary</a></code> attribute
-      
-      on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tables.html#the-table-element">table</a></code>.
+      <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tables.html#the-table-element">table</a></code>.
 
       <li><p><code class="external" title="attr-form-accept"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#attr-form-accept">accept</a></code> attribute on <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-form-element">form</a></code>.
 
@@ -2017,8 +1985,6 @@
       <li><p>Editing API in combination with a new global <code class="external" title="attr-contenteditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#attr-contenteditable">contenteditable</a></code>
       attribute.</li>
 
-      
-
       <li><p>An API that exposes the components of the document's URL and allows
       scripts to navigate, redirect and reload (the <code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#location">Location</a></code> interface).
 
@@ -2138,9 +2104,7 @@
       <code class="external" title="dom-hidden"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#dom-hidden">hidden</a></code>,
       <code class="external" title="dom-tabIndex"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#dom-tabindex">tabIndex</a></code>,
       <code class="external" title="dom-accessKey"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#dom-accesskey">accessKey</a></code>,
-      
       <code class="external" title="dom-contentEditable"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#dom-contenteditable">contentEditable</a></code>,
-      
       <code class="external" title="dom-spellcheck"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interaction.html#dom-spellcheck">spellcheck</a></code> and
       <code class="external" title="dom-style"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-style">style</a></code> reflect content
       attributes.
@@ -2268,8 +2232,6 @@
 
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tables.html#htmltableelement">HTMLTableElement</a></code> now has the
       members <code class="external" title="dom-table-createTBody"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tables.html#dom-table-createtbody">createTBody()</a></code>
-      .
-
       <li><p><code class="external"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#htmliframeelement">HTMLIFrameElement</a></code> now has the
       member <code class="external" title="dom-iframe-contentWindow"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html#dom-iframe-contentwindow">contentWindow</a></code>.
 

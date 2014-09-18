@@ -6,7 +6,6 @@
     <title class=not-whatwg>HTML5 Differences from HTML4</title>
     <link class=not-w3c rel=icon href=//resources.whatwg.org/logo-differences.svg>
     <style class=not-whatwg>
-      #w3c-doctype { font-size:140%; background-color:white; color:#005A9C; margin-bottom: 0.83em; margin-top: 0.83em; }
       @media screen { code { color: #D93B00; } code :link, code :visited { color: inherit; } }
       pre, code { font-size: inherit; font-family: monospace; font-variant: normal; }
       pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
@@ -24,6 +23,10 @@
      Editor's checklist for stuff to fix for publication:
 
        * Previous Versions links
+       * a new paragraph is now required in the boilerplate at the end of the SotD (sigh)
+       * you can't fix links by replacing the WHATWG path with the W3C path, many of the files don't have the same names. I fixed this with some application of brute force.
+       * what's more, some links don't have any equivalent in the PR since features were dropped there.
+       * your substitution resulted in the W3C PR being the link for WHATWG HTML — I found that amusing *almost* to the point of leaving it in
 
     -->
     <div class="head">
@@ -37,7 +40,7 @@
 
       <div class=not-whatwg>
         <h1>HTML5 Differences from HTML4</h1>
-        <p id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</p>
+        <h2 class="no-num no-toc" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
       </div>
 
       <dl>
@@ -2672,6 +2675,7 @@
     Philip J&auml;genstedt,
     Philip Taylor,
     Randy Peterman,
+    Robin Berjon,
     Steve Faulkner,
     Toby Inkster,
     Xaxio Brandish,

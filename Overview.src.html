@@ -741,7 +741,7 @@
       element has a new <code data-anolis-spec=html title=attr-button-menu>menu</code>
       attribute, used together with popup menus.
 
-      <li><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
       attribute which can be used to enable scoped style sheets. Style rules
       within such a <code data-anolis-spec=html>style</code> element only apply to the local tree.
 
@@ -762,8 +762,9 @@
       <code data-anolis-spec=html title=attr-ol-reversed>reversed</code>. When present, it indicates that the list order
       is descending.
 
-      <li><p>The <code data-anolis-spec=html>iframe</code> element has three new attributes called
-      <code data-anolis-spec=html title=attr-iframe-sandbox>sandbox</code>, <code data-anolis-spec=html title=attr-iframe-seamless>seamless</code>, and <code data-anolis-spec=html title=attr-iframe-srcdoc>srcdoc</code>
+      <li><p>The <code data-anolis-spec=html>iframe</code> element has new attributes called
+      <code data-anolis-spec=html title=attr-iframe-sandbox>sandbox</code><span class="not-w3c">, <code data-anolis-spec=html title=attr-iframe-seamless>seamless</code>,</span>
+      and <code data-anolis-spec=html title=attr-iframe-srcdoc>srcdoc</code>
       which allow for sandboxing content, e.g. blog comments.</p></li>
 
       <li><p>The <code data-anolis-spec=html>object</code> element has a new attribute called <code data-anolis-spec=html title=attr-object-typemustmatch>typemustmatch</code> which allows safer embedding of external resources.
@@ -1334,7 +1335,7 @@
       an image map. The element represents its children.
       -->
 
-      <li><p>The <code data-anolis-spec=html>menu</code> element is redefined to
+      <li class="not-w3c"><p>The <code data-anolis-spec=html>menu</code> element is redefined to
       be useful for toolbars and popup menus.</p></li>
 
       <!--
@@ -1846,13 +1847,14 @@
     on what you can use instead.</p>
 
     <ul>
-      <li><p><code data-anolis-spec=html title=attr-a-rev>rev</code> and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
+      <li><p><code data-anolis-spec=html title=attr-a-rev class="not-w3c">rev</code><code title class="not-whatwg">rev</code>
+      and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
       <code data-anolis-spec=html>link</code> and <code data-anolis-spec=html>a</code>.
 
       <li><p><code data-anolis-spec=html title=attr-a-shape>shape</code> and <code data-anolis-spec=html title=attr-a-coords>coords</code> attributes on
       <code data-anolis-spec=html>a</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-iframe-longdesc>longdesc</code> attribute on
+      <li><p><code data-anolis-spec=html title=attr-iframe-longdesc class="not-w3c">longdesc</code><code title class="not-whatwg">longdesc</code> attribute on
       <span title class="not-w3c"><code data-anolis-spec=html>img</code> and</span>
       <code data-anolis-spec=html>iframe</code>.
 
@@ -1879,7 +1881,7 @@
       <li><p><code data-anolis-spec=html title=attr-tdth-axis>axis</code>
       attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-td-abbr>abbr</code> and
+      <li><p><code data-anolis-spec=html title=attr-td-abbr class="not-w3c">abbr</code><code title class="not-whatwg">abbr</code> and
       <code data-anolis-spec=html title=attr-td-scope>scope</code> attributes on
       <code data-anolis-spec=html>td</code>.
 
@@ -1926,7 +1928,8 @@
 
       <li><p><code data-anolis-spec=html title=attr-br-clear>clear</code> attribute on <code data-anolis-spec=html>br</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>, <code data-anolis-spec=html>menu</code>,
+      <li><p><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>,
+      <span class="not-w3c"><code data-anolis-spec=html>menu</code>,</span>
       <code data-anolis-spec=html>ol</code> and <code data-anolis-spec=html>ul</code>.
 
       <li><p><code data-anolis-spec=html title=attr-table-frame>frame</code> attribute on <code data-anolis-spec=html>table</code>.
@@ -2209,8 +2212,8 @@
       <li><p>An API to prompt the user (<code data-anolis-spec=html
       title=dom-alert>alert()</code>, <code data-anolis-spec=html
       title=dom-confirm>confirm()</code>, <code data-anolis-spec=html
-      title=dom-prompt>prompt()</code>, <code data-anolis-spec=html
-      title=dom-showmodaldialog>showModalDialog()</code>).
+      title=dom-prompt>prompt()</code><span class="not-w3c">, <code data-anolis-spec=html
+      title=dom-showmodaldialog>showModalDialog()</code></span>).
 
       <li><p>An API for printing the document (<code data-anolis-spec=html
       title=dom-print>print()</code>).
@@ -2342,8 +2345,8 @@
       <code data-anolis-spec=html title=dom-document-head>head</code>, <code
       data-anolis-spec=html title=dom-document-embeds>embeds</code>, <code
       data-anolis-spec=html title=dom-document-plugins>plugins</code>, <code
-      data-anolis-spec=html title=dom-document-scripts>scripts</code>, <code
-      data-anolis-spec=html title=dom-document-commands>commands</code>, and a
+      data-anolis-spec=html title=dom-document-scripts>scripts</code>, <span class="not-w3c"><code
+      data-anolis-spec=html title=dom-document-commands>commands</code>,</span> and a
       generic name getter, to access various parts of the DOM tree.
 
       <li class="not-w3c"><p><code data-anolis-spec=html
@@ -2438,9 +2441,9 @@
       title=dom-isContentEditable>isContentEditable</code> returns true if the
       element is editable.
 
-      <li><p><code data-anolis-spec=html title=dom-forcespellcheck>forceSpellCheck()</code> causes the user agent to check spelling of an element.
+      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-forcespellcheck>forceSpellCheck()</code> causes the user agent to check spelling of an element.
 
-      <li><p><code data-anolis-spec=html
+      <li class="not-w3c"><p><code data-anolis-spec=html
       title=dom-command-ro-commandType>commandType</code>, <code data-anolis-spec=html
       title=dom-command-ro-commandLabel>commandLabel</code>, <code data-anolis-spec=html
       title=dom-command-ro-commandIcon>commandIcon</code>, <code data-anolis-spec=html
@@ -2490,9 +2493,9 @@
 
       <li><p><code data-anolis-spec=html>HTMLFormElement</code> now has a named
       getter and an indexed getter,
-      as well as the <code data-anolis-spec=html title=dom-form-checkvalidity>checkValidity()</code>,
+      as well as the <code data-anolis-spec=html title=dom-form-checkvalidity>checkValidity()</code><span class="not-w3c">,
       <code data-anolis-spec=html title=dom-form-reportvalidity>reportValidity()</code> and
-      <code data-anolis-spec=html title=dom-form-requestautocomplete>requestAutocomplete()</code> methods.
+      <code data-anolis-spec=html title=dom-form-requestautocomplete>requestAutocomplete()</code> methods</span><span class="not-whatwg"> method</span>.
 
       <li><p><code data-anolis-spec=html>HTMLSelectElement</code> now has a
       getter, <code data-anolis-spec=html title=dom-select-item>item()</code>

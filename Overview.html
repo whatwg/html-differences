@@ -38,7 +38,7 @@
 
       <div class="not-whatwg">
         <h1>HTML5 Differences from HTML4</h1>
-        <h2 class="no-num no-toc" id="w3c-doctype">Editor's Draft 15 October 2014</h2>
+        <h2 class="no-num no-toc" id="w3c-doctype">Editor's Draft 28 October 2014</h2>
       </div>
 
       <dl>
@@ -108,7 +108,7 @@
     found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
     at http://www.w3.org/TR/.</i></p>
 
-    <p>This is the 15 October 2014 Editor's Draft produced by the
+    <p>This is the 28 October 2014 Editor's Draft produced by the
     <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
     <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
     Working Group intends to publish this document as a
@@ -696,10 +696,6 @@
       <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> element also has the new
       <code class="external" title="attr-input-minlength"><a href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-minlength">minlength</a></code> attribute.
 
-      <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">style</a></code> element has a new <code class="external" title="attr-style-scoped"><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-style-scoped">scoped</a></code>
-      attribute which can be used to enable scoped style sheets. Style rules
-      within such a <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">style</a></code> element only apply to the local tree.
-
       <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/scripting.html#the-script-element">script</a></code> element has a new attribute called
       <code class="external" title="attr-script-async"><a href="https://html.spec.whatwg.org/multipage/scripting.html#attr-script-async">async</a></code> that influences script loading and execution.
 
@@ -717,8 +713,9 @@
       <code class="external" title="attr-ol-reversed"><a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-ol-reversed">reversed</a></code>. When present, it indicates that the list order
       is descending.
 
-      <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code> element has three new attributes called
-      <code class="external" title="attr-iframe-sandbox"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-sandbox">sandbox</a></code>, <code class="external" title="attr-iframe-seamless"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-seamless">seamless</a></code>, and <code class="external" title="attr-iframe-srcdoc"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc">srcdoc</a></code>
+      <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code> element has new attributes called
+      <code class="external" title="attr-iframe-sandbox"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-sandbox">sandbox</a></code>
+      and <code class="external" title="attr-iframe-srcdoc"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc">srcdoc</a></code>
       which allow for sandboxing content, e.g. blog comments.</li>
 
       <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> element has a new attribute called <code class="external" title="attr-object-typemustmatch"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-object-typemustmatch">typemustmatch</a></code> which allows safer embedding of external resources.
@@ -1255,8 +1252,7 @@
       an image map. The element represents its children.
       -->
 
-      <li><p>The <code class="external"><a href="https://html.spec.whatwg.org/multipage/forms.html#the-menu-element">menu</a></code> element is redefined to
-      be useful for toolbars and popup menus.</li>
+      
 
       <!--
       META
@@ -1736,13 +1732,14 @@
     on what you can use instead.</p>
 
     <ul>
-      <li><p><code class="external" title="attr-a-rev"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-rev">rev</a></code> and <code class="external" title="attr-a-charset"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-charset">charset</a></code> attributes on
+      <li><p><code class="not-whatwg" title="">rev</code>
+      and <code class="external" title="attr-a-charset"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-charset">charset</a></code> attributes on
       <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">link</a></code> and <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-a-element">a</a></code>.
 
       <li><p><code class="external" title="attr-a-shape"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-shape">shape</a></code> and <code class="external" title="attr-a-coords"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-coords">coords</a></code> attributes on
       <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-a-element">a</a></code>.
 
-      <li><p><code class="external" title="attr-iframe-longdesc"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-longdesc">longdesc</a></code> attribute on
+      <li><p><code class="not-whatwg" title="">longdesc</code> attribute on
       
       <code class="external"><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>.
 
@@ -1769,7 +1766,7 @@
       <li><p><code class="external" title="attr-tdth-axis"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-axis">axis</a></code>
       attribute on <code class="external"><a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code> and <code class="external"><a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>.
 
-      <li><p><code class="external" title="attr-td-abbr"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-td-abbr">abbr</a></code> and
+      <li><p><code class="not-whatwg" title="">abbr</code> and
       <code class="external" title="attr-td-scope"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-td-scope">scope</a></code> attributes on
       <code class="external"><a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>.
 
@@ -1816,7 +1813,8 @@
 
       <li><p><code class="external" title="attr-br-clear"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-br-clear">clear</a></code> attribute on <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-br-element">br</a></code>.
 
-      <li><p><code class="external" title="attr-dl-compact"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-dl-compact">compact</a></code> attribute on <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code>, <code class="external"><a href="https://html.spec.whatwg.org/multipage/forms.html#the-menu-element">menu</a></code>,
+      <li><p><code class="external" title="attr-dl-compact"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-dl-compact">compact</a></code> attribute on <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code>,
+      
       <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-ol-element">ol</a></code> and <code class="external"><a href="https://html.spec.whatwg.org/multipage/semantics.html#the-ul-element">ul</a></code>.
 
       <li><p><code class="external" title="attr-table-frame"><a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-frame">frame</a></code> attribute on <code class="external"><a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>.
@@ -2035,7 +2033,7 @@
 
       <li><p>An API to schedule timer-based callbacks (<code class="external" title="dom-windowtimers-settimeout"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-windowtimers-settimeout">setTimeout()</a></code> and <code class="external" title="dom-windowtimers-setinterval"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-windowtimers-setinterval">setInterval()</a></code>).
 
-      <li><p>An API to prompt the user (<code class="external" title="dom-alert"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-alert">alert()</a></code>, <code class="external" title="dom-confirm"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-confirm">confirm()</a></code>, <code class="external" title="dom-prompt"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-prompt">prompt()</a></code>, <code class="external" title="dom-showmodaldialog"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-showmodaldialog">showModalDialog()</a></code>).
+      <li><p>An API to prompt the user (<code class="external" title="dom-alert"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-alert">alert()</a></code>, <code class="external" title="dom-confirm"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-confirm">confirm()</a></code>, <code class="external" title="dom-prompt"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-prompt">prompt()</a></code>).
 
       <li><p>An API for printing the document (<code class="external" title="dom-print"><a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-print">print()</a></code>).
 
@@ -2111,7 +2109,7 @@
       help resource metadata management.
 
       <li><p><code class="external" title="dom-document-dir"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-dir">dir</a></code>,
-      <code class="external" title="dom-document-head"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-head">head</a></code>, <code class="external" title="dom-document-embeds"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-embeds">embeds</a></code>, <code class="external" title="dom-document-plugins"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-plugins">plugins</a></code>, <code class="external" title="dom-document-scripts"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-scripts">scripts</a></code>, <code class="external" title="dom-document-commands"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-document-commands">commands</a></code>, and a
+      <code class="external" title="dom-document-head"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-head">head</a></code>, <code class="external" title="dom-document-embeds"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-embeds">embeds</a></code>, <code class="external" title="dom-document-plugins"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-plugins">plugins</a></code>, <code class="external" title="dom-document-scripts"><a href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-scripts">scripts</a></code>,  and a
       generic name getter, to access various parts of the DOM tree.
 
       <li><p><code class="external" title="dom-document-activeElement"><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-activeelement">activeElement</a></code> and <code class="external" title="dom-document-hasFocus"><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-hasfocus">hasFocus</a></code> to
@@ -2165,11 +2163,6 @@
       <li><p><code class="external" title="dom-isContentEditable"><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-iscontenteditable">isContentEditable</a></code> returns true if the
       element is editable.
 
-      <li><p><code class="external" title="dom-forcespellcheck"><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-forcespellcheck">forceSpellCheck()</a></code> causes the user agent to check spelling of an element.
-
-      <li><p><code class="external" title="dom-command-ro-commandType"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commandtype">commandType</a></code>, <code class="external" title="dom-command-ro-commandLabel"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commandlabel">commandLabel</a></code>, <code class="external" title="dom-command-ro-commandIcon"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commandicon">commandIcon</a></code>, <code class="external" title="dom-command-ro-commandHidden"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commandhidden">commandHidden</a></code>, <code class="external" title="dom-command-ro-commandDisabled"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commanddisabled">commandDisabled</a></code> and <code class="external" title="dom-command-ro-commandChecked"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-command-ro-commandchecked">commandChecked</a></code> is
-      part of the command API.
-
       <li><p>All event handler IDL attributes.
     </ul>
 
@@ -2204,9 +2197,7 @@
 
       <li><p><code class="external"><a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">HTMLFormElement</a></code> now has a named
       getter and an indexed getter,
-      as well as the <code class="external" title="dom-form-checkvalidity"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-checkvalidity">checkValidity()</a></code>,
-      <code class="external" title="dom-form-reportvalidity"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-reportvalidity">reportValidity()</a></code> and
-      <code class="external" title="dom-form-requestautocomplete"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-requestautocomplete">requestAutocomplete()</a></code> methods.
+      as well as the <code class="external" title="dom-form-checkvalidity"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-checkvalidity">checkValidity()</a></code><span class="not-whatwg"> method</span>.
 
       <li><p><code class="external"><a href="https://html.spec.whatwg.org/multipage/forms.html#htmlselectelement">HTMLSelectElement</a></code> now has a
       getter, <code class="external" title="dom-select-item"><a href="https://html.spec.whatwg.org/multipage/forms.html#dom-select-item">item()</a></code>

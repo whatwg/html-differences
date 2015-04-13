@@ -2,84 +2,42 @@
 <html lang="en-US">
   <head>
     <meta charset=utf-8>
-    <title class=not-w3c>Differences from HTML4</title>
-    <title class=not-whatwg>HTML5 Differences from HTML4</title>
-    <link class=not-w3c rel=icon href=//resources.whatwg.org/logo-differences.svg>
-    <style class=not-whatwg>
-      @media screen { code { color: #D93B00; } code :link, code :visited { color: inherit; } }
-      pre, code { font-size: inherit; font-family: monospace; font-variant: normal; }
-      pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
-      .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
-    </style>
+    <title>Differences from HTML4</title>
+    <link rel=icon href=//resources.whatwg.org/logo-differences.svg>
     <style>
       .bad { color: gray; }
     </style>
-    <link class=not-whatwg rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/W3C-[STATUS]">
-    <link class=not-w3c rel="stylesheet" href="https://www.whatwg.org/style/specification">
+    <link rel="stylesheet" href="https://www.whatwg.org/style/specification">
   </head>
   <body>
-    <!--
-
-     Editor's checklist for stuff to fix for publication:
-
-       * Previous Versions links
-
-    -->
     <div class="head">
-      <div class=not-whatwg><!--logo--></div>
-      <p class=not-w3c><a class="logo" href="https://www.whatwg.org/"><img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-differences.svg" width="100"></a></p>
+      <p><a class="logo" href="https://www.whatwg.org/"><img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-differences.svg" width="100"></a></p>
 
-      <hgroup class=not-w3c>
+      <hgroup>
         <h1>Differences from HTML4</h1>
         <h2 class="no-num no-toc">Living Document &mdash; Last Updated [DATE: 1 August 1986]</h2>
       </hgroup>
 
-      <div class=not-whatwg>
-        <h1>HTML5 Differences from HTML4</h1>
-        <h2 class="no-num no-toc" id="w3c-doctype">[LONGSTATUS] [DATE: 1 August 1986]</h2>
-      </div>
-
       <dl>
         <dt>This Version:</dt>
-        <dd class="not-draft not-whatwg"><a href="[VERSION]">[VERSION]</a></dd>
-        <dd class="not-tr not-whatwg"><a href="https://rawgit.com/whatwg/html-differences/master/Overview.html">https://rawgit.com/whatwg/html-differences/master/Overview.html</a>
-        <dd class="not-w3c"><a href="https://html-differences.whatwg.org/">https://html-differences.whatwg.org/</a>
+        <dd><a href="https://html-differences.whatwg.org/">https://html-differences.whatwg.org/</a>
 
-        <dt class=not-draft>Latest Version:</dt>
-        <dd class=not-draft><a href="[LATEST]">[LATEST]</a></dd>
+        <dt>Latest Version:</dt>
+        <dd><a href="[LATEST]">[LATEST]</a></dd>
 
-        <dt class=not-draft>Latest Editor's Draft:</dt>
-        <dd class=not-draft><a href="https://rawgit.com/whatwg/html-differences/master/Overview.html">https://rawgit.com/whatwg/html-differences/master/Overview.html</a></dd>
+        <dt>Latest Editor's Draft:</dt>
+        <dd><a href="https://rawgit.com/whatwg/html-differences/master/Overview.html">https://rawgit.com/whatwg/html-differences/master/Overview.html</a></dd>
 
         <dt>Participate:</dt>
-        <dd class=not-w3c>Send feedback to
+        <dd>Send feedback to
          <a href="https://www.whatwg.org/mailing-list">whatwg@whatwg.org</a>
          (<a href=https://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/>archives</a>)
-        <dd class="not-w3c"><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=WHATWG&component=HTML%20Differences">File a bug</a>
+        <dd><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=WHATWG&component=HTML%20Differences">File a bug</a>
          (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=WHATWG&component=HTML%20Differences&amp;resolution=---">open bugs</a>)
-        <dd class="not-whatwg"><a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4">File a bug</a>
-         (<a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=HTML%20WG&component=HTML5%20differences%20from%20HTML4&amp;resolution=---">open bugs</a>)
-        <dd class=not-w3c><a href="https://wiki.whatwg.org/wiki/IRC">IRC: #whatwg on Freenode</a>
+        <dd><a href="https://wiki.whatwg.org/wiki/IRC">IRC: #whatwg on Freenode</a>
 
         <dt>Version History:
         <dd><a href="https://github.com/whatwg/html-differences/commits">https://github.com/whatwg/html-differences/commits</a>
-
-        <dt class=not-whatwg>Previous Versions:</dt>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2014/WD-html5-diff-20140918/">http://www.w3.org/TR/2014/WD-html5-diff-20140918/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2013/WD-html5-diff-20130528/">http://www.w3.org/TR/2013/WD-html5-diff-20130528/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2012/WD-html5-diff-20121025/">http://www.w3.org/TR/2012/WD-html5-diff-20121025/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/">http://www.w3.org/TR/2012/WD-html5-diff-20120329/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110525/">http://www.w3.org/TR/2011/WD-html5-diff-20110525/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110405/">http://www.w3.org/TR/2011/WD-html5-diff-20110405/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2011/WD-html5-diff-20110113/">http://www.w3.org/TR/2011/WD-html5-diff-20110113/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20101019/">http://www.w3.org/TR/2010/WD-html5-diff-20101019/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100624/">http://www.w3.org/TR/2010/WD-html5-diff-20100624/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2010/WD-html5-diff-20100304/">http://www.w3.org/TR/2010/WD-html5-diff-20100304/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090825/">http://www.w3.org/TR/2009/WD-html5-diff-20090825/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090423/">http://www.w3.org/TR/2009/WD-html5-diff-20090423/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2009/WD-html5-diff-20090212/">http://www.w3.org/TR/2009/WD-html5-diff-20090212/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080610/">http://www.w3.org/TR/2008/WD-html5-diff-20080610/</a></dd>
-        <dd class=not-whatwg><a href="http://www.w3.org/TR/2008/WD-html5-diff-20080122/">http://www.w3.org/TR/2008/WD-html5-diff-20080122/</a></dd>
 
         <dt>Editor:</dt>
         <dd>Simon Pieters
@@ -90,11 +48,9 @@
         &lt;<a href="mailto:annevk@annevk.nl">annevk@annevk.nl</a>></dd>
       </dl>
 
-      <script class=not-tr src=//resources.whatwg.org/file-bug.js async></script>
+      <script src=//resources.whatwg.org/file-bug.js async></script>
 
-      <div class="not-whatwg"><!--copyright--></div>
-
-      <p class="copyright not-w3c"><a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/80x15.png" alt="CC0"></a>
+      <p class="copyright"><a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/80x15.png" alt="CC0"></a>
       To the extent possible under law, the editors have waived all copyright and
       related or neighboring rights to this work. In addition, as of
       [DATE: 01 Jan 1901], the editors have made this specification available
@@ -109,55 +65,7 @@
 
     <h2 class="no-num no-toc" id="abstract">Abstract</h2>
 
-    <p class="not-w3c">"Differences from HTML4" describes the differences of the HTML specification from those of HTML4.</p>
-    <p class="not-whatwg">"HTML5 Differences from HTML4" describes the differences of the HTML5 specification from those of HTML4.</p>
-
-
-    <div class="not-whatwg">
-    <h2 class="no-num no-toc" id="sotd">Status of This Document</h2>
-
-    <p><i>This section describes the status of this document at the time of its
-    publication. Other documents may supersede this document. A list of current
-    W3C publications and the latest revision of this technical report can be
-    found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a>
-    at http://www.w3.org/TR/.</i></p>
-
-    <p>This is the [DATE: 1 August 1986] [LONGSTATUS] produced by the
-    <a href="http://www.w3.org/html/wg/">HTML Working Group</a>, part of the
-    <a href="http://www.w3.org/MarkUp/Activity">HTML Activity</a>. The
-    Working Group intends to publish this document as a
-    <a href="http://www.w3.org/2005/10/Process-20051014/#WGNote">Working
-    Group Note</a>.
-    The appropriate forum for comments is
-    <a href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&amp;component=HTML5%20differences%20from%20HTML4">W3C
-    Bugzilla</a>. (<a href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</a>,
-    a mailing list with a
-    <a href="http://lists.w3.org/Archives/Public/public-html-comments/" title="Archive for HTML comments mailing-list">public
-    archive</a>, is no longer used for tracking comments.)</p>
-
-    <p>Publication as a [LONGSTATUS] does not imply endorsement by the
-    W3C Membership. This is a draft document and may be updated, replaced or
-    obsoleted by other documents at any time. It is inappropriate to cite
-    this document as other than work in progress.</p>
-
-    <p>This document was produced by a group operating under the
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February
-    2004 W3C Patent Policy</a>. W3C maintains a
-    <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/40318/status">public
-    list of any patent disclosures</a> made in connection with the deliverables
-    of the group; that page also includes instructions for disclosing a patent.
-    An individual who has actual knowledge of a patent which the individual
-    believes contains
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
-    Claim(s)</a> must disclose the information in accordance with
-    <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
-    6 of the W3C Patent Policy</a>.</p>
-
-    <p>
-      This document is governed by the <a id="w3c_process_revision"
-      href="http://www.w3.org/2005/10/Process-20051014/">14 October 2005 W3C Process Document</a>.
-    </p>
-    </div>
+    <p>"Differences from HTML4" describes the differences of the HTML specification from those of HTML4.</p>
 
     <h2 class="no-num no-toc" id="toc">Table of Contents</h2>
 
@@ -168,17 +76,11 @@
 
     <h3 id="scope">Scope of This Document</h3>
 
-    <p class="not-w3c">This document covers the WHATWG HTML standard.
+    <p>This document covers the WHATWG HTML standard.
     It does not cover the W3C HTML5 or W3C HTML5.1 specifications.
     <span data-anolis-ref>HTML</span>
     <span data-anolis-ref>HTML5</span>
     <span data-anolis-ref>HTML5NIGHTLY</span></p>
-
-    <p class="not-whatwg">This document covers the W3C HTML5 specification.
-    It does not cover the W3C HTML5.1 specification or the WHATWG HTML standard.
-    <span data-anolis-ref>HTML5</span>
-    <span data-anolis-ref>HTML5NIGHTLY</span>
-    <span data-anolis-ref>HTML</span></p>
 
     <h3 id="history">History of HTML</h3>
 
@@ -215,9 +117,7 @@
 
     <h3 id="open-issues">Open Issues</h3>
 
-    <p class="not-w3c">See <a href="https://www.w3.org/Bugs/Public/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=HTML&product=WHATWG">open issues in Bugzilla</a>. The specification also has annotation boxes in the margin which can link to bugs.
-
-    <p class="not-whatwg">See the "Status of This Document" section of the HTML5 specification.
+    <p>See <a href="https://www.w3.org/Bugs/Public/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=HTML&product=WHATWG">open issues in Bugzilla</a>. The specification also has annotation boxes in the margin which can link to bugs.
 
 
     <h3 id="backward-compatibility">Backward Compatibility</h3>
@@ -243,7 +143,7 @@
     "deprecated".</p>
 
 
-    <div class="not-w3c">
+    <div>
     <h3 id="development-model">Development Model</h3>
 
     <p>The HTML4 specification reached Recommendation status before it was completely
@@ -437,7 +337,7 @@
 
   <ul>
       <li><p><code data-anolis-spec=html>section</code>
-      represents a generic document or application section. It <span title class=not-w3c>can</span> <span title class=not-whatwg>should</span> be
+      represents a generic document or application section. It can be
       <span data-anolis-spec=html title="Headings and sections">used together</span>
       with the <code data-anolis-spec=html>h1</code>, <code data-anolis-spec=html>h2</code>, <code data-anolis-spec=html>h3</code>,
       <code data-anolis-spec=html>h4</code>, <code data-anolis-spec=html>h5</code>, and <code data-anolis-spec=html>h6</code> elements to
@@ -448,15 +348,14 @@
       blog entry or newspaper article.</p></li>
 
       <li><p><code data-anolis-spec=html>main</code>
-      <span title class=not-w3c>can be used as a container for the dominant contents of another element, such as
-      the main content of the page.</span>
-      <span title class=not-whatwg>represents the main content of the body of a document or application.</span></p></li>
+      can be used as a container for the dominant contents of another element, such as
+      the main content of the page.</p></li>
 
       <li><p><code data-anolis-spec=html>aside</code>
       represents a piece of content that is only slightly related to the
       rest of the page.</p></li>
 
-      <li class="not-w3c"><p><code data-anolis-spec=html>hgroup</code>
+      <li><p><code data-anolis-spec=html>hgroup</code>
       represents the header of a section.</p></li>
 
       <li><p><code data-anolis-spec=html>header</code>
@@ -518,10 +417,10 @@
       <li><p><code data-anolis-spec=html>time</code> represents a date
       and/or time.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html>data</code>
+      <li><p><code data-anolis-spec=html>data</code>
       allows content to be annotated with a machine-readable value.
 
-      <li class=not-w3c><p><code data-anolis-spec=html>dialog</code> for showing a dialog.
+      <li><p><code data-anolis-spec=html>dialog</code> for showing a dialog.
 
       <li><p><code data-anolis-spec=html>ruby</code>,
       <code data-anolis-spec=html>rt</code>, and
@@ -538,10 +437,10 @@
       <li><p><code data-anolis-spec=html>canvas</code> is used for rendering
       dynamic bitmap graphics on the fly, such as graphs or games.
 
-      <li class=not-w3c><p><code data-anolis-spec=html>menuitem</code>
+      <li><p><code data-anolis-spec=html>menuitem</code>
       represents a command the user can invoke from a popup menu.</p></li>
 
-      <li class=not-w3c><p><code data-anolis-spec=html>details</code>
+      <li><p><code data-anolis-spec=html>details</code>
       represents additional information or controls which the user can
       obtain on demand. The
       <code data-anolis-spec=html>summary</code>
@@ -581,17 +480,17 @@
 
       <li><code data-anolis-spec=html title=attr-input-type-email>email</code>
 
-      <li class=not-w3c><code data-anolis-spec=html title=attr-input-type-datetime>datetime</code>
+      <li><code data-anolis-spec=html title=attr-input-type-datetime>datetime</code>
 
       <li><code data-anolis-spec=html title=attr-input-type-date>date</code>
 
-      <li class=not-w3c><code data-anolis-spec=html title=attr-input-type-month>month</code>
+      <li><code data-anolis-spec=html title=attr-input-type-month>month</code>
 
-      <li class=not-w3c><code data-anolis-spec=html title=attr-input-type-week>week</code>
+      <li><code data-anolis-spec=html title=attr-input-type-week>week</code>
 
       <li><code data-anolis-spec=html title=attr-input-type-time>time</code>
 
-      <li class=not-w3c><code data-anolis-spec=html title=attr-input-type-datetime-local>datetime-local</code>
+      <li><code data-anolis-spec=html title=attr-input-type-datetime-local>datetime-local</code>
 
       <li><code data-anolis-spec=html title=attr-input-type-number>number</code>
 
@@ -613,7 +512,7 @@
     that were already part of HTML4:</p>
 
     <ul>
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>a</code> and
+      <li><p>The <code data-anolis-spec=html>a</code> and
       <code data-anolis-spec=html>area</code> elements have the new
       <code data-anolis-spec=html title=attr-hyperlink-download>download</code> and
       <code data-anolis-spec=html title=attr-hyperlink-ping>ping</code> attributes.
@@ -631,7 +530,7 @@
       way to specify the
       <a href="#character-encoding">character encoding</a> for the document.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>table</code>
+      <li><p>The <code data-anolis-spec=html>table</code>
       element now has a <code data-anolis-spec=html title=attr-table-sortable>sortable</code> attribute and the
       <code data-anolis-spec=html>th</code> element has a
       <code data-anolis-spec=html title=attr-th-sorted>sorted</code> attribute, which provide a means to sort
@@ -729,21 +628,21 @@
       <li><p>The <code data-anolis-spec=html>input</code> element also has the new
       <code data-anolis-spec=html title=attr-input-minlength>minlength</code> attribute.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>input</code> and
+      <li><p>The <code data-anolis-spec=html>input</code> and
       <code data-anolis-spec=html>textarea</code> elements have an
       <code data-anolis-spec=html title="attr-fe-inputmode">inputmode</code> attribute.
 
-      <li class=not-w3c><p>The <code data-anolis-spec=html>menu</code> element has two new attributes:
+      <li><p>The <code data-anolis-spec=html>menu</code> element has two new attributes:
       <code data-anolis-spec=html title=attr-menu-type>type</code> and <code data-anolis-spec=html title=attr-menu-label>label</code>. They
       allow the element to transform into a menu as found in typical user
       interfaces as well as providing for context menus in conjunction with the
       global <code data-anolis-spec=html title=attr-contextmenu>contextmenu</code> attribute.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>button</code>
+      <li><p>The <code data-anolis-spec=html>button</code>
       element has a new <code data-anolis-spec=html title=attr-button-menu>menu</code>
       attribute, used together with popup menus.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
+      <li><p>The <code data-anolis-spec=html>style</code> element has a new <code data-anolis-spec=html title=attr-style-scoped>scoped</code>
       attribute which can be used to enable scoped style sheets. Style rules
       within such a <code data-anolis-spec=html>style</code> element only apply to the local tree.
 
@@ -765,7 +664,7 @@
       is descending.
 
       <li><p>The <code data-anolis-spec=html>iframe</code> element has new attributes called
-      <code data-anolis-spec=html title=attr-iframe-sandbox>sandbox</code><span class="not-w3c">, <code data-anolis-spec=html title=attr-iframe-seamless>seamless</code>,</span>
+      <code data-anolis-spec=html title=attr-iframe-sandbox>sandbox</code>, <code data-anolis-spec=html title=attr-iframe-seamless>seamless</code>,
       and <code data-anolis-spec=html title=attr-iframe-srcdoc>srcdoc</code>
       which allow for sandboxing content, e.g. blog comments.</p></li>
 
@@ -774,14 +673,14 @@
       <li><p>The <code data-anolis-spec=html>img</code> element has a new attribute called
       <code data-anolis-spec=html title=attr-img-crossorigin>crossorigin</code> to use CORS in the fetch and if it is successful, allows the image data to be
       read with the <code data-anolis-spec=html>canvas</code> API.
-      <span title class="not-w3c">The <code data-anolis-spec=html>script</code> element has a
+      The <code data-anolis-spec=html>script</code> element has a
       <code data-anolis-spec=html title=attr-script-crossorigin>crossorigin</code> attribute to allow script
       <span data-anolis-spec=html title="report the error">errors to be reported</span> to
       <code data-anolis-spec=html title=handler-onerror>onerror</code> with information about the error.
       The <code data-anolis-spec=html>link</code> element also has a
-      <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code> attribute.</span>
+      <code data-anolis-spec=html title=attr-link-crossorigin>crossorigin</code> attribute.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>img</code> element has new attributes called
+      <li><p>The <code data-anolis-spec=html>img</code> element has new attributes called
       <code data-anolis-spec=html title=attr-img-srcset>srcset</code>
       and <code data-anolis-spec=html title=attr-img-sizes>sizes</code>,
       along with the new elements <code data-anolis-spec=html>picture</code> and
@@ -806,7 +705,7 @@
       the element is an editable area. The user can change the contents of the
       element and manipulate the markup.
 
-      <li class=not-w3c><p>The <code data-anolis-spec=html
+      <li><p>The <code data-anolis-spec=html
       title=attr-contextmenu>contextmenu</code> attribute can be used to point
       to a context menu provided by the Web developer.
 
@@ -818,7 +717,7 @@
       the Web page or application itself. They are <em>not</em> intended for
       data to be consumed by other parties (e.g. user agents).
 
-      <li class=not-w3c><p>The <code data-anolis-spec=html
+      <li><p>The <code data-anolis-spec=html
       title=attr-draggable>draggable</code> and <code data-anolis-spec=html
       title=attr-dropzone>dropzone</code> attributes can be used together with
       the new drag &amp; drop API.
@@ -961,11 +860,6 @@
       source.
       -->
 
-      <li class="not-whatwg"><p>The <code data-anolis-spec=html>blockquote</code> element
-      still represents content that is quoted from another source but now
-      also allows including a citation in a <code data-anolis-spec=html>footer</code> or
-      <code data-anolis-spec=html>cite</code> element as well as inline changes such as annotations and abbreviations.</p></li>
-
       <!--
       BODY
       html4:
@@ -1004,7 +898,7 @@
       if it has a parent and that is a table element.
       -->
 
-      <li class=not-w3c><p>The <code data-anolis-spec=html>cite</code> element now solely
+      <li><p>The <code data-anolis-spec=html>cite</code> element now solely
       represents the title of a work (e.g. a book, a paper, an essay, a poem, a
       score, a song, a script, a film, a TV show, a game, a sculpture, a
       painting, a theatre production, a play, an opera, a musical, an
@@ -1337,7 +1231,7 @@
       an image map. The element represents its children.
       -->
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>menu</code> element is redefined to
+      <li><p>The <code data-anolis-spec=html>menu</code> element is redefined to
       be useful for toolbars and popup menus.</p></li>
 
       <!--
@@ -1671,12 +1565,7 @@
       attribute on <code data-anolis-spec=html>form</code> is no longer allowed
       to have an empty URL.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
-
-      <li class="not-whatwg"><p>The <code data-anolis-spec=html
-      title=attr-table-border>border</code> attribute on <code
-      data-anolis-spec=html>table</code> only allows the values "1" and the
-      empty string.
+      <li><p>The <code data-anolis-spec=html title=attr-fs-method>method</code> attribute has a new keyword <code data-anolis-spec=html title=attr-fs-method-dialog-keyword>dialog</code>, intended to close a <code data-anolis-spec=html>dialog</code> element.
 
       <li><p>The <code data-anolis-spec=html
       title=attr-tdth-colspan>colspan</code> attribute on <code
@@ -1849,15 +1738,15 @@
     on what you can use instead.</p>
 
     <ul>
-      <li><p><code data-anolis-spec=html title=attr-a-rev class="not-w3c">rev</code><code title class="not-whatwg">rev</code>
+      <li><p><code data-anolis-spec=html title=attr-a-rev>rev</code>
       and <code data-anolis-spec=html title=attr-a-charset>charset</code> attributes on
       <code data-anolis-spec=html>link</code> and <code data-anolis-spec=html>a</code>.
 
       <li><p><code data-anolis-spec=html title=attr-a-shape>shape</code> and <code data-anolis-spec=html title=attr-a-coords>coords</code> attributes on
       <code data-anolis-spec=html>a</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-iframe-longdesc class="not-w3c">longdesc</code><code title class="not-whatwg">longdesc</code> attribute on
-      <span title class="not-w3c"><code data-anolis-spec=html>img</code> and</span>
+      <li><p><code data-anolis-spec=html title=attr-iframe-longdesc>longdesc</code> attribute on
+      <code data-anolis-spec=html>img</code> and
       <code data-anolis-spec=html>iframe</code>.
 
       <li><p><code data-anolis-spec=html title=attr-link-target>target</code> attribute on <code data-anolis-spec=html>link</code>.
@@ -1883,12 +1772,12 @@
       <li><p><code data-anolis-spec=html title=attr-tdth-axis>axis</code>
       attribute on <code data-anolis-spec=html>td</code> and <code data-anolis-spec=html>th</code>.
 
-      <li><p><code data-anolis-spec=html title=attr-td-abbr class="not-w3c">abbr</code><code title class="not-whatwg">abbr</code> and
+      <li><p><code data-anolis-spec=html title=attr-td-abbr>abbr</code> and
       <code data-anolis-spec=html title=attr-td-scope>scope</code> attributes on
       <code data-anolis-spec=html>td</code>.
 
       <li><p><code data-anolis-spec=html title=attr-table-summary>summary</code> attribute
-      <span title class=not-w3c>and <code data-anolis-spec=html title=attr-table-border>border</code> attribute</span>
+      and <code data-anolis-spec=html title=attr-table-border>border</code> attribute
       on <code data-anolis-spec=html>table</code>.
 
       <li><p><code data-anolis-spec=html title=attr-form-accept>accept</code> attribute on <code data-anolis-spec=html>form</code>.
@@ -1931,7 +1820,7 @@
       <li><p><code data-anolis-spec=html title=attr-br-clear>clear</code> attribute on <code data-anolis-spec=html>br</code>.
 
       <li><p><code data-anolis-spec=html title=attr-dl-compact>compact</code> attribute on <code data-anolis-spec=html>dl</code>,
-      <span class="not-w3c"><code data-anolis-spec=html>menu</code>,</span>
+      <code data-anolis-spec=html>menu</code>,
       <code data-anolis-spec=html>ol</code> and <code data-anolis-spec=html>ul</code>.
 
       <li><p><code data-anolis-spec=html title=attr-table-frame>frame</code> attribute on <code data-anolis-spec=html>table</code>.
@@ -2083,7 +1972,7 @@
       <li><p>HTML4 allowed <code data-anolis-spec=html>object</code> in <code
       data-anolis-spec=html>head</code>. HTML does not.
 
-      <li class="not-w3c"><p>The <code data-anolis-spec=html>link</code> and
+      <li><p>The <code data-anolis-spec=html>link</code> and
       <code data-anolis-spec=html>meta</code> elements are allowed as descendants of
       <code data-anolis-spec=html>body</code> if they use microdata attributes.
 
@@ -2172,7 +2061,7 @@
       data-anolis-spec=html
       title=dom-cva-setcustomvalidity>setCustomValidity()</code> method).
 
-      <li class=not-w3c><p>An API for <span data-anolis-spec=html
+      <li><p>An API for <span data-anolis-spec=html
       title=concept-command>commands</span> that the user can invoke.
 
       <li><p>An API that enables offline Web applications, with an <span
@@ -2188,7 +2077,7 @@
       data-anolis-spec=html title=attr-contenteditable>contenteditable</code>
       attribute.</li>
 
-      <li class=not-w3c><p>Drag &amp; drop API in combination with a <code
+      <li><p>Drag &amp; drop API in combination with a <code
       data-anolis-spec=html title=attr-draggable>draggable</code>
       attribute.</li>
 
@@ -2214,8 +2103,8 @@
       <li><p>An API to prompt the user (<code data-anolis-spec=html
       title=dom-alert>alert()</code>, <code data-anolis-spec=html
       title=dom-confirm>confirm()</code>, <code data-anolis-spec=html
-      title=dom-prompt>prompt()</code><span class="not-w3c">, <code data-anolis-spec=html
-      title=dom-showmodaldialog>showModalDialog()</code></span>).
+      title=dom-prompt>prompt()</code>, <code data-anolis-spec=html
+      title=dom-showmodaldialog>showModalDialog()</code>).
 
       <li><p>An API for printing the document (<code data-anolis-spec=html
       title=dom-print>print()</code>).
@@ -2230,29 +2119,29 @@
       <code data-anolis-spec=html>External</code>
       interfaces have been defined.
 
-      <li class="not-w3c"><p>An API for microdata.
+      <li><p>An API for microdata.
 
-      <li class="not-w3c"><p>An API for immediate-mode bitmap graphics (the <code
+      <li><p>An API for immediate-mode bitmap graphics (the <code
       data-anolis-spec=html title=canvas-context-2d>2d</code> context for the
       <code data-anolis-spec=html>canvas</code> element).
 
-      <li class="not-w3c"><p>An API for cross-document messaging, channel messaging and
+      <li><p>An API for cross-document messaging, channel messaging and
       sending messages to other tabs in the same origin (<code
       data-anolis-spec=html title=dom-window-postMessage>postMessage()</code>,
       <code data-anolis-spec=html>MessageChannel</code> and <code data-anolis-spec=html>BroadcastChannel</code>).
 
-      <li class="not-w3c"><p>An API for runnings scripts in the background (<code
+      <li><p>An API for runnings scripts in the background (<code
       data-anolis-spec=html>Worker</code> and <code
       data-anolis-spec=html>SharedWorker</code>).
 
-      <li class="not-w3c"><p>An API for client-side storage (<code data-anolis-spec=html
+      <li><p>An API for client-side storage (<code data-anolis-spec=html
       title=dom-localStorage>localStorage</code> and <code data-anolis-spec=html
       title=dom-sessionStorage>sessionStorage</code>).
 
-      <li class="not-w3c"><p>An API for bidirectional client-server communication (<code
+      <li><p>An API for bidirectional client-server communication (<code
       data-anolis-spec=html>WebSocket</code>).
 
-      <li class="not-w3c"><p>An API for server-to-client data push (<code data-anolis-spec=html>EventSource</code>).
+      <li><p>An API for server-to-client data push (<code data-anolis-spec=html>EventSource</code>).
     </ul>
 
 
@@ -2347,17 +2236,17 @@
       <code data-anolis-spec=html title=dom-document-head>head</code>, <code
       data-anolis-spec=html title=dom-document-embeds>embeds</code>, <code
       data-anolis-spec=html title=dom-document-plugins>plugins</code>, <code
-      data-anolis-spec=html title=dom-document-scripts>scripts</code>, <span class="not-w3c"><code
-      data-anolis-spec=html title=dom-document-commands>commands</code>,</span> and a
+      data-anolis-spec=html title=dom-document-scripts>scripts</code>, <code
+      data-anolis-spec=html title=dom-document-commands>commands</code>, and a
       generic name getter, to access various parts of the DOM tree.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html
+      <li><p><code data-anolis-spec=html
       title=dom-document-getItems>getItems()</code> for microdata.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-document-cssElementMap>cssElementMap</code>
+      <li><p><code data-anolis-spec=html title=dom-document-cssElementMap>cssElementMap</code>
       to accompany the CSS <code>element()</code> feature.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
+      <li><p><code data-anolis-spec=html title=dom-document-currentscript>currentScript</code> which returns the currently
       running <code data-anolis-spec=html>script</code> element (or null).
 
       <li><p><code data-anolis-spec=html
@@ -2402,12 +2291,10 @@
       <code data-anolis-spec=html title=dom-hidden>hidden</code>,
       <code data-anolis-spec=html title=dom-tabIndex>tabIndex</code>,
       <code data-anolis-spec=html title=dom-accessKey>accessKey</code>,
-      <span class=not-w3c>
       <code data-anolis-spec=html title=dom-draggable>draggable</code>,
       <code data-anolis-spec=html title=dom-dropzone>dropzone</code>,
-      </span>
       <code data-anolis-spec=html title=dom-contentEditable>contentEditable</code>,
-      <span title class=not-w3c><code data-anolis-spec=html title=dom-contextMenu>contextMenu</code>,</span>
+      <code data-anolis-spec=html title=dom-contextMenu>contextMenu</code>,
       <code data-anolis-spec=html title=dom-spellcheck>spellcheck</code> and
       <code data-anolis-spec=html title=dom-style>style</code> reflect content
       attributes.
@@ -2419,7 +2306,7 @@
       = 'test'</code> sets the <code>data-foo-bar</code> content attribute on
       <code><var>elm</var></code>.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html
+      <li><p><code data-anolis-spec=html
       title=dom-itemScope>itemScope</code>, <code data-anolis-spec=html
       title=dom-itemType>itemType</code>, <code data-anolis-spec=html
       title=dom-itemId>itemId</code>, <code data-anolis-spec=html
@@ -2443,9 +2330,9 @@
       title=dom-isContentEditable>isContentEditable</code> returns true if the
       element is editable.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html title=dom-forcespellcheck>forceSpellCheck()</code> causes the user agent to check spelling of an element.
+      <li><p><code data-anolis-spec=html title=dom-forcespellcheck>forceSpellCheck()</code> causes the user agent to check spelling of an element.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html
+      <li><p><code data-anolis-spec=html
       title=dom-command-ro-commandType>commandType</code>, <code data-anolis-spec=html
       title=dom-command-ro-commandLabel>commandLabel</code>, <code data-anolis-spec=html
       title=dom-command-ro-commandIcon>commandIcon</code>, <code data-anolis-spec=html
@@ -2495,9 +2382,9 @@
 
       <li><p><code data-anolis-spec=html>HTMLFormElement</code> now has a named
       getter and an indexed getter,
-      as well as the <code data-anolis-spec=html title=dom-form-checkvalidity>checkValidity()</code><span class="not-w3c">,
+      as well as the <code data-anolis-spec=html title=dom-form-checkvalidity>checkValidity()</code>,
       <code data-anolis-spec=html title=dom-form-reportvalidity>reportValidity()</code> and
-      <code data-anolis-spec=html title=dom-form-requestautocomplete>requestAutocomplete()</code> methods</span><span class="not-whatwg"> method</span>.
+      <code data-anolis-spec=html title=dom-form-requestautocomplete>requestAutocomplete()</code> methods.
 
       <li><p><code data-anolis-spec=html>HTMLSelectElement</code> now has a
       getter, <code data-anolis-spec=html title=dom-select-item>item()</code>
@@ -2594,9 +2481,9 @@
       <li><p><code data-anolis-spec=html>HTMLTableElement</code> now has the
       members <code data-anolis-spec=html
       title=dom-table-createTBody>createTBody()</code>
-      <span title class="not-w3c">and <code data-anolis-spec=html title=dom-table-stopsorting>stopSorting()</code></span>.
+      and <code data-anolis-spec=html title=dom-table-stopsorting>stopSorting()</code>.
 
-      <li class="not-w3c"><p><code data-anolis-spec=html>HTMLTableHeaderCellElement</code> now has the member
+      <li><p><code data-anolis-spec=html>HTMLTableHeaderCellElement</code> now has the member
       <code data-anolis-spec=html title=dom-th-sort>sort()</code>.
 
       <li><p><code data-anolis-spec=html>HTMLIFrameElement</code> now has the

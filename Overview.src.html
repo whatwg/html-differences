@@ -240,6 +240,16 @@
     that the browser renders the page in standards mode. The doctype has no
     other purpose. <span data-anolis-ref>DOCTYPE</span>
 
+    <p>In HTML4, it was possible to use doctypes that were syntactically correct
+    but still trigger quirks mode (e.g.
+    <code class=bad>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"></code>, without the URL).
+
+    <p>If you were using no doctype or a quirky doctype and switch to a standards mode doctype,
+    you will most likely run into differences between the modes. For example, in quirks mode,
+    classes and IDs in Selectors are case-insensitive and CSS &lt;length>s do not require a unit.
+    For more examples, please refer to
+    <a href="http://www.cs.tut.fi/~jkorpela/quirks-mode.html"><cite>What happens in Quirks Mode?</cite></a>.
+
     <p>The doctype declaration for the HTML syntax is <code>&lt;!DOCTYPE html></code> and is
     case-insensitive. Doctypes from earlier versions of
     HTML were longer because the HTML language was SGML-based and therefore
@@ -2545,6 +2555,7 @@
     &#x7FBD;&#x7530;&#x91CE;&#x592A;&#x5DF3; (Futomi Hatano),
     Gordon P. Hemsley,
     Henri Sivonen,
+    Jacob Palme,
     James Graham,
     Jens O. Meiert,
     Jeremy Keith,

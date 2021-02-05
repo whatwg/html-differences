@@ -1,0 +1,2304 @@
+<pre class=metadata>
+Title: Differences from HTML4
+Group: WHATWG
+H1: Differences from HTML4
+Shortname: html-differences
+Status: LD
+No Editor: true
+Abstract: "Differences from HTML4" describes the differences of the HTML specification from those of HTML4.
+Logo: https://resources.whatwg.org/logo-differences.svg
+Boilerplate: omit feedback-header, omit conformance, omit index, omit idl-index
+Markup Shorthands: css off, markup on
+!Participate: <a href=https://github.com/whatwg/html-differences>GitHub whatwg/html-differences</a> (<a href=https://github.com/whatwg/html-differences/issues/new>file an issue</a>, <a href=https://github.com/whatwg/html-differences/issues>open issues</a>)
+!Participate: <a href=https://wiki.whatwg.org/wiki/IRC>IRC: #whatwg on Freenode</a>
+!Commits: <a href=https://github.com/whatwg/html-differences/commits>GitHub whatwg/html-differences/commits</a>
+Ignored Vars: event
+</pre>
+
+<script src=https://resources.whatwg.org/file-issue.js async></script>
+
+<h2 id=introduction>Introduction</h2>
+
+<h3 id=scope>Scope of This Document</h3>
+
+<p>This document covers the WHATWG HTML standard.
+It does not cover the W3C HTML5 or W3C HTML5.1 specifications.
+[[!HTML]]
+[[!HTML5]]
+[[!HTML51]]
+
+<h3 id=history>History of HTML</h3>
+
+<p>HTML has been in continuous evolution since it was introduced to the
+Internet in the early 1990s. Some features were introduced in
+specifications; others were introduced in software releases. In some
+respects, implementations and Web developer practices have converged with each
+other and with specifications and standards, but in other ways, they
+have diverged.
+
+<p>HTML4 became a W3C Recommendation in 1997. While it continues
+to serve as a rough guide to many of the core features of HTML, it does
+not provide enough information to build implementations that
+interoperate with each other and, more importantly, with
+Web content. The same goes for XHTML1, which defines an
+XML serialization for HTML4, and DOM Level 2 HTML, which defines
+JavaScript APIs for both HTML and XHTML. HTML replaces these documents. [[!DOM-Level-2-HTML]]
+[[!HTML401]]
+[[!XHTML1]]
+
+<p>The HTML specification reflects an effort, started in 2004, to study
+contemporary HTML implementations and Web content. The specification:
+
+<ol>
+ <li><p>Defines a single language called HTML which can be written
+ in HTML syntax and in XML syntax.
+ <li><p>Defines detailed processing models to foster interoperable
+ implementations.
+ <li><p>Improves markup for documents.
+ <li><p>Introduces markup and APIs for emerging idioms, such as Web
+ applications.
+</ol>
+
+
+<h3 id=open-issues>Open Issues</h3>
+
+<p>See <a href=https://www.w3.org/Bugs/Public/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=HTML&amp;product=WHATWG>open issues in Bugzilla</a>. The specification also has annotation boxes in the margin which can link to bugs.
+
+
+<h3 id=backward-compatibility>Backward Compatibility</h3>
+
+<p>HTML is defined in a way that is backward compatible with
+the way user agents handle content. To keep the
+language relatively simple for Web developers, several older elements and attributes
+are not included, as outlined in the other sections of this document,
+such as presentational elements that are better handled using
+CSS.
+
+<p>User agents, however, will always have to support these older
+elements and attributes. This is why the HTML specification clearly
+separates requirements for Web developers (referred to as "authors" in the
+specification) and user agents; for instance, this
+means that Web developers cannot use the <{isindex}> or the
+<{plaintext}> element, but user agents are required to support
+them in a way that is compatible with how these elements need to behave
+for compatibility with Web content.
+
+<p>Since HTML has separate conformance requirements for Web developers
+and user agents there is no longer a need for marking features
+"deprecated".
+
+
+<div>
+<h3 id=development-model>Development Model</h3>
+
+<p>The HTML4 specification reached Recommendation status before it was completely
+implemented in user agents. HTML4 still is not completely implemented, because it
+contains various bugs that have been fixed in the current HTML specification, which
+user agents are much closer to implementing than HTML4.
+
+<p>The HTML standard is under continual development where bugs are fixed
+and new features are introduced over time. Features can also be removed from the
+specification if they lack implementor interest, are not being used by Web developers, or
+for other reasons.
+</div>
+
+
+<h2 id=syntax>Syntax</h2>
+
+<p>HTML defines a syntax, referred to as "the HTML syntax", that is
+mostly compatible with HTML4 and XHTML1 documents published on the
+Web, but is not compatible with the more esoteric SGML features of
+HTML4, such as
+<a href=http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.6>processing instructions</a>
+and
+<a href=http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.7>shorthand markup</a>
+as these are not supported by most user agents. Documents using the HTML
+syntax are served with the <code>text/html</code> media
+type.
+
+<p>HTML also defines detailed parsing rules (including "error
+handling") for this syntax which are largely compatible with HTML4-era
+implementations. User agents have to use these rules for resources that
+have the <code>text/html</code> media type. Here is an example document
+that conforms to the HTML syntax:
+
+<pre>
+&lt;!doctype html>
+&lt;html>
+ &lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Example document&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>Example paragraph&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+<p>The other syntax that can be used for HTML is XML. This syntax
+is compatible with XHTML1 documents and implementations. Documents
+using this syntax need to be served with an XML media type (such as
+<code>application/xhtml+xml</code> or <code>application/xml</code>) and elements
+need to be put in the <code>http://www.w3.org/1999/xhtml</code>
+namespace following the rules set forth by the XML specifications.
+[[!XML]] [[!XML-NAMES]]
+
+<p>Below is an example document that conforms to the XML syntax of
+HTML.
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;html xmlns="http://www.w3.org/1999/xhtml">
+ &lt;head>
+  &lt;title>Example document&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>Example paragraph&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+<h3 id=character-encoding>Character Encoding</h3>
+
+<p>For the HTML syntax, Web developers are required to declare the
+character encoding. There are three ways to do that:
+
+<ul>
+ <li><p>At the transport level; for instance, by using the HTTP <code>Content-Type</code>
+ header.
+
+ <li><p>Using a Unicode Byte Order Mark (BOM) character at the start of
+ the file. This character provides a signature for the encoding
+ used.
+
+ <li><p>Using a <{meta}> element with a <{meta/charset}>
+ attribute that specifies the encoding within the first 1024 bytes of
+ the document; for instance, <code>&lt;meta charset="UTF-8"></code>
+ could be used to specify the UTF-8 encoding. This replaces the need
+ for
+ <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></code>
+ although that syntax is still allowed.
+</ul>
+
+<p>For the XML syntax, Web developers have to use the rules as set forth in the
+XML specification to set the character encoding.
+
+<h3 id=doctype>The Doctype</h3>
+
+<p>The HTML syntax requires a doctype to be specified to ensure
+that the browser renders the page in standards mode. The doctype has no
+other purpose. See <a href="https://hsivonen.fi/doctype/"><cite>Activating Browser Modes with Doctype</cite></a>.
+
+<p>In HTML4, it was possible to use doctypes that were syntactically correct
+but still trigger quirks mode (e.g.
+<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"></code>, without the URL).
+
+<p>If you were using no doctype or a quirky doctype and switch to a standards mode doctype,
+you will most likely run into differences between the modes. For example, in quirks mode,
+classes and IDs in Selectors are case-insensitive and CSS &lt;length>s do not require a unit.
+For more examples, please refer to
+<a href=http://www.cs.tut.fi/~jkorpela/quirks-mode.html><cite>What happens in Quirks Mode?</cite></a>.
+
+<p>The doctype declaration for the HTML syntax is <code>&lt;!DOCTYPE html></code> and is
+case-insensitive. Doctypes from earlier versions of
+HTML were longer because the HTML language was SGML-based and therefore
+required a reference to a DTD. This is no longer the case and
+the doctype is only needed to enable standards mode for documents
+written using the HTML syntax. Browsers already do this for
+<code>&lt;!DOCTYPE html></code>.
+
+<p>To support legacy markup generators that cannot generate the preferred
+short doctype, the doctype <code>&lt;!DOCTYPE html SYSTEM
+"about:legacy-compat"></code> is allowed in the HTML syntax.
+
+<p>The strict doctypes for HTML 4.0, HTML 4.01, XHTML 1.0 as well as XHTML
+1.1 are also allowed (but are discouraged) in the HTML syntax.
+
+<p>In the XML syntax, any doctype declaration may be used, or it may be
+omitted altogether. Documents with an XML media type are always handled in
+standards mode.
+
+
+<h3 id=mathml-svg>MathML and SVG</h3>
+
+<p>The HTML syntax allows for MathML and SVG elements to
+be used inside a document. An <code>math</code> or <code>svg</code> start
+tag causes the HTML parser to switch to a special insertion mode which puts
+elements and attributes in the appropriate namespaces, does case fixups for
+elements and attributes that have mixed case, and supports the empty-element
+syntax as in XML. The syntax is still case-insensitive and attributes allow
+the same syntax as for HTML elements. Namespace declarations may be omitted.
+CDATA sections are supported in this insertion mode.
+
+<p>Some MathML and SVG elements cause the parser to switch back to "HTML
+mode", e.g. <code>mtext</code> and <code>foreignObject</code>, so you can
+use HTML elements or a new <code>math</code> or <code>svg</code> element.
+
+<p>For instance, a very simple document using some of the
+minimal syntax features could look like:
+
+<pre>
+&lt;!doctype html>
+&lt;title>SVG in text/html&lt;/title>
+&lt;p>
+ A green circle:
+ <mark>&lt;svg> &lt;circle r="50" cx="50" cy="50" fill="green"/> &lt;/svg></mark>
+&lt;/p>
+</pre>
+
+<h3 id=syntax-misc>Miscellaneous</h3>
+
+<p>There are a few other changes in the HTML syntax worthy of mentioning:
+
+<ul>
+ <li><p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character references now expand to U+27E8 and U+27E9 (mathematical left/right angle
+ bracket) instead of U+2329 and U+232A (left/right-pointing angle bracket), respectively.
+
+ <li><p>Many new named character references have been added, including all named character references from
+ MathML.
+
+ <li><p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
+ trailing slash.
+
+ <li><p>The ampersand (<code>&amp;</code>) may be left unescaped in more
+ cases compared to HTML4.
+
+ <li><p>Attributes have to be separated by at least one whitespace character.
+
+ <li><p>Attributes with an empty value may be written as just the attribute
+ name omitting the equals sign and the value, even if the attribute is not a boolean
+ attribute. (It is commonly believed that HTML4 allowed the value to be omitted for boolean attributes. Instead, HTML4 allowed using only the attribute
+ <em>value</em> and omitting the attribute name, for enumerated attributes,
+ but this was not supported in browsers.)
+
+ <li><p>Attributes omitting quotes for the value are allowed to use a larger
+ set of characters compared to HTML4.
+
+ <li><p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the
+ <a spec=html element-attr><code>id</code></a> attribute is not ignored (and thus now invalid), and newline characters can be used in the
+ <{input/value}> attribute of the <{input}> element without using character
+ references.
+
+ <li><p>The <{optgroup}> end tag is now optional.
+
+ <li><p>The <{colgroup}> start tag is now optional and is inferred by
+ the HTML parser.
+</ul>
+
+
+<h2 id=language>Language</h2>
+
+<p>This section is split up in several subsections to more clearly
+illustrate the various differences from HTML4.
+
+
+<h3 id=new-elements>New Elements</h3>
+
+<p>The following elements have been introduced for better structure:
+
+<ul>
+ <li><p><{section}>
+ represents a generic document or application section. It can be
+ <a lt="Headings and sections">used together</a>
+ with the <{h1}>, <{h2}>, <{h3}>,
+ <{h4}>, <{h5}>, and <{h6}> elements to
+ indicate the document structure.
+
+ <li><p><{article}>
+ represents an independent piece of content of a document, such as a
+ blog entry or newspaper article.
+
+ <li><p><{main}>
+ can be used as a container for the dominant contents of another element, such as
+ the main content of the page.
+
+ <li><p><{aside}>
+ represents a piece of content that is only slightly related to the
+ rest of the page.
+
+ <li><p><{hgroup}>
+ represents the header of a section.
+
+ <li><p><{header}>
+ represents a group of introductory or navigational aids.
+
+ <li><p><{footer}>
+ represents a footer for a section and can contain information about
+ the author, copyright information, etc.
+
+ <li><p><{nav}>
+ represents a section of the document intended for navigation.
+
+ <li>
+  <p><{figure}>
+  represents a piece of self-contained flow content, typically
+  referenced as a single unit from the main flow of the document.
+
+  <pre>
+  &lt;figure>
+   &lt;video src="example.webm" controls>&lt;/video>
+   &lt;figcaption>Example&lt;/figcaption>
+  &lt;/figure>
+  </pre>
+
+  <p><{figcaption}> can be used as caption (it is optional).
+
+ <li><p><{template}>
+ can be used to declare fragments of HTML that can be cloned and inserted in the document by script.
+
+</ul>
+
+<p>Then there are several other new elements:
+
+<ul>
+ <li><p><{video}> and
+ <{audio}> for multimedia content. Both
+ provide an API so application Web developers can script their own user
+ interface, but there is also a way to trigger a user interface
+ provided by the user agent. <{source}> elements are used together with these elements if there are multiple
+ streams available of different types.
+
+ <li><p><{track}> provides text tracks
+ for the <{video}> element.
+
+ <li><p><{embed}> is used for plugin
+ content.
+
+ <li><p><{mark}> represents a run of
+ text in one document marked or highlighted for reference purposes, due
+ to its relevance in another context.
+
+ <li><p><{progress}> represents a
+ completion of a task, such as downloading or when performing a series
+ of expensive operations.
+
+ <li><p><{meter}> represents a
+ measurement, such as disk usage.
+
+ <li><p><{time}> represents a date
+ and/or time.
+
+ <li><p><{data}>
+ allows content to be annotated with a machine-readable value.
+
+ <li><p><{dialog}> for showing a dialog.
+
+ <li><p><{ruby}>,
+ <{rt}>, and
+ <{rp}> allow for marking up ruby
+ annotations.
+
+ <li><p><{bdi}> represents a span of
+ text that is to be isolated from its surroundings for the purposes of
+ bidirectional text formatting.
+
+ <li><p><{wbr}> represents a line break
+ opportunity.
+
+ <li><p><{canvas}> is used for rendering
+ dynamic bitmap graphics on the fly, such as graphs or games.
+
+ <li><p><{menuitem}>
+ represents a command the user can invoke from a popup menu.
+
+ <li><p><{details}>
+ represents additional information or controls which the user can
+ obtain on demand. The
+ <{summary}> element provides its summary, legend, or caption.
+
+ <li>
+  <p><{datalist}>
+  together with the a new <{input/list}> attribute for
+  <{input}> can be used to make comboboxes:
+
+  <pre>
+  &lt;input <mark>list="browsers"</mark>>
+  &lt;datalist <mark>id="browsers"</mark>>
+   &lt;option value="Safari">
+   &lt;option value="Internet Explorer">
+   &lt;option value="Opera">
+   &lt;option value="Firefox">
+  &lt;/datalist>
+  </pre>
+
+ <li><p><{keygen}>
+ represents control for key pair generation.
+
+ <li><p><{output}>
+ represents some type of output, such as from a calculation done
+ through scripting.
+</ul>
+
+<p>The <{input}> element's <{input/type}> attribute now has the
+following new values:
+
+<ul class=brief>
+ <li><a spec=html element-state for=input/type><code>tel</code></a>
+ <li><a spec=html element-state for=input/type><code>search</code></a>
+ <li><a spec=html element-state for=input/type><code>url</code></a>
+ <li><a spec=html element-state for=input/type><code>email</code></a>
+ <li><a spec=html element-state for=input/type><code>datetime</code></a>
+ <li><a spec=html element-state for=input/type><code>date</code></a>
+ <li><a spec=html element-state for=input/type><code>month</code></a>
+ <li><a spec=html element-state for=input/type><code>week</code></a>
+ <li><a spec=html element-state for=input/type><code>time</code></a>
+ <li><a spec=html element-state for=input/type><code>datetime-local</code></a>
+ <li><a spec=html element-state for=input/type><code>number</code></a>
+ <li><a spec=html element-state for=input/type><code>range</code></a>
+ <li><a spec=html element-state for=input/type><code>color</code></a>
+</ul>
+
+<p>The idea of these new types is that the user agent can provide the user
+interface, such as a calendar date picker or integration with the user's
+address book, and submit a defined format to the server. It gives the user a
+better experience as his input is checked before sending it to the server
+meaning there is less time to wait for feedback.
+
+
+<h3 id=new-attributes>New Attributes</h3>
+
+<p>Several attributes have been introduced to various elements
+that were already part of HTML4:
+
+<ul>
+ <li><p>The <{a}> and
+ <{area}> elements have the new
+ <a spec=html element-attr><code>download</code></a> and
+ <a spec=html element-attr><code>ping</code></a> attributes.
+
+ <li><p>The <{area}> element, for consistency with the
+ <{a}> and <{link}> elements, now also has the
+ <{area/hreflang}>, <{area/type}> and <{area/rel}> attributes.
+
+ <li><p>The <{base}> element can now have a <{base/target}>
+ attribute as well, mainly for consistency with the
+ <{a}> element. (This is already widely supported.)
+
+ <li><p>The <{meta}> element has a <{charset}>
+ attribute now as this was already widely supported and provides a nice
+ way to specify the
+ <a href=#character-encoding>character encoding</a> for the document.
+
+ <li><p>The <{table}> element now has a <{table/sortable}> attribute and the
+ <{th}> element has a
+ <{th/sorted}> attribute, which provide a means to sort
+ table columns.
+
+ <li><p>A new <{input/autofocus}> attribute can be specified on the
+ <{input}> (except when the <{input/type}> attribute is
+ <a spec=html element-state for=input/type><code>hidden</code></a>), <{select}>, <{textarea}> and
+ <{button}> elements. It provides a declarative way to focus a
+ form control during page load. Using this feature should enhance the
+ user experience compared to focusing the element with script as the user can turn it off if the user does not like
+ it, for instance.
+
+ <li>
+  <p>A new <a spec=html element-attr><code>placeholder</code></a> attribute can be specified on
+  the <{input}> and <{textarea}> elements. It
+  represents a hint intended to aid the user with data entry.
+
+  <pre>
+  &lt;input type=search name=q <mark>placeholder="Enter search phrase..."</mark>> &lt;button>Search&lt;/button>
+  </pre>
+
+  <pre>
+  &lt;label>Email &lt;input type=email name=email <mark>placeholder="john@example.com"</mark>>&lt;/label>
+  </pre>
+
+  <p>The <{input/placeholder}> attribute should not be used as a replacement for the
+  <{label}> element.
+
+  <pre class=bad>
+  &lt;!-- Do not do this: -->
+  &lt;input type=email name=email placeholder="Email">
+  </pre>
+
+ <li>
+  <p>The new <a spec=html element-attr>form</a> attribute for <{input}>,
+  <{output}>, <{select}>, <{textarea}>,
+  <{button}>, <{label}>, <{object}> and <{fieldset}> elements allows for
+  controls to be associated with a form. These elements can now be
+  placed anywhere on a page, not just as descendants of the
+  <{form}> element, and still be associated with a <{form}>.
+
+  <pre>
+  &lt;table>
+   &lt;tr>
+    &lt;th>Key
+    &lt;th>Value
+    &lt;th>Action
+   &lt;tr>
+    &lt;td>&lt;form <mark>id=1</mark>>&lt;input name=1-key>&lt;/form>
+    &lt;td>&lt;input <mark>form=1</mark> name=1-value>
+    &lt;td>&lt;button <mark>form=1</mark> name=1-action value=save>✓&lt;/button>
+     &lt;button <mark>form=1</mark> name=1-action value=delete>✗&lt;/button>
+   ...
+  &lt;/table>
+  </pre>
+
+ <li><p>The new <{input/required}> attribute applies to
+ <{input}> (except when the <{input/type}> attribute is
+ <a spec=html element-state for=input/type><code>hidden</code></a>, <a spec=html element-state for=input/type><code>image</code></a> or some button type such as
+ <a spec=html element-state for=input/type><code>submit</code></a>), <{select}> and <{textarea}>. It indicates that the user
+ has to fill in a value in order to submit the form. For <{select}>, the first <{option}> element has to be a placeholder with an empty value.
+
+ <pre>
+ &lt;label>Color: &lt;select name=color <mark>required</mark>>
+  &lt;option <mark>value=""</mark>>Choose one
+  &lt;option>Red
+  &lt;option>Green
+  &lt;option>Blue
+ &lt;/select>&lt;/label>
+ </pre>
+
+ <li><p>The <{fieldset}> element now allows the
+ <{fieldset/disabled}> attribute which disables all descendant controls (excluding those that are descendants of the <{legend}> element)
+ when specified, and the <{fieldset/name}> attribute which can be used for script access.
+
+ <li><p>The <{input}> element has several new attributes to
+ specify constraints: <{input/autocomplete}>, <{input/min}>,
+ <{input/max}>, <{input/multiple}>, <{input/pattern}> and
+ <{input/step}>. As mentioned before it also has a new
+ <{input/list}> attribute which can be used together with the
+ <{input/datalist}> element. It also now has the <{input/width}> and <{input/height}> attributes to specify the dimensions of the image when using <code>type=image</code>.
+
+ <li><p>The <{input}> and <{textarea}> elements have
+ a new attribute named <a spec=html element-attr><code>dirname</code></a> that causes the
+ directionality of the control as set by the user to be submitted as
+ well.
+
+ <li><p>The <{textarea}> element also has three new attributes,
+ <{textarea/maxlength}>,
+ <{textarea/minlength}> and
+ <{textarea/wrap}> which control max input
+ length and submitted line wrapping behavior, respectively.
+
+ <li><p>The <{form}> element has a <{form/novalidate}>
+ attribute that can be used to disable form validation submission (i.e.
+ the form can always be submitted).
+
+ <li><p>The <{input}> and <{button}> elements have
+ <a spec=html element-attr><code>formaction</code></a>, <a spec=html element-attr><code>formenctype</code></a>,
+ <a spec=html element-attr><code>formmethod</code></a>, <a spec=html element-attr><code>formnovalidate</code></a>, and
+ <a spec=html element-attr><code>formtarget</code></a> as new attributes. If present, they override
+ the <{form/action}>, <{form/enctype}>, <{form/method}>,
+ <{form/novalidate}>, and <{form/target}> attributes on the
+ <{form}> element.
+
+ <li><p>The <{input}> element also has the new
+ <{input/minlength}> attribute.
+
+ <li><p>The <{input}> and
+ <{textarea}> elements have an
+ <a spec=html element-attr><code>inputmode</code></a> attribute.
+
+ <li><p>The <{menu}> element has two new attributes:
+ <{menu/type}> and <{menu/label}>. They
+ allow the element to transform into a menu as found in typical user
+ interfaces as well as providing for context menus in conjunction with the
+ global <a spec=html element-attr><code>contextmenu</code></a> attribute.
+
+ <li><p>The <{button}> element has a new <{menu}>
+ attribute, used together with popup menus.
+
+ <li><p>The <{style}> element has a new <{style/scoped}>
+ attribute which can be used to enable scoped style sheets. Style rules
+ within such a <{style}> element only apply to the local tree.
+
+ <li><p>The <{script}> element has a new attribute called
+ <{script/async}> that influences script loading and execution.
+
+ <li><p>The <{html}> element has a new attribute called
+ <{html/manifest}> that points to an application cache manifest
+ used in conjunction with the API for offline Web applications.
+
+ <li><p>The <{link}> element has a new attribute called
+ <{link/sizes}>. It can be used in conjunction with the
+ <a spec=html><code>icon</code></a> relationship (set through the <{link/rel}>
+ attribute; can be used for e.g. favicons) to indicate the size of the
+ referenced icon, thus allowing for icons of distinct dimensions.
+
+ <li><p>The <{ol}> element has a new attribute called
+ <{ol/reversed}>. When present, it indicates that the list order
+ is descending.
+
+ <li><p>The <{iframe}> element has new attributes called
+ <{iframe/sandbox}>, <{iframe/seamless}>,
+ and <{iframe/srcdoc}>
+ which allow for sandboxing content, e.g. blog comments.
+
+ <li><p>The <{object}> element has a new attribute called <{object/typemustmatch}> which allows safer embedding of external resources.
+
+ <li><p>The <{img}> element has a new attribute called
+ <{img/crossorigin}> to use CORS in the fetch and if it is successful, allows the image data to be
+ read with the <{canvas}> API.
+ The <{script}> element has a
+ <{script/crossorigin}> attribute to allow script
+ <a lt="report the error">errors to be reported</a> to
+ <a spec=html element-attr><code>onerror</code></a> with information about the error.
+ The <{link}> element also has a
+ <{link/crossorigin}> attribute.
+
+ <li><p>The <{img}> element has new attributes called
+ <{img/srcset}>
+ and <{img/sizes}>,
+ along with the new elements <{picture}> and
+ <{source}>
+ to allow Web developers to declaratively control or give hints to the user agent
+ about which image resource to use, based on the screen pixel density,
+ viewport size, image format, and other factors.
+</ul>
+
+<p>Several attributes from HTML4 now apply to all elements. These
+are called global attributes: <a spec=html element-attr><code>accesskey</code></a>, <a spec=html><code>class</code></a>, <a spec=html><code>dir</code></a>,
+<a spec=html element-attr><code>id</code></a>, <a spec=html element-attr><code>lang</code></a>, <a spec=html element-attr><code>style</code></a>,
+<a spec=html element-attr><code>tabindex</code></a> and <a spec=html element-attr><code>title</code></a>. Additionally, XHTML 1.0
+only allowed <code>xml:space</code> on some elements, which is now allowed
+on all elements in XHTML documents.
+
+<p>There are also several new global attributes:
+
+<ul>
+ <li><p>The <a spec=html element-attr><code>contenteditable</code></a> attribute indicates that
+ the element is an editable area. The user can change the contents of the
+ element and manipulate the markup.
+
+ <li><p>The <a spec=html element-attr><code>contextmenu</code></a> attribute can be used to point
+ to a context menu provided by the Web developer.
+
+ <li><p>The <a spec=html element-attr><code>data-<var>*</var></code></a> collection of Web developer-defined
+ attributes. Web developers can define any attribute they want as long as they
+ prefix it with <code>data-</code> to avoid clashes with future versions of
+ HTML. These are intended to be used to store custom data to be consumed by
+ the Web page or application itself. They are <em>not</em> intended for
+ data to be consumed by other parties (e.g. user agents).
+
+ <li><p>The <a spec=html element-attr><code>draggable</code></a> and <a spec=html element-attr><code>dropzone</code></a> attributes can be used together with
+ the new drag &amp; drop API.
+
+ <li><p>The <a spec=html element-attr><code>hidden</code></a>
+ attribute indicates that an element is not yet, or is no longer, relevant.
+
+ <li><p>The <a spec=html element-attr><code>role</code></a> and
+ <a spec=html element-attr><code>aria-<var>*</var></code></a>
+ collection attributes which can be used to instruct assistive
+ technology.
+
+ <li><p>The <a spec=html element-attr><code>spellcheck</code></a> attribute allows for hinting
+ whether content can be checked for spelling or not.
+
+ <li><p>The <a spec=html element-attr><code>translate</code></a> attribute gives a hint to
+ translators whether the content should be translated.
+</ul>
+
+<p>HTML also makes all event handler attributes from HTML4, which take the
+form <code>on<var>event</var></code>, global attributes and adds
+several new event handler attributes for new events it defines; for
+instance, the <a spec=html element-attr><code>onplay</code></a>
+event handler attribute for the <a spec=html event><code>play</code></a> event which is used by the API for the
+media elements (<{video}> and <{audio}>).
+The specification has an <a href=https://html.spec.whatwg.org/multipage/indices.html#events-2>index of all events</a>.
+
+
+<h3 id=changed-elements>Changed Elements</h3>
+
+<p>These elements have slightly modified meanings in HTML to
+better reflect how they are used on the Web or to make them more
+useful:
+
+<ul>
+ <!--
+ <li><p>The <code data-anolis-spec=html>a</code> element without an
+ <code data-anolis-spec=html title=attr-hyperlink-href>href</code>
+ attribute now represents a placeholder for where a link otherwise
+ might have been placed.
+
+ html4:
+ Each  A element defines an anchor
+
+ 1. The  A element's content defines the position of the anchor.
+ 2. The  name attribute names the anchor so that it may be the destination
+ of zero or more links (see also anchors with  id).
+ 3. The  href attribute makes this anchor the source anchor of exactly one
+ link.
+
+ Authors may also create an A element that specifies no anchors, i.e., that
+ doesn't specify href, name, or id. Values for these attributes may be set
+ at a later time through scripts.
+
+ html:
+ If the a element has an href attribute, then it represents a hyperlink (a
+ hypertext anchor).
+
+ If the a element has no href attribute, then the element represents a
+ placeholder for where a link might otherwise have been placed, if it had
+ been relevant.
+
+ Both basically say that <a> without href is a "placeholder", so this isn't
+ really a change.
+ -->
+
+ <!--
+ <li><p>The <code data-anolis-spec=html>abbr</code> element now represents
+ an abbreviation <em>or</em> an acronym.
+
+ html4:
+ Indicates an abbreviated form (e.g., WWW, HTTP, URI, Mass., etc.).
+
+ html:
+ The abbr element represents an abbreviation or acronym, optionally with
+ its expansion.
+
+ Not a major change (technically acronym is a form of abbreviation anyway),
+ and this document says to use abbr instead of acronym already.
+ -->
+
+ <li><p>The <{address}> element is now
+ scoped by the nearest ancestor <{article}>
+ or <{body}> element.
+
+ <!--
+ AREA
+ html4 doesn't really have a definition of area, but html does, but that's
+ hardly worth calling out here.
+ -->
+
+ <li><p>The <{b}> element now represents a
+ span of text to which attention is being drawn for utilitarian purposes
+ without conveying any extra importance and with no implication of an
+ alternate voice or mood, such as key words in a document abstract, product
+ names in a review, actionable words in interactive text-driven software,
+ or an article lede.
+
+ <!--
+ BASE
+ html4:
+ The BASE element allows authors to specify a document's base URI
+ explicitly.
+
+ html:
+ The base element allows authors to specify the document base URL for the
+ purposes of resolving relative URLs, and the name of the default browsing
+ context for the purposes of following hyperlinks. The element does not
+ represent any content beyond this information.
+ -->
+
+ <!--
+ BDO
+ html4:
+ The BDO element allows authors to turn off the bidirectional algorithm for
+ selected fragments of text.
+
+ html:
+ The bdo element represents explicit text directionality formatting control
+ for its children. It allows authors to override the Unicode bidirectional
+ algorithm by explicitly specifying a direction override.
+ -->
+
+ <!--
+ <li><p>The <code data-anolis-spec=html>blockquote</code> element now
+ represents a section that is quoted <em>from another source</em> (and that
+ is not necessarily "long").
+
+ html4:
+ These two elements designate quoted text.  BLOCKQUOTE is for long
+ quotations (block-level content)
+
+ html:
+ The blockquote element represents a section that is quoted from another
+ source.
+ -->
+
+ <!--
+ BODY
+ html4:
+ The body of a document contains the document's content.
+
+ html:
+ The body element represents the main content of the document.
+ -->
+
+ <!--
+ BR
+ html4:
+ The  BR element forcibly breaks (ends) the current line of text.
+
+ html:
+ The br element represents a line break.
+ -->
+
+ <!--
+ BUTTON
+ html4:
+ Buttons created with the BUTTON element function just like buttons created
+ with the INPUT element
+ html:
+ The button element represents a button.
+ -->
+
+ <!--
+ CAPTION
+ html4:
+ When present, the CAPTION element's text should describe the nature of the
+ table.
+
+ html:
+ The caption element represents the title of the table that is its parent,
+ if it has a parent and that is a table element.
+ -->
+
+ <li><p>The <{cite}> element now solely
+ represents the title of a work (e.g. a book, a paper, an essay, a poem, a
+ score, a song, a script, a film, a TV show, a game, a sculpture, a
+ painting, a theatre production, a play, an opera, a musical, an
+ exhibition, a legal case report, etc). Specifically the example in HTML4
+ where it is used to mark up the name of a person is no longer considered
+ conforming.
+
+ <!--
+ CODE
+ html4:
+ Designates a fragment of computer code.
+ html:
+ The code element represents a fragment of computer code.
+ -->
+
+ <!--
+ COL
+ html4:
+ The  COL element allows authors to group together attribute specifications
+ for table columns.
+
+ html:
+ If a col element has a parent and that is a colgroup element that itself
+ has a parent that is a table element, then the col element represents one
+ or more columns in the column group represented by that colgroup.
+ -->
+
+ <!--
+ COLGROUP
+ html4:
+ The  COLGROUP element creates an explicit column group.
+
+ html:
+ The colgroup element represents a group of one or more columns in the
+ table that is its parent, if it has a parent and that is a table element.
+ -->
+
+ <!--
+ DD
+ covered by dl
+ -->
+
+ <!--
+ DEL
+ html4:
+ INS and DEL are used to markup sections of the document that have been
+ inserted or deleted with respect to a different version of a document
+
+ html:
+ The del element represents a removal from the document.
+ -->
+
+ <!--
+ DFN
+ html4:
+ Indicates that this is the defining instance of the enclosed term.
+
+ html:
+ The dfn element represents the defining instance of a term.
+ -->
+
+ <!--
+ DIV
+ html4:
+ The  DIV and SPAN elements, in conjunction with the id and  class
+ attributes, offer a generic mechanism for adding structure to documents.
+ These elements define content to be inline (SPAN) or block-level (DIV) but
+ impose no other presentational idioms on the content. Thus, authors may
+ use these elements in conjunction with style sheets, the lang attribute,
+ etc., to tailor HTML to their own needs and tastes.
+
+ html:
+ The div element has no special meaning at all. It represents its children.
+ It can be used with the class, lang, and title attributes to mark up
+ semantics common to a group of consecutive elements.
+ -->
+
+ <li><p>The <{dl}> element now represents an
+ association list of name-value groups, and is no longer said to be
+ appropriate for dialogue.
+
+ <!--
+ DT
+ covered by dl
+ -->
+
+ <!--
+ EM
+ html4:
+ Indicates emphasis.
+
+ html:
+ The em element represents stress emphasis of its contents.
+ -->
+
+ <!--
+ FIELDSET
+ html4:
+ The FIELDSET element allows authors to group thematically related controls
+ and labels.
+
+ html:
+ The fieldset element represents a set of form controls optionally grouped
+ under a common name.
+ -->
+
+ <!--
+ FORM
+ html4:
+ The  FORM element acts as a container for  controls.
+
+ html:
+ The form element represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing.
+ -->
+
+ <!--
+ <li><p>The <code data-anolis-spec=html>h1</code>-<code
+ data-anolis-spec=html>h6</code> elements in HTML4 are said to have
+ different importance. In HTML, they are said to have different <span
+ data-anolis-spec=html>ranks</span>, which affect the outline algorithm,
+ but do not affect importance.
+
+ html4:
+ A heading element briefly describes the topic of the section it
+ introduces. Heading information may be used by user agents, for example,
+ to construct a table of contents for a document automatically.
+
+ There are six levels of headings in HTML with H1 as the most important and
+ H6 as the least. Visual browsers usually render more important headings in
+ larger fonts than less important ones.
+
+ html:
+ These elements represent headings for their sections.
+
+ The semantics and meaning of these elements are defined in the section on
+ headings and sections.
+
+ These elements have a rank given by the number in their name. The h1
+ element is said to have the highest rank, the h6 element has the lowest
+ rank, and two elements with the same name have equal rank.
+
+ well, they intend the same semantics, basically.
+ -->
+
+ <!--
+ HEAD
+ html4:
+ The  HEAD element contains information about the current document, such as
+ its title, keywords that may be useful to search engines, and other data
+ that is not considered document content.
+
+ html:
+ The head element represents a collection of metadata for the Document.
+ -->
+
+ <li><p>The <{hr}> element now represents a
+ paragraph-level thematic break.
+
+ <!--
+ HTML
+ html4:
+ After document type declaration, the remainder of an HTML document is
+ contained by the HTML element.
+
+ html:
+ The html element represents the root of an HTML document.
+ -->
+
+ <li><p>The <{i}> element now represents a
+ span of text in an alternate voice or mood, or otherwise offset from the
+ normal prose in a manner indicating a different quality of text, such as a
+ taxonomic designation, a technical term, an idiomatic phrase from another
+ language, a thought, or a ship name in Western texts.
+
+ <!--
+ IFRAME
+ html4:
+ The  IFRAME element allows authors to insert a frame within a block of
+ text. Inserting an inline frame within a section of text is much like
+ inserting an object via the OBJECT element: they both allow you to insert
+ an HTML document in the middle of another, they may both be aligned with
+ surrounding text, etc.
+
+ html:
+ The iframe element represents a nested browsing context.
+ -->
+
+ <!--
+ IMG
+ html4:
+ The  IMG element embeds an image in the current document at the location
+ of the element's definition.
+
+ html:
+ An img element represents an image.
+ -->
+
+ <!--
+ INPUT
+
+ type         html4         html
+ text         Creates a single-line text input control.
+                            Text with no line breaks; A text field. The
+                            input element represents a one line plain text
+                            edit control for the element's value.
+ password     Like "text", but the input text is rendered in such a way as
+              to hide the characters
+                            Text with no line breaks (sensitive
+                            information); A text field that obscures data
+                            entry. The input element represents a one line
+                            plain text edit control for the element's
+                            value. The user agent should obscure the value
+                            so that people other than the user cannot see
+                            it.
+ checkbox     Checkboxes are on/off switches that may be toggled by the
+              user.
+                            A set of zero or more values from a predefined
+                            list; A checkbox. The input element represents
+                            a two-state control that represents the
+                            element's checkedness state.
+ radio        Radio buttons are like checkboxes except that when several
+              share the same control name, they are mutually exclusive
+                            An enumerated value; A radio button. The input
+                            element represents a control that, when used in
+                            conjunction with other input elements, forms a
+                            radio button group in which only one control
+                            can have its checkedness state set to true.
+ submit       When activated, a submit button submits a form. A form may
+              contain more than one submit button.
+                            An enumerated value, with the extra semantic
+                            that it must be the last value selected and
+                            initiates form submission; A button. The input
+                            element represents a button that, when
+                            activated, submits the form.
+ image        Creates a graphical submit button.
+                            A coordinate, relative to a particular image's
+                            size, with the extra semantic that it must be
+                            the last value selected and initiates form
+                            submission; Either a clickable image, or a
+                            button. The input element represents either an
+                            image from which a user can select a coordinate
+                            and submit the form, or alternatively a button
+                            from which the user can submit the form. The
+                            element is a button, specifically a submit
+                            button.
+ reset        When activated, a reset button resets all controls to their
+              initial values.
+                            n/a; A button. The input element represents a
+                            button that, when activated, resets the form.
+ button       Push buttons have no default behavior.
+                            n/a; A button. The input element represents a
+                            button with no default behavior.
+ hidden       Authors may create controls that are not rendered but whose
+              values are submitted with a form. Authors generally use this
+              control type to store information between client/server
+              exchanges that would otherwise be lost due to the stateless
+              nature of HTTP (see [RFC2616]). The INPUT element is used to
+              create a hidden control.
+                            An arbitrary string; n/a. The input element
+                            represents a value that is not intended to be
+                            examined or manipulated by the user.
+ file         This control type allows the user to select files so that
+              their contents may be submitted with a form. The INPUT
+              element is used to create a file select control.
+                            Zero or more files each with a MIME type and
+                            optionally a file name; A label and a button.
+                            The input element represents a list of selected
+                            files, each file consisting of a file name, a
+                            file type, and a file body (the contents of the
+                            file).
+ -->
+
+ <!--
+ INS
+ see DEL above
+ -->
+
+ <!--
+ KBD
+ html4:
+ Indicates text to be entered by the user.
+
+ html:
+ The kbd element represents user input (typically keyboard input, although
+ it may also be used to represent other input, such as voice commands).
+ -->
+
+ <li><p>For the <{label}> element the
+ browser should no longer move focus from the label to the control unless
+ such behavior is standard for the underlying platform user
+ interface.
+
+ <!--
+ LEGEND
+ html4:
+ The  LEGEND element allows authors to assign a caption to a  FIELDSET.
+
+ html:
+ The legend element represents a caption for the rest of the contents of
+ the legend element's parent fieldset element, if any.
+ -->
+
+ <!--
+ LI
+ html4:
+ Both types of lists are made up of sequences of list items defined by the
+ LI element
+
+ html:
+ The li element represents a list item.
+ -->
+
+ <!--
+ LINK
+ html4:
+ This element defines a link.
+
+ html:
+ The link element allows authors to link their document to other resources.
+ -->
+
+ <!--
+ MAP
+ html4:
+ The  MAP element specifies a client-side image map (or other navigation
+ mechanism)
+
+ html:
+ The map element, in conjunction with any area element descendants, defines
+ an image map. The element represents its children.
+ -->
+
+ <li><p>The <{menu}> element is redefined to
+ be useful for toolbars and popup menus.
+
+ <!--
+ META
+ html4:
+ The  META element can be used to identify properties of a document (e.g.,
+ author, expiration date, a list of key words, etc.) and assign values to
+ those properties.
+
+ html:
+ The meta element represents various kinds of metadata that cannot be
+ expressed using the title, base, link, style, and script elements.
+ -->
+
+ <li><p>The <{noscript}> element is no
+ longer said to be rendered when the user agent doesn't support a scripting
+ language invoked by a <{script}> element
+ earlier in the document.
+
+ <!--
+ OBJECT
+ html4:
+ The  OBJECT element allows authors to control whether data should be
+ rendered externally or by some program, specified by the author, that
+ renders the data within the user agent.
+
+ html:
+ The object element can represent an external resource, which, depending on
+ the type of the resource, will either be treated as an image, as a nested
+ browsing context, or as an external resource to be processed by a plugin.
+ -->
+
+ <!--
+ OL
+ html4:
+ Ordered and unordered lists are rendered in an identical manner except
+ that visual user agents number ordered list items. User agents may present
+ those numbers in a variety of ways. Unordered list items are not numbered.
+
+ html:
+ The ol element represents a list of items, where the items have been
+ intentionally ordered, such that changing the order would change the
+ meaning of the document.
+ -->
+
+ <!--
+ OPTGROUP
+ html4:
+ The OPTGROUP element allows authors to group choices logically.
+
+ html:
+ The optgroup element represents a group of option elements with a common
+ label.
+ -->
+
+ <!--
+ OPTION
+ html4:
+ Each choice offered by the menu is represented by an OPTION element.
+
+ html:
+ The option element represents an option in a select element ...
+ -->
+
+ <!--
+ P
+ html4:
+ The  P element represents a paragraph.
+
+ html:
+ The p element represents a paragraph.
+ -->
+
+ <!--
+ PARAM
+ html4:
+ PARAM elements specify a set of values that may be required by an object
+ at run-time.
+
+ html:
+ The param element defines parameters for plugins invoked by object
+ elements. It does not represent anything on its own.
+ -->
+
+ <!--
+ PRE
+ html4:
+ The  PRE element tells visual user agents that the enclosed text is
+ "preformatted".
+
+ html:
+ The pre element represents a block of preformatted text, in which
+ structure is represented by typographic conventions rather than by
+ elements.
+ -->
+
+ <!--
+ Q
+ html4:
+ These two elements designate quoted text.  ... Q is intended for short
+ quotations (inline content) that don't require paragraph breaks.
+
+ html:
+ The q element represents some phrasing content quoted from another source.
+ -->
+
+ <li><p>The <{s}> element now represents
+ contents that are no longer accurate or no longer relevant.
+
+ <!--
+ SAMP
+ html4:
+ Designates sample output from programs, scripts, etc.
+
+ html:
+ The samp element represents (sample) output from a program or computing
+ system.
+ -->
+
+ <li><p>The <{script}> element can now be
+ used for scripts or for custom data blocks.
+
+ <!--
+ SELECT
+ html4:
+ The  SELECT element creates a menu. Menus offer users options from which
+ to choose.
+
+ html:
+ The select element represents a control for selecting amongst a set of
+ options.
+ -->
+
+ <li><p>The <{small}> element now represents
+ side comments such as small print.
+
+ <!--
+ SPAN
+ html4:
+ The  DIV and SPAN elements, in conjunction with the id and  class
+ attributes, offer a generic mechanism for adding structure to documents.
+ These elements define content to be inline (SPAN) or block-level (DIV) but
+ impose no other presentational idioms on the content. Thus, authors may
+ use these elements in conjunction with style sheets, the lang attribute,
+ etc., to tailor HTML to their own needs and tastes.
+
+ html:
+ The span element doesn't mean anything on its own, but can be useful when
+ used together with the global attributes, e.g. class, lang, or dir. It
+ represents its children.
+ -->
+
+ <li><p>The <{strong}> element now
+ represents importance rather than strong emphasis.
+
+ <!--
+ STYLE
+ html4:
+ The  STYLE element allows authors to put style sheet rules in the head of
+ the document.
+
+ html:
+ The style element allows authors to embed style information in their
+ documents. The style element is one of several inputs to the styling
+ processing model. The element does not represent content for the user.
+ -->
+
+ <!--
+ SUB and SUP
+ html4:
+ Many scripts (e.g., French) require superscripts or subscripts for proper
+ rendering. The  SUB and SUP elements should be used to markup text in
+ these cases.
+
+ html:
+ The sup element represents a superscript and the sub element represents a
+ subscript.
+ -->
+
+ <!--
+ TABLE
+ html4:
+ The  TABLE element contains all other elements that specify caption, rows,
+ content, and formatting.
+
+ html:
+ The table element represents data with more than one dimension, in the
+ form of a table.
+ -->
+
+ <!--
+ TBODY
+ html4:
+ The table body should contain rows of table data.
+
+ html:
+ The tbody element represents a block of rows that consist of a body of
+ data for the parent table element, if the tbody element has a parent and
+ it is a table.
+ -->
+
+ <!--
+ TD
+ html4:
+ The  TD element defines a cell that contains data.
+
+ html:
+ The td element represents a data cell in a table.
+ -->
+
+ <!--
+ TEXTAREA
+ html4:
+ The  TEXTAREA element creates a  multi-line text input control. User
+ agents should use the contents of this element as the initial value of
+ the control and should render this text initially.
+
+ html:
+ The textarea element represents a multiline plain text edit control for
+ the element's raw value. The contents of the control represent the control's default value.
+ -->
+
+ <!--
+ TFOOT
+ html4:
+ The table head and table foot should contain information about the table's
+ columns.
+
+ html:
+ The tfoot element represents the block of rows that consist of the column
+ summaries (footers) for the parent table element, if the tfoot element has
+ a parent and it is a table.
+ -->
+
+ <!--
+ TH
+ html4:
+ The  TH element defines a cell that contains header information.
+
+ html:
+ The th element represents a header cell in a table.
+ -->
+
+ <!--
+ THEAD
+ html4:
+ The table head and table foot should contain information about the table's columns.
+
+ html:
+ The thead element represents the block of rows that consist of the column
+ labels (headers) for the parent table element, if the thead element has a
+ parent and it is a table.
+ -->
+
+ <!--
+ TITLE
+ html4:
+ Authors should use the TITLE element to identify the contents of a
+ document. Since users often consult documents out of context, authors
+ should provide context-rich titles.
+
+ html:
+ The title element represents the document's title or name. Authors should
+ use titles that identify their documents even when they are used out of
+ context, for example in a user's history or bookmarks, or in search
+ results.
+ -->
+
+ <!--
+ TR
+ html4:
+ The  TR elements acts as a container for a row of table cells.
+
+ html:
+ The tr element represents a row of cells in a table.
+ -->
+
+ <li><p>The <{u}> element now represents a
+ span of text with an unarticulated, though explicitly rendered,
+ non-textual annotation, such as labeling the text as being a proper name
+ in Chinese text (a Chinese proper name mark), or labeling the text as
+ being misspelt.
+
+ <!--
+ UL
+ html4:
+ Ordered and unordered lists are rendered in an identical manner except
+ that visual user agents number ordered list items. User agents may present
+ those numbers in a variety of ways. Unordered list items are not numbered.
+
+ html:
+ The ul element represents a list of items, where the order of the items is
+ not important — that is, where changing the order would not materially
+ change the meaning of the document.
+ -->
+
+ <!--
+ VAR
+ html4:
+ Indicates an instance of a variable or program argument.
+
+ html:
+ The var element represents a variable. This could be an actual variable in
+ a mathematical expression or programming context, an identifier
+ representing a constant, a function parameter, or just be a term used as a
+ placeholder in prose.
+ -->
+</ul>
+
+
+<h3 id=changed-attributes>Changed Attributes</h3>
+
+<p>Several attributes have changed in various ways.
+
+<ul>
+ <li><p>The <{img/alt}> attribute on <{img}>
+ has more elaborate requirements, and in some cases can also be omitted.
+ For details, see <a href=https://html.spec.whatwg.org/multipage/embedded-content.html#alt>the specification</a>.
+
+ <li><p>The <{input/accept}> attribute on <{input}> now allows the values
+ <code>audio/*</code>, <code>video/*</code> and <code>image/*</code>.
+
+ <li><p>The <a spec=html element-attr><code>accesskey</code></a> global attribute now allows multiple
+ characters to be specified, which the user agent can choose from.
+
+ <li><p>The <{form/action}>
+ attribute on <{form}> is no longer allowed
+ to have an empty URL.
+
+ <li><p>The <{dialog/method}> attribute has a new keyword <{dialog}>, intended to close a <{dialog}> element.
+
+ <li><p>The <{tdth/colspan}> attribute on <{td}> and <{th}>
+ now has to be greater than zero.
+
+ <li><p>The <{coords}> attribute on <{area}> no longer allows a percentage value of
+ the radius when the element is in the circle state.
+
+ <li><p>The <{object/data}>
+ attribute on <{object}> is no longer said
+ to be relative to the <{object/codebase}> attribute.
+
+ <li><p>The <{script/defer}> attribute on <{script}> now explicitly makes the script
+ execute when the page has finished parsing.
+
+ <li><p>The <a spec=html element-attr><code>dir</code></a> global
+ attribute now allows the value <code>auto</code>.
+
+ <li><p>The <{form/enctype}> attribute on <{form}> now supports the value
+ <code>text/plain</code>.
+
+ <li><p>The <a spec=html element-attr><code>width</code></a>
+ and <a spec=html element-attr><code>height</code></a>
+ attributes on <{img}>, <{iframe}> and <{object}> are no longer allowed to contain
+ percentages. They are also not allowed to be used to stretch the image to
+ a different aspect ratio than its intrinsic aspect ratio.
+
+ <li><p>The <{link/href}>
+ attribute on <{link}> is no longer allowed
+ to have an empty URL.
+
+ <li><p>The <{base/href}>
+ attribute on <{base}> is now allowed to
+ contain a relative URL.
+
+ <li><p>All attributes that take URLs, e.g. <{a/href}> on the <{a}> element, now support IRIs if the document's
+ encoding is UTF-8 or UTF-16.
+
+ <li><p>The <{meta/http-equiv}> attribute on <{meta}> is no longer said to be used by HTTP
+ servers to create HTTP headers in the HTTP response. Instead, it is said
+ to be a pragma directive to be used by the user agent.
+
+ <li><p>The <a spec=html element-attr><code>id</code></a> global
+ attribute is now allowed to have any value, as long as it is unique, is
+ not the empty string, and does not contain space characters.
+
+ <li><p>The <a spec=html element-attr><code>lang</code></a> global
+ attribute takes the empty string in addition to a valid language
+ identifier, just like <code>xml:lang</code> does in XML.
+
+ <li><p>The <{link/media}> attribute on <{link}> now accepts a media query list and defaults
+ to "all".
+
+ <li><p>The event handler attributes (e.g. <a spec=html element-attr><code>onclick</code></a>) now always use JavaScript as the
+ scripting language.
+
+ <li><p>The <{li/value}>
+ attribute of the <{li}> element is no
+ longer deprecated as it is not presentational. The same goes for the <{ol/start}> and <{ol/type}> attributes of the
+ <{ol}> element.
+
+ <li><p>The <a spec=html element-attr><code>style</code></a>
+ global attribute now always uses CSS as the styling language.
+
+ <li><p>The <a spec=html element-attr><code>tabindex</code></a>
+ global attribute now allows negative values which indicate that the
+ element can receive focus but cannot be tabbed to.
+
+ <li><p>The <a spec=html element-attr><code>target</code></a> attribute of the <{a}> and <{area}> elements is no longer deprecated, as it is useful in Web applications,
+ e.g. in conjunction with <{iframe}>.
+
+ <li><p>The <a spec=html element-attr><code>type</code></a>
+ attribute on <{script}> and <{style}> is no longer required if the scripting
+ language is JavaScript and the styling language is CSS, respectively.
+
+ <li><p>The <{img/usemap}> attribute on <{img}> no longer takes a URL, but instead takes
+ a <a>valid hash-name reference</a> to a <{map}> element.
+
+</ul>
+
+
+<h3 id=obsolete-elements>Obsolete Elements</h3>
+
+<p>The elements in this section are not to be used by Web developers. User
+agents will still have to support them and various sections in
+HTML define how. E.g. the obsolete <{isindex}> element
+is handled by the parser section.
+
+<p>The following elements are not in HTML because their effect is
+purely presentational and their function is better handled by CSS:
+
+<ul class=brief>
+ <li><code>basefont</code>
+ <li><code>big</code>
+ <li><code>center</code>
+ <li><code>font</code>
+ <li><code>strike</code>
+ <li><code>tt</code>
+</ul>
+
+<p>The following elements are not in HTML because using them damages
+usability and accessibility:
+
+<ul class=brief>
+ <li><code>frame</code>
+ <li><code>frameset</code>
+ <li><code>noframes</code>
+</ul>
+
+<p>The following elements are not included because they have not been
+used often, created confusion, or their function can be handled by other
+elements:
+
+<ul>
+ <li><p><{acronym}> is not included because it has created a lot
+ of confusion. Web developers are to use <{abbr}> for
+ abbreviations.
+
+ <li><p><{applet}> has been obsoleted in favor of
+ <{object}>.
+
+ <li><p><{isindex}> usage can be replaced by usage of form controls.
+
+ <li><p><{dir}> has been obsoleted in favor of <{ul}>.
+</ul>
+
+<p>Finally the <{noscript}> element is only conforming in the
+HTML syntax. It is not allowed in the XML syntax. This is because in order to not only hide visually but also prevent the content to run scripts, apply style sheets, have submittable form controls, load resources, and so forth, the HTML parser parses the content of the <{noscript}> element as plain text. The same is not possible with an XML parser.
+
+
+<h3 id=obsolete-attributes>Obsolete Attributes</h3>
+
+<p>Some attributes from HTML4 are no longer allowed in HTML. The
+specification defines how user agents should process them in legacy
+documents, but Web developers are not allowed use them and they will not validate.
+
+<p>HTML
+<a lt="non conforming features">has advice</a>
+on what you can use instead.
+
+<ul>
+ <li><p><a spec=html element-attr><code>rev</code></a>
+ and <a spec=html element-attr><code>charset</code></a> attributes on
+ <code>link</code> and <code>a</code>.
+
+ <li><p><{a/shape}> and <{a/coords}> attributes on
+ <{a}>.
+
+ <li><p><a spec=html element-attr><code>longdesc</code></a> attribute on
+ <{img}> and
+ <{iframe}>.
+
+ <li><p><{link/target}> attribute on <{link}>.
+
+ <li><p><{area/nohref}> attribute on <{area}>.
+
+ <li><p><{head/profile}> attribute on <{head}>.
+
+ <li><p><{version}> attribute on <{html}>.
+
+ <li><p><{img/name}> attribute on <{img}>
+ (use <a spec=html element-attr><code>id</code></a> instead).
+
+ <li><p><{meta/scheme}> attribute on <{meta}>.
+
+ <li><p><{object/archive}>, <{object/classid}>, <{object/codebase}>,
+ <{object/codetype}>, <{object/declare}> and <{object/standby}>
+ attributes on <{object}>.
+
+ <li><p><{param/valuetype}> and <{param/type}> attributes on
+ <{param}>.
+
+ <li><p><a spec=html element-attr><code>axis</code></a>
+ attribute on <{td}> and <{th}>.
+
+ <li><p><{td/abbr}> and
+ <{td/scope}> attributes on
+ <{td}>.
+
+ <li><p><{table/summary}> attribute
+ and <{table/border}> attribute
+ on <{table}>.
+
+ <li><p><{form/accept}> attribute on <{form}>.
+
+ <li><p><{input/usemap}> attribute on <{input}>.
+</ul>
+
+<p>In addition, HTML has none of the presentational attributes
+that were in HTML4 as their functions are better handled by
+CSS:
+
+<ul>
+ <li><p><a spec=html element-attr><code>align</code></a> attribute on <{caption}>,
+ <{iframe}>, <{img}>, <{input}>,
+ <{object}>, <{legend}>, <{table}>,
+ <{hr}>, <{div}>, <{h1}>, <{h2}>,
+ <{h3}>, <{h4}>, <{h5}>, <{h6}>,
+ <{p}>, <{col}>, <{colgroup}>,
+ <{tbody}>, <{td}>, <{tfoot}>,
+ <{th}>, <{thead}> and <{tr}>.
+
+ <li><p><{body/alink}>, <{body/link}>, <{body/text}> and
+ <{body/vlink}> attributes on <{body}>.
+
+ <li><p><{body/background}> attribute on <{body}>.
+
+ <li><p><a spec=html element-attr><code>bgcolor</code></a> attribute on <{table}>, <{tr}>,
+ <{td}>, <{th}> and <{body}>.
+
+ <li><p><{object/border}> attribute on <{object}>.
+
+ <li><p><{table/cellpadding}> and <{table/cellspacing}> attributes on
+ <{table}>.
+
+ <li><p><a spec=html element-attr><code>char</code></a> and <a spec=html element-attr><code>charoff</code></a> attributes on
+ <{col}>, <{colgroup}>, <{tbody}>,
+ <{td}>, <{tfoot}>, <{th}>, <{thead}>
+ and <{tr}>.
+
+ <li><p><a><code>clear</code></a> attribute on <{br}>.
+
+ <li><p><a><code>compact</code></a> attribute on <{dl}>,
+ <{menu}>,
+ <{ol}> and <{ul}>.
+
+ <li><p><a><code>frame</code></a> attribute on <{table}>.
+
+ <li><p><a><code>frameborder</code></a> attribute on <{iframe}>.
+
+ <li><p><a><code>height</code></a> attribute on <{td}> and
+ <{th}>.
+
+ <li><p><a><code>hspace</code></a> and <a><code>vspace</code></a> attributes on
+ <{img}> and <{object}>.
+
+ <li><p><a><code>marginheight</code></a> and <a><code>marginwidth</code></a> attributes on
+ <{iframe}>.
+
+ <li><p><a><code>noshade</code></a> attribute on <{hr}>.
+
+ <li><p><a><code>nowrap</code></a> attribute on <{td}> and <{th}>.
+
+ <li><p><a><code>rules</code></a> attribute on <{table}>.
+
+ <li><p><a><code>scrolling</code></a> attribute on <{iframe}>.
+
+ <li><p><a><code>size</code></a> attribute on <{hr}>.
+
+ <li><p><a><code>type</code></a> attribute
+ on <{li}> and <{ul}>.
+
+ <li><p><a><code>valign</code></a> attribute on <{col}>,
+ <{colgroup}>, <{tbody}>, <{td}>,
+ <{tfoot}>, <{th}>, <{thead}> and
+ <{tr}>.
+
+ <li><p><a><code>width</code></a> attribute on <{hr}>, <{table}>,
+ <{td}>, <{th}>, <{col}>, <{colgroup}>
+ and <{pre}>.
+</ul>
+
+<p>The following attributes are allowed but Web developers are discouraged from
+using them and instead strongly encouraged to use an alternative solution:
+
+<ul>
+ <li><p>The <a><code>border</code></a>
+ attribute on <{img}>. It is required to have
+ the value "<code>0</code>" when present. Web developers can use CSS
+ instead.
+
+ <li><p>The <a><code>language</code></a> attribute on <{script}>. It is required to have the value
+ "<code>JavaScript</code>" (case-insensitive) when present and cannot
+ conflict with the <a><code>type</code></a> attribute. Web developers can simply omit it as
+ it has no useful function.
+
+ <li><p>The <a><code>name</code></a> attribute on <{a}>. Web developers can use the <a spec=html element-attr><code>id</code></a> attribute instead.
+</ul>
+
+
+<h2 id=content-model>Content Model</h2>
+
+<p>The content model is what defines how elements may be nested — what is
+allowed as children (or descendants) of a certain element.
+
+<p>At a high level, HTML4 had two major categories of elements, "inline"
+(e.g. <{span}>, <{img}>, text), and "block-level" (e.g. <{div}>, <{hr}>,
+<{table}>). Some elements did not fit in
+either category.
+
+<p>Some elements allowed "inline" elements (e.g. <{p}>), some allowed "block-level" elements (e.g.
+<{body}>), some allowed both (e.g. <{div}>), while other elements did not allow either
+category but only allowed other specific elements (e.g. <{dl}>, <{table}>),
+or did not allow any children at all (e.g. <{link}>, <{img}>,
+<{hr}>).
+
+<p>Notice the difference between an element itself being in a
+certain category, and having a content model of a certain category; for
+instance, the <{p}> element is itself a
+"block-level" element, but has a content model of "inline".
+
+<p>To make it more confusing, HTML4 had different content model rules in its
+Strict, Transitional and Frameset flavors; for instance, in Strict, the
+<{body}> element allowed only "block-level"
+elements, but in Transitional, it allowed both "inline" and "block-level".
+
+<p>To make things more confusing still, CSS uses the terms "block-level
+element" and "inline-level element" for its visual formatting model, which
+is related to CSS's 'display' property and has nothing to do with HTML's
+content model rules.
+
+<p>HTML does not use the terms "block-level" or "inline" as part of its
+content model rules, to reduce confusion with CSS. However, it has more
+<a lt="content categories">categories</a>
+than HTML4, and an element can be part of none of them, one of them, or
+several of them.
+
+<ul>
+ <li><p>Metadata content, e.g. <{link}>, <{script}>.
+
+ <li><p>Flow content, e.g. <{span}>, <{div}>, text. This is roughly like HTML4's
+ "block-level" and "inline" together.
+
+ <li><p>Sectioning content, e.g. <{aside}>,
+ <{section}>.
+
+ <li><p>Heading content, e.g. <{h1}>.
+
+ <li><p>Phrasing content, e.g. <{span}>, <{img}>, text. This is roughly like HTML4's
+ "inline". Elements that are phrasing content are also flow content.
+
+ <li><p>Embedded content, e.g. <{img}>, <{iframe}>, <{svg}>.
+
+ <li><p>Interactive content, e.g. <{a}>, <{button}>, <{label}>. Interactive content is not allowed to
+ be nested.
+</ul>
+
+<p>As a broad change from HTML4, HTML no longer has any element that only
+accepts what HTML4 called "block-level" elements; e.g. the <{body}> element now allows flow content. Thus, This is
+closer to HTML4 Transitional than HTML4 Strict.
+
+<p>Further changes include:
+
+<ul>
+ <li><p>The <{address}> element now allows
+ flow content, but with no heading content descendants, no sectioning
+ content descendants, and no <{header}>,
+ <{footer}>, or <{address}> element descendants.
+
+ <li><p>HTML4 allowed <{object}> in <{head}>. HTML does not.
+
+ <li><p>The <{link}> and
+ <{meta}> elements are allowed as descendants of
+ <{body}> if they use microdata attributes.
+
+ <li><p>The <{noscript}> element was a
+ "block-level" element in HTML4, but is phrasing content in HTML.
+
+ <li><p>The <{table}>, <{thead}>, <{tbody}>, <{tfoot}>, <{tr}>,
+ <{ol}>, <{ul}> and <{dl}> elements are
+ allowed to be empty in HTML.
+
+ <li><p>Table elements have to conform to the <a>table model</a> (e.g. two cells are not allowed
+ to overlap).
+
+ <li><p>The <{table}> element now does not
+ allow <{col}> elements as direct children.
+ However, the HTML parser implies a <{colgroup}> element, so this change should not
+ affect <code>text/html</code> content.
+
+ <li><p>The <{table}> element now allows the
+ <{tfoot}> element to be the last child.
+
+ <li><p>The <{caption}> element now allows
+ flow content, but with no descendant <{table}> elements.
+
+ <li><p>The <{th}> element now allows flow
+ content, but with no <{header}>, <{footer}>, sectioning content, or heading
+ content descendants.
+
+ <li><p>The <{a}> element now has a <a>transparent</a> content model (except it does not
+ allow interactive content descendants), meaning that it has the same
+ content model as its parent. This means that the <{a}> element can now contain e.g. <{div}> elements, if its parent allows flow
+ content.
+
+ <li><p>The <{ins}> and <{del}> elements also have a transparent content
+ model. HTML4 had similar rules in prose that could not be expressed in the
+ DTD.
+
+ <li><p>The <{object}> element also has a
+ transparent content model, after its <{param}> children.
+
+ <li><p>The <{map}> element also has a
+ transparent content model. The <{area}> element is considered phrasing content if there is a <{map}> element ancestor, which means that they
+ do not need to be direct children of <{map}>.
+
+ <li><p>The <{fieldset}> element no longer
+ requires a <{legend}> child.
+</ul>
+
+
+<h2 id=apis>APIs</h2>
+
+<p>HTML has introduced many new APIs and has extended, changed or
+obsoleted some existing APIs.
+
+
+<h3 id=new-apis>New APIs</h3>
+
+<p>HTML introduces a number of APIs that help in creating Web
+applications. These can be used together with the new elements introduced
+for applications:
+
+<ul>
+ <li><p>Media elements (<{video}> and <{audio}>) have APIs for controlling playback,
+ syncronising multiple media elements, and timed text tracks (e.g.
+ subtitles).
+
+ <li><p>An API for form constraint validation (e.g. the <a><code>setCustomValidity()</code></a> method).
+
+ <li><p>An API for <a>commands</a> that the user can invoke.
+
+ <li><p>An API that enables offline Web applications, with an <a>application cache</a>.
+
+ <li><p>An API that allows a Web application to register itself for certain
+ protocols or media types, using <a><code>registerProtocolHandler()</code></a>
+ and <a><code>registerContentHandler()</code></a>.
+
+ <li><p>Editing API in combination with a new global <a spec=html element-attr><code>contenteditable</code></a>
+ attribute.
+
+ <li><p>Drag &amp; drop API in combination with a <a spec=html element-attr><code>draggable</code></a>
+ attribute.
+
+ <li><p>An API that exposes the components of the document's URL and allows
+ scripts to navigate, redirect and reload (the {{Location}} interface).
+
+ <li><p>An API that exposes the session history and allows scripts to
+ update the document's URL without actually navigating, so that
+ applications don't need to abuse the fragment component for "Ajax-style"
+ navigation (the {{History}} interface).
+
+ <li><p>An API for base64 conversion ({{Window/atob()}} and {{Window/btoa()}} methods).
+
+ <li><p>An API to schedule timer-based callbacks ({{Window/setTimeout()}} and {{Window/setInterval()}}).
+
+ <li><p>An API to prompt the user ({{Window/alert()}}, {{Window/confirm()}}, {{Window/prompt()}}, {{Window/showModalDialog()}}).
+
+ <li><p>An API for printing the document ({{Window/print()}}).
+
+ <li><p>An API for handling search providers ({{Window/AddSearchProvider()}} and {{Window/IsSearchProviderInstalled()}}).
+
+ <li><p>The {{Window}},
+ {{Navigator}} and
+ {{External}}
+ interfaces have been defined.
+
+ <li><p>An API for microdata.
+
+ <li><p>An API for immediate-mode bitmap graphics (the <a><code>2d</code></a> context for the
+ <{canvas}> element).
+
+ <li><p>An API for cross-document messaging, channel messaging and
+ sending messages to other tabs in the same origin ({{Window/postMessage()}},
+ {{MessageChannel}} and {{BroadcastChannel}}).
+
+ <li><p>An API for runnings scripts in the background ({{Worker}} and {{SharedWorker}}).
+
+ <li><p>An API for client-side storage ({{Window/localStorage}} and {{Window/sessionStorage}}).
+
+ <li><p>An API for bidirectional client-server communication ({{WebSocket}}).
+
+ <li><p>An API for server-to-client data push (<code>EventSource</code>).
+</ul>
+
+
+<h3 id=changed-apis>Changed APIs</h3>
+
+<p>The following features from DOM Level 2 HTML are changed in various ways:
+
+<ul>
+ <li><p>{{Document/title|document.title}} now collapses whitespace on
+ getting.
+
+ <li><p>{{Document/domain|document.domain}} is made settable, which
+ can change the document's effective script origin.
+
+ <li><p>{{Document/open|document.open()}}> now either clears the
+ document (if invoked with two or less arguments), or acts like {{Window/open()|window.open()}} (if invoked with
+ three or four arguments). In the former case, throws an exception in XML.
+
+ <li><p>{{Document/close/document.close()}}, {{Document/write|document.write()}} and
+ {{Document/writeln|document.writeln()}} throw an exception in
+ XML. The latter two now support variadic arguments; they can add text to
+ the document's input stream while it is still being parsed, imply a
+ call to {{Document/open|document.open()}}, or be ignored altogether in
+ some cases.
+
+ <li><p>{{Document/getElementsByName()|document.getElementsByName()}}
+ now returns all HTML elements with a <code>name</code> attribute matching
+ the argument.
+
+ <li><p>{{HTMLFormElement/elements}}
+ on {{HTMLFormElement}} now returns an
+ {{HTMLFormControlsCollection}} of <{button}>, <{fieldset}>, <{input}>, <{keygen}>, <{object}>, <{output}>, <{select}> and <{textarea}> elements. {{HTMLFormElement/length}} returns the
+ number of nodes in {{HTMLFormElement/elements}}.
+
+ <li><p>{{HTMLSelectElement/add()}} on
+ {{HTMLSelectElement}} now also accepts an
+ integer as its second argument.
+
+ <li><p>{{HTMLSelectElement/remove()}}
+ on {{HTMLSelectElement}} now removes the
+ first element in the collection if the argument is out of bounds.
+
+ <li><p><{a}> and <{area}> elements now stringify to their <a spec=html element-attr><code>href</code></a> attribute.
+
+ <li><p>The {{HTMLElement/click()}},
+ {{HTMLElement/focus()}} and {{HTMLElement/blur()}} methods are now
+ available on all HTML elements.
+</ul>
+
+<h3 id=document-extensions>Extensions to
+{{Document}}</h3>
+
+<p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
+inherited from {{Document}} and provided HTML-specific members on
+documents. HTML has moved these members to the {{Document}} interface, and extended it in a number
+of ways. Since all documents use the {{Document}} interface, the
+HTML-specific members are now available on all documents, so they are usable
+in e.g. SVG documents as well. It also has several new members:
+
+<ul>
+ <li><p>{{Document/location}}, {{Document/lastModified}} and {{Document/readyState}} to
+ help resource metadata management.
+
+ <li><p>{{Document/dir}},
+ {{Document/head}}, {{Document/embeds}}, {{Document/plugins}}, {{Document/scripts}}, {{Document/commands}}, and a
+ generic name getter, to access various parts of the DOM tree.
+
+ <li><p>{{Document/getItems()}} for microdata.
+
+ <li><p>{{Document/cssElementMap}}
+ to accompany the CSS <code>element()</code> feature.
+
+ <li><p>{{Document/currentScript}} which returns the currently
+ running <{script}> element (or null).
+
+ <li><p>{{Document/activeElement}} and {{Document/hasFocus}} to
+ determine which element is currently focused and whether the <code>Document</code> has focus respectively.
+
+ <li><p>{{Document/designMode}}, {{Document/execCommand()}},
+ {{Document/queryCommandEnabled()}}, {{Document/queryCommandIndeterm()}},
+ {{Document/queryCommandState()}}, {{Document/queryCommandSupported()}}, {{Document/queryCommandValue()}} for the
+ editing API.
+
+ <li><p>All event handler IDL attributes. Also, {{Document/onreadystatechange}} is a
+ special event handler IDL attribute that is only available on
+ {{Document}}.
+</ul>
+
+<p>Existing scripts that modified the prototype of <code>HTMLDocument</code>
+should continue to work because <code>window.HTMLDocument</code> now returns
+the {{Document}} interface object.
+
+
+<h3 id=htmlelement-extensions>Extensions to {{HTMLElement}}</h3>
+
+<p>The {{HTMLElement}} interface has also gained several extensions
+in HTML:
+
+<ul>
+ <li><p><a><code>translate</code></a>,
+ <a><code>hidden</code></a>,
+ <a><code>tabIndex</code></a>,
+ <a><code>accessKey</code></a>,
+ <a><code>draggable</code></a>,
+ <a><code>dropzone</code></a>,
+ <a><code>contentEditable</code></a>,
+ <a><code>contextMenu</code></a>,
+ <a><code>spellcheck</code></a> and
+ <a><code>style</code></a> reflect content
+ attributes.
+
+ <li><p><a><code>dataset</code></a> is a
+ convenience feature for handling the <a><code>data-*</code></a> attributes, which are exposed as
+ camel-cased properties; for instance, <code><var>elm</var>.dataset.fooBar
+ = 'test'</code> sets the <code>data-foo-bar</code> content attribute on
+ <code><var>elm</var></code>.
+
+ <li><p><a><code>itemScope</code></a>, <a><code>itemType</code></a>, <a><code>itemId</code></a>, <a><code>itemRef</code></a>, <a><code>itemProp</code></a>, <a><code>properties</code></a> and <a><code>itemValue</code></a> for microdata.
+
+ <li><p><a><code>click()</code></a>, <a><code>focus()</code></a> and <a><code>blur()</code></a> allow scripts to
+ simulate clicks and moving focus.
+
+ <li><p><a><code>accessKeyLabel</code></a> gives the shortcut key that
+ the user agent has assigned for the element, which the Web developer can
+ influence with the <a><code>accesskey</code></a> attribute.
+
+ <li><p><a><code>isContentEditable</code></a> returns true if the
+ element is editable.
+
+ <li><p><a><code>forceSpellCheck()</code></a> causes the user agent to check spelling of an element.
+
+ <li><p><a><code>commandType</code></a>, <a><code>commandLabel</code></a>, <a><code>commandIcon</code></a>, <a><code>commandHidden</code></a>, <a><code>commandDisabled</code></a> and <a><code>commandChecked</code></a> is
+ part of the command API.
+
+ <li><p>All event handler IDL attributes.
+</ul>
+
+<p>Some members were previously defined on <code>HTMLElement</code> but been moved to the <code>Element</code>
+interface in the DOM standard: [[!DOM]]
+
+<ul>
+ <li><p><a><code>id</code></a> reflects the <code>id</code> content attribute.
+
+ <li><p><a><code>className</code></a> reflects the <code>class</code> content attribute.
+
+ <li><p><a><code>classList</code></a> is a convenient accessor for
+ <a><code>className</code></a>. The object it returns exposes methods (<code>contains()</code>, <code>add()</code>,
+ <code>remove()</code>, and <code>toggle()</code>) for manipulating the element's classes.
+
+ <li><p><a><code>getElementsByClassName()</code></a> returns a list of elements with the specified
+ classes.
+</ul>
+
+
+<h3 id=other-extensions>Extensions to Other Interfaces</h3>
+
+<p>Some interfaces in DOM Level 2 HTML have been extended.
+
+<ul>
+ <li><p><code>HTMLOptionsCollection</code> now has a
+ legacy caller, setter creator, and the members <a><code>add()</code></a>, <a><code>remove()</code></a> and <a><code>selectedIndex</code></a>
+
+ <li><p><code>HTMLLinkElement</code> and <code>HTMLStyleElement</code> now implement the
+ <code>LinkStyle</code> interface from CSSOM. [[!CSSOM]]
+
+ <li><p><code>HTMLFormElement</code> now has a named
+ getter and an indexed getter,
+ as well as the <a><code>checkValidity()</code></a>,
+ <a><code>reportValidity()</code></a> and
+ <a><code>requestAutocomplete()</code></a> methods.
+
+ <li><p><code>HTMLSelectElement</code> now has a
+ getter, <a><code>item()</code></a>
+ and <a><code>namedItem()</code></a> methods, a setter creator,
+ <a><code>selectedOptions</code></a> and <a><code>labels</code></a> IDL attributes,
+ and members for the form constrain validation API: <a><code>willValidate</code></a>,
+ <a><code>validity</code></a>, <a><code>validationMessage</code></a>, <a><code>checkValidity()</code></a>,
+ <a><code>reportValidity()</code></a>,
+ and <a><code>setCustomValidity()</code></a>.
+
+ <li><p><code>HTMLOptionElement</code> now has a
+ constructor <a><code>Option</code></a>.
+
+ <li><p><code>HTMLInputElement</code> now has the
+ members <a><code>files</code></a>,
+ <a><code>height</code></a>, <a><code>indeterminate</code></a>,
+ <a><code>list</code></a>, <a><code>valueAsDate</code></a>,
+ <a><code>valueAsNumber</code></a>, <a><code>width</code></a>, <a><code>stepUp()</code></a>, <a><code>stepDown()</code></a>, the form
+ constraint validation API members, <a><code>labels</code></a>, and members for the text field selection
+ API: <a><code>selectionStart</code></a>, <a><code>selectionEnd</code></a>, <a><code>selectionDirection</code></a>,
+ <a><code>setSelectionRange()</code></a>
+ and <a><code>setRangeText()</code></a>.
+
+ <li><p><code>HTMLTextAreaElement</code> now has the
+ members <a><code>textLength</code></a>, the form constraint
+ validation API members, <a><code>labels</code></a> and the text field selection API
+ members.
+
+ <li><p><code>HTMLButtonElement</code> now has the
+ form constraint validation API members and <a><code>labels</code></a>.
+
+ <li><p><code>HTMLLabelElement</code> now has the
+ member <a><code>control</code></a>.
+
+ <li><p><code>HTMLFieldSetElement</code> now has the
+ members <a><code>type</code></a>,
+ <a><code>elements</code></a>
+ and the form constraint validation API members.
+
+ <li><p><code>HTMLAnchorElement</code> now has the
+ members <a><code>relList</code></a>,
+ <a><code>text</code></a>, and implements the <code>URLUtils</code> interface which has the members
+ <a><code>href</code></a>, <a><code>origin</code></a>,
+ <a><code>protocol</code></a>, <a><code>username</code></a>,
+ <a><code>password</code></a>, <a><code>host</code></a>,
+ <a><code>hostname</code></a>, <a><code>port</code></a>,
+ <a><code>pathname</code></a>, <a><code>search</code></a>,
+ <a><code>searchParams</code></a> and <a><code>hash</code></a>.
+ <code>HTMLLinkElement</code> and <code>HTMLAreaElement</code> also have the <a><code>relList</code></a> IDL attribute.
+ <code>HTMLAreaElement</code> also implements the <code>URLUtils</code> interface.
+
+ <li><p><code>HTMLImageElement</code> now has a
+ constructor <a><code>Image</code></a>, and the
+ members <a><code>naturalWidth</code></a>, <a><code>naturalHeight</code></a> and
+ <a><code>complete</code></a>.
+
+ <li><p><code>HTMLObjectElement</code> now has the
+ members <a><code>contentWindow</code></a>, the form constraint
+ validation API members and a legacy caller.
+
+ <li><p><code>HTMLMapElement</code> now has the
+ member <a><code>images</code></a>.
+
+ <li><p><code>HTMLTableElement</code> now has the
+ members <a><code>createTBody()</code></a>
+ and <a><code>stopSorting()</code></a>.
+
+ <li><p><code>HTMLTableHeaderCellElement</code> now has the member
+ <a><code>sort()</code></a>.
+
+ <li><p><code>HTMLIFrameElement</code> now has the
+ member <a><code>contentWindow</code></a>.
+</ul>
+
+<p>In addition, most new content attributes also have corresponding IDL
+attributes on the elements' interfaces, e.g. the <a><code>sizes</code></a> IDL attribute on <code>HTMLLinkElement</code> which reflects the <a><code>sizes</code></a> content attribute.
+
+
+<h3 id=obsolete-apis>Obsolete APIs</h3>
+
+<p>Some APIs are now either removed altogether, or marked as obsolete.
+
+<p>All IDL attributes that reflect a content attribute that is itself
+obsolete, are now also obsolete; for instance, the <a><code>bgColor</code></a> IDL attribute on
+<code>HTMLBodyElement</code> which reflects the
+obsolete <a><code>bgcolor</code></a>
+content attribute is now obsolete.
+
+<p>The following interfaces are marked obsolete since the elements are
+obsolete: <code>HTMLAppletElement</code>, <code>HTMLFrameSetElement</code>, <code>HTMLFrameElement</code>, <code>HTMLDirectoryElement</code> and <code>HTMLFontElement</code>.
+
+<p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
+the HTML parser expands an <code>isindex</code> tag into other elements. The
+<code>HTMLBaseFontElement</code> interface is also removed since <!-- Anne managed to
+kill it --> the element has no effect.
+
+<p>The following members of the <code>HTMLDocument</code> interface (which
+have now moved to <code>Document</code>) are now
+obsolete: <a><code>anchors</code></a> and <a><code>applets</code></a>.
+
+
+<h2 class=no-num id=acknowledgments>Acknowledgments</h2>
+
+<p>The editors would like to thank
+Ben Millard,
+Bruce Lawson,
+Cameron McCormack,
+Charles McCathieNevile,
+Dan Connolly,
+David Håsäther,
+Dennis German,
+Frank Ellermann,
+Frank Palinkas,
+羽田野太巳 (Futomi Hatano),
+Gordon P. Hemsley,
+Henri Sivonen,
+Jacob Palme,
+James Graham,
+Jens Oliver Meiert,
+Jeremy Keith,
+Jukka K. Korpela,
+Jürgen Jeka,
+Krijn Hoetmer,
+Leif Halvard Silli,
+Maciej Stachowiak,
+Mallory van Achterberg<!--stommepoes-->,
+Marcos Caceres,
+Mark Pilgrim,
+Martijn Wargers,
+Martin Leese,
+Martyn Haigh,
+Masataka Yakura,
+Michael Smith,
+Mike Taylor<!--miketaylr-->,
+<i>Ms2ger</i>,
+Olivier Gendrin,
+Øistein E. Andersen,
+Philip Jägenstedt,
+Philip Taylor,
+Randy Peterman,
+Robin Berjon,
+Steve Faulkner,
+Timo Tijhof,
+Toby Inkster,
+Xaxio Brandish,
+Yngve Spjeld Landro and
+Zhong Yu
+for their contributions to this document as well as to all the people
+who have contributed to HTML over the years for improving the Web!

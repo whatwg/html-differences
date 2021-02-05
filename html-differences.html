@@ -1,0 +1,1303 @@
+<!doctype html><html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="#3c790a" name="theme-color">
+  <title>Differences from HTML4</title>
+  <link href="https://resources.whatwg.org/standard.css" rel="stylesheet">
+  <link href="https://resources.whatwg.org/bikeshed.css" rel="stylesheet">
+  <link href="https://resources.whatwg.org/logo-differences.svg" rel="icon">
+  <meta content="Bikeshed version 6502bba05cb4f82ef5545cd14be1b0c8bf55e17b" name="generator">
+ <body class="h-entry status-LD">
+  <div class="head">
+   <p data-fill-with="logo"><a class="logo" href="https://whatwg.org/"> <img alt="WHATWG" height="100" src="https://resources.whatwg.org/logo-differences.svg"> </a> </p>
+   <hgroup>
+    <h1 class="p-name no-ref" id="title">Differences from HTML4</h1>
+    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document — Last Updated <time class="dt-updated" datetime="2017-03-20">20 March 2017</time></span></h2>
+   </hgroup>
+   <div data-fill-with="spec-metadata">
+    <dl>
+     <dt>Participate:
+     <dd><span><a href="https://github.com/whatwg/html-differences">GitHub whatwg/html-differences</a> (<a href="https://github.com/whatwg/html-differences/issues/new">file an issue</a>, <a href="https://github.com/whatwg/html-differences/issues">open issues</a>)</span>
+     <dd><span><a href="https://wiki.whatwg.org/wiki/IRC">IRC: #whatwg on Freenode</a></span>
+     <dt>Commits:
+     <dd><span><a href="https://github.com/whatwg/html-differences/commits">GitHub whatwg/html-differences/commits</a></span>
+    </dl>
+   </div>
+   <div data-fill-with="warning"></div>
+  </div>
+  <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+  <div class="p-summary" data-fill-with="abstract">
+   <p>"Differences from HTML4" describes the differences of the HTML specification from those of HTML4.</p>
+  </div>
+  <nav data-fill-with="table-of-contents" id="toc">
+   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
+   <ol class="toc" role="directory">
+    <li>
+     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
+     <ol class="toc">
+      <li><a href="#scope"><span class="secno">1.1</span> <span class="content">Scope of This Document</span></a>
+      <li><a href="#history"><span class="secno">1.2</span> <span class="content">History of HTML</span></a>
+      <li><a href="#open-issues"><span class="secno">1.3</span> <span class="content">Open Issues</span></a>
+      <li><a href="#backward-compatibility"><span class="secno">1.4</span> <span class="content">Backward Compatibility</span></a>
+      <li><a href="#development-model"><span class="secno">1.5</span> <span class="content">Development Model</span></a>
+     </ol>
+    <li>
+     <a href="#syntax"><span class="secno">2</span> <span class="content">Syntax</span></a>
+     <ol class="toc">
+      <li><a href="#character-encoding"><span class="secno">2.1</span> <span class="content">Character Encoding</span></a>
+      <li><a href="#doctype"><span class="secno">2.2</span> <span class="content">The Doctype</span></a>
+      <li><a href="#mathml-svg"><span class="secno">2.3</span> <span class="content">MathML and SVG</span></a>
+      <li><a href="#syntax-misc"><span class="secno">2.4</span> <span class="content">Miscellaneous</span></a>
+     </ol>
+    <li>
+     <a href="#language"><span class="secno">3</span> <span class="content">Language</span></a>
+     <ol class="toc">
+      <li><a href="#new-elements"><span class="secno">3.1</span> <span class="content">New Elements</span></a>
+      <li><a href="#new-attributes"><span class="secno">3.2</span> <span class="content">New Attributes</span></a>
+      <li><a href="#changed-elements"><span class="secno">3.3</span> <span class="content">Changed Elements</span></a>
+      <li><a href="#changed-attributes"><span class="secno">3.4</span> <span class="content">Changed Attributes</span></a>
+      <li><a href="#obsolete-elements"><span class="secno">3.5</span> <span class="content">Obsolete Elements</span></a>
+      <li><a href="#obsolete-attributes"><span class="secno">3.6</span> <span class="content">Obsolete Attributes</span></a>
+     </ol>
+    <li><a href="#content-model"><span class="secno">4</span> <span class="content">Content Model</span></a>
+    <li>
+     <a href="#apis"><span class="secno">5</span> <span class="content">APIs</span></a>
+     <ol class="toc">
+      <li><a href="#new-apis"><span class="secno">5.1</span> <span class="content">New APIs</span></a>
+      <li><a href="#changed-apis"><span class="secno">5.2</span> <span class="content">Changed APIs</span></a>
+      <li><a href="#document-extensions"><span class="secno">5.3</span> <span class="content">Extensions to <code class="idl"><span>Document</span></code></span></a>
+      <li><a href="#htmlelement-extensions"><span class="secno">5.4</span> <span class="content">Extensions to <code class="idl"><span>HTMLElement</span></code></span></a>
+      <li><a href="#other-extensions"><span class="secno">5.5</span> <span class="content">Extensions to Other Interfaces</span></a>
+      <li><a href="#obsolete-apis"><span class="secno">5.6</span> <span class="content">Obsolete APIs</span></a>
+     </ol>
+    <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">Acknowledgments</span></a>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+     </ol>
+   </ol>
+  </nav>
+  <main>
+<script async="" src="https://resources.whatwg.org/file-issue.js"></script>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="1.1" id="scope"><span class="secno">1.1. </span><span class="content">Scope of This Document</span><a class="self-link" href="#scope"></a></h3>
+   <p>This document covers the WHATWG HTML standard.
+It does not cover the W3C HTML5 or W3C HTML5.1 specifications. <a data-link-type="biblio" href="#biblio-html">[HTML]</a> <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> <a data-link-type="biblio" href="#biblio-html51">[HTML51]</a> </p>
+   <h3 class="heading settled" data-level="1.2" id="history"><span class="secno">1.2. </span><span class="content">History of HTML</span><a class="self-link" href="#history"></a></h3>
+   <p>HTML has been in continuous evolution since it was introduced to the
+Internet in the early 1990s. Some features were introduced in
+specifications; others were introduced in software releases. In some
+respects, implementations and Web developer practices have converged with each
+other and with specifications and standards, but in other ways, they
+have diverged. </p>
+   <p>HTML4 became a W3C Recommendation in 1997. While it continues
+to serve as a rough guide to many of the core features of HTML, it does
+not provide enough information to build implementations that
+interoperate with each other and, more importantly, with
+Web content. The same goes for XHTML1, which defines an
+XML serialization for HTML4, and DOM Level 2 HTML, which defines
+JavaScript APIs for both HTML and XHTML. HTML replaces these documents. <a data-link-type="biblio" href="#biblio-dom-level-2-html">[DOM-Level-2-HTML]</a> <a data-link-type="biblio" href="#biblio-html401">[HTML401]</a> <a data-link-type="biblio" href="#biblio-xhtml1">[XHTML1]</a> </p>
+   <p>The HTML specification reflects an effort, started in 2004, to study
+contemporary HTML implementations and Web content. The specification: </p>
+   <ol>
+    <li>
+     <p>Defines a single language called HTML which can be written
+ in HTML syntax and in XML syntax. </p>
+    <li>
+     <p>Defines detailed processing models to foster interoperable
+ implementations. </p>
+    <li>
+     <p>Improves markup for documents. </p>
+    <li>
+     <p>Introduces markup and APIs for emerging idioms, such as Web
+ applications. </p>
+   </ol>
+   <h3 class="heading settled" data-level="1.3" id="open-issues"><span class="secno">1.3. </span><span class="content">Open Issues</span><a class="self-link" href="#open-issues"></a></h3>
+   <p>See <a href="https://www.w3.org/Bugs/Public/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=HTML&amp;product=WHATWG">open issues in Bugzilla</a>. The specification also has annotation boxes in the margin which can link to bugs. </p>
+   <h3 class="heading settled" data-level="1.4" id="backward-compatibility"><span class="secno">1.4. </span><span class="content">Backward Compatibility</span><a class="self-link" href="#backward-compatibility"></a></h3>
+   <p>HTML is defined in a way that is backward compatible with
+the way user agents handle content. To keep the
+language relatively simple for Web developers, several older elements and attributes
+are not included, as outlined in the other sections of this document,
+such as presentational elements that are better handled using
+CSS. </p>
+   <p>User agents, however, will always have to support these older
+elements and attributes. This is why the HTML specification clearly
+separates requirements for Web developers (referred to as "authors" in the
+specification) and user agents; for instance, this
+means that Web developers cannot use the <code><a data-link-type="element">isindex</a></code> or the <code><a data-link-type="element">plaintext</a></code> element, but user agents are required to support
+them in a way that is compatible with how these elements need to behave
+for compatibility with Web content. </p>
+   <p>Since HTML has separate conformance requirements for Web developers
+and user agents there is no longer a need for marking features
+"deprecated". </p>
+   <div>
+    <h3 class="heading settled" data-level="1.5" id="development-model"><span class="secno">1.5. </span><span class="content">Development Model</span><a class="self-link" href="#development-model"></a></h3>
+    <p>The HTML4 specification reached Recommendation status before it was completely
+implemented in user agents. HTML4 still is not completely implemented, because it
+contains various bugs that have been fixed in the current HTML specification, which
+user agents are much closer to implementing than HTML4. </p>
+    <p>The HTML standard is under continual development where bugs are fixed
+and new features are introduced over time. Features can also be removed from the
+specification if they lack implementor interest, are not being used by Web developers, or
+for other reasons. </p>
+   </div>
+   <h2 class="heading settled" data-level="2" id="syntax"><span class="secno">2. </span><span class="content">Syntax</span><a class="self-link" href="#syntax"></a></h2>
+   <p>HTML defines a syntax, referred to as "the HTML syntax", that is
+mostly compatible with HTML4 and XHTML1 documents published on the
+Web, but is not compatible with the more esoteric SGML features of
+HTML4, such as <a href="http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.6">processing instructions</a> and <a href="http://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.3.7">shorthand markup</a> as these are not supported by most user agents. Documents using the HTML
+syntax are served with the <code>text/html</code> media
+type. </p>
+   <p>HTML also defines detailed parsing rules (including "error
+handling") for this syntax which are largely compatible with HTML4-era
+implementations. User agents have to use these rules for resources that
+have the <code>text/html</code> media type. Here is an example document
+that conforms to the HTML syntax: </p>
+<pre>&lt;!doctype html>
+&lt;html>
+ &lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Example document&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>Example paragraph&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+   <p>The other syntax that can be used for HTML is XML. This syntax
+is compatible with XHTML1 documents and implementations. Documents
+using this syntax need to be served with an XML media type (such as <code>application/xhtml+xml</code> or <code>application/xml</code>) and elements
+need to be put in the <code>http://www.w3.org/1999/xhtml</code> namespace following the rules set forth by the XML specifications. <a data-link-type="biblio" href="#biblio-xml">[XML]</a> <a data-link-type="biblio" href="#biblio-xml-names">[XML-NAMES]</a> </p>
+   <p>Below is an example document that conforms to the XML syntax of
+HTML. </p>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;html xmlns="http://www.w3.org/1999/xhtml">
+ &lt;head>
+  &lt;title>Example document&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;p>Example paragraph&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+   <h3 class="heading settled" data-level="2.1" id="character-encoding"><span class="secno">2.1. </span><span class="content">Character Encoding</span><a class="self-link" href="#character-encoding"></a></h3>
+   <p>For the HTML syntax, Web developers are required to declare the
+character encoding. There are three ways to do that: </p>
+   <ul>
+    <li>
+     <p>At the transport level; for instance, by using the HTTP <code>Content-Type</code> header. </p>
+    <li>
+     <p>Using a Unicode Byte Order Mark (BOM) character at the start of
+ the file. This character provides a signature for the encoding
+ used. </p>
+    <li>
+     <p>Using a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code> element with a <code><a data-link-type="element-sub">charset</a></code> attribute that specifies the encoding within the first 1024 bytes of
+ the document; for instance, <code>&lt;meta charset="UTF-8"></code> could be used to specify the UTF-8 encoding. This replaces the need
+ for <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></code> although that syntax is still allowed. </p>
+   </ul>
+   <p>For the XML syntax, Web developers have to use the rules as set forth in the
+XML specification to set the character encoding. </p>
+   <h3 class="heading settled" data-level="2.2" id="doctype"><span class="secno">2.2. </span><span class="content">The Doctype</span><a class="self-link" href="#doctype"></a></h3>
+   <p>The HTML syntax requires a doctype to be specified to ensure
+that the browser renders the page in standards mode. The doctype has no
+other purpose. See <a href="https://hsivonen.fi/doctype/"><cite>Activating Browser Modes with Doctype</cite></a>. </p>
+   <p>In HTML4, it was possible to use doctypes that were syntactically correct
+but still trigger quirks mode (e.g. <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"></code>, without the URL). </p>
+   <p>If you were using no doctype or a quirky doctype and switch to a standards mode doctype,
+you will most likely run into differences between the modes. For example, in quirks mode,
+classes and IDs in Selectors are case-insensitive and CSS &lt;length>s do not require a unit.
+For more examples, please refer to <a href="http://www.cs.tut.fi/~jkorpela/quirks-mode.html"><cite>What happens in Quirks Mode?</cite></a>. </p>
+   <p>The doctype declaration for the HTML syntax is <code>&lt;!DOCTYPE html></code> and is
+case-insensitive. Doctypes from earlier versions of
+HTML were longer because the HTML language was SGML-based and therefore
+required a reference to a DTD. This is no longer the case and
+the doctype is only needed to enable standards mode for documents
+written using the HTML syntax. Browsers already do this for <code>&lt;!DOCTYPE html></code>. </p>
+   <p>To support legacy markup generators that cannot generate the preferred
+short doctype, the doctype <code>&lt;!DOCTYPE html SYSTEM
+"about:legacy-compat"></code> is allowed in the HTML syntax. </p>
+   <p>The strict doctypes for HTML 4.0, HTML 4.01, XHTML 1.0 as well as XHTML
+1.1 are also allowed (but are discouraged) in the HTML syntax. </p>
+   <p>In the XML syntax, any doctype declaration may be used, or it may be
+omitted altogether. Documents with an XML media type are always handled in
+standards mode. </p>
+   <h3 class="heading settled" data-level="2.3" id="mathml-svg"><span class="secno">2.3. </span><span class="content">MathML and SVG</span><a class="self-link" href="#mathml-svg"></a></h3>
+   <p>The HTML syntax allows for MathML and SVG elements to
+be used inside a document. An <code>math</code> or <code>svg</code> start
+tag causes the HTML parser to switch to a special insertion mode which puts
+elements and attributes in the appropriate namespaces, does case fixups for
+elements and attributes that have mixed case, and supports the empty-element
+syntax as in XML. The syntax is still case-insensitive and attributes allow
+the same syntax as for HTML elements. Namespace declarations may be omitted.
+CDATA sections are supported in this insertion mode. </p>
+   <p>Some MathML and SVG elements cause the parser to switch back to "HTML
+mode", e.g. <code>mtext</code> and <code>foreignObject</code>, so you can
+use HTML elements or a new <code>math</code> or <code>svg</code> element. </p>
+   <p>For instance, a very simple document using some of the
+minimal syntax features could look like: </p>
+<pre>&lt;!doctype html>
+&lt;title>SVG in text/html&lt;/title>
+&lt;p>
+ A green circle:
+ <mark>&lt;svg> &lt;circle r="50" cx="50" cy="50" fill="green"/> &lt;/svg></mark>
+&lt;/p>
+</pre>
+   <h3 class="heading settled" data-level="2.4" id="syntax-misc"><span class="secno">2.4. </span><span class="content">Miscellaneous</span><a class="self-link" href="#syntax-misc"></a></h3>
+   <p>There are a few other changes in the HTML syntax worthy of mentioning: </p>
+   <ul>
+    <li>
+     <p>The <code>&amp;lang;</code> and <code>&amp;rang;</code> named character references now expand to U+27E8 and U+27E9 (mathematical left/right angle
+ bracket) instead of U+2329 and U+232A (left/right-pointing angle bracket), respectively. </p>
+    <li>
+     <p>Many new named character references have been added, including all named character references from
+ MathML. </p>
+    <li>
+     <p>Void elements (known as "EMPTY" in HTML4) are allowed to have a
+ trailing slash. </p>
+    <li>
+     <p>The ampersand (<code>&amp;</code>) may be left unescaped in more
+ cases compared to HTML4. </p>
+    <li>
+     <p>Attributes have to be separated by at least one whitespace character. </p>
+    <li>
+     <p>Attributes with an empty value may be written as just the attribute
+ name omitting the equals sign and the value, even if the attribute is not a boolean
+ attribute. (It is commonly believed that HTML4 allowed the value to be omitted for boolean attributes. Instead, HTML4 allowed using only the attribute <em>value</em> and omitting the attribute name, for enumerated attributes,
+ but this was not supported in browsers.) </p>
+    <li>
+     <p>Attributes omitting quotes for the value are allowed to use a larger
+ set of characters compared to HTML4. </p>
+    <li>
+     <p>The HTML parser does not do any normalization of whitespace in attribute values; for instance, leading and trailing whitespace in the <a data-link-type="element-attr"><code>id</code></a> attribute is not ignored (and thus now invalid), and newline characters can be used in the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-value">value</a></code> attribute of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> element without using character
+ references. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-optgroup-element">optgroup</a></code> end tag is now optional. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code> start tag is now optional and is inferred by
+ the HTML parser. </p>
+   </ul>
+   <h2 class="heading settled" data-level="3" id="language"><span class="secno">3. </span><span class="content">Language</span><a class="self-link" href="#language"></a></h2>
+   <p>This section is split up in several subsections to more clearly
+illustrate the various differences from HTML4. </p>
+   <h3 class="heading settled" data-level="3.1" id="new-elements"><span class="secno">3.1. </span><span class="content">New Elements</span><a class="self-link" href="#new-elements"></a></h3>
+   <p>The following elements have been introduced for better structure: </p>
+   <ul>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-section-element">section</a></code> represents a generic document or application section. It can be <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/semantics.html#headings-and-sections">used together</a> with the <code><a data-link-type="element">h1</a></code>, <code><a data-link-type="element">h2</a></code>, <code><a data-link-type="element">h3</a></code>, <code><a data-link-type="element">h4</a></code>, <code><a data-link-type="element">h5</a></code>, and <code><a data-link-type="element">h6</a></code> elements to
+ indicate the document structure. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-article-element">article</a></code> represents an independent piece of content of a document, such as a
+ blog entry or newspaper article. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-main-element">main</a></code> can be used as a container for the dominant contents of another element, such as
+ the main content of the page. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-aside-element">aside</a></code> represents a piece of content that is only slightly related to the
+ rest of the page. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hgroup-element">hgroup</a></code> represents the header of a section. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-header-element">header</a></code> represents a group of introductory or navigational aids. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element">footer</a></code> represents a footer for a section and can contain information about
+ the author, copyright information, etc. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-nav-element">nav</a></code> represents a section of the document intended for navigation. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-figure-element">figure</a></code> represents a piece of self-contained flow content, typically
+  referenced as a single unit from the main flow of the document. </p>
+<pre>&lt;figure>
+ &lt;video src="example.webm" controls>&lt;/video>
+ &lt;figcaption>Example&lt;/figcaption>
+&lt;/figure>
+</pre>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-figcaption-element">figcaption</a></code> can be used as caption (it is optional). </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element">template</a></code> can be used to declare fragments of HTML that can be cloned and inserted in the document by script. </p>
+   </ul>
+   <p>Then there are several other new elements: </p>
+   <ul>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#video">video</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#audio">audio</a></code> for multimedia content. Both
+ provide an API so application Web developers can script their own user
+ interface, but there is also a way to trigger a user interface
+ provided by the user agent. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element">source</a></code> elements are used together with these elements if there are multiple
+ streams available of different types. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element">track</a></code> provides text tracks
+ for the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#video">video</a></code> element. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-embed-element">embed</a></code> is used for plugin
+ content. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-mark-element">mark</a></code> represents a run of
+ text in one document marked or highlighted for reference purposes, due
+ to its relevance in another context. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-progress-element">progress</a></code> represents a
+ completion of a task, such as downloading or when performing a series
+ of expensive operations. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-meter-element">meter</a></code> represents a
+ measurement, such as disk usage. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-time-element">time</a></code> represents a date
+ and/or time. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-data-element">data</a></code> allows content to be annotated with a machine-readable value. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element">dialog</a></code> for showing a dialog. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ruby-element">ruby</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-rt-element">rt</a></code>, and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-rp-element">rp</a></code> allow for marking up ruby
+ annotations. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-bdi-element">bdi</a></code> represents a span of
+ text that is to be isolated from its surroundings for the purposes of
+ bidirectional text formatting. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-wbr-element">wbr</a></code> represents a line break
+ opportunity. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#canvas">canvas</a></code> is used for rendering
+ dynamic bitmap graphics on the fly, such as graphs or games. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-menuitem-element">menuitem</a></code> represents a command the user can invoke from a popup menu. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-details-element">details</a></code> represents additional information or controls which the user can
+ obtain on demand. The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-summary-element">summary</a></code> element provides its summary, legend, or caption. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-datalist-element">datalist</a></code> together with the a new <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-list">list</a></code> attribute for <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> can be used to make comboboxes: </p>
+<pre>&lt;input <mark>list="browsers"</mark>>
+&lt;datalist <mark>id="browsers"</mark>>
+ &lt;option value="Safari">
+ &lt;option value="Internet Explorer">
+ &lt;option value="Opera">
+ &lt;option value="Firefox">
+&lt;/datalist>
+</pre>
+    <li>
+     <p><code><a data-link-type="element">keygen</a></code> represents control for key pair generation. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-output-element">output</a></code> represents some type of output, such as from a calculation done
+ through scripting. </p>
+   </ul>
+   <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> element’s <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-type">type</a></code> attribute now has the
+following new values: </p>
+   <ul class="brief">
+    <li><a data-link-type="element-state"><code>tel</code></a> 
+    <li><a data-link-type="element-state"><code>search</code></a> 
+    <li><a data-link-type="element-state"><code>url</code></a> 
+    <li><a data-link-type="element-state"><code>email</code></a> 
+    <li><a data-link-type="element-state"><code>datetime</code></a> 
+    <li><a data-link-type="element-state"><code>date</code></a> 
+    <li><a data-link-type="element-state"><code>month</code></a> 
+    <li><a data-link-type="element-state"><code>week</code></a> 
+    <li><a data-link-type="element-state"><code>time</code></a> 
+    <li><a data-link-type="element-state"><code>datetime-local</code></a> 
+    <li><a data-link-type="element-state"><code>number</code></a> 
+    <li><a data-link-type="element-state"><code>range</code></a> 
+    <li><a data-link-type="element-state"><code>color</code></a> 
+   </ul>
+   <p>The idea of these new types is that the user agent can provide the user
+interface, such as a calendar date picker or integration with the user’s
+address book, and submit a defined format to the server. It gives the user a
+better experience as his input is checked before sending it to the server
+meaning there is less time to wait for feedback. </p>
+   <h3 class="heading settled" data-level="3.2" id="new-attributes"><span class="secno">3.2. </span><span class="content">New Attributes</span><a class="self-link" href="#new-attributes"></a></h3>
+   <p>Several attributes have been introduced to various elements
+that were already part of HTML4: </p>
+   <ul>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> elements have the new <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-hyperlink-download"><code>download</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#dom-a-ping"><code>ping</code></a> attributes. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> element, for consistency with the <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> and <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> elements, now also has the <code><a data-link-type="element-sub">hreflang</a></code>, <code><a data-link-type="element-sub">type</a></code> and <code><a data-link-type="element-sub">rel</a></code> attributes. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-base-element">base</a></code> element can now have a <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-base-target">target</a></code> attribute as well, mainly for consistency with the <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> element. (This is already widely supported.) </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code> element has a <code><a data-link-type="element">charset</a></code> attribute now as this was already widely supported and provides a nice
+ way to specify the <a href="#character-encoding">character encoding</a> for the document. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code> element now has a <code><a data-link-type="element-sub">sortable</a></code> attribute and the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code> element has a <code><a data-link-type="element-sub">sorted</a></code> attribute, which provide a means to sort
+ table columns. </p>
+    <li>
+     <p>A new <code><a data-link-type="element-sub">autofocus</a></code> attribute can be specified on the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> (except when the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-type">type</a></code> attribute is <a data-link-type="element-state"><code>hidden</code></a>), <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-select-element">select</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code> elements. It provides a declarative way to focus a
+ form control during page load. Using this feature should enhance the
+ user experience compared to focusing the element with script as the user can turn it off if the user does not like
+ it, for instance. </p>
+    <li>
+     <p>A new <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-placeholder"><code>placeholder</code></a> attribute can be specified on
+  the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> elements. It
+  represents a hint intended to aid the user with data entry. </p>
+<pre>&lt;input type=search name=q <mark>placeholder="Enter search phrase..."</mark>> &lt;button>Search&lt;/button>
+</pre>
+<pre>&lt;label>Email &lt;input type=email name=email <mark>placeholder="john@example.com"</mark>>&lt;/label>
+</pre>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-placeholder">placeholder</a></code> attribute should not be used as a replacement for the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">label</a></code> element. </p>
+<pre class="bad">&lt;!-- Do not do this: -->
+&lt;input type=email name=email placeholder="Email">
+</pre>
+    <li>
+     <p>The new <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fae-form">form</a> attribute for <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-output-element">output</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-select-element">select</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">label</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element">fieldset</a></code> elements allows for
+  controls to be associated with a form. These elements can now be
+  placed anywhere on a page, not just as descendants of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> element, and still be associated with a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code>. </p>
+<pre>&lt;table>
+ &lt;tr>
+  &lt;th>Key
+  &lt;th>Value
+  &lt;th>Action
+ &lt;tr>
+  &lt;td>&lt;form <mark>id=1</mark>>&lt;input name=1-key>&lt;/form>
+  &lt;td>&lt;input <mark>form=1</mark> name=1-value>
+  &lt;td>&lt;button <mark>form=1</mark> name=1-action value=save>✓&lt;/button>
+   &lt;button <mark>form=1</mark> name=1-action value=delete>✗&lt;/button>
+ ...
+&lt;/table>
+</pre>
+    <li>
+     <p>The new <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-required">required</a></code> attribute applies to <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> (except when the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-type">type</a></code> attribute is <a data-link-type="element-state"><code>hidden</code></a>, <a data-link-type="element-state"><code>image</code></a> or some button type such as <a data-link-type="element-state"><code>submit</code></a>), <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-select-element">select</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code>. It indicates that the user
+ has to fill in a value in order to submit the form. For <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-select-element">select</a></code>, the first <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-option-element">option</a></code> element has to be a placeholder with an empty value. </p>
+<pre>&lt;label>Color: &lt;select name=color <mark>required</mark>>
+ &lt;option <mark>value=""</mark>>Choose one
+ &lt;option>Red
+ &lt;option>Green
+ &lt;option>Blue
+&lt;/select>&lt;/label>
+</pre>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element">fieldset</a></code> element now allows the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fieldset-disabled">disabled</a></code> attribute which disables all descendant controls (excluding those that are descendants of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-legend-element">legend</a></code> element)
+ when specified, and the <code><a data-link-type="element-sub">name</a></code> attribute which can be used for script access. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> element has several new attributes to
+ specify constraints: <code><a data-link-type="element-sub">autocomplete</a></code>, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-min">min</a></code>, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-max">max</a></code>, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-multiple">multiple</a></code>, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-pattern">pattern</a></code> and <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-step">step</a></code>. As mentioned before it also has a new <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-list">list</a></code> attribute which can be used together with the <code><a data-link-type="element-sub">datalist</a></code> element. It also now has the <code><a data-link-type="element-sub">width</a></code> and <code><a data-link-type="element-sub">height</a></code> attributes to specify the dimensions of the image when using <code>type=image</code>. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> elements have
+ a new attribute named <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fe-dirname"><code>dirname</code></a> that causes the
+ directionality of the control as set by the user to be submitted as
+ well. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> element also has three new attributes, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-textarea-maxlength">maxlength</a></code>, <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-textarea-minlength">minlength</a></code> and <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-textarea-wrap">wrap</a></code> which control max input
+ length and submitted line wrapping behavior, respectively. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> element has a <code><a data-link-type="element-sub">novalidate</a></code> attribute that can be used to disable form validation submission (i.e.
+ the form can always be submitted). </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code> elements have <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formaction"><code>formaction</code></a>, <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formenctype"><code>formenctype</code></a>, <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formmethod"><code>formmethod</code></a>, <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formnovalidate"><code>formnovalidate</code></a>, and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formtarget"><code>formtarget</code></a> as new attributes. If present, they override
+ the <code><a data-link-type="element-sub">action</a></code>, <code><a data-link-type="element-sub">enctype</a></code>, <code><a data-link-type="element-sub">method</a></code>, <code><a data-link-type="element-sub">novalidate</a></code>, and <code><a data-link-type="element-sub">target</a></code> attributes on the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> element. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> element also has the new <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-minlength">minlength</a></code> attribute. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> elements have an <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-fe-inputmode"><code>inputmode</code></a> attribute. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#menus">menu</a></code> element has two new attributes: <code><a data-link-type="element-sub">type</a></code> and <code><a data-link-type="element-sub">label</a></code>. They
+ allow the element to transform into a menu as found in typical user
+ interfaces as well as providing for context menus in conjunction with the
+ global <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-contextmenu"><code>contextmenu</code></a> attribute. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code> element has a new <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#menus">menu</a></code> attribute, used together with popup menus. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#elementdef-style">style</a></code> element has a new <code><a data-link-type="element-sub">scoped</a></code> attribute which can be used to enable scoped style sheets. Style rules
+ within such a <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#elementdef-style">style</a></code> element only apply to the local tree. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> element has a new attribute called <code><a data-link-type="element-sub">async</a></code> that influences script loading and execution. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-html-element">html</a></code> element has a new attribute called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-html-manifest">manifest</a></code> that points to an application cache manifest
+ used in conjunction with the API for offline Web applications. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> element has a new attribute called <code><a data-link-type="element-sub">sizes</a></code>. It can be used in conjunction with the <a data-link-type="dfn"><code>icon</code></a> relationship (set through the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-link-rel">rel</a></code> attribute; can be used for e.g. favicons) to indicate the size of the
+ referenced icon, thus allowing for icons of distinct dimensions. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ol-element">ol</a></code> element has a new attribute called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-ol-reversed">reversed</a></code>. When present, it indicates that the list order
+ is descending. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code> element has new attributes called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-sandbox">sandbox</a></code>, <code><a data-link-type="element-sub">seamless</a></code>,
+ and <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc">srcdoc</a></code> which allow for sandboxing content, e.g. blog comments. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> element has a new attribute called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-object-typemustmatch">typemustmatch</a></code> which allows safer embedding of external resources. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> element has a new attribute called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin">crossorigin</a></code> to use CORS in the fetch and if it is successful, allows the image data to be
+ read with the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#canvas">canvas</a></code> API.
+ The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> element has a <code><a data-link-type="element-sub" href="https://svgwg.org/svg2-draft/interact.html#ScriptElementCrossoriginAttribute">crossorigin</a></code> attribute to allow script <a data-link-type="dfn">errors to be reported</a> to <a data-link-type="element-attr"><code>onerror</code></a> with information about the error.
+ The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> element also has a <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-link-crossorigin">crossorigin</a></code> attribute. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> element has new attributes called <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset">srcset</a></code> and <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-sizes">sizes</a></code>,
+ along with the new elements <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">picture</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element">source</a></code> to allow Web developers to declaratively control or give hints to the user agent
+ about which image resource to use, based on the screen pixel density,
+ viewport size, image format, and other factors. </p>
+   </ul>
+   <p>Several attributes from HTML4 now apply to all elements. These
+are called global attributes: <a data-link-type="element-attr"><code>accesskey</code></a>, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#classes"><code>class</code></a>, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/obsolete.html#dir"><code>dir</code></a>, <a data-link-type="element-attr"><code>id</code></a>, <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/dom.html#attr-lang"><code>lang</code></a>, <a data-link-type="element-attr"><code>style</code></a>, <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex"><code>tabindex</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/dom.html#attr-title"><code>title</code></a>. Additionally, XHTML 1.0
+only allowed <code>xml:space</code> on some elements, which is now allowed
+on all elements in XHTML documents. </p>
+   <p>There are also several new global attributes: </p>
+   <ul>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-contenteditable"><code>contenteditable</code></a> attribute indicates that
+ the element is an editable area. The user can change the contents of the
+ element and manipulate the markup. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/forms.html#attr-contextmenu"><code>contextmenu</code></a> attribute can be used to point
+ to a context menu provided by the Web developer. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>data-<var>*</var></code></a> collection of Web developer-defined
+ attributes. Web developers can define any attribute they want as long as they
+ prefix it with <code>data-</code> to avoid clashes with future versions of
+ HTML. These are intended to be used to store custom data to be consumed by
+ the Web page or application itself. They are <em>not</em> intended for
+ data to be consumed by other parties (e.g. user agents). </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>draggable</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-dropzone"><code>dropzone</code></a> attributes can be used together with
+ the new drag &amp; drop API. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>hidden</code></a> attribute indicates that an element is not yet, or is no longer, relevant. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/infrastructure.html#attr-aria-role"><code>role</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/infrastructure.html#attr-aria-*"><code>aria-<var>*</var></code></a> collection attributes which can be used to instruct assistive
+ technology. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-spellcheck"><code>spellcheck</code></a> attribute allows for hinting
+ whether content can be checked for spelling or not. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/dom.html#attr-translate"><code>translate</code></a> attribute gives a hint to
+ translators whether the content should be translated. </p>
+   </ul>
+   <p>HTML also makes all event handler attributes from HTML4, which take the
+form <code>on<var>event</var></code>, global attributes and adds
+several new event handler attributes for new events it defines; for
+instance, the <a data-link-type="element-attr"><code>onplay</code></a> event handler attribute for the <a class="idl-code" data-link-type="event"><code>play</code></a> event which is used by the API for the
+media elements (<code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#video">video</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#audio">audio</a></code>).
+The specification has an <a href="https://html.spec.whatwg.org/multipage/indices.html#events-2">index of all events</a>. </p>
+   <h3 class="heading settled" data-level="3.3" id="changed-elements"><span class="secno">3.3. </span><span class="content">Changed Elements</span><a class="self-link" href="#changed-elements"></a></h3>
+   <p>These elements have slightly modified meanings in HTML to
+better reflect how they are used on the Web or to make them more
+useful: </p>
+   <ul>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-address-element">address</a></code> element is now
+ scoped by the nearest ancestor <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-article-element">article</a></code> or <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code> element. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-b-element">b</a></code> element now represents a
+ span of text to which attention is being drawn for utilitarian purposes
+ without conveying any extra importance and with no implication of an
+ alternate voice or mood, such as key words in a document abstract, product
+ names in a review, actionable words in interactive text-driven software,
+ or an article lede. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-cite-element">cite</a></code> element now solely
+ represents the title of a work (e.g. a book, a paper, an essay, a poem, a
+ score, a song, a script, a film, a TV show, a game, a sculpture, a
+ painting, a theatre production, a play, an opera, a musical, an
+ exhibition, a legal case report, etc). Specifically the example in HTML4
+ where it is used to mark up the name of a person is no longer considered
+ conforming. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code> element now represents an
+ association list of name-value groups, and is no longer said to be
+ appropriate for dialogue. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code> element now represents a
+ paragraph-level thematic break. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-i-element">i</a></code> element now represents a
+ span of text in an alternate voice or mood, or otherwise offset from the
+ normal prose in a manner indicating a different quality of text, such as a
+ taxonomic designation, a technical term, an idiomatic phrase from another
+ language, a thought, or a ship name in Western texts. </p>
+    <li>
+     <p>For the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">label</a></code> element the
+ browser should no longer move focus from the label to the control unless
+ such behavior is standard for the underlying platform user
+ interface. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#menus">menu</a></code> element is redefined to
+ be useful for toolbars and popup menus. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element">noscript</a></code> element is no
+ longer said to be rendered when the user agent doesn’t support a scripting
+ language invoked by a <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> element
+ earlier in the document. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-s-element">s</a></code> element now represents
+ contents that are no longer accurate or no longer relevant. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> element can now be
+ used for scripts or for custom data blocks. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-small-element">small</a></code> element now represents
+ side comments such as small print. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-strong-element">strong</a></code> element now
+ represents importance rather than strong emphasis. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-u-element">u</a></code> element now represents a
+ span of text with an unarticulated, though explicitly rendered,
+ non-textual annotation, such as labeling the text as being a proper name
+ in Chinese text (a Chinese proper name mark), or labeling the text as
+ being misspelt. </p>
+   </ul>
+   <h3 class="heading settled" data-level="3.4" id="changed-attributes"><span class="secno">3.4. </span><span class="content">Changed Attributes</span><a class="self-link" href="#changed-attributes"></a></h3>
+   <p>Several attributes have changed in various ways. </p>
+   <ul>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt">alt</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> has more elaborate requirements, and in some cases can also be omitted.
+ For details, see <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#alt">the specification</a>. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/forms.html#attr-input-accept">accept</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code> now allows the values <code>audio/*</code>, <code>video/*</code> and <code>image/*</code>. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>accesskey</code></a> global attribute now allows multiple
+ characters to be specified, which the user agent can choose from. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">action</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> is no longer allowed
+ to have an empty URL. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">method</a></code> attribute has a new keyword <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element">dialog</a></code>, intended to close a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element">dialog</a></code> element. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">colspan</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code> now has to be greater than zero. </p>
+    <li>
+     <p>The <code><a data-link-type="element">coords</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> no longer allows a percentage value of
+ the radius when the element is in the circle state. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-object-data">data</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> is no longer said
+ to be relative to the <code><a data-link-type="element-sub">codebase</a></code> attribute. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">defer</a></code> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> now explicitly makes the script
+ execute when the page has finished parsing. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>dir</code></a> global
+ attribute now allows the value <code>auto</code>. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">enctype</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> now supports the value <code>text/plain</code>. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-dim-width"><code>width</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-dim-height"><code>height</code></a> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> are no longer allowed to contain
+ percentages. They are also not allowed to be used to stretch the image to
+ a different aspect ratio than its intrinsic aspect ratio. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-link-href">href</a></code> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> is no longer allowed
+ to have an empty URL. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-base-href">href</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-base-element">base</a></code> is now allowed to
+ contain a relative URL. </p>
+    <li>
+     <p>All attributes that take URLs, e.g. <code><a data-link-type="element-sub">href</a></code> on the <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> element, now support IRIs if the document’s
+ encoding is UTF-8 or UTF-16. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv">http-equiv</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code> is no longer said to be used by HTTP
+ servers to create HTTP headers in the HTTP response. Instead, it is said
+ to be a pragma directive to be used by the user agent. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>id</code></a> global
+ attribute is now allowed to have any value, as long as it is unique, is
+ not the empty string, and does not contain space characters. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/dom.html#attr-lang"><code>lang</code></a> global
+ attribute takes the empty string in addition to a valid language
+ identifier, just like <code>xml:lang</code> does in XML. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-link-media">media</a></code> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> now accepts a media query list and defaults
+ to "all". </p>
+    <li>
+     <p>The event handler attributes (e.g. <a data-link-type="element-attr"><code>onclick</code></a>) now always use JavaScript as the
+ scripting language. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-li-value">value</a></code> attribute of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-li-element">li</a></code> element is no
+ longer deprecated as it is not presentational. The same goes for the <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-ol-start">start</a></code> and <code><a data-link-type="element-sub" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-ol-type">type</a></code> attributes of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ol-element">ol</a></code> element. </p>
+    <li>
+     <p>The <a data-link-type="element-attr"><code>style</code></a> global attribute now always uses CSS as the styling language. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex"><code>tabindex</code></a> global attribute now allows negative values which indicate that the
+ element can receive focus but cannot be tabbed to. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-base-target"><code>target</code></a> attribute of the <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> elements is no longer deprecated, as it is useful in Web applications,
+ e.g. in conjunction with <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>. </p>
+    <li>
+     <p>The <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-link-type"><code>type</code></a> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> and <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#elementdef-style">style</a></code> is no longer required if the scripting
+ language is JavaScript and the styling language is CSS, respectively. </p>
+    <li>
+     <p>The <code><a data-link-type="element-sub">usemap</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> no longer takes a URL, but instead takes
+ a <a data-link-type="dfn">valid hash-name reference</a> to a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-map-element">map</a></code> element. </p>
+   </ul>
+   <h3 class="heading settled" data-level="3.5" id="obsolete-elements"><span class="secno">3.5. </span><span class="content">Obsolete Elements</span><a class="self-link" href="#obsolete-elements"></a></h3>
+   <p>The elements in this section are not to be used by Web developers. User
+agents will still have to support them and various sections in
+HTML define how. E.g. the obsolete <code><a data-link-type="element">isindex</a></code> element
+is handled by the parser section. </p>
+   <p>The following elements are not in HTML because their effect is
+purely presentational and their function is better handled by CSS: </p>
+   <ul class="brief">
+    <li><code>basefont</code> 
+    <li><code>big</code> 
+    <li><code>center</code> 
+    <li><code>font</code> 
+    <li><code>strike</code> 
+    <li><code>tt</code> 
+   </ul>
+   <p>The following elements are not in HTML because using them damages
+usability and accessibility: </p>
+   <ul class="brief">
+    <li><code>frame</code> 
+    <li><code>frameset</code> 
+    <li><code>noframes</code> 
+   </ul>
+   <p>The following elements are not included because they have not been
+used often, created confusion, or their function can be handled by other
+elements: </p>
+   <ul>
+    <li>
+     <p><code><a data-link-type="element">acronym</a></code> is not included because it has created a lot
+ of confusion. Web developers are to use <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-abbr-element">abbr</a></code> for
+ abbreviations. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/obsolete.html#the-applet-element">applet</a></code> has been obsoleted in favor of <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element">isindex</a></code> usage can be replaced by usage of form controls. </p>
+    <li>
+     <p><code><a data-link-type="element">dir</a></code> has been obsoleted in favor of <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ul-element">ul</a></code>. </p>
+   </ul>
+   <p>Finally the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element">noscript</a></code> element is only conforming in the
+HTML syntax. It is not allowed in the XML syntax. This is because in order to not only hide visually but also prevent the content to run scripts, apply style sheets, have submittable form controls, load resources, and so forth, the HTML parser parses the content of the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element">noscript</a></code> element as plain text. The same is not possible with an XML parser. </p>
+   <h3 class="heading settled" data-level="3.6" id="obsolete-attributes"><span class="secno">3.6. </span><span class="content">Obsolete Attributes</span><a class="self-link" href="#obsolete-attributes"></a></h3>
+   <p>Some attributes from HTML4 are no longer allowed in HTML. The
+specification defines how user agents should process them in legacy
+documents, but Web developers are not allowed use them and they will not validate. </p>
+   <p>HTML <a data-link-type="dfn">has advice</a> on what you can use instead. </p>
+   <ul>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-rev"><code>rev</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset"><code>charset</code></a> attributes on <code>link</code> and <code>a</code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">shape</a></code> and <code><a data-link-type="element-sub">coords</a></code> attributes on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code>. </p>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-longdesc"><code>longdesc</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">target</a></code> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">nohref</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">profile</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-head-element">head</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element">version</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-html-element">html</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">name</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> (use <a data-link-type="element-attr"><code>id</code></a> instead). </p>
+    <li>
+     <p><code><a data-link-type="element-sub">scheme</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">archive</a></code>, <code><a data-link-type="element-sub">classid</a></code>, <code><a data-link-type="element-sub">codebase</a></code>, <code><a data-link-type="element-sub">codetype</a></code>, <code><a data-link-type="element-sub">declare</a></code> and <code><a data-link-type="element-sub">standby</a></code> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">valuetype</a></code> and <code><a data-link-type="element-sub">type</a></code> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-param-element">param</a></code>. </p>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-axis"><code>axis</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">abbr</a></code> and <code><a data-link-type="element-sub">scope</a></code> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">summary</a></code> attribute
+ and <code><a data-link-type="element-sub">border</a></code> attribute
+ on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">accept</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">usemap</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code>. </p>
+   </ul>
+   <p>In addition, HTML has none of the presentational attributes
+that were in HTML4 as their functions are better handled by
+CSS: </p>
+   <ul>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-caption-align"><code>align</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element">caption</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-legend-element">legend</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-div-element">div</a></code>, <code><a data-link-type="element">h1</a></code>, <code><a data-link-type="element">h2</a></code>, <code><a data-link-type="element">h3</a></code>, <code><a data-link-type="element">h4</a></code>, <code><a data-link-type="element">h5</a></code>, <code><a data-link-type="element">h6</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-p-element">p</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">tbody</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">thead</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">alink</a></code>, <code><a data-link-type="element-sub">link</a></code>, <code><a data-link-type="element-sub">text</a></code> and <code><a data-link-type="element-sub">vlink</a></code> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">background</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code>. </p>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-bgcolor"><code>bgcolor</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">border</a></code> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>. </p>
+    <li>
+     <p><code><a data-link-type="element-sub">cellpadding</a></code> and <code><a data-link-type="element-sub">cellspacing</a></code> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>. </p>
+    <li>
+     <p><a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-char"><code>char</code></a> and <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-charoff"><code>charoff</code></a> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">tbody</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">thead</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>clear</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-br-element">br</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>compact</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#menus">menu</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ol-element">ol</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ul-element">ul</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>frame</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>frameborder</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn" href="https://drafts.csswg.org/css-writing-modes-4/#height"><code>height</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>hspace</code></a> and <a data-link-type="dfn"><code>vspace</code></a> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>marginheight</code></a> and <a data-link-type="dfn"><code>marginwidth</code></a> attributes on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>noshade</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>nowrap</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>rules</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>scrolling</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn" href="https://drafts.csswg.org/css-sizing-3/#size"><code>size</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn" href="https://w3c.github.io/ServiceWorker/#dfn-type"><code>type</code></a> attribute
+ on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-li-element">li</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ul-element">ul</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>valign</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">tbody</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">thead</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>. </p>
+    <li>
+     <p><a data-link-type="dfn" href="https://drafts.csswg.org/css-writing-modes-4/#width"><code>width</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-pre-element">pre</a></code>. </p>
+   </ul>
+   <p>The following attributes are allowed but Web developers are discouraged from
+using them and instead strongly encouraged to use an alternative solution: </p>
+   <ul>
+    <li>
+     <p>The <a data-link-type="dfn"><code>border</code></a> attribute on <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>. It is required to have
+ the value "<code>0</code>" when present. Web developers can use CSS
+ instead. </p>
+    <li>
+     <p>The <a data-link-type="dfn"><code>language</code></a> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code>. It is required to have the value
+ "<code>JavaScript</code>" (case-insensitive) when present and cannot
+ conflict with the <a data-link-type="dfn" href="https://w3c.github.io/ServiceWorker/#dfn-type"><code>type</code></a> attribute. Web developers can simply omit it as
+ it has no useful function. </p>
+    <li>
+     <p>The <a data-link-type="dfn" href="https://fetch.spec.whatwg.org/#concept-header-name"><code>name</code></a> attribute on <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code>. Web developers can use the <a data-link-type="element-attr"><code>id</code></a> attribute instead. </p>
+   </ul>
+   <h2 class="heading settled" data-level="4" id="content-model"><span class="secno">4. </span><span class="content">Content Model</span><a class="self-link" href="#content-model"></a></h2>
+   <p>The content model is what defines how elements may be nested — what is
+allowed as children (or descendants) of a certain element. </p>
+   <p>At a high level, HTML4 had two major categories of elements, "inline"
+(e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-span-element">span</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, text), and "block-level" (e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-div-element">div</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>). Some elements did not fit in
+either category. </p>
+   <p>Some elements allowed "inline" elements (e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-p-element">p</a></code>), some allowed "block-level" elements (e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code>), some allowed both (e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-div-element">div</a></code>), while other elements did not allow either
+category but only allowed other specific elements (e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>),
+or did not allow any children at all (e.g. <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-hr-element">hr</a></code>). </p>
+   <p>Notice the difference between an element itself being in a
+certain category, and having a content model of a certain category; for
+instance, the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-p-element">p</a></code> element is itself a
+"block-level" element, but has a content model of "inline". </p>
+   <p>To make it more confusing, HTML4 had different content model rules in its
+Strict, Transitional and Frameset flavors; for instance, in Strict, the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code> element allowed only "block-level"
+elements, but in Transitional, it allowed both "inline" and "block-level". </p>
+   <p>To make things more confusing still, CSS uses the terms "block-level
+element" and "inline-level element" for its visual formatting model, which
+is related to CSS’s 'display' property and has nothing to do with HTML’s
+content model rules. </p>
+   <p>HTML does not use the terms "block-level" or "inline" as part of its
+content model rules, to reduce confusion with CSS. However, it has more <a data-link-type="dfn">categories</a> than HTML4, and an element can be part of none of them, one of them, or
+several of them. </p>
+   <ul>
+    <li>
+     <p>Metadata content, e.g. <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code>, <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code>. </p>
+    <li>
+     <p>Flow content, e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-span-element">span</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-div-element">div</a></code>, text. This is roughly like HTML4’s
+ "block-level" and "inline" together. </p>
+    <li>
+     <p>Sectioning content, e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-aside-element">aside</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-section-element">section</a></code>. </p>
+    <li>
+     <p>Heading content, e.g. <code><a data-link-type="element">h1</a></code>. </p>
+    <li>
+     <p>Phrasing content, e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-span-element">span</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, text. This is roughly like HTML4’s
+ "inline". Elements that are phrasing content are also flow content. </p>
+    <li>
+     <p>Embedded content, e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-iframe-element">iframe</a></code>, <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/struct.html#elementdef-svg">svg</a></code>. </p>
+    <li>
+     <p>Interactive content, e.g. <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">label</a></code>. Interactive content is not allowed to
+ be nested. </p>
+   </ul>
+   <p>As a broad change from HTML4, HTML no longer has any element that only
+accepts what HTML4 called "block-level" elements; e.g. the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code> element now allows flow content. Thus, This is
+closer to HTML4 Transitional than HTML4 Strict. </p>
+   <p>Further changes include: </p>
+   <ul>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-address-element">address</a></code> element now allows
+ flow content, but with no heading content descendants, no sectioning
+ content descendants, and no <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-header-element">header</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element">footer</a></code>, or <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-address-element">address</a></code> element descendants. </p>
+    <li>
+     <p>HTML4 allowed <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> in <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-head-element">head</a></code>. HTML does not. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/styling.html#LinkElement">link</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code> elements are allowed as descendants of <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-body-element">body</a></code> if they use microdata attributes. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element">noscript</a></code> element was a
+ "block-level" element in HTML4, but is phrasing content in HTML. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">thead</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">tbody</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ol-element">ol</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ul-element">ul</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-dl-element">dl</a></code> elements are
+ allowed to be empty in HTML. </p>
+    <li>
+     <p>Table elements have to conform to the <a data-link-type="dfn">table model</a> (e.g. two cells are not allowed
+ to overlap). </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code> element now does not
+ allow <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code> elements as direct children.
+ However, the HTML parser implies a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code> element, so this change should not
+ affect <code>text/html</code> content. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code> element now allows the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code> element to be the last child. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element">caption</a></code> element now allows
+ flow content, but with no descendant <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code> elements. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code> element now allows flow
+ content, but with no <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-header-element">header</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element">footer</a></code>, sectioning content, or heading
+ content descendants. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> element now has a <a data-link-type="dfn">transparent</a> content model (except it does not
+ allow interactive content descendants), meaning that it has the same
+ content model as its parent. This means that the <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> element can now contain e.g. <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-div-element">div</a></code> elements, if its parent allows flow
+ content. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-ins-element">ins</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-del-element">del</a></code> elements also have a transparent content
+ model. HTML4 had similar rules in prose that could not be expressed in the
+ DTD. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code> element also has a
+ transparent content model, after its <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-param-element">param</a></code> children. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-map-element">map</a></code> element also has a
+ transparent content model. The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> element is considered phrasing content if there is a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-map-element">map</a></code> element ancestor, which means that they
+ do not need to be direct children of <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-map-element">map</a></code>. </p>
+    <li>
+     <p>The <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element">fieldset</a></code> element no longer
+ requires a <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-legend-element">legend</a></code> child. </p>
+   </ul>
+   <h2 class="heading settled" data-level="5" id="apis"><span class="secno">5. </span><span class="content">APIs</span><a class="self-link" href="#apis"></a></h2>
+   <p>HTML has introduced many new APIs and has extended, changed or
+obsoleted some existing APIs. </p>
+   <h3 class="heading settled" data-level="5.1" id="new-apis"><span class="secno">5.1. </span><span class="content">New APIs</span><a class="self-link" href="#new-apis"></a></h3>
+   <p>HTML introduces a number of APIs that help in creating Web
+applications. These can be used together with the new elements introduced
+for applications: </p>
+   <ul>
+    <li>
+     <p>Media elements (<code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#video">video</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#audio">audio</a></code>) have APIs for controlling playback,
+ syncronising multiple media elements, and timed text tracks (e.g.
+ subtitles). </p>
+    <li>
+     <p>An API for form constraint validation (e.g. the <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-cva-setcustomvalidity"><code>setCustomValidity()</code></a> method). </p>
+    <li>
+     <p>An API for <a data-link-type="dfn">commands</a> that the user can invoke. </p>
+    <li>
+     <p>An API that enables offline Web applications, with an <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#application-cache">application cache</a>. </p>
+    <li>
+     <p>An API that allows a Web application to register itself for certain
+ protocols or media types, using <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-navigator-registerprotocolhandler"><code>registerProtocolHandler()</code></a> and <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-navigator-registercontenthandler"><code>registerContentHandler()</code></a>. </p>
+    <li>
+     <p>Editing API in combination with a new global <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-contenteditable"><code>contenteditable</code></a> attribute. </p>
+    <li>
+     <p>Drag &amp; drop API in combination with a <a data-link-type="element-attr"><code>draggable</code></a> attribute. </p>
+    <li>
+     <p>An API that exposes the components of the document’s URL and allows
+ scripts to navigate, redirect and reload (the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#location">Location</a></code> interface). </p>
+    <li>
+     <p>An API that exposes the session history and allows scripts to
+ update the document’s URL without actually navigating, so that
+ applications don’t need to abuse the fragment component for "Ajax-style"
+ navigation (the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#history-3">History</a></code> interface). </p>
+    <li>
+     <p>An API for base64 conversion (<code class="idl"><a data-link-type="idl">atob()</a></code> and <code class="idl"><a data-link-type="idl">btoa()</a></code> methods). </p>
+    <li>
+     <p>An API to schedule timer-based callbacks (<code class="idl"><a data-link-type="idl">setTimeout()</a></code> and <code class="idl"><a data-link-type="idl">setInterval()</a></code>). </p>
+    <li>
+     <p>An API to prompt the user (<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-alert">alert()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-confirm">confirm()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-prompt">prompt()</a></code>, <code class="idl"><a data-link-type="idl">showModalDialog()</a></code>). </p>
+    <li>
+     <p>An API for printing the document (<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-print">print()</a></code>). </p>
+    <li>
+     <p>An API for handling search providers (<code class="idl"><a data-link-type="idl">AddSearchProvider()</a></code> and <code class="idl"><a data-link-type="idl">IsSearchProviderInstalled()</a></code>). </p>
+    <li>
+     <p>The <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#window">Window</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#navigator">Navigator</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/obsolete.html#external">External</a></code> interfaces have been defined. </p>
+    <li>
+     <p>An API for microdata. </p>
+    <li>
+     <p>An API for immediate-mode bitmap graphics (the <a data-link-type="dfn"><code>2d</code></a> context for the <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#canvas">canvas</a></code> element). </p>
+    <li>
+     <p>An API for cross-document messaging, channel messaging and
+ sending messages to other tabs in the same origin (<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/comms.html#dom-window-postmessage">postMessage()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/comms.html#messagechannel">MessageChannel</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/comms.html#broadcastchannel">BroadcastChannel</a></code>). </p>
+    <li>
+     <p>An API for runnings scripts in the background (<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/workers.html#worker">Worker</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/workers.html#sharedworker">SharedWorker</a></code>). </p>
+    <li>
+     <p>An API for client-side storage (<code class="idl"><a data-link-type="idl">localStorage</a></code> and <code class="idl"><a data-link-type="idl">sessionStorage</a></code>). </p>
+    <li>
+     <p>An API for bidirectional client-server communication (<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/comms.html#websocket">WebSocket</a></code>). </p>
+    <li>
+     <p>An API for server-to-client data push (<code>EventSource</code>). </p>
+   </ul>
+   <h3 class="heading settled" data-level="5.2" id="changed-apis"><span class="secno">5.2. </span><span class="content">Changed APIs</span><a class="self-link" href="#changed-apis"></a></h3>
+   <p>The following features from DOM Level 2 HTML are changed in various ways: </p>
+   <ul>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">document.title</a></code> now collapses whitespace on
+ getting. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain">document.domain</a></code> is made settable, which
+ can change the document’s effective script origin. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">document.open()</a></code>> now either clears the
+ document (if invoked with two or less arguments), or acts like <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-document-open">window.open()</a></code> (if invoked with
+ three or four arguments). In the former case, throws an exception in XML. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">document.close()</a></code>, <code class="idl"><a data-link-type="idl">document.write()</a></code> and <code class="idl"><a data-link-type="idl">document.writeln()</a></code> throw an exception in
+ XML. The latter two now support variadic arguments; they can add text to
+ the document’s input stream while it is still being parsed, imply a
+ call to <code class="idl"><a data-link-type="idl">document.open()</a></code>, or be ignored altogether in
+ some cases. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-getelementsbyname">document.getElementsByName()</a></code> now returns all HTML elements with a <code>name</code> attribute matching
+ the argument. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-elements">elements</a></code> on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">HTMLFormElement</a></code> now returns an <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection">HTMLFormControlsCollection</a></code> of <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-button-element">button</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-fieldset-element">fieldset</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-input-element">input</a></code>, <code><a data-link-type="element">keygen</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-object-element">object</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-output-element">output</a></code>, <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-select-element">select</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-textarea-element">textarea</a></code> elements. <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-length">length</a></code> returns the
+ number of nodes in <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-elements">elements</a></code>. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#dom-select-add">add()</a></code> on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#htmlselectelement">HTMLSelectElement</a></code> now also accepts an
+ integer as its second argument. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#dom-select-remove">remove()</a></code> on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/forms.html#htmlselectelement">HTMLSelectElement</a></code> now removes the
+ first element in the collection if the argument is out of bounds. </p>
+    <li>
+     <p><code><a data-link-type="element" href="https://svgwg.org/svg2-draft/linking.html#elementdef-a">a</a></code> and <code><a data-link-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element">area</a></code> elements now stringify to their <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/semantics.html#attr-base-href"><code>href</code></a> attribute. </p>
+    <li>
+     <p>The <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-click">click()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus">focus()</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-blur">blur()</a></code> methods are now
+ available on all HTML elements. </p>
+   </ul>
+   <h3 class="heading settled" data-level="5.3" id="document-extensions"><span class="secno">5.3. </span><span class="content">Extensions to <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code></span><a class="self-link" href="#document-extensions"></a></h3>
+   <p>DOM Level 2 HTML had an <code>HTMLDocument</code> interface that
+inherited from <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code> and provided HTML-specific members on
+documents. HTML has moved these members to the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code> interface, and extended it in a number
+of ways. Since all documents use the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code> interface, the
+HTML-specific members are now available on all documents, so they are usable
+in e.g. SVG documents as well. It also has several new members: </p>
+   <ul>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">location</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-lastmodified">lastModified</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-readystate">readyState</a></code> to
+ help resource metadata management. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">dir</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-head">head</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-embeds">embeds</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-plugins">plugins</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-scripts">scripts</a></code>, <code class="idl"><a data-link-type="idl">commands</a></code>, and a
+ generic name getter, to access various parts of the DOM tree. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">getItems()</a></code> for microdata. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">cssElementMap</a></code> to accompany the CSS <code>element()</code> feature. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#dom-document-currentscript">currentScript</a></code> which returns the currently
+ running <code><a data-link-type="element" href="https://svgwg.org/svg2-draft/interact.html#elementdef-script">script</a></code> element (or null). </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-activeelement">activeElement</a></code> and <code class="idl"><a data-link-type="idl">hasFocus</a></code> to
+ determine which element is currently focused and whether the <code>Document</code> has focus respectively. </p>
+    <li>
+     <p><code class="idl"><a data-link-type="idl">designMode</a></code>, <code class="idl"><a data-link-type="idl">execCommand()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-querycommandenabled">queryCommandEnabled()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-querycommandindeterm">queryCommandIndeterm()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-querycommandstate">queryCommandState()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-querycommandsupported">queryCommandSupported()</a></code>, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-querycommandvalue">queryCommandValue()</a></code> for the
+ editing API. </p>
+    <li>
+     <p>All event handler IDL attributes. Also, <code class="idl"><a data-link-type="idl">onreadystatechange</a></code> is a
+ special event handler IDL attribute that is only available on <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code>. </p>
+   </ul>
+   <p>Existing scripts that modified the prototype of <code>HTMLDocument</code> should continue to work because <code>window.HTMLDocument</code> now returns
+the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a></code> interface object. </p>
+   <h3 class="heading settled" data-level="5.4" id="htmlelement-extensions"><span class="secno">5.4. </span><span class="content">Extensions to <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement">HTMLElement</a></code></span><a class="self-link" href="#htmlelement-extensions"></a></h3>
+   <p>The <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement">HTMLElement</a></code> interface has also gained several extensions
+in HTML: </p>
+   <ul>
+    <li>
+     <p><a data-link-type="dfn"><code>translate</code></a>, <a data-link-type="dfn"><code>hidden</code></a>, <a data-link-type="dfn"><code>tabIndex</code></a>, <a data-link-type="dfn"><code>accessKey</code></a>, <a data-link-type="dfn"><code>draggable</code></a>, <a data-link-type="dfn"><code>dropzone</code></a>, <a data-link-type="dfn"><code>contentEditable</code></a>, <a data-link-type="dfn"><code>contextMenu</code></a>, <a data-link-type="dfn"><code>spellcheck</code></a> and <a data-link-type="dfn"><code>style</code></a> reflect content
+ attributes. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>dataset</code></a> is a
+ convenience feature for handling the <a data-link-type="dfn"><code>data-*</code></a> attributes, which are exposed as
+ camel-cased properties; for instance, <code><var>elm</var>.dataset.fooBar
+ = 'test'</code> sets the <code>data-foo-bar</code> content attribute on <code><var>elm</var></code>. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>itemScope</code></a>, <a data-link-type="dfn"><code>itemType</code></a>, <a data-link-type="dfn"><code>itemId</code></a>, <a data-link-type="dfn"><code>itemRef</code></a>, <a data-link-type="dfn"><code>itemProp</code></a>, <a data-link-type="dfn"><code>properties</code></a> and <a data-link-type="dfn"><code>itemValue</code></a> for microdata. </p>
+    <li>
+     <p><a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-click"><code>click()</code></a>, <a data-link-type="functionish" href="https://w3c.github.io/ServiceWorker/#dom-windowclient-focus"><code>focus()</code></a> and <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-blur"><code>blur()</code></a> allow scripts to
+ simulate clicks and moving focus. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>accessKeyLabel</code></a> gives the shortcut key that
+ the user agent has assigned for the element, which the Web developer can
+ influence with the <a data-link-type="dfn"><code>accesskey</code></a> attribute. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>isContentEditable</code></a> returns true if the
+ element is editable. </p>
+    <li>
+     <p><a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-forcespellcheck"><code>forceSpellCheck()</code></a> causes the user agent to check spelling of an element. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>commandType</code></a>, <a data-link-type="dfn"><code>commandLabel</code></a>, <a data-link-type="dfn"><code>commandIcon</code></a>, <a data-link-type="dfn"><code>commandHidden</code></a>, <a data-link-type="dfn"><code>commandDisabled</code></a> and <a data-link-type="dfn"><code>commandChecked</code></a> is
+ part of the command API. </p>
+    <li>
+     <p>All event handler IDL attributes. </p>
+   </ul>
+   <p>Some members were previously defined on <code>HTMLElement</code> but been moved to the <code>Element</code> interface in the DOM standard: <a data-link-type="biblio" href="#biblio-dom">[DOM]</a> </p>
+   <ul>
+    <li>
+     <p><a data-link-type="dfn" href="https://w3c.github.io/ServiceWorker/#dfn-service-worker-id"><code>id</code></a> reflects the <code>id</code> content attribute. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>className</code></a> reflects the <code>class</code> content attribute. </p>
+    <li>
+     <p><a data-link-type="dfn"><code>classList</code></a> is a convenient accessor for <a data-link-type="dfn"><code>className</code></a>. The object it returns exposes methods (<code>contains()</code>, <code>add()</code>, <code>remove()</code>, and <code>toggle()</code>) for manipulating the element’s classes. </p>
+    <li>
+     <p><a data-link-type="functionish" href="https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname"><code>getElementsByClassName()</code></a> returns a list of elements with the specified
+ classes. </p>
+   </ul>
+   <h3 class="heading settled" data-level="5.5" id="other-extensions"><span class="secno">5.5. </span><span class="content">Extensions to Other Interfaces</span><a class="self-link" href="#other-extensions"></a></h3>
+   <p>Some interfaces in DOM Level 2 HTML have been extended. </p>
+   <ul>
+    <li>
+     <p><code>HTMLOptionsCollection</code> now has a
+ legacy caller, setter creator, and the members <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-select-add"><code>add()</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-select-remove"><code>remove()</code></a> and <a data-link-type="dfn"><code>selectedIndex</code></a> </p>
+    <li>
+     <p><code>HTMLLinkElement</code> and <code>HTMLStyleElement</code> now implement the <code>LinkStyle</code> interface from CSSOM. <a data-link-type="biblio" href="#biblio-cssom">[CSSOM]</a> </p>
+    <li>
+     <p><code>HTMLFormElement</code> now has a named
+ getter and an indexed getter,
+ as well as the <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-checkvalidity"><code>checkValidity()</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-reportvalidity"><code>reportValidity()</code></a> and <a data-link-type="functionish"><code>requestAutocomplete()</code></a> methods. </p>
+    <li>
+     <p><code>HTMLSelectElement</code> now has a
+ getter, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/infrastructure.html#dom-htmlallcollection-item"><code>item()</code></a> and <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-mimetypearray-nameditem"><code>namedItem()</code></a> methods, a setter creator, <a data-link-type="dfn"><code>selectedOptions</code></a> and <a data-link-type="dfn" href="https://encoding.spec.whatwg.org/#label"><code>labels</code></a> IDL attributes,
+ and members for the form constrain validation API: <a data-link-type="dfn"><code>willValidate</code></a>, <a data-link-type="dfn"><code>validity</code></a>, <a data-link-type="dfn"><code>validationMessage</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-checkvalidity"><code>checkValidity()</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-form-reportvalidity"><code>reportValidity()</code></a>,
+ and <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-cva-setcustomvalidity"><code>setCustomValidity()</code></a>. </p>
+    <li>
+     <p><code>HTMLOptionElement</code> now has a
+ constructor <a data-link-type="dfn"><code>Option</code></a>. </p>
+    <li>
+     <p><code>HTMLInputElement</code> now has the
+ members <a data-link-type="dfn"><code>files</code></a>, <a data-link-type="dfn" href="https://drafts.csswg.org/css-writing-modes-4/#height"><code>height</code></a>, <a data-link-type="dfn"><code>indeterminate</code></a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-urlsearchparams-list"><code>list</code></a>, <a data-link-type="dfn"><code>valueAsDate</code></a>, <a data-link-type="dfn"><code>valueAsNumber</code></a>, <a data-link-type="dfn" href="https://drafts.csswg.org/css-writing-modes-4/#width"><code>width</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-input-stepup"><code>stepUp()</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-input-stepdown"><code>stepDown()</code></a>, the form
+ constraint validation API members, <a data-link-type="dfn" href="https://encoding.spec.whatwg.org/#label"><code>labels</code></a>, and members for the text field selection
+ API: <a data-link-type="dfn"><code>selectionStart</code></a>, <a data-link-type="dfn"><code>selectionEnd</code></a>, <a data-link-type="dfn"><code>selectionDirection</code></a>, <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange"><code>setSelectionRange()</code></a> and <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext"><code>setRangeText()</code></a>. </p>
+    <li>
+     <p><code>HTMLTextAreaElement</code> now has the
+ members <a data-link-type="dfn"><code>textLength</code></a>, the form constraint
+ validation API members, <a data-link-type="dfn" href="https://encoding.spec.whatwg.org/#label"><code>labels</code></a> and the text field selection API
+ members. </p>
+    <li>
+     <p><code>HTMLButtonElement</code> now has the
+ form constraint validation API members and <a data-link-type="dfn" href="https://encoding.spec.whatwg.org/#label"><code>labels</code></a>. </p>
+    <li>
+     <p><code>HTMLLabelElement</code> now has the
+ member <a data-link-type="dfn"><code>control</code></a>. </p>
+    <li>
+     <p><code>HTMLFieldSetElement</code> now has the
+ members <a data-link-type="dfn" href="https://w3c.github.io/ServiceWorker/#dfn-type"><code>type</code></a>, <a data-link-type="dfn" href="https://w3c.github.io/webappsec-csp/#violation-element"><code>elements</code></a> and the form constraint validation API members. </p>
+    <li>
+     <p><code>HTMLAnchorElement</code> now has the
+ members <a data-link-type="dfn"><code>relList</code></a>, <a data-link-type="dfn"><code>text</code></a>, and implements the <code>URLUtils</code> interface which has the members <a data-link-type="dfn"><code>href</code></a>, <a data-link-type="dfn" href="https://w3c.github.io/ServiceWorker/#service-worker-client-origin"><code>origin</code></a>, <a data-link-type="dfn"><code>protocol</code></a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-username"><code>username</code></a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-password"><code>password</code></a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-host"><code>host</code></a>, <a data-link-type="dfn"><code>hostname</code></a>, <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-port"><code>port</code></a>, <a data-link-type="dfn"><code>pathname</code></a>, <a data-link-type="dfn"><code>search</code></a>, <a data-link-type="dfn"><code>searchParams</code></a> and <a data-link-type="dfn"><code>hash</code></a>. <code>HTMLLinkElement</code> and <code>HTMLAreaElement</code> also have the <a data-link-type="dfn"><code>relList</code></a> IDL attribute. <code>HTMLAreaElement</code> also implements the <code>URLUtils</code> interface. </p>
+    <li>
+     <p><code>HTMLImageElement</code> now has a
+ constructor <a data-link-type="dfn"><code>Image</code></a>, and the
+ members <a data-link-type="dfn"><code>naturalWidth</code></a>, <a data-link-type="dfn"><code>naturalHeight</code></a> and <a data-link-type="dfn" href="https://drafts.csswg.org/css-transitions-1/#dfn-complete"><code>complete</code></a>. </p>
+    <li>
+     <p><code>HTMLObjectElement</code> now has the
+ members <a data-link-type="dfn"><code>contentWindow</code></a>, the form constraint
+ validation API members and a legacy caller. </p>
+    <li>
+     <p><code>HTMLMapElement</code> now has the
+ member <a data-link-type="dfn"><code>images</code></a>. </p>
+    <li>
+     <p><code>HTMLTableElement</code> now has the
+ members <a data-link-type="functionish" href="https://html.spec.whatwg.org/multipage/tables.html#dom-table-createtbody"><code>createTBody()</code></a> and <a data-link-type="functionish"><code>stopSorting()</code></a>. </p>
+    <li>
+     <p><code>HTMLTableHeaderCellElement</code> now has the member <a data-link-type="functionish" href="https://url.spec.whatwg.org/#dom-urlsearchparams-sort"><code>sort()</code></a>. </p>
+    <li>
+     <p><code>HTMLIFrameElement</code> now has the
+ member <a data-link-type="dfn"><code>contentWindow</code></a>. </p>
+   </ul>
+   <p>In addition, most new content attributes also have corresponding IDL
+attributes on the elements' interfaces, e.g. the <a data-link-type="dfn" href="https://drafts.csswg.org/css-sizing-3/#size"><code>sizes</code></a> IDL attribute on <code>HTMLLinkElement</code> which reflects the <a data-link-type="dfn" href="https://drafts.csswg.org/css-sizing-3/#size"><code>sizes</code></a> content attribute. </p>
+   <h3 class="heading settled" data-level="5.6" id="obsolete-apis"><span class="secno">5.6. </span><span class="content">Obsolete APIs</span><a class="self-link" href="#obsolete-apis"></a></h3>
+   <p>Some APIs are now either removed altogether, or marked as obsolete. </p>
+   <p>All IDL attributes that reflect a content attribute that is itself
+obsolete, are now also obsolete; for instance, the <a data-link-type="dfn"><code>bgColor</code></a> IDL attribute on <code>HTMLBodyElement</code> which reflects the
+obsolete <a data-link-type="dfn"><code>bgcolor</code></a> content attribute is now obsolete. </p>
+   <p>The following interfaces are marked obsolete since the elements are
+obsolete: <code>HTMLAppletElement</code>, <code>HTMLFrameSetElement</code>, <code>HTMLFrameElement</code>, <code>HTMLDirectoryElement</code> and <code>HTMLFontElement</code>. </p>
+   <p>The <code>HTMLIsIndexElement</code> interface is removed altogether since
+the HTML parser expands an <code>isindex</code> tag into other elements. The <code>HTMLBaseFontElement</code> interface is also removed since 
+ the element has no effect. </p>
+   <p>The following members of the <code>HTMLDocument</code> interface (which
+have now moved to <code>Document</code>) are now
+obsolete: <a data-link-type="dfn"><code>anchors</code></a> and <a data-link-type="dfn"><code>applets</code></a>. </p>
+   <h2 class="no-num heading settled" id="acknowledgments"><span class="content">Acknowledgments</span><a class="self-link" href="#acknowledgments"></a></h2>
+   <p>The editors would like to thank
+Ben Millard,
+Bruce Lawson,
+Cameron McCormack,
+Charles McCathieNevile,
+Dan Connolly,
+David Håsäther,
+Dennis German,
+Frank Ellermann,
+Frank Palinkas,
+羽田野太巳 (Futomi Hatano),
+Gordon P. Hemsley,
+Henri Sivonen,
+Jacob Palme,
+James Graham,
+Jens Oliver Meiert,
+Jeremy Keith,
+Jukka K. Korpela,
+Jürgen Jeka,
+Krijn Hoetmer,
+Leif Halvard Silli,
+Maciej Stachowiak,
+Mallory van Achterberg,
+Marcos Caceres,
+Mark Pilgrim,
+Martijn Wargers,
+Martin Leese,
+Martyn Haigh,
+Masataka Yakura,
+Michael Smith,
+Mike Taylor, <i>Ms2ger</i>,
+Olivier Gendrin,
+Øistein E. Andersen,
+Philip Jägenstedt,
+Philip Taylor,
+Randy Peterman,
+Robin Berjon,
+Steve Faulkner,
+Timo Tijhof,
+Toby Inkster,
+Xaxio Brandish,
+Yngve Spjeld Landro and
+Zhong Yu
+for their contributions to this document as well as to all the people
+who have contributed to HTML over the years for improving the Web! </p>
+  </main>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <dl>
+   <dt id="biblio-csp3">[CSP3]
+   <dd>Mike West. <a href="https://www.w3.org/TR/CSP3/">Content Security Policy Level 3</a>. URL: <a href="https://www.w3.org/TR/CSP3/">https://www.w3.org/TR/CSP3/</a>
+   <dt id="biblio-css-sizing-3">[CSS-SIZING-3]
+   <dd>Elika Etemad. <a href="https://www.w3.org/TR/css-sizing-3/">CSS Intrinsic &amp; Extrinsic Sizing Module Level 3</a>. URL: <a href="https://www.w3.org/TR/css-sizing-3/">https://www.w3.org/TR/css-sizing-3/</a>
+   <dt id="biblio-css-transitions-1">[CSS-TRANSITIONS-1]
+   <dd>CSS Transitions Module Level 1 URL: <a href="https://www.w3.org/TR/css3-transitions/">https://www.w3.org/TR/css3-transitions/</a>
+   <dt id="biblio-css-writing-modes-4">[CSS-WRITING-MODES-4]
+   <dd>CSS Writing Modes Module Level 4 URL: <a href="https://www.w3.org/TR/css-writing-modes-4/">https://www.w3.org/TR/css-writing-modes-4/</a>
+   <dt id="biblio-cssom">[CSSOM]
+   <dd>Simon Pieters; Glenn Adams. <a href="https://drafts.csswg.org/cssom/">CSS Object Model (CSSOM)</a>. URL: <a href="https://drafts.csswg.org/cssom/">https://drafts.csswg.org/cssom/</a>
+   <dt id="biblio-dom">[DOM]
+   <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/">DOM Standard</a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
+   <dt id="biblio-dom-level-2-html">[DOM-Level-2-HTML]
+   <dd><a href="https://www.w3.org/TR/DOM-Level-2-HTML/">Document Object Model (DOM) Level 2 HTML</a>. URL: <a href="https://www.w3.org/TR/DOM-Level-2-HTML/">https://www.w3.org/TR/DOM-Level-2-HTML/</a>
+   <dt id="biblio-encoding">[ENCODING]
+   <dd>Anne van Kesteren. <a href="https://encoding.spec.whatwg.org/">Encoding Standard</a>. Living Standard. URL: <a href="https://encoding.spec.whatwg.org/">https://encoding.spec.whatwg.org/</a>
+   <dt id="biblio-fetch">[FETCH]
+   <dd>Anne van Kesteren. <a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>. Living Standard. URL: <a href="https://fetch.spec.whatwg.org/">https://fetch.spec.whatwg.org/</a>
+   <dt id="biblio-html">[HTML]
+   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+   <dt id="biblio-html401">[HTML401]
+   <dd>Dave Raggett; Arnaud Le Hors; Ian Jacobs. <a href="https://www.w3.org/TR/html401">HTML 4.01 Specification</a>. 24 December 1999. REC. URL: <a href="https://www.w3.org/TR/html401">https://www.w3.org/TR/html401</a>
+   <dt id="biblio-html5">[HTML5]
+   <dd>Ian Hickson; et al. <a href="https://www.w3.org/html/wg/drafts/html/master/">HTML5</a>. URL: <a href="https://www.w3.org/html/wg/drafts/html/master/">https://www.w3.org/html/wg/drafts/html/master/</a>
+   <dt id="biblio-html51">[HTML51]
+   <dd>Steve Faulkner; et al. <a href="https://w3c.github.io/html/">HTML 5.1</a>. URL: <a href="https://w3c.github.io/html/">https://w3c.github.io/html/</a>
+   <dt id="biblio-service-workers-1">[SERVICE-WORKERS-1]
+   <dd>Alex Russell; et al. <a href="https://www.w3.org/TR/service-workers-1/">Service Workers 1</a>. URL: <a href="https://www.w3.org/TR/service-workers-1/">https://www.w3.org/TR/service-workers-1/</a>
+   <dt id="biblio-svg2">[SVG2]
+   <dd>Nikos Andronikos; et al. <a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a>
+   <dt id="biblio-url">[URL]
+   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
+   <dt id="biblio-xhtml1">[XHTML1]
+   <dd>Steven Pemberton. <a href="https://www.w3.org/TR/xhtml1">XHTML™ 1.0 The Extensible HyperText Markup Language (Second Edition)</a>. 1 August 2002. REC. URL: <a href="https://www.w3.org/TR/xhtml1">https://www.w3.org/TR/xhtml1</a>
+   <dt id="biblio-xml">[XML]
+   <dd>Tim Bray; et al. <a href="https://www.w3.org/TR/xml">Extensible Markup Language (XML) 1.0 (Fifth Edition)</a>. 26 November 2008. REC. URL: <a href="https://www.w3.org/TR/xml">https://www.w3.org/TR/xml</a>
+   <dt id="biblio-xml-names">[XML-NAMES]
+   <dd>Tim Bray; et al. <a href="https://www.w3.org/TR/xml-names">Namespaces in XML 1.0 (Third Edition)</a>. 8 December 2009. REC. URL: <a href="https://www.w3.org/TR/xml-names">https://www.w3.org/TR/xml-names</a>
+  </dl>
